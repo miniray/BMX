@@ -1,0 +1,232 @@
+package Modelo;
+
+public class Participante {
+	
+	private int id = 0;
+	private int licencia = 0;
+	private int placa = 0;
+	private String nombre = "";
+	private String apellido_1 = "";
+	private String apellido_2 = "";
+	private int año_nacimiento = 0;
+	private int sexo = 0;
+	private String provincia = "";
+	private int categoria_españa;
+	private int categoria_regional;
+	private int categoria_cruiser;
+	
+	private int ranking_liga_regional = 0;
+	private int ranking_copa_regional = 0;
+	private int ranking_campeonato_regional = 0;
+	private int ranking_liga_española = 0;
+	private int ranking_copa_española = 0;
+	private int ranking_campeonato_españa = 0;
+	private int ranking_otro_regional = 0;
+	private int ranking_otro_nacional = 0;
+	private int ranking_cruiser_regional = 0;
+	private int ranking_cruiser_nacional = 0;
+	private  Object[] p_traspaso = new Object[20];
+
+	public Participante( int id, int licencia, int placa,
+						String nombre, String apellido_1, String apellido_2,
+						int año_nacimiento, int categoria_españa, int categoria_regional,
+						int categoria_cruiser, int sexo, String provincia,
+						int ranking_liga_regional, int ranking_copa_regional,int ranking_campeonato_regional,
+						int ranking_otro_regional,
+						int ranking_liga_española, int ranking_copa_española,int ranking_campeonato_españa,
+						int ranking_otro_nacional,
+						int ranking_cruiser_regional, int ranking_cruiser_nacional){
+		this.id = id;
+		this.licencia = licencia;
+		this.placa = placa;
+		this.nombre = nombre;
+		this.apellido_1 = apellido_1;
+		this.apellido_2 = apellido_2;
+		this.año_nacimiento = año_nacimiento;
+		this.sexo = sexo;
+		this.categoria_españa = categoria_españa;
+		this.categoria_regional = categoria_regional;
+		this.categoria_cruiser = categoria_cruiser;
+		this.provincia = provincia;
+		
+		this.ranking_liga_regional = ranking_liga_regional;
+		this.ranking_copa_regional = ranking_copa_regional;
+		this.ranking_campeonato_regional = ranking_campeonato_regional;
+		this.ranking_liga_española = ranking_liga_española;
+		this.ranking_copa_española = ranking_copa_española;
+		this.ranking_campeonato_españa = ranking_campeonato_españa;
+		
+		this.ranking_otro_regional = ranking_otro_regional;
+		this.ranking_otro_nacional = ranking_otro_nacional;
+		this.ranking_cruiser_regional = ranking_cruiser_regional;
+		this.ranking_cruiser_nacional = ranking_cruiser_nacional;
+	}
+	
+	//ID
+	public void setId(int id){
+		this.id = id;
+	}
+	public int getId(){
+		return id;
+	}
+	//LICENCIA
+	public void setLicencia(int licencia){
+		this.licencia = licencia;
+	}
+	public int getLicencia(){
+		return licencia;
+	}
+	//PLACA
+	public void setPlaca(int placa){
+		this.placa = placa;
+	}
+	public int getPlaca(){
+		return placa;
+	}
+	//NOMBRE
+	public void setNombre(String nombre){
+		this.nombre = nombre;
+	}
+	public String getNombre(){
+		return nombre;
+	}
+	//APELLIDO1
+	public void setApellido1(String apellido_1){
+		this.apellido_1 = apellido_1;
+	}
+	public String getApellido1(){
+		return apellido_1;
+	}
+	//APELLIDO2
+	public void setApellido2(String apellido_2){
+		this.apellido_2 = apellido_2;
+	}
+	public String getApellido2(){
+		return apellido_2;
+	}
+	//AÑO
+	public void setAñoNacimiento(int año_nacimiento){
+		this.año_nacimiento= año_nacimiento;
+	}
+	public int getAñoNacimiento(){
+		return año_nacimiento;
+	}
+	//CATEGORIA ESPAÑA
+	public void setCategoriaEspaña(int categoria_españa){
+		this.categoria_españa = categoria_españa;
+		
+	}
+	public int getCategoriaEspaña(){
+		return categoria_españa;
+	}
+	//CATEGORIA REGIONAL
+	public void setCategoriaRegional(int categoria_regional){
+		this.categoria_regional = categoria_regional;
+	}
+	public int getCategoriaRegional(){
+		return categoria_regional;
+	}
+	//CATEGORIA CRUISER
+	public void setCategoriaCruiser(int categoria_cruiser){
+			this.categoria_cruiser = categoria_cruiser;
+	}
+	public int getCategoriaCruiser(){
+			return categoria_cruiser;
+	}
+	//SEXO
+	public void setSexo (int sexo){
+		this.sexo = sexo;
+	}
+	public int getSexo(){
+		return sexo;
+	}
+	//PROVINCIA
+	public void setProvincia(String provincia){
+		this.provincia = provincia;
+	}
+	public String getProvincia(){
+		return provincia;
+	}
+	//RANKINGS REGIONALES
+	public void setRankingLigaRegional(int ranking_liga_regional){
+		this.ranking_liga_regional = ranking_liga_regional;
+	}
+	public int getRankingLigaRegional(){
+		return ranking_liga_regional;
+	}
+	
+	public void setRankingCopaRegional(int ranking_copa_regional){
+		this.ranking_copa_regional = ranking_copa_regional;
+	}
+	public int getRankingCopaRegional(){
+		return ranking_copa_regional;
+	}
+	
+	public void setRankingCampeonatoRegional(int ranking_campeonato_regional){
+		this.ranking_campeonato_regional = ranking_campeonato_regional;
+	}
+	public int getRankingCampeonatoRegional(){
+		return ranking_campeonato_regional;
+	}
+	//RANKINGS ESPAÑA
+	public void setRankingLigaEspañola(int ranking_liga_española){
+		this.ranking_liga_española = ranking_liga_española;
+	}
+	public int getRankingLigaEspañola(){
+		return ranking_liga_española;
+	}
+	
+	public void setRankingCopaEspañola(int ranking_copa_española){
+		this.ranking_copa_española = ranking_copa_española;
+	}
+	public int getRankingCopaEspañola(){
+		return ranking_copa_española;
+	}
+	
+	public void setRankingCampeonatoEspaña(int ranking_campeonato_españa){
+		this.ranking_campeonato_españa = ranking_campeonato_españa;
+	}
+	public int getRankingCampeonatoEspaña(){
+		return ranking_campeonato_españa;
+	}
+	//RANKINGS OTROS
+	public void setOtroRankingRegional(int ranking_otro_regional){
+		this.ranking_otro_regional = ranking_otro_regional;
+	}
+	public int getOtroRankingRegional(){
+		return ranking_otro_regional;
+	}
+	
+	public void setOtroRankingNacional(int ranking_otro_nacional){
+		this.ranking_otro_nacional = ranking_otro_nacional;
+	}
+	public int getOtroRankingNacional(){
+		return ranking_otro_nacional;
+	}
+	public String getDescripcion(){
+		return "ID: " + id + " LICENCIA: " +  licencia +
+				" PLACA: " + placa + "NOMBRE: " + nombre +
+				" APELLIDO1 : " + apellido_1 + " APELLIDO2: " + apellido_2 +
+				" AÑO DE NACIMIENTO: " + año_nacimiento + " SEXO: " + sexo +
+				" CAT ESPAÑA: " + categoria_españa + " CAT REG: " +categoria_regional +
+				" CAT CRUISER: " + categoria_cruiser + " RANK LIGA REG: " +ranking_liga_regional +
+				" RANK COPA REG: " + ranking_copa_regional + " RANK CAMP REG: " + ranking_campeonato_regional +
+				" RANK LIGA ESP: " + ranking_liga_española + " RANK COPA ESP: " + ranking_copa_española +
+				" RANK CAMP ESP: " + ranking_campeonato_españa + " RANK OTRO REG: " + ranking_otro_regional+
+				" RANK OTRO NAC: " + ranking_otro_nacional;
+	}
+	//RANKINGS CRUISER
+	public void setRankingCruiserRegional(int ranking_cruiser_regional){
+		this.ranking_cruiser_regional = ranking_cruiser_regional;
+	}
+	public int getRankingCruiserRegional(){
+		return ranking_cruiser_regional;
+	}
+	public void setRankingCruiserNacional(int ranking_cruiser_nacional){
+		this.ranking_cruiser_nacional = ranking_cruiser_nacional;
+	}
+	public int getRankingCruiserNacional(){
+		return ranking_cruiser_nacional;
+	}
+}
+	

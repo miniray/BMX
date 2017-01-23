@@ -1,0 +1,33 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.awt.BorderLayout;
+import javax.swing.BoxLayout;
+import java.awt.GridLayout;
+import javax.swing.JSplitPane;
+import javax.swing.JButton;
+import java.awt.Dimension;
+import javax.swing.JScrollBar;
+import java.awt.Component;
+import javax.swing.JList;
+
+public class GUI {
+
+	/**
+	 * @wbp.parser.entryPoint
+	 */
+	
+	private JFrame frame;
+
+	public static void main(String[] args) {
+		
+	}
+	
+	/**
+	 * @wbp.parser.entryPoint
+	 */
+	public GUI(){
+		
+	}
+}

@@ -1,0 +1,243 @@
+package Modelo;
+
+import java.util.ArrayList;
+
+import javax.swing.JComboBox;
+import javax.swing.event.TableModelEvent;
+import javax.swing.event.TableModelListener;
+import javax.swing.table.AbstractTableModel;
+import javax.swing.table.TableModel;
+
+public class MyTableModelPrincipal extends AbstractTableModel implements Constantes, TableModel, TableModelListener {
+
+		Class[] column_names = {Integer.class, Integer.class,Object.class, Object.class, Object.class, Integer.class, Object.class, JComboBox.class,Integer.class, JComboBox.class, Integer.class};	
+		String titulos[] = {"Licencia", "Placa", "Nombre", "Apellido", "2º Apellido", "Año", "Sexo", "Categoria", "Ranking", "Cruiser", "Rank Cruiser"}; 
+		ArrayList<Participante> list_p = new ArrayList<Participante>();
+		Participante part_temp;
+		int ranking = 0;
+		
+		public MyTableModelPrincipal(ArrayList<Participante> listado_p){
+			list_p = listado_p;	
+			addTableModelListener(this);
+			
+		}
+		public void setTabla(ArrayList<Participante> listado){
+			list_p = listado;
+		}
+
+		public int getRowCount() {
+			return list_p.size();
+		}
+		
+		public int getColumnCount() {
+			return column_names.length;
+		}
+		
+		public Class getColumnClass (int col_index){
+			return column_names[col_index];
+		}
+		
+		public String getColumnName(int col_index){
+			return titulos[col_index];
+		}
+		
+		public Object getValueAt(int row_index, int col_index) {
+			
+			switch (col_index)
+			{
+			//case 0: return list_p.get(row_index).getId();
+			case 0: return list_p.get(row_index).getLicencia();
+			case 1: return list_p.get(row_index).getPlaca();
+			case 2: return list_p.get(row_index).getNombre();
+			case 3: return list_p.get(row_index).getApellido1();
+			case 4: return list_p.get(row_index).getApellido2();
+			case 5: return list_p.get(row_index).getAñoNacimiento();
+			case 6: if (list_p.get(row_index).getSexo()==0){
+					return "F";
+					}else{
+						return "x";
+					}
+			case 7: 
+				// F = 0 Y M = 1
+				int x = list_p.get(row_index).getCategoriaEspaña();
+				int n = list_p.get(row_index).getCategoriaRegional();
+				if (list_p.get(row_index).getSexo() == 0){
+					if (ranking == 1){
+						System.out.println("CAT ESPAÑA FEM: " + x);
+						return cat_españa_fem[n];
+					}
+					if (ranking == 2){
+						System.out.println("CAT ESPAÑA FEM: " + n);
+						return cat_cataluña_fem[x];
+					}
+				}else{
+					if (ranking == 1){
+						System.out.println("CAT ESPAÑA MASC: " + x);
+						return cat_españa_masc[x];
+					}
+					if (ranking == 2){
+						System.out.println("CAT ESPAÑA MASC: " + n);
+						return cat_cataluña_masc[n];
+					}
+					System.out.println("OUT OF SITUATION");
+					break;
+				}
+				
+			case 8: return "a";
+					//list_p.get(row_index).getRankingLigaEspañola();
+			
+			case 9: 
+				int y = list_p.get(row_index).getCategoriaCruiser();
+				if (list_p.get(row_index).getSexo() == 0){
+					return "NO HAY CATEGORIA";
+				}else{
+					if (ranking == 1){
+						return cat_españa_cruiser_masc[y];
+					}
+					if (ranking == 2){
+						return cat_cataluña_cruiser_masc[y];
+					}
+				}
+				
+			case 10: return list_p.get(row_index).getRankingLigaRegional();
+			default: return null;
+			
+			}
+			return "NO ENTIENDO";
+		}
+		public void setValueAt(Object value, int row, int column){
+			Participante part = list_p.get(row);
+			
+			switch(column){
+			case 0: 
+				part.setLicencia((int) value);
+				break;
+			case 1:
+				part.setPlaca((int) value);
+				break;
+			case 2:
+				part.setNombre((String) value);
+				break;
+			case 3:
+				part.setApellido1((String) value);
+				break;
+			case 4:
+				part.setApellido2((String) value);
+				break;
+			case 5:
+				part.setAñoNacimiento((int) value);
+				break;
+			case 6:
+				if (value == "F"){
+					part.setSexo(0);
+				}else{
+					if (value == "M"){
+						part.setSexo(1);
+					}
+				}
+				break;
+			case 7:
+				setCategoriaSetValue(part, value);
+				break;
+			case 8:
+				System.out.println("SET RANKING");
+				break;
+			case 9:
+				setCategoriaCruiserSetValue(part, value);
+				break;
+			case 10:
+				System.out.println("SET PUNTACION CRUISER");
+			default:
+				System.out.println("NO HAY CASO");
+				break;
+			}
+		}
+		//Calculo para crear el JComboBox para elegir categoria.
+		
+		
+		public boolean isCellEditable(int row, int col){
+			return true;
+		}
+		
+		public void tableChanged(TableModelEvent arg0) {
+				System.out.println("TABLE CHANGED-MYTABLEMODEL" + arg0.toString() + "tableMOdelPRincipal");
+		}
+		
+		public void deleteRow(int row){
+			list_p.remove(row);
+			getRowCount();
+			this.fireTableDataChanged();
+		}
+		public void addRow(Participante newRow){
+			list_p.add(newRow);
+			this.fireTableDataChanged();
+		}
+		
+		public Participante getRow(int row){
+			return list_p.get(row);
+		}
+		public void setRanking(int x){
+			ranking = x;
+		}
+		
+		//METODO PARA SETTEAR LA CATEGORIA SEGUN GENERO Y RANKING ELEGIDO
+		public void setCategoriaSetValue (Participante p, Object value){
+			//SI EL RANKING ES ESPAÑA CAMBIAR LA CATEGORIA DE ESPAÑA
+			if (ranking == 1){
+				//SI ES HOMBRE
+				if (p.getSexo()==1){
+					for (int n = 0; n<cat_españa_masc.length; n++){
+						if (value.toString()==cat_españa_masc[n]){
+							p.setCategoriaEspaña(n);
+						}
+					}
+				//SI ES MUJER
+				}else{
+					for (int n = 0; n<cat_españa_fem.length; n++){
+						if (value.toString()==cat_españa_fem[n]){
+						p.setCategoriaEspaña(n);
+						}
+					}
+				}
+			}
+			//SI EL RANKING ES CATALUÑA
+			if (ranking == 2){
+				//SI ES HOMBRE
+				if (p.getSexo()==1){
+					for (int n = 0; n<cat_cataluña_masc.length; n++){
+						if (value.toString()==cat_cataluña_masc[n]){
+							p.setCategoriaEspaña(n);
+						}
+					}
+				//SI ES MUJER
+				}else{
+					for (int n = 0; n<cat_cataluña_fem.length; n++){
+						if (value.toString()==cat_cataluña_fem[n]){
+						p.setCategoriaEspaña(n);
+						}
+					}
+				}
+			}
+		}
+		public void setCategoriaCruiserSetValue (Participante p, Object value){
+			//SI EL RANKING ES ESPAÑA CAMBIAR LA CATEGORIA DE ESPAÑA
+			if (ranking == 1){
+				for (int n = 0; n<cat_españa_cruiser_masc.length; n++){
+					if (value.toString()==cat_españa_cruiser_masc[n]){
+						p.setCategoriaCruiser(n);
+					}
+				}
+			}
+			//SI EL RANKING ES CATALUÑA
+			if (ranking == 2){
+				for (int n = 0; n<cat_cataluña_cruiser_masc.length; n++){
+					if (value.toString()==cat_cataluña_cruiser_masc[n]){
+						p.setCategoriaCruiser(n);
+					}
+				}
+			}
+		}
+}
+
+
+

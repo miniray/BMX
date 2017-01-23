@@ -1,0 +1,64 @@
+package Modelo;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.swing.JFileChooser;
+
+import com.csvreader.CsvReader;
+
+public class GestorCSV {
+	
+	CsvReader gcsv_part_imp;
+	public static ArrayList<Participante> listaparticipantes = new ArrayList<Participante>();
+	
+	//Lector del archivo CSV, recorre filas creando el participante en una lista.
+	public ArrayList<Participante> CsvImportarFicheroATabla(){
+		Participante part;
+		JFileChooser file = new JFileChooser();
+		int seleccion = file.showOpenDialog(null);
+		
+		switch(seleccion) {
+		//Caso eligen archivo, devuelve la ruta
+		case JFileChooser.APPROVE_OPTION:
+			 file.getSelectedFile().getPath();
+		
+			try{
+				gcsv_part_imp = new CsvReader(file.getSelectedFile().getPath(), ';');
+				gcsv_part_imp.readHeaders();
+			
+				while (gcsv_part_imp.readRecord()){
+				
+					part = new Participante(Integer.parseInt(gcsv_part_imp.get(0)),Integer.parseInt(gcsv_part_imp.get(1)),
+										Integer.parseInt(gcsv_part_imp.get(2)),gcsv_part_imp.get(3),gcsv_part_imp.get(4),
+										gcsv_part_imp.get(5), Integer.parseInt(gcsv_part_imp.get(6)),
+										Integer.parseInt(gcsv_part_imp.get(7)),Integer.parseInt(gcsv_part_imp.get(8)),
+										Integer.parseInt(gcsv_part_imp.get(9)), Integer.parseInt(gcsv_part_imp.get(10)),
+										gcsv_part_imp.get(11), Integer.parseInt(gcsv_part_imp.get(12)),
+										Integer.parseInt(gcsv_part_imp.get(13)), Integer.parseInt(gcsv_part_imp.get(14)), 
+										Integer.parseInt(gcsv_part_imp.get(15)), Integer.parseInt(gcsv_part_imp.get(16)),
+										Integer.parseInt(gcsv_part_imp.get(17)), Integer.parseInt(gcsv_part_imp.get(18)),
+										Integer.parseInt(gcsv_part_imp.get(19)), Integer.parseInt(gcsv_part_imp.get(20)),
+										Integer.parseInt(gcsv_part_imp.get(21)));
+					
+					listaparticipantes.add(part);
+				}
+			}
+				catch (FileNotFoundException e) {
+					e.printStackTrace();
+				}
+				catch (IOException e) {
+					e.printStackTrace();
+				}
+			return listaparticipantes;
+			//Caso cancelan seleccion.
+					case JFileChooser.CANCEL_OPTION:
+						break;
+					//Caso si hay un error.
+					case JFileChooser.ERROR_OPTION:
+						System.out.println ("Hay un error en la seleccion");
+						break;
+		}
+		return null;
+	}
+}

@@ -1,0 +1,265 @@
+package Vista;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.table.TableColumn;
+
+import javax.swing.DefaultCellEditor;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.ListSelectionModel;
+import javax.swing.WindowConstants;
+import javax.swing.border.EmptyBorder;
+import javax.swing.event.TableModelEvent;
+import javax.swing.event.TableModelListener;
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableCellEditor;
+
+import Controlador.Controlador;
+import Modelo.Constantes;
+import Modelo.MyTableModel;
+import Modelo.MyTableModelPrincipal;
+import Modelo.Participante;
+
+public class GraphicInterface implements Constantes {
+
+	JFrame frame = new JFrame();
+	
+	private Object[][] data = {	};
+	
+	public JTable tabla = new JTable();
+	
+	public JLabel categoria = new JLabel("CATEGORIA", JLabel.CENTER);
+	private JButton btn_f_izq = new JButton("ANTERIOR");
+	private JButton btn_f_der = new JButton("SIGUIENTE");
+	private JPanel panel_categoria = new JPanel();
+	
+	private JButton btn_importar = new JButton("IMPORTAR");
+	private JButton btn_añadir = new JButton("AÑADIR");
+	private JButton btn_eliminar = new JButton("ELIMINAR");
+	private JButton btn_generar = new JButton("GENERAR");
+	
+	private JPanel panel_superior_superior = new JPanel();
+	private JPanel panel_superior_inferior = new JPanel();
+	private JPanel panel_inferior = new JPanel();
+	private JPanel panel_central = new JPanel();
+	private JPanel panel_botones = new JPanel();
+	
+	public JComboBox  ranking = new JComboBox();
+	
+	public GraphicInterface(){
+		
+		frame.setSize(1200, 700);
+		
+		GridBagLayout gbl = new GridBagLayout();
+		gbl.columnWeights = new double[] {1.0, 1.0, 1.0, 1.0, Double.MIN_VALUE};
+		gbl.rowWeights = new double[] {1.0, 1.0, 1.0, 1.0, Double.MIN_VALUE};
+				frame.setLayout(gbl);
+		GridBagConstraints constraints = new GridBagConstraints();
+		
+		//PANEL SUPERIOR SUPERIOR
+		panel_superior_superior.setBackground(Color.YELLOW);
+		constraints.anchor = GridBagConstraints.NORTH;
+		constraints.gridx = 0;
+		constraints.gridy = 0;
+		constraints.gridwidth = 6;
+		constraints.gridheight = 1;
+		constraints.fill = GridBagConstraints.BOTH;
+		frame.getContentPane().add (panel_superior_superior, constraints); 
+		constraints.weighty = 0.0;
+		
+		//PANEL SUPERIOR INFERIOR
+		panel_superior_inferior.setBackground(Color.red);
+		panel_superior_inferior.setLayout(gbl);
+		panel_categoria.setLayout(new GridLayout(0,3));
+		panel_categoria.add(btn_f_izq);
+		panel_categoria.add(categoria);
+		panel_categoria.add(btn_f_der);
+		constraints.gridx = 0;
+		constraints.gridy = 0;
+		constraints.gridwidth = 0;
+		constraints.gridheight = 0;
+		panel_superior_inferior.add(panel_categoria,constraints);
+		
+		
+		constraints.gridx = 0;
+		constraints.gridy = 1;
+		constraints.gridwidth = 3;
+		constraints.gridheight = 1; 
+		frame.getContentPane().add (panel_superior_inferior, constraints); 
+		
+		
+		//PANEL CENTRAL CON TABLA
+		panel_central.setLayout(new GridLayout(0,1));
+		panel_central.setBorder(new EmptyBorder(20,30,30,20));
+		panel_central.add(tabla);
+		panel_central.setBackground(Color.cyan);
+		JScrollPane scroller1 = new JScrollPane(tabla);
+		scroller1.setVisible(true);
+		panel_central.add(scroller1);
+		constraints.gridx = 0;
+		constraints.gridy = 2;
+		constraints.gridwidth = 3;
+		constraints.gridheight = 5;
+		frame.getContentPane().add(panel_central, constraints);
+		
+		
+		//PANEL INFERIOR
+		panel_inferior.setBackground(Color.green);
+		constraints.gridx = 0;
+		constraints.gridy = 7;
+		constraints.gridwidth = 5;
+		constraints.gridheight = 1;
+		frame.getContentPane().add(panel_inferior, constraints);
+		
+		//PANEL BOTONES
+		panel_botones.setBackground(Color.blue);
+		panel_botones.setLayout(new GridLayout(6,0,0,50));
+		panel_botones.setBorder(new EmptyBorder(20,30,30,20));
+		panel_botones.add(btn_importar);
+		panel_botones.add(btn_añadir);
+		panel_botones.add(btn_eliminar);
+		btn_añadir.setEnabled(false);
+		btn_eliminar.setEnabled(false);
+
+
+		ranking.addItem("RANKING ESPAÑA");
+		ranking.addItem("RANKING CATALUÑA");
+		ranking.addItem("RANKING VALENCIA");
+		ranking.addItem("RANKING MADRID");
+		ranking.setEnabled(false);
+		panel_botones.add(ranking);
+		
+		btn_generar.setEnabled(false);
+		panel_botones.add(btn_generar);
+		
+		constraints.gridx = 3;
+		constraints.gridy = 1;
+		constraints.gridwidth = 2;
+		constraints.gridheight = 6;
+		frame.getContentPane().add(panel_botones, constraints);
+			
+		//salida de la ventana y visualización.
+		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+		
+	}
+	//Metodo para habilitar los botones despues de haber importado
+	public void desbloquearBotones(){
+
+		btn_añadir.setEnabled(true);
+		btn_eliminar.setEnabled(true);
+		ranking.setEnabled(true);
+		btn_generar.setEnabled(true);
+	}
+	
+	//Metodo para conectar los Listeners al controlador
+	public void conectorControlador(Controlador c){
+
+		
+		btn_importar.addActionListener(c);
+		btn_importar.setActionCommand("IMPORTAR");		
+		btn_añadir.addActionListener(c);
+		btn_añadir.setActionCommand("AÑADIR");
+		btn_eliminar.addActionListener(c);
+		btn_eliminar.setActionCommand("ELIMINAR");
+		btn_generar.addActionListener(c);
+		btn_generar.setActionCommand("GENERAR");
+		tabla.addMouseListener(c);
+		ranking.addActionListener(c);
+		ranking.setActionCommand("RANKING");
+		//solo permite seleccionar 1 fila.
+		tabla.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+	} 
+	
+	public void setCellEditor(){
+
+		TableColumn col = tabla.getColumnModel().getColumn(7);
+		TableColumn col2 = tabla.getColumnModel().getColumn(9);
+        col.setCellEditor(new CategoriaCellEditor());
+        col2.setCellEditor(new CategoriaCellEditor2());
+	}
+	
+	private class CategoriaCellEditor extends DefaultCellEditor implements Constantes, TableCellEditor {
+
+		public CategoriaCellEditor() {
+			super(new JComboBox());
+		}
+		
+		public Component getTableCellEditorComponent(JTable table, Object value,
+                boolean isSelected, int row, int column) {
+              
+              JComboBox combo = (JComboBox)getComponent();
+              JComboBox comboCruiser = (JComboBox)getComponent();
+              combo.removeAllItems();
+              comboCruiser.removeAllItems();
+              
+              if (ranking.getSelectedItem() == "RANKING CATALUÑA"){
+            	  if ((table.getModel().getValueAt(row,6) == "F")){
+                	  for(int i=0; i<cat_cataluña_fem.length; i++){
+                          combo.addItem(cat_cataluña_fem[i]);
+                	  }
+                  }else{
+                      for(int i=0; i<cat_cataluña_masc.length; i++){
+                          combo.addItem(cat_cataluña_masc[i]);
+                      }
+                  }
+              }
+              if (ranking.getSelectedItem()== "RANKING ESPAÑA"){
+            	  if ((table.getModel().getValueAt(row,6) == "F")){
+            		  for(int i=0; i<cat_españa_fem.length; i++){
+            			  combo.addItem(cat_españa_fem[i]);
+            		  }
+            	  }else{
+            		  for(int i=0; i<cat_españa_masc.length; i++){
+            			  combo.addItem(cat_españa_masc[i]);
+            		  }
+            	  }
+              }
+              return combo;
+		}
+	}
+	
+	private class CategoriaCellEditor2 extends DefaultCellEditor implements Constantes, TableCellEditor {
+
+		public CategoriaCellEditor2() {
+			super(new JComboBox());
+		}
+		
+		public Component getTableCellEditorComponent(JTable table, Object value,
+                boolean isSelected, int row, int column) {
+              
+              JComboBox comboCruiser = (JComboBox)getComponent();
+              comboCruiser.removeAllItems();
+              
+              if ((table.getModel().getValueAt(row,6) == "F")){
+        		  comboCruiser.addItem("FEMENINO CRUISER NO");
+            	  
+              }else{
+            	  if (ranking.getSelectedItem() == "RANKING CATALUÑA"){
+            		  for(int i=0; i<cat_cataluña_cruiser_masc.length; i++){
+                          comboCruiser.addItem(cat_cataluña_cruiser_masc[i]);
+                      }
+                  }
+            	  if (ranking.getSelectedItem()== "RANKING ESPAÑA"){
+            		  for(int i=0; i<cat_españa_cruiser_masc.length; i++){
+            			  comboCruiser.addItem(cat_españa_cruiser_masc[i]);
+            		  }
+            	  }
+              }
+              return comboCruiser;
+		}
+		
+	}
+}

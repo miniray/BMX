@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="CAT ESPAÑA" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="cat españa"/>
+			<item value="ENTRO"/>
+			<item value="DESCRIPCION"/>
+			<item value="cruiser"/>
+			<item value="accion no leida"/>
+			<item value="ranking"/>
+			<item value="set ranking"/>
+			<item value="set"/>
+		</list>
+		<list key="replacehistory">
+			<item value="list_p"/>
+			<item value="p_traspaso"/>
+			<item value="gcsv_part_imp"/>
+			<item value="Frame_imp_part"/>
+			<item value="btn_retroceder"/>
+			<item value="btn_pasar"/>
+			<item value="btn"/>
+			<item value="sel"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="284" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="389" key="DIALOG_HEIGHT"/>
+		<item value="1004" key="DIALOG_X_ORIGIN"/>
+		<item value="111" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

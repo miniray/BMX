@@ -1,0 +1,57 @@
+package Modelo;
+import java.awt.List;
+import java.util.ArrayList;
+
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
+import Vista.Frame_imp_part;
+
+public class BaseDatosParticipantes implements Constantes {
+	
+	//tabla part total original
+	ArrayList<Participante> list_part_total = new ArrayList<Participante>();
+	//tabla part total sin los seleccionados
+	ArrayList<Participante> list_part_total_mod = new ArrayList<Participante>();
+	//tabla part para los seleccionados
+	ArrayList<Participante> list_part_imp = new ArrayList<Participante>();
+	//tab
+	ArrayList<Participante> listaparticipantes_carrera = new ArrayList<Participante>();
+	ArrayList<Object> lista_categorias = new ArrayList <Object>();
+	public MyTableModel mtm;
+	public MyTableModel mtm_sel;
+	public MyTableModelPrincipal mtm_principal;
+	
+	
+	GestorCSV g_csv = new GestorCSV();
+	
+	
+	public MyTableModel importarFichero(){
+		
+		//Crea array con todos los participantes del archivo importado
+		list_part_total = g_csv.CsvImportarFicheroATabla();
+		if (list_part_total!=null){
+			mtm = new MyTableModel(list_part_total);
+			mtm_sel = new MyTableModel();
+			return mtm;
+		}
+		else{
+			return null;
+		}
+	}
+	
+	public void setTablaprincipal(){
+		mtm_principal = new MyTableModelPrincipal(mtm_sel.list_p);
+		list_part_imp = mtm_sel.list_p;
+		//mtm_principal.list_p.get(index)
+	}
+	public void creacionDeBotones(JTable table){
+		for (int i = 0; i<=mtm_sel.list_p.size(); i++){
+			if (lista_categorias.contains(mtm_sel.list_p.get(i).getCategoriaEspaña())){
+				
+			}else{
+				lista_categorias.add(mtm_sel.list_p.get(i).getCategoriaEspaña());
+			}
+		}
+	}
+}

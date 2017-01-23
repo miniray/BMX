@@ -1,0 +1,71 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.awt.BorderLayout;
+import javax.swing.BoxLayout;
+import java.awt.GridLayout;
+import javax.swing.JSplitPane;
+import javax.swing.JButton;
+import java.awt.Dimension;
+import javax.swing.JScrollBar;
+import java.awt.Component;
+import javax.swing.JList;
+
+public class GUI {
+
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					GUI window = new GUI();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public GUI() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 438, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setBounds(0, 0, 434, 46);
+		frame.getContentPane().add(panel);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBounds(0, 44, 338, 217);
+		frame.getContentPane().add(panel_1);
+		panel_1.setLayout(new GridLayout(0, 2, 0, 0));
+		
+		JList list = new JList();
+		panel_1.add(list);
+		
+		JPanel panel_2 = new JPanel();
+		panel_2.setBounds(336, 44, 98, 217);
+		frame.getContentPane().add(panel_2);
+		
+		JButton btnImportar = new JButton("Importar");
+		btnImportar.setPreferredSize(new Dimension(80, 25));
+		panel_2.add(btnImportar);
+	}
+}

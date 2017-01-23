@@ -1,0 +1,138 @@
+public void actionPerformed(ActionEvent ev)
+	{
+//VARIABLE QUE RECOJE EL LABEL DEL BOTON PULSADO
+String var = ((Button)ev.getSource()).getLabel();
+
+//REINICIAR
+if(var.equals("REINICIO"))
+{reiniciar();}
+//PARTIDA INICIADA CON EL MODO DE PARTIDA (CHECKBOX CORRESPONDIENTE)
+if(partida_on == true)
+	{
+//MODO PARTIDA HUMANO VS COMPUTADORA (CHECKBOX1)
+if (checkbox1.getState()==true)
+	{
+//SI LA CASILLA QUE SELECCIONA EL HUMANO ESTA VACIA
+	if(var.equals(""))
+	{
+//HUMANO - SEÑALA CON x SU CASILLA
+	((Button)ev.getSource()).setLabel("X");
+	bloquear_botones();
+// CADA VEZ QUE MARCA CASILLA VERIFICA SI HA GANADO LA PARTIDA
+	if (hay_ganador())
+	{
+	label.setText("HAS GANADO!!!");
+	}
+//VERIFICA QUE TODAS LAS CASILLAS ESTAN MARCADAS Y NO HAY GANADOR
+	else if (hay_tablas() && hay_ganador() == false)
+	{
+	label.setText("PARTIDA EMPATADA");
+	}
+//COMPUTADORA - SEÑALA CON o SU CASILLA
+//SI NO GANA LA COMP NI EL TABLERO ESTA COMPLETO CEDE SU TURNO
+	else
+	desbloquear_botones();
+	label.setText("ES TU TURNO");
+//NO PUEDES MARCAR UNA CASILLA YA MARCADA
+	else{label.setText("Casilla invalida");}
+	}
+
+//MODO PARTIDA HUMANO VS HUMANO (CHECKBOX)
+	else
+	{
+//VEMOS QUE JUGADOR TIENE EL TURNO PARA ESCRIBIR CON SU MARCA
+	if (getJugador().equals("Jugador 1"))
+	{marca = "X";}
+	else
+	{marca ="O";}
+//ESCRIBIMOS EN LA CASILLA QUE HA ELEGIDO EL JUGADOR SU MARCA
+//BLOQUEAMOS BOTONES PARA QUE EL JUGADOR NO MARQUE POR ERROR COMO EL OTRO JUGADOR
+//CAMBIO DE JUGADOR PARA LA SIGUIENTE RONDA
+//CAMBIO DE TURNO
+	desbloquear_botones();
+//CASILLA YA MARCADA
+	else{label.setText("Casilla invalida");}
+//INICIAR PARTIDAS CON LOS MODOS DE JUEGO
+	if (partida_on == false)
+	{
+	if(var.equals("COMENZAR") && checkbox.getState()== false)
+…….
+	if(var.equals("COMENZAR") && checkbox.getState()== true)
+….
+
+
+Ahora te voy a dejar un esquema de planteamiento de la interfaz...
+
+PANEL DEL TRES EN RAYA CON CAPACIDAD DE REDIMENSIONARSE.
+
+//Observa usa un panIzq que es un GridLayor(3,3) para los botones, un panDer que es un BorderLayout y en el agregamos otros 2 panes, un panRadios tipo BorderLayout y un panReiniciar que un FlowLyout.Center.   Finalmente agregamos al panel x defecto el panIzq.Center y el panDer.EAST   Ojo que panIzq va a CENTER para que se pueda redimensionar.
+
+package EnRaya3;
+import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+public class interfaz extends Frame {
+
+	private static final long serialVersionUID = -5153442307038655130L;
+
+	public static void main(String[] args)
+	{
+		interfaz ej = new interfaz();
+		//ej.setSize(500,500);
+		ej.pack();
+		ej.setVisible(true);
+	}
+
+	public interfaz()
+	{
+		setTitle("Tres en Raya by Gerardo");
+		Button[][] casillas = new Button[3][3];
+
+//Creamos los paneles y los Layouts.
+		Panel panIzq=new Panel(new GridLayout(3,3));
+		Panel panDer=new Panel(new BorderLayout());
+		Panel panRadios=new Panel(new BorderLayout());
+		Panel panReiniciar=new Panel(new FlowLayout(FlowLayout.CENTER));
+
+//Creamos todos los componentes, asignandoles un listener si lo necesitan y añadiendolos al su panel
+		for(int i=0;i<3; i++)
+			for(int j=0;j<3;j++)
+			{
+			casillas[i][j]=new Button();
+			casillas[i][j].setLabel(Integer.toString(i)+Integer.toString(j));
+			casillas[i][j].setName( Integer.toString(i)+Integer.toString(j) );
+			//	casillas[i][j].addActionListener(this);
+			//	casillas[i][j].addMouseListener(new EscuchadorDeRaton());
+			//	casillas[i][j].addMouseListener(this);
+			panIzq.add(casillas[i][j]);
+			}
+
+		CheckboxGroup cbgrp=new CheckboxGroup();
+		Checkbox cb1=new Checkbox("Humano vs Computadora", true, cbgrp);
+		cb1.setName("HC");
+	//	cb1.addItemListener(this);
+		Checkbox cb2=new Checkbox("Humano vs Humano", false, cbgrp);
+		cb2.setName("HH");
+	//	cb2.addItemListener(this);
+
+		Button btnReiniciar=new Button("Reiniciar");
+	//	btnReiniciar.addActionListener(this);
+
+		panReiniciar.add(btnReiniciar);
+		panRadios.add(cb1, BorderLayout.NORTH);
+		panRadios.add(cb2, BorderLayout.SOUTH);
+		panDer.add(panRadios, BorderLayout.NORTH);
+	//	panDer.add(lbRes, BorderLayout.CENTER);
+		panDer.add(panReiniciar, BorderLayout.SOUTH);
+
+		add(panIzq, BorderLayout.CENTER);  //No es WEST, para permitir que los botones se redimensionen
+		add(panDer, BorderLayout.EAST);
+
+		this.addWindowListener(new WindowAdapter() { // para cerra ventana
+			public void windowClosing(WindowEvent e) { System.exit(0); }
+		});
+	}
+
+//////FINAL, ES SÓLO PARA VER LOS GESTORES DE POSICION/////////////////////////////////
+}

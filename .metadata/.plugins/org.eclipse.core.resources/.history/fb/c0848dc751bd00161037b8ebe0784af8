@@ -1,0 +1,139 @@
+package Controlador;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.io.File;
+
+import javax.swing.JFileChooser;
+import javax.swing.JTable;
+import javax.swing.event.TableModelEvent;
+import javax.swing.event.TableModelListener;
+
+import Modelo.BaseDatosParticipantes;
+import Modelo.Participante;
+import Vista.Frame_imp_part;
+import Vista.GraphicInterface;
+
+public class Controlador implements ActionListener, MouseListener, TableModelListener {
+
+	private GraphicInterface gi;
+	private BaseDatosParticipantes bd;
+	private Frame_imp_part fip;
+	public Controlador (GraphicInterface gi, BaseDatosParticipantes bd, Frame_imp_part fip){
+		
+		this.fip = fip;
+		this.gi =gi;
+		this.bd = bd;
+	}
+	
+
+	@Override
+	public void mouseClicked(MouseEvent arg0) {
+		if ( arg0.getSource()== gi.tabla){
+		}else{
+			if (arg0.getSource() == fip.tab_part_total){
+				bd.mtm_sel.addRow(bd.mtm.getRow(fip.tab_part_total.getSelectedRow()));
+				bd.mtm.deleteRow(fip.tab_part_total.getSelectedRow());
+			}
+			else{
+				if ( arg0.getSource() == fip.tab_part_sel){
+					bd.mtm.addRow(bd.mtm_sel.getRow(fip.tab_part_sel.getSelectedRow()));
+					bd.mtm_sel.deleteRow(fip.tab_part_sel.getSelectedRow());
+					
+				}
+			}
+		}
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void mouseExited(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void mousePressed(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		
+		String comando = arg0.getActionCommand();
+		
+		switch (comando) {
+		
+		case "IMPORTAR":
+			
+			if (bd.importarFichero()!=null){
+				fip.tab_part_total.setModel(bd.mtm);
+				fip.tab_part_sel.setModel(bd.mtm_sel);
+				fip.frame_import.setVisible(true);
+				break;
+			}else{
+				break;
+			}
+		case "ACEPTAR": 
+			bd.setTablaprincipal();
+			gi.tabla.setModel(bd.mtm_principal);
+			gi.setCellEditor();
+			fip.frame_import.setVisible(false);
+			gi.desbloquearBotones();
+			
+			break;
+			
+		case "AÑADIR":
+			System.out.println(bd.mtm_principal.getArray().get(gi.tabla.getSelectedRow()).getDescripcion());
+			bd.creacionDeBotones();
+			break;
+			
+		case "ELIMINAR":
+			bd.mtm_principal.deleteRow(gi.tabla.getSelectedRow());
+			break;
+			
+			
+		case "RANKING":
+			if (gi.ranking.getSelectedItem() == "RANKING ESPAÑA"){
+				bd.mtm_principal.setRanking(1);
+				bd.mtm_principal.fireTableDataChanged();
+				System.out.println("RANKING COMBOBOX CHANGED TO ESPAÑA");
+			}
+			
+			if (gi.ranking.getSelectedItem() == "RANKING CATALUÑA"){
+					bd.mtm_principal.setRanking(2);
+					bd.mtm_principal.fireTableDataChanged();
+					System.out.println("RANKING COMBOBOX CHANGED TO ESPAÑA");
+			}
+			break;
+		
+		default: 
+			System.out.println("ACCION NO LEIDA " + arg0);
+		}
+	}
+	
+	private void limpiarTabla(){
+	       
+	   }
+
+
+	@Override
+	public void tableChanged(TableModelEvent arg0) {
+	}
+}
+
+
