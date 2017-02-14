@@ -8,18 +8,16 @@ import javax.swing.border.EmptyBorder;
 import Controlador.Controller;
 import Modelo.Constants;
 import Modelo.MainTableModel;
-import Modelo.Manga;
 import Modelo.Players;
 
 public class GraphicInterface implements Constants {
 
-	private JFrame frame = new JFrame();
-	
-	public JTable tabla = new JTable();
+    public JTable tabla = new JTable();
 
 	public JPanel panel_categoria_masc = new JPanel();
 	public JPanel panel_categoria_fem = new JPanel();
 	public JPanel panel_categoria_cruiser = new JPanel();
+	public JPanel panel_boton_todos = new JPanel();
 	public JButton btn_todos = new JButton ("TODOS");
 
 	public GridLayout grid_panel_cat_masc = new GridLayout(0,1);
@@ -32,11 +30,7 @@ public class GraphicInterface implements Constants {
 	public JButton btn_generar = new JButton ("GENERAR");
 
 
-	public JPanel panel_superior = new JPanel();
-	private JPanel panel_inferior = new JPanel();
-	private JPanel panel_central = new JPanel();
-	private JPanel panel_botones = new JPanel();
-	public JPanel panel_central_central = new JPanel();
+    public JPanel panel_central_central = new JPanel();
 	public JPanel panel_card = new JPanel();
 	public JPanel allMangasPanel = new JPanel();
 	public MainTableModel mtm_principal = new MainTableModel();
@@ -44,15 +38,14 @@ public class GraphicInterface implements Constants {
 
 	private JComboBox categoria = new JComboBox();
 
-	private JComboBox ranking = new JComboBox();
 
-
-	public GraphicInterface(){
+    public GraphicInterface(){
 
 		//frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-		frame.setSize(1300,600);
+        JFrame frame = new JFrame();
+        frame.setSize(1300,600);
 
-		mtm_principal.setIsMainTable(true);
+		mtm_principal.setIsMainTable();
 
 		GridBagLayout gbl = new GridBagLayout();
 		GridBagLayout gbl2 = new GridBagLayout();
@@ -69,7 +62,8 @@ public class GraphicInterface implements Constants {
 		GridBagConstraints constraints = new GridBagConstraints();
 
 		//PANEL SUPERIOR SUPERIOR
-		panel_superior.setBackground(Color.YELLOW);
+        JPanel panel_superior = new JPanel();
+        panel_superior.setBackground(Color.YELLOW);
 		panel_superior.setLayout(new GridLayout (4,0));
 		panel_categoria_masc.setLayout(grid_panel_cat_masc);
 		panel_categoria_fem.setLayout(grid_panel_cat_fem);
@@ -84,7 +78,9 @@ public class GraphicInterface implements Constants {
 		panel_superior.add(panel_categoria_masc);
 		panel_superior.add(panel_categoria_fem);
 		panel_superior.add(panel_categoria_cruiser);
-		panel_superior.add(btn_todos);
+		panel_boton_todos.setLayout(new GridLayout(0,1));
+		panel_boton_todos.add(btn_todos);
+		panel_superior.add(panel_boton_todos);
 		frame.getContentPane().add (panel_superior, constraints);
 
 		panel_central_central.setBackground(Color.magenta);
@@ -93,13 +89,15 @@ public class GraphicInterface implements Constants {
 		constraints.gridy = 0;
 		constraints.gridwidth = 4;
 		constraints.gridheight = 4;
-		panel_central_central.add(panel_central, constraints);
+        JPanel panel_central = new JPanel();
+        panel_central_central.add(panel_central, constraints);
 		constraints.gridx = 4;
 		constraints.gridy = 0;
 		constraints.gridwidth = 2;
 		constraints.gridheight = 4;
 		allMangasPanel.setBackground(Color.RED);
-		panel_central_central.add(panel_botones, constraints);
+        JPanel panel_botones = new JPanel();
+        panel_central_central.add(panel_botones, constraints);
 		panel_card.setLayout(card);
 		panel_card.add("PANEL CENTRAL 1", panel_central_central);
 		card.show(panel_card, "PANEL CENTRAL 1");
@@ -127,7 +125,8 @@ public class GraphicInterface implements Constants {
 		categoria.addItem("BARCELONA");
 		categoria.addItem("MADRID");
 
-		ranking.addItem("CAMPEONATO");
+        JComboBox ranking = new JComboBox();
+        ranking.addItem("CAMPEONATO");
 		ranking.addItem("LIGA");
 		ranking.addItem("COPA");
 
@@ -231,8 +230,13 @@ public class GraphicInterface implements Constants {
 		newTableModel.getChangesToMainArray(mtm_principal.getArray());
 	    tabla.setModel(newTableModel);
 	    tabla.setRowSorter(newTableModel.setSorter(newTableModel));
-	    tabla.updateUI();
-	    setCellEditor();
+	    if (tabla != null) {
+			tabla.updateUI();
+			setCellEditor();
+		}else{
+	    	System.out.println("VA A PETAR");
+		}
+
     }
 
     public JComboBox getCategory(){
@@ -243,4 +247,7 @@ public class GraphicInterface implements Constants {
 
         return panel_card;
     }
+    public JPanel getPanelBotonTodos(){
+		return panel_boton_todos;
+	}
 }

@@ -16,8 +16,11 @@ public class Moto implements TableModelListener {
 
         private JPanel container;
         private MotosTableModel tableModelMoto;
-        private JTable motoTable;
-        private ArrayList<Players> playersOfThisMoto;
+    private ArrayList<Players> playersOfThisMoto;
+        protected JLabel motoTitle;
+        private boolean is_quarter = false;
+        private boolean is_semifinal = false;
+        private boolean is_final = false;
 
 
 
@@ -27,12 +30,16 @@ public class Moto implements TableModelListener {
             //this.playersOfThisMoto = playersOfThisMoto;
 
             //CONFIGURACION DEL LABEL
-            JLabel motoLabel = new JLabel("MOTO " + number);
-            motoLabel.setHorizontalAlignment(JLabel.CENTER);
+            if (number != 0){
+                motoTitle = new JLabel("MOTO " + number);
+            }else{
+                motoTitle = new JLabel("FINAL");
+            }
+            motoTitle.setHorizontalAlignment(JLabel.CENTER);
 
             //CREACION DE LA TABLA, SU MODELO, SU SCROLLPANE Y SU PANEL
             tableModelMoto = new MotosTableModel();
-            motoTable = new JTable();
+        JTable motoTable = new JTable();
             motoTable.setModel(tableModelMoto);
             tableModelMoto.addTableModelListener(this);
             JScrollPane motoTableScroller = new JScrollPane(motoTable);
@@ -43,8 +50,8 @@ public class Moto implements TableModelListener {
 
             //CREACION DEL PANELCONTENEDOR, SU LAYOUT Y LA PROPORCION DE TAMAÑO DE SU PARRILLA.
             GridBagLayout gridBagContainerLayout = new GridBagLayout();
-            gridBagContainerLayout.columnWeights = new double[]{1.0, 1.0, 1.0, 1.0, Double.MIN_VALUE};
-            gridBagContainerLayout.rowWeights = new double[]{1.0, 40.0, 1.0, 1.0, Double.MIN_VALUE};
+            gridBagContainerLayout.columnWeights = new double[]{1.0, 1.0, 1.0, 1.0};
+            gridBagContainerLayout.rowWeights = new double[]{1.0, 40.0, 1.0, 1.0};
             container = new JPanel();
             container.setLayout(gridBagContainerLayout);
 
@@ -58,7 +65,7 @@ public class Moto implements TableModelListener {
             layoutPosition.gridy = 0;
             layoutPosition.gridwidth = 4;
             layoutPosition.gridheight = 1;
-            container.add(motoLabel, layoutPosition);
+            container.add(motoTitle, layoutPosition);
 
             layoutPosition.gridx = 1;
             layoutPosition.gridy = 1;
@@ -72,10 +79,15 @@ public class Moto implements TableModelListener {
 
     public MotosTableModel getModelMotoTable(){ return tableModelMoto; }
 
+    public void setMotoTitle(String newTitle){
+        motoTitle.setText(newTitle);
+    }
+
 
     @Override
     public void tableChanged(TableModelEvent e) {
         System.out.println("MOTO: " + this.toString());
         System.out.println("SOURCE: " + e.getSource());
     }
+
 }

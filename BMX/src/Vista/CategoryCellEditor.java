@@ -13,9 +13,9 @@ import java.awt.*;
  */
 public class CategoryCellEditor extends DefaultCellEditor implements Constants, TableCellEditor {
 
-    JComboBox categoria;
+    private JComboBox categoria;
 
-    public CategoryCellEditor(JComboBox categoria) {
+    CategoryCellEditor(JComboBox categoria) {
         super(new JComboBox());
         this.categoria = categoria;
     }
@@ -32,14 +32,14 @@ public class CategoryCellEditor extends DefaultCellEditor implements Constants, 
 
         if (player_temp.getSexo() == 0) {
             if (categoria.getSelectedIndex() == 0){
-                for (int i = 0; i < cat_espanya_fem.length; i++) {
-                    combo.addItem(cat_espanya_fem[i]);
+                for (String aCat_espanya_fem : cat_espanya_fem) {
+                    combo.addItem(aCat_espanya_fem);
                 }
                 combo.setSelectedIndex(player_temp.getCategoriaEspanya());
             }
             if (categoria.getSelectedIndex() == 1){
-                for (int i = 0; i < cat_catalunya_fem.length; i++) {
-                    combo.addItem(cat_catalunya_fem[i]);
+                for (String aCat_catalunya_fem : cat_catalunya_fem) {
+                    combo.addItem(aCat_catalunya_fem);
                 }
                 combo.setSelectedIndex(player_temp.getCategoriaRegional());
             }

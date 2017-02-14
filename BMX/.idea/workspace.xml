@@ -7,49 +7,39 @@
   </component>
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/src/Modelo/CategoriesManagement.java" line="76" />
+    <bookmark url="file://$PROJECT_DIR$/src/Modelo/Constants.java" line="8" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d81d3b57-2c71-46a0-b9ed-ebaf6b409ca9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/csvreader/CsvReader$ColumnBuffer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/csvreader/CsvReader$ComplexEscape.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/csvreader/CsvReader$DataBuffer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/csvreader/CsvReader$HeadersHolder.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/csvreader/CsvReader$Letters.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/csvreader/CsvReader$RawRecordBuffer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/csvreader/CsvReader$StaticSettings.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/csvreader/CsvReader$UserSettings.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/csvreader/CsvReader.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/csvreader/CsvWriter$Letters.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/csvreader/CsvWriter$UserSettings.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/csvreader/CsvWriter.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controlador/Controller.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controlador/Main.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Modelo/AllGames.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Modelo/CSVReader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Modelo/Categories.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Modelo/CategoriesManagement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Modelo/Constants.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Modelo/DataBase.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Modelo/ImportedTableModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Modelo/MainTableModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Modelo/Manga.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Modelo/Moto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Modelo/MotosTableModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Modelo/Players.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Modelo/SingleGame.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Modelo/Utils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Pilotos_test1.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Vista/CategoryCellEditor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Vista/CategoryCruiserCellEditor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Vista/GenderCellEditor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Vista/GraphicInterface.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Vista/Paneles_generar.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Vista/PlayersImportationFrame.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Vista/principal.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/csvreader/CsvReader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/csvreader/CsvWriter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Modelo/FinalTableModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Modelo/FinalsManga.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Modelo/FinalsTableModel.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BMX/Vista/Paneles_generar.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Vista/Paneles_generar.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Controlador/Controller.class" afterPath="$PROJECT_DIR$/out/production/BMX/Controlador/Controller.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/AllGames.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/AllGames.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/Constants.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/Constants.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/MainTableModel.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/MainTableModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/Manga.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/Manga.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/Moto.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/Moto.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/MotosTableModel.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/MotosTableModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/SingleGame.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/SingleGame.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Vista/CategoryCellEditor.class" afterPath="$PROJECT_DIR$/out/production/BMX/Vista/CategoryCellEditor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Vista/GraphicInterface.class" afterPath="$PROJECT_DIR$/out/production/BMX/Vista/GraphicInterface.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controlador/Controller.java" afterPath="$PROJECT_DIR$/src/Controlador/Controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/AllGames.java" afterPath="$PROJECT_DIR$/src/Modelo/AllGames.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/Constants.java" afterPath="$PROJECT_DIR$/src/Modelo/Constants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/MainTableModel.java" afterPath="$PROJECT_DIR$/src/Modelo/MainTableModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/Manga.java" afterPath="$PROJECT_DIR$/src/Modelo/Manga.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/Moto.java" afterPath="$PROJECT_DIR$/src/Modelo/Moto.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/MotosTableModel.java" afterPath="$PROJECT_DIR$/src/Modelo/MotosTableModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/Players.java" afterPath="$PROJECT_DIR$/src/Modelo/Players.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/SingleGame.java" afterPath="$PROJECT_DIR$/src/Modelo/SingleGame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vista/CategoryCellEditor.java" afterPath="$PROJECT_DIR$/src/Vista/CategoryCellEditor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vista/GraphicInterface.java" afterPath="$PROJECT_DIR$/src/Vista/GraphicInterface.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vista/PlayersImportationFrame.java" afterPath="$PROJECT_DIR$/src/Vista/PlayersImportationFrame.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,85 +58,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GraphicInterface.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vista/GraphicInterface.java">
+      <file leaf-file-name="Manga.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Modelo/Manga.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="method#conectorControlador#0;class#GraphicInterface#0" expanded="false" />
-                <element signature="method#setCellEditor#0;class#GraphicInterface#0" expanded="false" />
-                <element signature="e#7563#7564#0" expanded="false" />
-                <element signature="e#7582#7583#0" expanded="false" />
-                <element signature="method#setAllPlayersModel#0;class#GraphicInterface#0" expanded="false" />
-                <element signature="method#changeTableModel#0;class#GraphicInterface#0" expanded="false" />
-                <element signature="e#8288#8289#0" expanded="false" />
-                <element signature="e#8311#8312#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="principal.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vista/principal.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+            <state relative-caret-position="102">
+              <caret line="16" column="30" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainTableModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Modelo/MainTableModel.java">
+      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Modelo/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="method#MainTableModel#0;class#MainTableModel#0" expanded="false" />
-                <element signature="method#MainTableModel#1;class#MainTableModel#0" expanded="false" />
-                <element signature="method#setTabla#0;class#MainTableModel#0" expanded="false" />
-                <element signature="e#1285#1286#0" expanded="false" />
-                <element signature="e#1314#1315#0" expanded="false" />
-                <element signature="e#1349#1350#0" expanded="false" />
-                <element signature="e#1384#1385#0" expanded="false" />
-                <element signature="e#1434#1435#0" expanded="false" />
-                <element signature="e#1473#1474#0" expanded="false" />
-                <element signature="e#1522#1523#0" expanded="false" />
-                <element signature="e#1556#1557#0" expanded="false" />
-                <element signature="e#1597#1598#0" expanded="false" />
-                <element signature="e#1619#1620#0" expanded="false" />
-                <element signature="e#1674#1675#0" expanded="false" />
-                <element signature="e#1707#1708#0" expanded="false" />
-                <element signature="method#getValueAt#0;class#MainTableModel#0" expanded="false" />
-                <element signature="method#setValueAt#0;class#MainTableModel#0" expanded="false" />
-                <element signature="e#4681#4682#0" expanded="false" />
-                <element signature="e#4710#4711#0" expanded="false" />
-                <element signature="method#tableChanged#0;class#MainTableModel#0" expanded="false" />
-                <element signature="method#deleteRow#0;class#MainTableModel#0" expanded="false" />
-                <element signature="method#addRow#0;class#MainTableModel#0" expanded="false" />
-                <element signature="e#5204#5205#0" expanded="false" />
-                <element signature="e#5235#5236#0" expanded="false" />
-                <element signature="e#5280#5281#0" expanded="false" />
-                <element signature="e#5311#5312#0" expanded="false" />
-                <element signature="method#setPlayerCategory#0;class#MainTableModel#0" expanded="false" />
-                <element signature="method#setCategoriaCruiserSetValue#0;class#MainTableModel#0" expanded="false" />
-                <element signature="e#6494#6495#0" expanded="false" />
-                <element signature="e#6517#6518#0" expanded="false" />
-                <element signature="method#getPlayerById#0;class#MainTableModel#0" expanded="false" />
-                <element signature="method#getValueCategoryPosition#0;class#MainTableModel#0" expanded="false" />
-                <element signature="e#7005#7006#0" expanded="false" />
-                <element signature="e#7036#7037#0" expanded="false" />
-                <element signature="method#setSorter#0;class#MainTableModel#0" expanded="false" />
-                <element signature="e#7263#7264#0" expanded="false" />
-                <element signature="e#7295#7296#0" expanded="false" />
-                <element signature="e#7332#7333#0" expanded="false" />
-                <element signature="e#7361#7362#0" expanded="false" />
-                <element signature="method#getUnderlyingModelRow#0;class#MainTableModel#0" expanded="false" />
-                <element signature="method#getChangesToMainArray#0;class#MainTableModel#0" expanded="false" />
-                <element signature="method#deleteModifiedPlayerCategory#0;class#MainTableModel#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="374">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -154,58 +81,10 @@
       <file leaf-file-name="AllGames.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Modelo/AllGames.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="38" column="62" lean-forward="false" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="62" />
+            <state relative-caret-position="714">
+              <caret line="46" column="31" lean-forward="false" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
               <folding>
-                <element signature="e#2132#2133#0" expanded="false" />
-                <element signature="e#2166#2167#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CategoriesManagement.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Modelo/CategoriesManagement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="132" column="40" lean-forward="false" selection-start-line="132" selection-start-column="40" selection-end-line="132" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="docComment;class#CategoriesManagement#0" expanded="false" />
-                <element signature="method#setExistingCategories#0;class#CategoriesManagement#0" expanded="false" />
-                <element signature="method#setListenerButton#0;class#CategoriesManagement#0" expanded="false" />
-                <element signature="method#creationArrayOfButtons#0;class#CategoriesManagement#0" expanded="false" />
-                <element signature="method#panelCategoriesVisualConfiguration#0;class#CategoriesManagement#0" expanded="false" />
-                <element signature="method#getSpecificCategoryArray#0;class#CategoriesManagement#0" expanded="false" />
-                <element signature="method#getCategoriesByGender#0;class#CategoriesManagement#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Moto.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Modelo/Moto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="36" column="53" lean-forward="false" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Manga.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Modelo/Manga.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="27" column="70" lean-forward="false" selection-start-line="27" selection-start-column="70" selection-end-line="27" selection-end-column="70" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#919#920#0" expanded="false" />
-                <element signature="e#952#953#0" expanded="false" />
-                <element signature="e#998#999#0" expanded="false" />
-                <element signature="e#1029#1030#0" expanded="false" />
+                <element signature="method#createPrintButtons#0;class#AllGames#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -214,24 +93,65 @@
       <file leaf-file-name="SingleGame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Modelo/SingleGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+            <state relative-caret-position="83">
+              <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#generateAllMangas#0;class#SingleGame#0" expanded="false" />
+                <element signature="method#generateGamePanel#0;class#SingleGame#0" expanded="false" />
+                <element signature="method#setNumber_of_manga_int#0;class#SingleGame#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controlador/Controller.java">
+      <file leaf-file-name="Players.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Modelo/Players.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2465">
-              <caret line="158" column="22" lean-forward="false" selection-start-line="158" selection-start-column="22" selection-end-line="158" selection-end-column="22" />
+            <state relative-caret-position="3859">
+              <caret line="310" column="0" lean-forward="false" selection-start-line="310" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
               <folding>
-                <element signature="method#mouseClicked#0;class#Controller#0" expanded="false" />
-                <element signature="method#generateButtonsForPanels#0;class#Controller#0" expanded="false" />
+                <element signature="method#setRankingCopaEspanyola#0;class#Players#0" expanded="false" />
+                <element signature="method#setRankingCampeonatoEspanya#0;class#Players#0" expanded="false" />
+                <element signature="method#getDescripcion#0;class#Players#0" expanded="false" />
+                <element signature="method#setRankingCruiserRegional#0;class#Players#0" expanded="false" />
+                <element signature="method#setRankingCruiserNacional#0;class#Players#0" expanded="false" />
+                <element signature="e#8487#8488#0" expanded="true" />
+                <element signature="e#8547#8548#0" expanded="true" />
+                <element signature="e#8587#8588#0" expanded="true" />
+                <element signature="e#8628#8629#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CategoriesManagement.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Modelo/CategoriesManagement.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="663">
+              <caret line="45" column="54" lean-forward="false" selection-start-line="45" selection-start-column="54" selection-end-line="45" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="docComment;class#CategoriesManagement#0" expanded="false" />
+                <element signature="method#setListenerButton#0;class#CategoriesManagement#0" expanded="false" />
+                <element signature="method#creationArrayOfButtons#0;class#CategoriesManagement#0" expanded="false" />
+                <element signature="method#panelCategoriesVisualConfiguration#0;class#CategoriesManagement#0" expanded="false" />
+                <element signature="method#splitAllPlayersIntoSpecificCategory#0;class#CategoriesManagement#0" expanded="false" />
+                <element signature="method#getSpecificCategoryArray#0;class#CategoriesManagement#0" expanded="false" />
+                <element signature="method#getCategoriesByGender#0;class#CategoriesManagement#0" expanded="false" />
+                <element signature="method#getAllExistingCategoriesWithPlayers#0;class#CategoriesManagement#0" expanded="false" />
+                <element signature="method#getAllExistingCategoriesIdArray#0;class#CategoriesManagement#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FinalsManga.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Modelo/FinalsManga.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="629">
+              <caret line="56" column="54" lean-forward="false" selection-start-line="56" selection-start-column="54" selection-end-line="56" selection-end-column="54" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -247,16 +167,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>allCategoriesNamesArray</find>
-      <find>ranking</find>
-      <find>setCombo_box_category</find>
-      <find>anyad</find>
-      <find>category</find>
-      <find>selectedCategoryArray</find>
-      <find>enabled</find>
-      <find>s</find>
-      <find>setPlayerCategory</find>
-      <find>getMainTableModel</find>
       <find>setm</find>
       <find>set</find>
       <find>existingCategoriesButtonsArray</find>
@@ -277,6 +187,16 @@
       <find>card</find>
       <find>System.out.</find>
       <find>single</find>
+      <find>graphicInterface.getPanelBotonTodos()</find>
+      <find>number</find>
+      <find>todos</find>
+      <find>update</find>
+      <find>finalMangaPanel</find>
+      <find>size</find>
+      <find>mangasPlayers</find>
+      <find>allPlayersByCategoryArray</find>
+      <find>allPlayersOfThisRace</find>
+      <find>allPlayersByMangaArray</find>
     </findStrings>
     <replaceStrings>
       <replace>ny</replace>
@@ -288,6 +208,7 @@
       <replace>motosConstraints</replace>
       <replace>playerTemp</replace>
       <replace>getArray()</replace>
+      <replace>buttonsPanel</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -324,27 +245,34 @@
         <option value="$PROJECT_DIR$/src/Vista/MotosPanel.java" />
         <option value="$PROJECT_DIR$/src/Vista/Prueba.java" />
         <option value="$PROJECT_DIR$/src/Vista/CategoriaCellEditor.java" />
-        <option value="$PROJECT_DIR$/src/Modelo/Players.java" />
         <option value="$PROJECT_DIR$/src/Modelo/CategoriesMananagement.java" />
         <option value="$PROJECT_DIR$/src/Vista/GenderCellEditor.java" />
-        <option value="$PROJECT_DIR$/src/Modelo/Constants.java" />
-        <option value="$PROJECT_DIR$/src/Vista/CategoryCellEditor.java" />
         <option value="$PROJECT_DIR$/src/Vista/CategoryCruiserCellEditor.java" />
-        <option value="$PROJECT_DIR$/src/Modelo/DataBase.java" />
-        <option value="$PROJECT_DIR$/src/Modelo/MainTableModel.java" />
-        <option value="$PROJECT_DIR$/src/Modelo/MotosTableModel.java" />
         <option value="$PROJECT_DIR$/src/Modelo/Carrera.java" />
         <option value="$PROJECT_DIR$/src/Modelo/CategoriesManagement.java" />
         <option value="$PROJECT_DIR$/src/Vista/MotoPanel.java" />
         <option value="$PROJECT_DIR$/src/Vista/MangaPanel.java" />
         <option value="$PROJECT_DIR$/src/Vista/Moto.java" />
         <option value="$PROJECT_DIR$/src/Vista/Manga.java" />
-        <option value="$PROJECT_DIR$/src/Modelo/Manga.java" />
-        <option value="$PROJECT_DIR$/src/Modelo/Moto.java" />
-        <option value="$PROJECT_DIR$/src/Modelo/SingleGame.java" />
-        <option value="$PROJECT_DIR$/src/Controlador/Controller.java" />
+        <option value="$PROJECT_DIR$/src/Modelo/FinalTableModel.java" />
+        <option value="$PROJECT_DIR$/src/Modelo/SemifinalsTest.java" />
+        <option value="$PROJECT_DIR$/src/Modelo/SemifinalsTableModel.java" />
+        <option value="$PROJECT_DIR$/src/Modelo/Final.java" />
+        <option value="$PROJECT_DIR$/src/Modelo/Semifinals.java" />
+        <option value="$PROJECT_DIR$/src/Vista/CategoryCellEditor.java" />
         <option value="$PROJECT_DIR$/src/Vista/GraphicInterface.java" />
+        <option value="$PROJECT_DIR$/src/Modelo/DataBase.java" />
+        <option value="$PROJECT_DIR$/src/Modelo/MainTableModel.java" />
+        <option value="$PROJECT_DIR$/src/Modelo/MotosTableModel.java" />
+        <option value="$PROJECT_DIR$/src/Modelo/Moto.java" />
+        <option value="$PROJECT_DIR$/src/Modelo/FinalsTableModel.java" />
+        <option value="$PROJECT_DIR$/src/Controlador/Controller.java" />
+        <option value="$PROJECT_DIR$/src/Modelo/Constants.java" />
+        <option value="$PROJECT_DIR$/src/Modelo/Manga.java" />
+        <option value="$PROJECT_DIR$/src/Modelo/FinalsManga.java" />
+        <option value="$PROJECT_DIR$/src/Modelo/Players.java" />
         <option value="$PROJECT_DIR$/src/Modelo/AllGames.java" />
+        <option value="$PROJECT_DIR$/src/Modelo/SingleGame.java" />
       </list>
     </option>
   </component>
@@ -356,11 +284,13 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="y" value="32" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -376,9 +306,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -461,12 +388,28 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BMX" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BMX" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="reference.idesettings.debugger.dataviews" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -959,12 +902,23 @@
       <workItem from="1484554629059" duration="4429000" />
       <workItem from="1484662919415" duration="18454000" />
       <workItem from="1484926955805" duration="537000" />
-      <workItem from="1485178980954" duration="1120000" />
+      <workItem from="1485178980954" duration="3256000" />
+      <workItem from="1485269683407" duration="6488000" />
+      <workItem from="1485515554475" duration="7828000" />
+      <workItem from="1485629717696" duration="1417000" />
+      <workItem from="1485783616730" duration="12813000" />
+      <workItem from="1485903999361" duration="8321000" />
+      <workItem from="1486558211128" duration="597000" />
+      <workItem from="1486560951210" duration="4316000" />
+      <workItem from="1486649234713" duration="2860000" />
+      <workItem from="1486963033475" duration="5987000" />
+      <workItem from="1487006710864" duration="9809000" />
+      <workItem from="1487101842058" duration="1508000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="281690000" />
+    <option name="totallyTimeSpent" value="345770000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -976,24 +930,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="32" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3256579" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21875" sideWeight="0.14117648" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30427632" sideWeight="0.85882354" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3338816" sideWeight="0.85882354" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18667643" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22474378" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2492647" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1006,10 +961,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31907895" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32730263" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31907895" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3026316" sideWeight="0.49411765" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30592105" sideWeight="0.49411765" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1020,10 +974,18 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/plaf/basic/BasicTableUI.java</url>
+          <line>1017</line>
+          <properties />
+          <option name="timeStamp" value="180" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="179" />
+      <option name="time" value="188" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1032,125 +994,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/Timer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="244" column="0" lean-forward="false" selection-start-line="244" selection-start-column="0" selection-end-line="244" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/awt/event/InvocationEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="310" column="0" lean-forward="false" selection-start-line="310" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/table/TableRowSorter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="39" column="23" lean-forward="false" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vista/PlayersImportationFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/Math.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="1335" column="0" lean-forward="false" selection-start-line="1335" selection-start-column="0" selection-end-line="1335" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/Arrays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="3180" column="0" lean-forward="false" selection-start-line="3180" selection-start-column="0" selection-end-line="3180" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/JViewport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="727" column="0" lean-forward="false" selection-start-line="727" selection-start-column="0" selection-end-line="727" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/plaf/ComponentUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="160" column="0" lean-forward="false" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/plaf/basic/BasicTableUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="2113" column="0" lean-forward="false" selection-start-line="2113" selection-start-column="0" selection-end-line="2113" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="652" column="0" lean-forward="false" selection-start-line="652" selection-start-column="0" selection-end-line="652" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/event/EventListenerList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/EventObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/jre/lib/rt.jar!/sun/awt/AWTAccessor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/jre/lib/rt.jar!/sun/awt/SunToolkit.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="340" column="0" lean-forward="false" selection-start-line="340" selection-start-column="0" selection-end-line="340" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/HashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="555" column="0" lean-forward="false" selection-start-line="555" selection-start-column="0" selection-end-line="555" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/jre/lib/rt.jar!/sun/awt/MostRecentKeyValue.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/jre/lib/rt.jar!/sun/awt/AppContext.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
@@ -1257,24 +1100,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/awt/EventDispatchThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vista/GenderCellEditor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
           <caret line="30" column="8" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vista/CategoryCellEditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="51" column="13" lean-forward="true" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1292,120 +1121,127 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modelo/Constants.java">
+    <entry file="file://$PROJECT_DIR$/src/Modelo/FinalTableModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="92" column="12" lean-forward="false" selection-start-line="92" selection-start-column="12" selection-end-line="92" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Modelo/SemifinalsTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/Modelo/Final.java" />
+    <entry file="file://$PROJECT_DIR$/src/Modelo/Semifinals.java" />
+    <entry file="file://$PROJECT_DIR$/src/Vista/Paneles_generar.java" />
+    <entry file="file://$PROJECT_DIR$/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/awt/EventDispatchThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/RuntimeException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/NullPointerException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vista/CategoryCellEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/awt/event/MouseEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="816" column="0" lean-forward="false" selection-start-line="816" selection-start-column="0" selection-end-line="816" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/plaf/basic/BasicTableUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="1018" column="0" lean-forward="false" selection-start-line="1018" selection-start-column="0" selection-end-line="1018" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/awt/Point.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/awt/geom/Point2D.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="237" column="0" lean-forward="false" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-          <folding />
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/csvreader/CsvReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="1089" column="59" lean-forward="false" selection-start-line="1089" selection-start-column="59" selection-end-line="1089" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Modelo/DataBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="87" column="17" lean-forward="false" selection-start-line="87" selection-start-column="17" selection-end-line="87" selection-end-column="17" />
-          <folding>
-            <element signature="method#getIDfromCategoryList#0;class#DataBase#0" expanded="false" />
-            <element signature="e#2856#2857#0" expanded="false" />
-            <element signature="e#2880#2881#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="128">
+          <caret line="61" column="52" lean-forward="false" selection-start-line="61" selection-start-column="52" selection-end-line="61" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modelo/Players.java">
+    <entry file="file://$PROJECT_DIR$/src/Vista/GraphicInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="42" lean-forward="false" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
-          <folding>
-            <element signature="method#setSexo#0;class#Players#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modelo/MotosTableModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="method#createPointsArray#0;class#MotosTableModel#0" expanded="false" />
-            <element signature="method#tableChanged#0;class#MotosTableModel#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vista/Paneles_generar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modelo/CategoriesManagement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="132" column="40" lean-forward="false" selection-start-line="132" selection-start-column="40" selection-end-line="132" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="docComment;class#CategoriesManagement#0" expanded="false" />
-            <element signature="method#setExistingCategories#0;class#CategoriesManagement#0" expanded="false" />
-            <element signature="method#setListenerButton#0;class#CategoriesManagement#0" expanded="false" />
-            <element signature="method#creationArrayOfButtons#0;class#CategoriesManagement#0" expanded="false" />
-            <element signature="method#panelCategoriesVisualConfiguration#0;class#CategoriesManagement#0" expanded="false" />
-            <element signature="method#getSpecificCategoryArray#0;class#CategoriesManagement#0" expanded="false" />
-            <element signature="method#getCategoriesByGender#0;class#CategoriesManagement#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="101">
+          <caret line="150" column="44" lean-forward="false" selection-start-line="150" selection-start-column="44" selection-end-line="150" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Modelo/MainTableModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#MainTableModel#0;class#MainTableModel#0" expanded="false" />
-            <element signature="method#MainTableModel#1;class#MainTableModel#0" expanded="false" />
-            <element signature="method#setTabla#0;class#MainTableModel#0" expanded="false" />
-            <element signature="e#1285#1286#0" expanded="false" />
-            <element signature="e#1314#1315#0" expanded="false" />
-            <element signature="e#1349#1350#0" expanded="false" />
-            <element signature="e#1384#1385#0" expanded="false" />
-            <element signature="e#1434#1435#0" expanded="false" />
-            <element signature="e#1473#1474#0" expanded="false" />
-            <element signature="e#1522#1523#0" expanded="false" />
-            <element signature="e#1556#1557#0" expanded="false" />
-            <element signature="e#1597#1598#0" expanded="false" />
-            <element signature="e#1619#1620#0" expanded="false" />
-            <element signature="e#1674#1675#0" expanded="false" />
-            <element signature="e#1707#1708#0" expanded="false" />
-            <element signature="method#getValueAt#0;class#MainTableModel#0" expanded="false" />
-            <element signature="method#setValueAt#0;class#MainTableModel#0" expanded="false" />
-            <element signature="e#4681#4682#0" expanded="false" />
-            <element signature="e#4710#4711#0" expanded="false" />
-            <element signature="method#tableChanged#0;class#MainTableModel#0" expanded="false" />
-            <element signature="method#deleteRow#0;class#MainTableModel#0" expanded="false" />
-            <element signature="method#addRow#0;class#MainTableModel#0" expanded="false" />
-            <element signature="e#5204#5205#0" expanded="false" />
-            <element signature="e#5235#5236#0" expanded="false" />
-            <element signature="e#5280#5281#0" expanded="false" />
-            <element signature="e#5311#5312#0" expanded="false" />
-            <element signature="method#setPlayerCategory#0;class#MainTableModel#0" expanded="false" />
-            <element signature="method#setCategoriaCruiserSetValue#0;class#MainTableModel#0" expanded="false" />
-            <element signature="e#6494#6495#0" expanded="false" />
-            <element signature="e#6517#6518#0" expanded="false" />
-            <element signature="method#getPlayerById#0;class#MainTableModel#0" expanded="false" />
-            <element signature="method#getValueCategoryPosition#0;class#MainTableModel#0" expanded="false" />
-            <element signature="e#7005#7006#0" expanded="false" />
-            <element signature="e#7036#7037#0" expanded="false" />
-            <element signature="method#setSorter#0;class#MainTableModel#0" expanded="false" />
-            <element signature="e#7263#7264#0" expanded="false" />
-            <element signature="e#7295#7296#0" expanded="false" />
-            <element signature="e#7332#7333#0" expanded="false" />
-            <element signature="e#7361#7362#0" expanded="false" />
-            <element signature="method#getUnderlyingModelRow#0;class#MainTableModel#0" expanded="false" />
-            <element signature="method#getChangesToMainArray#0;class#MainTableModel#0" expanded="false" />
-            <element signature="method#deleteModifiedPlayerCategory#0;class#MainTableModel#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="120">
+          <caret line="289" column="35" lean-forward="false" selection-start-line="289" selection-start-column="35" selection-end-line="289" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Modelo/MotosTableModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="111" column="37" lean-forward="false" selection-start-line="111" selection-start-column="37" selection-end-line="111" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controlador/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1413,80 +1249,117 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Modelo/Moto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="36" column="53" lean-forward="false" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state relative-caret-position="187">
+          <caret line="54" column="80" lean-forward="false" selection-start-line="54" selection-start-column="80" selection-end-line="54" selection-end-column="80" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modelo/Manga.java">
+    <entry file="file://$PROJECT_DIR$/src/Modelo/FinalsTableModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="27" column="70" lean-forward="false" selection-start-line="27" selection-start-column="70" selection-end-line="27" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#919#920#0" expanded="false" />
-            <element signature="e#952#953#0" expanded="false" />
-            <element signature="e#998#999#0" expanded="false" />
-            <element signature="e#1029#1030#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="187">
+          <caret line="14" column="30" lean-forward="false" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vista/GraphicInterface.java">
+    <entry file="file://$PROJECT_DIR$/src/Modelo/CSVReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#conectorControlador#0;class#GraphicInterface#0" expanded="false" />
-            <element signature="method#setCellEditor#0;class#GraphicInterface#0" expanded="false" />
-            <element signature="e#7563#7564#0" expanded="false" />
-            <element signature="e#7582#7583#0" expanded="false" />
-            <element signature="method#setAllPlayersModel#0;class#GraphicInterface#0" expanded="false" />
-            <element signature="method#changeTableModel#0;class#GraphicInterface#0" expanded="false" />
-            <element signature="e#8288#8289#0" expanded="false" />
-            <element signature="e#8311#8312#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="51">
+          <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controlador/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2465">
-          <caret line="158" column="22" lean-forward="false" selection-start-line="158" selection-start-column="22" selection-end-line="158" selection-end-column="22" />
+        <state relative-caret-position="1462">
+          <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Modelo/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Modelo/CategoriesManagement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="45" column="54" lean-forward="false" selection-start-line="45" selection-start-column="54" selection-end-line="45" selection-end-column="54" />
           <folding>
-            <element signature="method#mouseClicked#0;class#Controller#0" expanded="false" />
-            <element signature="method#generateButtonsForPanels#0;class#Controller#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="docComment;class#CategoriesManagement#0" expanded="false" />
+            <element signature="method#setListenerButton#0;class#CategoriesManagement#0" expanded="false" />
+            <element signature="method#creationArrayOfButtons#0;class#CategoriesManagement#0" expanded="false" />
+            <element signature="method#panelCategoriesVisualConfiguration#0;class#CategoriesManagement#0" expanded="false" />
+            <element signature="method#splitAllPlayersIntoSpecificCategory#0;class#CategoriesManagement#0" expanded="false" />
+            <element signature="method#getSpecificCategoryArray#0;class#CategoriesManagement#0" expanded="false" />
+            <element signature="method#getCategoriesByGender#0;class#CategoriesManagement#0" expanded="false" />
+            <element signature="method#getAllExistingCategoriesWithPlayers#0;class#CategoriesManagement#0" expanded="false" />
+            <element signature="method#getAllExistingCategoriesIdArray#0;class#CategoriesManagement#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Modelo/Players.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3859">
+          <caret line="310" column="0" lean-forward="false" selection-start-line="310" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
+          <folding>
+            <element signature="method#setRankingCopaEspanyola#0;class#Players#0" expanded="false" />
+            <element signature="method#setRankingCampeonatoEspanya#0;class#Players#0" expanded="false" />
+            <element signature="method#getDescripcion#0;class#Players#0" expanded="false" />
+            <element signature="method#setRankingCruiserRegional#0;class#Players#0" expanded="false" />
+            <element signature="method#setRankingCruiserNacional#0;class#Players#0" expanded="false" />
+            <element signature="e#8487#8488#0" expanded="true" />
+            <element signature="e#8547#8548#0" expanded="true" />
+            <element signature="e#8587#8588#0" expanded="true" />
+            <element signature="e#8628#8629#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Modelo/AllGames.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="38" column="62" lean-forward="false" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="62" />
+        <state relative-caret-position="714">
+          <caret line="46" column="31" lean-forward="false" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
           <folding>
-            <element signature="e#2132#2133#0" expanded="false" />
-            <element signature="e#2166#2167#0" expanded="false" />
+            <element signature="method#createPrintButtons#0;class#AllGames#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Modelo/FinalsManga.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="56" column="54" lean-forward="false" selection-start-line="56" selection-start-column="54" selection-end-line="56" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Modelo/Manga.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="16" column="30" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Modelo/SingleGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        <state relative-caret-position="83">
+          <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#generateAllMangas#0;class#SingleGame#0" expanded="false" />
+            <element signature="method#generateGamePanel#0;class#SingleGame#0" expanded="false" />
+            <element signature="method#setNumber_of_manga_int#0;class#SingleGame#0" expanded="false" />
           </folding>
         </state>
       </provider>

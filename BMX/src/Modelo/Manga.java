@@ -14,20 +14,41 @@ import java.util.TreeMap;
 public class Manga {
 
     private JPanel panelManga;
-    private Map<Integer, Moto> mangaMap;
-    private Map<Integer, ArrayList<Players>> listToSplitIntoMotos;
+    private Map<Integer, Moto> motosMap;
+    private ArrayList<Players> mangaPlayersArray;
+    private JLabel numberOfMangaLabel;
+
 
     public Manga(ArrayList<Players> allPlayersOfThisManga){
 
-        mangaMap = new TreeMap<>();
+        motosMap = new TreeMap<>();
         panelManga = new JPanel();
-        panelManga.setLayout(new GridLayout(0,3));
+        GridBagLayout gbl = new GridBagLayout();
+        panelManga.setLayout(gbl);
+        GridBagConstraints constraints = new GridBagConstraints();
+        gbl.columnWeights = new double[] {-10.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0};
+        gbl.rowWeights = new double[] {1.0, 1.0, 1.0, 1.0, Double.MIN_VALUE};
+        constraints.anchor = GridBagConstraints.NORTH;
+        constraints.gridx = 0;
+        constraints.gridy = 0;
+        constraints.gridwidth = 1;
+        constraints.gridheight = 3;
+        constraints.fill = GridBagConstraints.BOTH;
+        constraints.weighty = 0.0;
+        numberOfMangaLabel = new JLabel();
+        panelManga.add(numberOfMangaLabel, constraints);
+
         splitPlayerstoSpecificMoto(allPlayersOfThisManga);
 
         for (int i = 1; i<= 3; i++){
-            Moto moto = new Moto(i /*listToSplitIntoMotos.get(i-1)*/);
-            mangaMap.put(i, moto);
-            panelManga.add(moto.getMotoPanel());
+            Moto moto = new Moto(i /*mangaPlayersArray.get(i-1)*/);
+            motosMap.put(i, moto);
+            constraints.gridx += constraints.gridwidth;
+            constraints.gridy = 0;
+            constraints.gridwidth = 2;
+            constraints.gridheight = 3;
+            panelManga.add(moto.getMotoPanel(), constraints);
+
         }
     }
 
@@ -35,13 +56,16 @@ public class Manga {
         return panelManga;
     }
 
-    public Map<Integer, Moto> getMangaMap(){
-        return mangaMap;
+    public Map<Integer, Moto> getMotosMap(){
+        return motosMap;
     }
 
     private void splitPlayerstoSpecificMoto(ArrayList<Players> allPlayers){
+    }
 
-
+    public void setNumberOfMangaLabel(String numberOfManga){
+        numberOfMangaLabel.setText(numberOfManga);
+        numberOfMangaLabel.setHorizontalTextPosition(JLabel.CENTER);
     }
 
 

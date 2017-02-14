@@ -155,7 +155,7 @@ public class MainTableModel extends AbstractTableModel implements Constants, Tab
 				player_temp.setAnyoNacimiento((int) value);
 				break;
 			case 6:
-				if (value.toString() == "F"){
+				if (value.toString().equals("F")){
 					player_temp.setSexo(0);
 					break;
 				}
@@ -287,8 +287,8 @@ public class MainTableModel extends AbstractTableModel implements Constants, Tab
 			return sorter;
 		}
 
-		public void setIsMainTable(boolean is){
-			this.is_main_table = is;
+		public void setIsMainTable(){
+			this.is_main_table = true;
 		}
 
 		public boolean getIsMainTable (){
@@ -299,11 +299,11 @@ public class MainTableModel extends AbstractTableModel implements Constants, Tab
 		}
 
 		public void getChangesToMainArray(ArrayList<Players> categoryPlayersArray){
-		    if (is_main_table ==false) {
+		    if (!is_main_table) {
 				for (Players selectedPlayer : categoryPlayersArray) {
                     for (Players selectedViewPlayer : list_p) {
                         if (selectedPlayer.getId() == selectedViewPlayer.getId()) {
-                            if (is_main_table == false) {
+                            if (!is_main_table) {
                                 selectedPlayer = selectedViewPlayer;
                                 }
                             }

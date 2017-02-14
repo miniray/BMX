@@ -26,7 +26,7 @@ public class MotosTableModel implements Constants, TableModel , TableModelListen
     private void createPointsArray(){
 
         for (int i = 0; i <= 8; i++ ){
-            ArrayList array = new ArrayList<>();
+            ArrayList<Object> array = new ArrayList<>();
             array.add(i);
             array.add("");
             list_p.add(array);
@@ -73,9 +73,9 @@ public class MotosTableModel implements Constants, TableModel , TableModelListen
         switch(columnIndex) {
 
             case 0:
-                return ((ArrayList) (list_p.get(rowIndex))).get(0);
+                return list_p.get(rowIndex).get(0);
             case 1:
-                return ((ArrayList)(list_p.get(rowIndex))).get(1);
+                return list_p.get(rowIndex).get(1);
             default:
                 return 0;
         }
@@ -88,7 +88,7 @@ public class MotosTableModel implements Constants, TableModel , TableModelListen
 
     @Override
     public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
-        ArrayList temp = (ArrayList) list_p.get(rowIndex);
+        ArrayList<Object> temp = list_p.get(rowIndex);
 
         switch(columnIndex) {
             case 0:
@@ -98,16 +98,19 @@ public class MotosTableModel implements Constants, TableModel , TableModelListen
                 temp.set(1, aValue);
                 break;
         }
-
     }
 
     @Override
     public void addTableModelListener(TableModelListener l) {
-
     }
 
     @Override
     public void removeTableModelListener(TableModelListener l) {
 
     }
+
+    public void setPositionsAsTitle (){
+        titulos[0] = "Posicion";
+    }
+
 }

@@ -1,5 +1,6 @@
 package Controlador;
 
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
@@ -19,7 +20,6 @@ public class Controller implements ActionListener, MouseListener, TableModelList
 	private DataBase dataBase;
 	private PlayersImportationFrame playersImportationFrame;
 	private boolean is_generated = false;
-	private AllGames Carrera = new AllGames();
 
 	public Controller(GraphicInterface graphicInterface, DataBase dataBase, PlayersImportationFrame playersImportationFrame){
 		
@@ -59,6 +59,7 @@ public class Controller implements ActionListener, MouseListener, TableModelList
 
 	@Override
 	public void mousePressed(MouseEvent arg0) {
+		System.out.println(arg0.getSource()+ "   vas millorant!");
 
 	}
 
@@ -99,7 +100,6 @@ public class Controller implements ActionListener, MouseListener, TableModelList
 				break;
 
             case "ANYADIR":
-                    System.out.println(graphicInterface.getCategory().getSelectedIndex());
                 break;
 
             case "ELIMINAR":
@@ -109,7 +109,7 @@ public class Controller implements ActionListener, MouseListener, TableModelList
             case "GENERAR":
                 is_generated = true;
                 graphicInterface.setCellEditor();
-                Carrera = new AllGames(graphicInterface.getCardPanel());
+				AllGames carrera = new AllGames(graphicInterface.getCardPanel(), graphicInterface.getPanelBotonTodos());
                 break;
 
 		    case "RANKING":
@@ -125,7 +125,7 @@ public class Controller implements ActionListener, MouseListener, TableModelList
 				break;
 
 			case "MBUTTON":
-			    if (is_generated == false) {
+			    if (!is_generated) {
                     dataBase.buttonAllControl = false;
                     graphicInterface.changeTableModel(CategoriesManagement.getSpecificCategoryArray(male, dataBase.getIDfromCategoryList(male, buttonText)), dataBase.getController());
                 }else{
@@ -137,7 +137,7 @@ public class Controller implements ActionListener, MouseListener, TableModelList
 				break;
 
             case "FBUTTON":
-                if (is_generated == false) {
+                if (!is_generated) {
                     dataBase.buttonAllControl = false;
                     graphicInterface.changeTableModel(CategoriesManagement.getSpecificCategoryArray(female, dataBase.getIDfromCategoryList(female, buttonText)), dataBase.getController());
                 }else{
@@ -148,7 +148,7 @@ public class Controller implements ActionListener, MouseListener, TableModelList
                 break;
 
             case "CBUTTON":
-                if(is_generated == false) {
+                if(!is_generated) {
                     dataBase.buttonAllControl = false;
                     graphicInterface.changeTableModel(CategoriesManagement.getSpecificCategoryArray(cruiser, dataBase.getIDfromCategoryList(cruiser, buttonText)), dataBase.getController());
                 }else{
@@ -171,7 +171,12 @@ public class Controller implements ActionListener, MouseListener, TableModelList
 				System.out.println("ESTAMOS BUSCANDO CATEGORIAS  " + arg0.getSource());
 				generateButtonsForPanels();
 				((MainTableModel)(graphicInterface.getMainTable().getModel())).getChangesToMainArray(graphicInterface.getMainTableModel().getArray());
-                graphicInterface.getMainTable().updateUI();
+                if(graphicInterface == null){
+                	System.out.println("PER FI");
+				}else {
+					graphicInterface.getMainTable().updateUI();
+					System.out.println("HOLA");
+				}
 			}
 		//}
 	}

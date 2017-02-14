@@ -23,12 +23,9 @@ public class PlayersImportationFrame implements Constants {
 	private JButton btn_pasar_todos = new JButton ("TODOS");
 	public JTable importedPlayersTable;
 	public JTable tab_part_sel;
-	private JPanel p_tab_totales = new JPanel();
-	private JPanel p_tab_sel = new JPanel();
-	private JPanel p_botones = new JPanel();
-	
-	
-	public PlayersImportationFrame() {
+
+
+    public PlayersImportationFrame() {
 		 
 		importedPlayersTable = new JTable();
 		tab_part_sel = new JTable();
@@ -43,7 +40,8 @@ public class PlayersImportationFrame implements Constants {
 		GridBagConstraints constraints = new GridBagConstraints();
 
 		//TABLA TOTALES (IZQUIERDA)
-		p_tab_totales.setLayout(new GridLayout(0,1));
+        JPanel p_tab_totales = new JPanel();
+        p_tab_totales.setLayout(new GridLayout(0,1));
 		p_tab_totales.setBorder(new EmptyBorder(30,30,30,30));
 		p_tab_totales.add(importedPlayersTable);
 		p_tab_totales.setBackground(Color.cyan);
@@ -61,7 +59,8 @@ public class PlayersImportationFrame implements Constants {
 		frame_import.getContentPane().add(p_tab_totales, constraints);
 
 		//PANEL BOTONES (CENTRAL)
-		p_botones.setLayout(new BorderLayout());
+        JPanel p_botones = new JPanel();
+        p_botones.setLayout(new BorderLayout());
 		p_botones.setBorder(new EmptyBorder (250, 30, 230, 30));
 		p_botones.add(btn_aceptar, BorderLayout.CENTER);
 		p_botones.add(btn_pasar_todos, BorderLayout.SOUTH);
@@ -73,7 +72,8 @@ public class PlayersImportationFrame implements Constants {
 		frame_import.getContentPane().add(p_botones, constraints);
 
 		//TABLE SELECCIONADOS (DERECHA)
-		p_tab_sel.setLayout(new GridLayout(0,1));
+        JPanel p_tab_sel = new JPanel();
+        p_tab_sel.setLayout(new GridLayout(0,1));
 		p_tab_sel.setBorder(new EmptyBorder(30,30,30,30));
 		p_tab_sel.add(tab_part_sel);
 		p_tab_sel.setBackground(Color.yellow);
