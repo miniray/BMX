@@ -43,12 +43,16 @@ public class AllGames {
         for (int gender = 0; gender < allExistingCategoriesIdArray.size(); gender++){
             for (int position_of_category = 0; position_of_category < allExistingCategoriesIdArray.get(gender).size(); position_of_category++){
                 int category = allExistingCategoriesIdArray.get(gender).get(position_of_category);
-                SingleGame singleGame = new SingleGame( category, allPlayersByCategoryArray.get(gender).get(category));
-                if (gender == 2 ){
-                    singleGame.setIsCruiserRace(true);
-                }
+                if ( gender == 2 & position_of_category == 0){
+
+                }else{
+                SingleGame singleGame = new SingleGame( gender,category, allPlayersByCategoryArray.get(gender).get(category));
                 allGamesmap.get(gender).put(category, singleGame);
                 mainPanel.add(singleGame.getAllMangasPanel(), Integer.toString(gender) + Integer.toString(category));
+                if (gender == 2 & position_of_category != 0 ){
+                    singleGame.setIsCruiserRace(true);
+                }
+                }
             }
         }
         createPrintButtons(buttonTodosPanel);
@@ -60,12 +64,14 @@ public class AllGames {
 
     private void createPrintButtons(JPanel buttonsPanel){
 
-        buttonsPanel.setLayout(new GridLayout(0,3));
+        buttonsPanel.setLayout(new GridLayout(0,4));
         JButton printMangas = new JButton("PRINT MANGAS");
+        JButton printQuarterfinals = new JButton(" PRINT CUARTOS DE FINAL");
         JButton printSemifinals = new JButton("PRINT SEMIFINALS");
         JButton printFinals = new JButton("PRINT FINALS");
         buttonsPanel.removeAll();
         buttonsPanel.add(printMangas);
+        buttonsPanel.add(printQuarterfinals);
         buttonsPanel.add(printSemifinals);
         buttonsPanel.add(printFinals);
         buttonsPanel.updateUI();
@@ -78,6 +84,14 @@ public class AllGames {
                 SingleGame tempManga = allGamesmap.get(mangas_order[i][0]).get(mangas_order[i][1]);
                 tempManga.setNumber_of_manga_int(number_of_manga);
                 number_of_manga = tempManga.getNumber_of_manga_int();
+            }
+        }
+    }
+
+    public void calculateAllPointsOfAllSingleGames(){
+        for(int i= 0; i<3; i++){
+            for (Map.Entry<Integer,SingleGame> entry: allGamesmap.get(i).entrySet()){
+                entry.getValue().calculateAllMangasPoints();
             }
         }
     }

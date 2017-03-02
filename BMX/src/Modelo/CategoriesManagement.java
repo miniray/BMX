@@ -67,13 +67,15 @@ public class CategoriesManagement {
         existingCategoriesButtonsArray = new ArrayList<>();
         int sex = 0;
         String[] genderCategories = {"F", "M", "C"};
-        Color[] buttonsColorBackgroung= {Color.blue, Color.white, Color.green};
 
+        Color red = new Color(247,55,55);
+        Color blue = new Color(55,74,246);
+        Color white = new Color(226,227,239);
+        Color[] buttonsColorBackgroung= {blue, white, red};
         for (ArrayList<Integer> genderCategoryArray : allExistingCategoriesIdArray) {
             for (int category_id : genderCategoryArray) {
 
                 JButton categoryButton = new JButton();
-
                 categoryButton.setText((selectedCategoryArray.get(sex)[category_id]));
 
                 categoryButton.setBackground(buttonsColorBackgroung[sex]);

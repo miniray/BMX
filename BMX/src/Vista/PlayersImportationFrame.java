@@ -33,8 +33,8 @@ public class PlayersImportationFrame implements Constants {
 
 
 		GridBagLayout gbl2 = new GridBagLayout();
-		gbl2.columnWeights = new double[] {1.0, 1.0,  1.0, 1.0, Double.MIN_VALUE};
-		gbl2.rowWeights = new double[] {1.0, 1.0, 1.0, 1.0, Double.MIN_VALUE};
+		gbl2.columnWeights = new double[] {1.0, 1.0, 1.0, 1.0,1.0,1.0, 1.0, 1.0, 1.0,1.0};
+		gbl2.rowWeights = new double[] {1.0, 1.0, 1.0, 1.0,1.0};
 		frame_import.setLayout(gbl2);
 		
 		GridBagConstraints constraints = new GridBagConstraints();
@@ -42,9 +42,7 @@ public class PlayersImportationFrame implements Constants {
 		//TABLA TOTALES (IZQUIERDA)
         JPanel p_tab_totales = new JPanel();
         p_tab_totales.setLayout(new GridLayout(0,1));
-		p_tab_totales.setBorder(new EmptyBorder(30,30,30,30));
 		p_tab_totales.add(importedPlayersTable);
-		p_tab_totales.setBackground(Color.cyan);
 		JScrollPane sp_total = new JScrollPane(importedPlayersTable);
 		sp_total.setVisible(true);
 		p_tab_totales.add(sp_total);
@@ -53,7 +51,7 @@ public class PlayersImportationFrame implements Constants {
 		constraints.anchor = GridBagConstraints.CENTER;
 		constraints.gridx = 0;
 		constraints.gridy = 0;
-		constraints.gridwidth = 4;
+		constraints.gridwidth = 5;
 		constraints.gridheight = 3;
 		constraints.weighty = 0.0;
 		frame_import.getContentPane().add(p_tab_totales, constraints);
@@ -62,10 +60,11 @@ public class PlayersImportationFrame implements Constants {
         JPanel p_botones = new JPanel();
         p_botones.setLayout(new BorderLayout());
 		p_botones.setBorder(new EmptyBorder (250, 30, 230, 30));
-		p_botones.add(btn_aceptar, BorderLayout.CENTER);
+		p_botones.setBackground(Color.darkGray);
+		p_botones.add(btn_aceptar, BorderLayout.NORTH);
 		p_botones.add(btn_pasar_todos, BorderLayout.SOUTH);
 		
-		constraints.gridx = 4;
+		constraints.gridx = 5;
 		constraints.gridy = 0;
 		constraints.gridwidth = 1;
 		constraints.gridheight = 3;
@@ -74,9 +73,7 @@ public class PlayersImportationFrame implements Constants {
 		//TABLE SELECCIONADOS (DERECHA)
         JPanel p_tab_sel = new JPanel();
         p_tab_sel.setLayout(new GridLayout(0,1));
-		p_tab_sel.setBorder(new EmptyBorder(30,30,30,30));
 		p_tab_sel.add(tab_part_sel);
-		p_tab_sel.setBackground(Color.yellow);
 		JScrollPane sp_sel = new JScrollPane(tab_part_sel);
 		sp_sel.setVisible(true);
 		p_tab_sel.add(sp_sel);

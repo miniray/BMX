@@ -11,7 +11,7 @@ import javax.swing.table.TableRowSorter;
 public class MainTableModel extends AbstractTableModel implements Constants, TableModel, TableModelListener {
 
 		Class[] column_names = {Integer.class, Integer.class,Object.class, Object.class, Object.class, Integer.class, Object.class, JComboBox.class,Integer.class, JComboBox.class, Integer.class};	
-		String titulos[] = {"Licencia", "Placa", "Nombre", "Apellido", "2 Apellido", "Nacimiento", "Sexo", "Categoria", "Ranking", "Cruiser", "Rank Cruiser"};
+		private String titulos[] = {"Licencia", "Placa", "Nombre", "Apellido", "2 Apellido", "Nacimiento", "Sexo", "Categoria", "Ranking", "Cruiser", "Rank Cruiser"};
 		private ArrayList<Players> list_p;
 		private int combo_box_category = 0;
         private TableRowSorter sorter;
@@ -140,7 +140,7 @@ public class MainTableModel extends AbstractTableModel implements Constants, Tab
 				player_temp.setLicencia((int) value);
 				break;
 			case 1:
-				player_temp.setPlaca((int) value);
+				player_temp.setPlaca(String.valueOf(value));
 				break;
 			case 2:
 				player_temp.setNombre((String) value);

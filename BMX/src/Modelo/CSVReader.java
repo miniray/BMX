@@ -25,7 +25,7 @@ class CSVReader {
 				while (importedFile.readRecord()){
 				
 					tempPlayer = new Players(Integer.parseInt(importedFile.get(0)),Integer.parseInt(importedFile.get(1)),
-										Integer.parseInt(importedFile.get(2)), importedFile.get(3), importedFile.get(4),
+										importedFile.get(2), importedFile.get(3), importedFile.get(4),
 										importedFile.get(5), Integer.parseInt(importedFile.get(6)),
 										Integer.parseInt(importedFile.get(7)),Integer.parseInt(importedFile.get(8)),
 										Integer.parseInt(importedFile.get(9)), Integer.parseInt(importedFile.get(10)),

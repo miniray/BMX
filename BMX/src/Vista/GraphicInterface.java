@@ -114,7 +114,8 @@ public class GraphicInterface implements Constants {
 		JButton btn_imprimirFinales = new JButton("IMPRIMIR FINALES");
 
 		//PANEL BOTONES
-		panel_botones.setBackground(Color.blue);
+		Color colorBotones = new Color(64,64,64);
+		panel_botones.setBackground(colorBotones);
 		panel_botones.setLayout(new GridLayout(6,0,0,50));
 		panel_botones.setBorder(new EmptyBorder(20,30,30,20));
 		panel_botones.add(btn_importar);
@@ -138,7 +139,8 @@ public class GraphicInterface implements Constants {
 
 		//PANEL CENTRAL CON TABLA
 		panel_central.setLayout(new GridLayout(0,1));
-		//panel_central.add(tabla);
+		Color colorTabla = new Color(224,224,224);
+		tabla.setBackground(colorTabla);
 		tabla.setModel(mtm_principal);
 		panel_central.setBackground(Color.cyan);
 		JScrollPane scroller1 = new JScrollPane(tabla);

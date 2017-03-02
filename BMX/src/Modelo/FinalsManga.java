@@ -2,6 +2,7 @@ package Modelo;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -12,18 +13,32 @@ public class FinalsManga {
 
     private JPanel finalMangaPanel;
 
+    private ArrayList<Players> quarterPlayers1;
+    private ArrayList<Players> quarterPlayers2;
+    private ArrayList<Players> quarterPlayers3;
+    private ArrayList<Players> quarterPlayers4;
+
+    private ArrayList<Players> semifinalsPlayers1;
+    private ArrayList<Players> semifinalsPlayers2;
+    private ArrayList<Players> finalsPlayers;
 
     private Moto finalMoto;
 
     public FinalsManga(int numberOfPlayers){
         finalMangaPanel = new JPanel();
-
+        finalMangaPanel.setBackground(new Color(64,64,64));
         if (numberOfPlayers > 8 && numberOfPlayers <= 16){
             finalMangaPanel.setLayout(new GridLayout(0,3));
-            finalMoto = new Moto(0);
+            finalsPlayers = new ArrayList<>();
+            for (int i = 0; i< 8; i++){
+                Players temp = new Players();
+                finalsPlayers.add(temp);
+            }
+            finalMoto = new Moto(0, finalsPlayers);
             finalMoto.setMotoTitle("FINAL");
             finalMangaPanel.add(finalMoto.getMotoPanel(), 0);
         }
+
 
         //CREAR 2 SEMIFINALS Y AÑADIR AL MAP DE SINGLEGAME + AL PANEL DE ALLGAME
         if (numberOfPlayers > 16 && numberOfPlayers <= 32){
@@ -48,9 +63,12 @@ public class FinalsManga {
 
     private void createSemifinalsCase (){
         Map<Integer, Moto> semifinalsMotosMap = new TreeMap<>();
-        Moto semiMoto1 = new Moto(0);
-        Moto semiMoto2 = new Moto(0);
-        finalMoto = new Moto (0);
+        semifinalsPlayers1 = new ArrayList<>();
+        semifinalsPlayers2 = new ArrayList<>();
+        finalsPlayers = new ArrayList<>();
+        Moto semiMoto1 = new Moto(0,semifinalsPlayers1);
+        Moto semiMoto2 = new Moto(0, semifinalsPlayers2);
+        finalMoto = new Moto (0, finalsPlayers);
         semiMoto1.setMotoTitle("SEMIFINAL 1");
         semiMoto2.setMotoTitle("SEMIFINAL 2");
         finalMoto.setMotoTitle("FINAL");
@@ -64,10 +82,16 @@ public class FinalsManga {
 
     private void createQuartersCase (){
         Map<Integer, Moto> quarterMotosMap = new TreeMap<>();
-        Moto quarter1 = new Moto(0);
-        Moto quarter2 = new Moto(0);
-        Moto quarter3 = new Moto(0);
-        Moto quarter4 = new Moto(0);
+
+        quarterPlayers1 = new ArrayList<>();
+        quarterPlayers2 = new ArrayList<>();
+        quarterPlayers3 = new ArrayList<>();
+        quarterPlayers4 = new ArrayList<>();
+
+        Moto quarter1 = new Moto(0, quarterPlayers1);
+        Moto quarter2 = new Moto(0, quarterPlayers2);
+        Moto quarter3 = new Moto(0, quarterPlayers3);
+        Moto quarter4 = new Moto(0, quarterPlayers4);
 
         quarter1.setMotoTitle("QUARTER 1");
         quarter2.setMotoTitle("QUARTER 2");

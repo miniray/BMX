@@ -1,10 +1,10 @@
 package Controlador;
 
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.Map;
 
 import javax.swing.*;
 import javax.swing.event.TableModelEvent;
@@ -20,7 +20,8 @@ public class Controller implements ActionListener, MouseListener, TableModelList
 	private DataBase dataBase;
 	private PlayersImportationFrame playersImportationFrame;
 	private boolean is_generated = false;
-
+    private AllGames carrera;
+    private resultsController rsController;
 	public Controller(GraphicInterface graphicInterface, DataBase dataBase, PlayersImportationFrame playersImportationFrame){
 		
 		this.playersImportationFrame = playersImportationFrame;
@@ -59,7 +60,6 @@ public class Controller implements ActionListener, MouseListener, TableModelList
 
 	@Override
 	public void mousePressed(MouseEvent arg0) {
-		System.out.println(arg0.getSource()+ "   vas millorant!");
 
 	}
 
@@ -109,14 +109,15 @@ public class Controller implements ActionListener, MouseListener, TableModelList
             case "GENERAR":
                 is_generated = true;
                 graphicInterface.setCellEditor();
-				AllGames carrera = new AllGames(graphicInterface.getCardPanel(), graphicInterface.getPanelBotonTodos());
+				carrera = new AllGames(graphicInterface.getCardPanel(), graphicInterface.getPanelBotonTodos());
+				rsController = new resultsController(carrera);
+				connectResultsController();
                 break;
 
 		    case "RANKING":
 
 				graphicInterface.getMainTableModel().setCombo_box_category(graphicInterface.getCategory().getSelectedIndex());
 				graphicInterface.getMainTableModel().fireTableDataChanged();
-				System.out.println("RANKING COMBOBOX CHANGED TO " + graphicInterface.getCategory().getSelectedItem());
 			    break;
 
 			case "TODOS":
@@ -130,8 +131,7 @@ public class Controller implements ActionListener, MouseListener, TableModelList
                     graphicInterface.changeTableModel(CategoriesManagement.getSpecificCategoryArray(male, dataBase.getIDfromCategoryList(male, buttonText)), dataBase.getController());
                 }else{
 			        graphicInterface.card.show(graphicInterface.panel_card,"1"+ dataBase.getIDfromCategoryList(male, buttonText));
-			        System.out.println("ENTRO en hombre con categoria: " + "1" + dataBase.getIDfromCategoryList(male, buttonText) );
-			        graphicInterface.getCardPanel().updateUI();
+					graphicInterface.getCardPanel().updateUI();
 
                 }
 				break;
@@ -142,7 +142,6 @@ public class Controller implements ActionListener, MouseListener, TableModelList
                     graphicInterface.changeTableModel(CategoriesManagement.getSpecificCategoryArray(female, dataBase.getIDfromCategoryList(female, buttonText)), dataBase.getController());
                 }else{
                     graphicInterface.card.show(graphicInterface.panel_card,"0"+ dataBase.getIDfromCategoryList(female, buttonText));
-                    System.out.println("ENTRO en mujer con categoria: " + "0" + dataBase.getIDfromCategoryList(female, buttonText) );
                     graphicInterface.getCardPanel().updateUI();
                 }
                 break;
@@ -153,14 +152,12 @@ public class Controller implements ActionListener, MouseListener, TableModelList
                     graphicInterface.changeTableModel(CategoriesManagement.getSpecificCategoryArray(cruiser, dataBase.getIDfromCategoryList(cruiser, buttonText)), dataBase.getController());
                 }else{
                     graphicInterface.card.show(graphicInterface.panel_card,"2"+ dataBase.getIDfromCategoryList(cruiser, buttonText));
-                    System.out.println("ENTRO en cruiser con categoria: " + "2" + dataBase.getIDfromCategoryList(cruiser, buttonText) );
+
                     graphicInterface.getCardPanel().updateUI();
                 }
                 break;
 
 			default:
-				System.out.println("ACCION NO LEIDA " + arg0);
-                System.out.println(arg0.getActionCommand());
 				break;
 		}
 	}
@@ -168,14 +165,11 @@ public class Controller implements ActionListener, MouseListener, TableModelList
 	public void tableChanged(TableModelEvent arg0) {
 		//if(dataBase.buttonAllControl == true) {
 			if (arg0.getSource() instanceof MainTableModel) {
-				System.out.println("ESTAMOS BUSCANDO CATEGORIAS  " + arg0.getSource());
 				generateButtonsForPanels();
 				((MainTableModel)(graphicInterface.getMainTable().getModel())).getChangesToMainArray(graphicInterface.getMainTableModel().getArray());
                 if(graphicInterface == null){
-                	System.out.println("PER FI");
 				}else {
 					graphicInterface.getMainTable().updateUI();
-					System.out.println("HOLA");
 				}
 			}
 		//}
@@ -188,6 +182,15 @@ public class Controller implements ActionListener, MouseListener, TableModelList
 				graphicInterface.panel_categoria_cruiser,graphicInterface.getCategory().getSelectedIndex());
 	}
 
+	public void connectResultsController(){
+		for (int i = 0; i < 3; i++){
+			for (Map.Entry<Integer, SingleGame> entry : carrera.getAllGamesmap().get(i).entrySet())
+			{
+                entry.getValue().connectCrontroller(rsController);
+			}
+
+		}
+	}
 }
 
 

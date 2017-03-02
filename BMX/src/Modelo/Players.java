@@ -6,7 +6,7 @@ public class Players {
 
     private int id = 0;
     private int licencia = 0;
-    private int placa = 0;
+    private String placa = "";
     private String nombre = "";
     private String apellido_1 = "";
     private String apellido_2 = "";
@@ -16,6 +16,8 @@ public class Players {
     private int categoria_espanya;
     private int categoria_regional;
     private int categoria_cruiser;
+    private int points;
+    private int total_points;
 
     private int ranking_liga_regional = 0;
     private int ranking_copa_regional = 0;
@@ -33,7 +35,7 @@ public class Players {
     public Players() {
     }
 
-    public Players(int id, int licencia, int placa,
+    public Players(int id, int licencia, String placa,
                    String nombre, String apellido_1, String apellido_2,
                    int anyo_nacimiento, int categoria_espanya, int categoria_regional,
                    int categoria_cruiser, int sexo, String provincia,
@@ -66,6 +68,8 @@ public class Players {
         this.ranking_otro_nacional = ranking_otro_nacional;
         this.ranking_cruiser_regional = ranking_cruiser_regional;
         this.ranking_cruiser_nacional = ranking_cruiser_nacional;
+        this.points= 0;
+        this.total_points = 0;
     }
 
     //ID
@@ -87,11 +91,11 @@ public class Players {
     }
 
     //PLACA
-    public void setPlaca(int placa) {
+    public void setPlaca(String placa) {
         this.placa = placa;
     }
 
-    public int getPlaca() {
+    public String getPlaca() {
         return placa;
     }
 
@@ -289,6 +293,17 @@ public class Players {
         return ranking_a_comparar;
     }
 
+    public void setPoints(int points){
+        this.total_points = points;
+    }
+
+    public int getPoints(){
+        return this.total_points;
+    }
+    public void addPoints(int points){
+        this.total_points = this.total_points + points;
+        System.out.println("TOTAL DEL PLAYER: "+ this.total_points + "    POINTS A SUMAR " + points);
+    }
 
     public static Comparator<Players> PlayerCampeonatoEspanyaComparator = new Comparator<Players>() {
         @Override

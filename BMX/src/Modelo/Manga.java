@@ -38,10 +38,10 @@ public class Manga {
         numberOfMangaLabel = new JLabel();
         panelManga.add(numberOfMangaLabel, constraints);
 
-        splitPlayerstoSpecificMoto(allPlayersOfThisManga);
+        mangaPlayersArray = allPlayersOfThisManga;
 
         for (int i = 1; i<= 3; i++){
-            Moto moto = new Moto(i /*mangaPlayersArray.get(i-1)*/);
+            Moto moto = new Moto(i, mangaPlayersArray);
             motosMap.put(i, moto);
             constraints.gridx += constraints.gridwidth;
             constraints.gridy = 0;
@@ -60,13 +60,34 @@ public class Manga {
         return motosMap;
     }
 
-    private void splitPlayerstoSpecificMoto(ArrayList<Players> allPlayers){
-    }
 
     public void setNumberOfMangaLabel(String numberOfManga){
         numberOfMangaLabel.setText(numberOfManga);
         numberOfMangaLabel.setHorizontalTextPosition(JLabel.CENTER);
     }
 
+    public ArrayList<Players> getMangaPlayersArray(){
+        return mangaPlayersArray;
+    }
+
+    public void calculateAllMotosPointsOfThisManga(){
+        for (Map.Entry<Integer, Moto> entry : motosMap.entrySet()) {
+            entry.getValue().getModelMotoTable().resetAllPlayersPoints();
+        }
+
+        for (Map.Entry<Integer, Moto> entry : motosMap.entrySet()){
+            entry.getValue().getModelMotoTable().updatePlayerPoints();
+            entry.getValue().getModelMotoTable().checkPlatesPointsLabel();
+        }
+
+    }
+
+    /*public void printMangas(){
+        int mangasq = 1;
+        for (Map.Entry<Integer, Moto> entry : motosMap.entrySet()) {
+            entry.getValue().getModelMotoTable().getAllPlayersInThisMoto();
+            mangasq++;
+       }
+    }*/
 
 }
