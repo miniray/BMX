@@ -19,8 +19,6 @@ public class AllGames {
             ,{2,1}, {2,2}, {2,3}, {2,4},{2,5}, {0,4}, {1,9}, {1,10}};
 
 
-    public AllGames(){}
-
     public AllGames(JPanel mainPanel, JPanel buttonTodosPanel){
 
         number_of_manga = 1;
@@ -43,15 +41,14 @@ public class AllGames {
         for (int gender = 0; gender < allExistingCategoriesIdArray.size(); gender++){
             for (int position_of_category = 0; position_of_category < allExistingCategoriesIdArray.get(gender).size(); position_of_category++){
                 int category = allExistingCategoriesIdArray.get(gender).get(position_of_category);
-                if ( gender == 2 & position_of_category == 0){
+                if (!( gender == 2 & position_of_category == 0)){
 
-                }else{
-                SingleGame singleGame = new SingleGame( gender,category, allPlayersByCategoryArray.get(gender).get(category));
-                allGamesmap.get(gender).put(category, singleGame);
-                mainPanel.add(singleGame.getAllMangasPanel(), Integer.toString(gender) + Integer.toString(category));
-                if (gender == 2 & position_of_category != 0 ){
-                    singleGame.setIsCruiserRace(true);
-                }
+                    SingleGame singleGame = new SingleGame( gender,category, allPlayersByCategoryArray.get(gender).get(category));
+                    allGamesmap.get(gender).put(category, singleGame);
+                    mainPanel.add(singleGame.getAllMangasPanel(), Integer.toString(gender) + Integer.toString(category));
+                    if (gender == 2 & position_of_category != 0 ){
+                        singleGame.setIsCruiserRace();
+                    }
                 }
             }
         }
@@ -79,9 +76,9 @@ public class AllGames {
 
     private void setNumberOfAllTheMangas(){
 
-        for (int i = 0; i < mangas_order.length; i++){
-            if (allGamesmap.get(mangas_order[i][0]).get(mangas_order[i][1]) != null) {
-                SingleGame tempManga = allGamesmap.get(mangas_order[i][0]).get(mangas_order[i][1]);
+        for (int[] aMangas_order : mangas_order) {
+            if (allGamesmap.get(aMangas_order[0]).get(aMangas_order[1]) != null) {
+                SingleGame tempManga = allGamesmap.get(aMangas_order[0]).get(aMangas_order[1]);
                 tempManga.setNumber_of_manga_int(number_of_manga);
                 number_of_manga = tempManga.getNumber_of_manga_int();
             }

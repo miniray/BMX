@@ -11,9 +11,9 @@ import java.awt.*;
 /**
  * Created by Miquel on 04/01/2017.
  */
-public class CategoryCellEditor extends DefaultCellEditor implements Constants, TableCellEditor {
+class CategoryCellEditor extends DefaultCellEditor implements Constants, TableCellEditor {
 
-    private JComboBox categoria;
+    private final JComboBox categoria;
 
     CategoryCellEditor(JComboBox categoria) {
         super(new JComboBox());
@@ -45,15 +45,15 @@ public class CategoryCellEditor extends DefaultCellEditor implements Constants, 
             }
         } else {
             if (categoria.getSelectedIndex() == 0) {
-                for (int i = 0; i < cat_espanya_masc.length; i++) {
-                    combo.addItem(cat_espanya_masc[i]);
+                for (String aCat_espanya_masc : cat_espanya_masc) {
+                    combo.addItem(aCat_espanya_masc);
 
                 }
                 combo.setSelectedIndex(player_temp.getCategoriaEspanya());
             }
             if (categoria.getSelectedIndex() == 1) {
-                for (int i = 0; i < cat_catalunya_masc.length; i++) {
-                    combo.addItem(cat_catalunya_masc[i]);
+                for (String aCat_catalunya_masc : cat_catalunya_masc) {
+                    combo.addItem(aCat_catalunya_masc);
                 }
                 combo.setSelectedIndex(player_temp.getCategoriaRegional());
             }

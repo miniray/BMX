@@ -8,11 +8,11 @@ import java.util.ArrayList;
 /**
  * Created by Miquel on 24/01/2017.
  */
-public class FinalTableModel implements Constants, TableModel, TableModelListener {
+class FinalTableModel implements Constants, TableModel, TableModelListener {
 
-        Class[] column_names = {Integer.class, String.class};
-        String titulos[] = {"Posicion", "Placa"};
-        ArrayList<ArrayList> list_p = new ArrayList();
+        private final Class[] column_names = {Integer.class, String.class};
+        private final String[] titulos = {"Posicion", "Placa"};
+        private ArrayList<ArrayList> list_p = new ArrayList();
         ArrayList<Players> playersInFinal = new ArrayList<>();
 
         public FinalTableModel(){

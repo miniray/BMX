@@ -11,9 +11,9 @@ import java.awt.*;
 /**
  * Created by Miquel on 04/01/2017.
  */
-public class CategoryCruiserCellEditor extends DefaultCellEditor implements Constants, TableCellEditor {
+class CategoryCruiserCellEditor extends DefaultCellEditor implements Constants, TableCellEditor {
 
-    JComboBox category;
+    private final JComboBox category;
 
     public CategoryCruiserCellEditor(JComboBox category) {
         super(new JComboBox());
@@ -28,18 +28,16 @@ public class CategoryCruiserCellEditor extends DefaultCellEditor implements Cons
         JComboBox comboCruiser = (JComboBox)getComponent();
         comboCruiser.removeAllItems();
 
-        if (player_temp.getSexo() == 0){
-
-        }else{
+        if (player_temp.getSexo() != 0){
 
             if (category.getSelectedIndex()== 0){
-                for(int i=0; i<cat_espanya_cruiser_masc.length; i++) {
-                    comboCruiser.addItem(cat_espanya_cruiser_masc[i]);
+                for (String aCat_espanya_cruiser_masc : cat_espanya_cruiser_masc) {
+                    comboCruiser.addItem(aCat_espanya_cruiser_masc);
                 }
             }
             if (category.getSelectedIndex()== 1){
-                for(int i=0; i<cat_catalunya_cruiser_masc.length; i++){
-                    comboCruiser.addItem(cat_catalunya_cruiser_masc[i]);
+                for (String aCat_catalunya_cruiser_masc : cat_catalunya_cruiser_masc) {
+                    comboCruiser.addItem(aCat_catalunya_cruiser_masc);
                 }
             }
             comboCruiser.setSelectedIndex(player_temp.getCategoriaCruiser());

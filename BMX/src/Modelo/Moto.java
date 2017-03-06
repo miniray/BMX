@@ -14,13 +14,12 @@ import java.util.ArrayList;
  */
 public class Moto implements TableModelListener {
 
-        private JPanel container;
-        private MotosTableModel tableModelMoto;
-        private ArrayList<Players> playersOfThisMoto;
+        private final JPanel container;
+        private final MotosTableModel tableModelMoto;
+        private final ArrayList<Players> playersOfThisMoto;
         private ArrayList<JLabel> labelsForPlayers;
-        protected JLabel motoTitle;
-        private int numero_moto;
-        private boolean is_quarter = false;
+        private final JLabel motoTitle;
+    private boolean is_quarter = false;
         private boolean is_semifinal = false;
         private boolean is_final = false;
 
@@ -28,7 +27,7 @@ public class Moto implements TableModelListener {
 
     public Moto(int number, ArrayList<Players> playersOfThisMoto) {
 
-        this.numero_moto = number;
+        int numero_moto = number;
 
         //INICIALIZACION
         this.playersOfThisMoto = playersOfThisMoto;
@@ -121,8 +120,8 @@ public class Moto implements TableModelListener {
         labelsForPlayers = new ArrayList();
         for (int i = 0; i < 8; i++){
             JLabel temp = new JLabel();
-            temp.setHorizontalAlignment(0);
-            temp.setVerticalAlignment(0);
+            temp.setHorizontalAlignment(SwingConstants.CENTER);
+            temp.setVerticalAlignment(SwingConstants.CENTER);
             temp.setBackground(Color.red);
             temp.setOpaque(true);
             labelsForPlayers.add(temp);
@@ -133,11 +132,12 @@ public class Moto implements TableModelListener {
         this.getModelMotoTable().setLabelsPlateArray(labelsForPlayers);
     }
 
-    public void insertPlayerNumberToLabels(){
+    private void insertPlayerNumberToLabels(){
         int contador = 0;
         if (playersOfThisMoto.size() > 8){
             System.out.println("NO PUEDE HABER MAS DE 8 PILOTOS POR MOTO"+ " \nActualmente hay: " + playersOfThisMoto.size());
         }
+        playersOfThisMoto.sort(Players.PlayerCampeonatoEspanyaComparator);
         for (Players aPlayer: playersOfThisMoto){
             System.out.println("PLACA: " + playersOfThisMoto.get(contador).getPlaca());
             labelsForPlayers.get(contador).setText(aPlayer.getPlaca());

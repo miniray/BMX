@@ -16,7 +16,6 @@ public class Players {
     private int categoria_espanya;
     private int categoria_regional;
     private int categoria_cruiser;
-    private int points;
     private int total_points;
 
     private int ranking_liga_regional = 0;
@@ -68,7 +67,7 @@ public class Players {
         this.ranking_otro_nacional = ranking_otro_nacional;
         this.ranking_cruiser_regional = ranking_cruiser_regional;
         this.ranking_cruiser_nacional = ranking_cruiser_nacional;
-        this.points= 0;
+        int points = 0;
         this.total_points = 0;
     }
 
@@ -146,8 +145,8 @@ public class Players {
     }
 
     //categoria REGIONAL
-    public void setCategoriaRegional(int categoria_regional) {
-        this.categoria_regional = categoria_regional;
+    private void setCategoriaRegional() {
+        this.categoria_regional = 0;
     }
 
     public int getCategoriaRegional() {
@@ -167,7 +166,7 @@ public class Players {
     public void setSexo(int sexo) {
         if (this.sexo != sexo) {
             this.setCategoriaEspanya(0);
-            this.setCategoriaRegional(0);
+            this.setCategoriaRegional();
             this.setCategoriaCruiser(0);
             this.sexo = sexo;
         } else {
@@ -293,8 +292,8 @@ public class Players {
         return ranking_a_comparar;
     }
 
-    public void setPoints(int points){
-        this.total_points = points;
+    public void setPoints(){
+        this.total_points = 0;
     }
 
     public int getPoints(){
@@ -305,26 +304,20 @@ public class Players {
         System.out.println("TOTAL DEL PLAYER: "+ this.total_points + "    POINTS A SUMAR " + points);
     }
 
-    public static Comparator<Players> PlayerCampeonatoEspanyaComparator = new Comparator<Players>() {
-        @Override
-        public int compare(Players p1, Players p2) {
-            int playerRankingCampeonatoEspanya1 = p1.getRankingCampeonatoEspanya();
-            int playerRankingCampeonatoEspanya2 = p2.getRankingCampeonatoEspanya();
+    public static final Comparator<Players> PlayerCampeonatoEspanyaComparator = (p1, p2) -> {
+        int playerRankingCampeonatoEspanya1 = p1.getRankingCampeonatoEspanya();
+        int playerRankingCampeonatoEspanya2 = p2.getRankingCampeonatoEspanya();
 
-            return playerRankingCampeonatoEspanya1 - playerRankingCampeonatoEspanya2;
+        return playerRankingCampeonatoEspanya1 - playerRankingCampeonatoEspanya2;
 
-        }
     };
 
-    public static Comparator<Players> PlayerCruiserEspanyaComparator = new Comparator<Players>() {
-        @Override
-        public int compare(Players p1, Players p2) {
-            int playerCruiserRankingEspanya1 = p1.getRankingCruiserNacional();
-            int playerCruiserRankingEspanya2 = p2.getRankingCruiserNacional();
+    public static final Comparator<Players> PlayerCruiserEspanyaComparator = (p1, p2) -> {
+        int playerCruiserRankingEspanya1 = p1.getRankingCruiserNacional();
+        int playerCruiserRankingEspanya2 = p2.getRankingCruiserNacional();
 
-            return playerCruiserRankingEspanya1 - playerCruiserRankingEspanya2;
+        return playerCruiserRankingEspanya1 - playerCruiserRankingEspanya2;
 
-        }
     };
 }
 	

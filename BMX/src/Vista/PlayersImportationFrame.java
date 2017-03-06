@@ -18,11 +18,11 @@ import Modelo.Constants;
 
 public class PlayersImportationFrame implements Constants {
 
-	public JFrame frame_import = new JFrame();
-	private JButton btn_aceptar = new JButton("ACEPTAR");
-	private JButton btn_pasar_todos = new JButton ("TODOS");
-	public JTable importedPlayersTable;
-	public JTable tab_part_sel;
+	public final JFrame frame_import = new JFrame();
+	private final JButton btn_aceptar = new JButton("ACEPTAR");
+	private final JButton btn_pasar_todos = new JButton ("TODOS");
+	public final JTable importedPlayersTable;
+	public final JTable tab_part_sel;
 
 
     public PlayersImportationFrame() {

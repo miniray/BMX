@@ -11,7 +11,7 @@ import java.awt.*;
 /**
  * Created by Miquel on 04/01/2017.
  */
-public class GenderCellEditor extends DefaultCellEditor implements Constants, TableCellEditor {
+class GenderCellEditor extends DefaultCellEditor implements Constants, TableCellEditor {
 
     public GenderCellEditor() {
         super(new JComboBox());

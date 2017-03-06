@@ -1,6 +1,7 @@
 package Modelo;
 
 import java.util.ArrayList;
+import java.util.Objects;
 import javax.swing.JComboBox;
 import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
@@ -10,15 +11,15 @@ import javax.swing.table.TableRowSorter;
 
 public class MainTableModel extends AbstractTableModel implements Constants, TableModel, TableModelListener {
 
-		Class[] column_names = {Integer.class, Integer.class,Object.class, Object.class, Object.class, Integer.class, Object.class, JComboBox.class,Integer.class, JComboBox.class, Integer.class};	
-		private String titulos[] = {"Licencia", "Placa", "Nombre", "Apellido", "2 Apellido", "Nacimiento", "Sexo", "Categoria", "Ranking", "Cruiser", "Rank Cruiser"};
+		private final Class[] column_names = {Integer.class, Integer.class,Object.class, Object.class, Object.class, Integer.class, Object.class, JComboBox.class,Integer.class, JComboBox.class, Integer.class};
+		private final String[] titulos = {"Licencia", "Placa", "Nombre", "Apellido", "2 Apellido", "Nacimiento", "Sexo", "Categoria", "Ranking", "Cruiser", "Rank Cruiser"};
 		private ArrayList<Players> list_p;
 		private int combo_box_category = 0;
         private TableRowSorter sorter;
-        boolean is_main_table = false;
+        private boolean is_main_table = false;
 
 		public MainTableModel(){
-            list_p = new ArrayList<Players>();
+            list_p = new ArrayList<>();
 		    sorter = new TableRowSorter(this);
         }
 		
@@ -159,7 +160,7 @@ public class MainTableModel extends AbstractTableModel implements Constants, Tab
 					player_temp.setSexo(0);
 					break;
 				}
-				if (value.toString() == "M"){
+				if (Objects.equals(value.toString(), "M")){
 					player_temp.setSexo(1);
 					break;
 					}
@@ -214,7 +215,7 @@ public class MainTableModel extends AbstractTableModel implements Constants, Tab
 		}
 		
 		//METODO PARA SETTEAR LA categoria SEGUN GENERO Y RANKING ELEGIDO
-		public void setPlayerCategory(Players p, Object value){
+        private void setPlayerCategory(Players p, Object value){
 
 			if (p.getSexo()== 0){
 				if (combo_box_category == 0) {
@@ -228,13 +229,13 @@ public class MainTableModel extends AbstractTableModel implements Constants, Tab
 		}
 
 		//METODO PARA SETTEAR LA categoria SEGUN GENERO Y RANKING ELEGIDO
-		public void setCategoriaCruiserSetValue (Players p, Object value){
+        private void setCategoriaCruiserSetValue(Players p, Object value){
 			
 			if (p.getSexo()==1){
 				//SI EL RANKING ES ESPAnyA CAMBIAR LA categoria DE ESPAnyA
 				if (combo_box_category == 0){
 					for (int n = 0; n<cat_espanya_cruiser_masc.length; n++){
-						if (value.toString()==cat_espanya_cruiser_masc[n]){
+						if (Objects.equals(value.toString(), cat_espanya_cruiser_masc[n])){
 							p.setCategoriaCruiser(n);
 						}
 					}
@@ -242,7 +243,7 @@ public class MainTableModel extends AbstractTableModel implements Constants, Tab
 				//SI EL RANKING ES CATALUnyA
 				if (combo_box_category == 1){
 					for (int n = 0; n<cat_catalunya_cruiser_masc.length; n++){
-						if (value.toString()==cat_catalunya_cruiser_masc[n]){
+						if (Objects.equals(value.toString(), cat_catalunya_cruiser_masc[n])){
 							p.setCategoriaCruiser(n);
 						}
 					}
@@ -268,7 +269,7 @@ public class MainTableModel extends AbstractTableModel implements Constants, Tab
 		private int getValueCategoryPosition(String[]list, Object value){
 
 			for (int i = 0; i < list.length; i++) {
-				if (value.toString() == list[i]) {
+				if (Objects.equals(value.toString(), list[i])) {
 					return i;
 				}
 			}
@@ -311,11 +312,6 @@ public class MainTableModel extends AbstractTableModel implements Constants, Tab
                     }
                 }
             }
-
-		public void deleteModifiedPlayerCategory(ArrayList<Players> allPlayersArray) {
-
-
-		}
 
 
 }

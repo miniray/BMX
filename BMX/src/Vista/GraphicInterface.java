@@ -12,31 +12,31 @@ import Modelo.Players;
 
 public class GraphicInterface implements Constants {
 
-    public JTable tabla = new JTable();
+    private final JTable tabla = new JTable();
 
-	public JPanel panel_categoria_masc = new JPanel();
-	public JPanel panel_categoria_fem = new JPanel();
-	public JPanel panel_categoria_cruiser = new JPanel();
-	public JPanel panel_boton_todos = new JPanel();
-	public JButton btn_todos = new JButton ("TODOS");
+	public final JPanel panel_categoria_masc = new JPanel();
+	public final JPanel panel_categoria_fem = new JPanel();
+	public final JPanel panel_categoria_cruiser = new JPanel();
+	private final JPanel panel_boton_todos = new JPanel();
+	private final JButton btn_todos = new JButton ("TODOS");
 
-	public GridLayout grid_panel_cat_masc = new GridLayout(0,1);
-	public GridLayout grid_panel_cat_fem = new GridLayout(0,1);
-	public GridLayout grid_panel_cat_cruiser = new GridLayout(0,1);
+	public final GridLayout grid_panel_cat_masc = new GridLayout(0,1);
+	public final GridLayout grid_panel_cat_fem = new GridLayout(0,1);
+	public final GridLayout grid_panel_cat_cruiser = new GridLayout(0,1);
 
-	public JButton btn_importar = new JButton("IMPORTAR");
-	public JButton btn_anyadir = new JButton("INSERTAR PARTICIPANTE");
-	public JButton btn_eliminar = new JButton("ELIMINAR");
-	public JButton btn_generar = new JButton ("GENERAR");
+	private final JButton btn_importar = new JButton("IMPORTAR");
+	private final JButton btn_anyadir = new JButton("INSERTAR PARTICIPANTE");
+	private final JButton btn_eliminar = new JButton("ELIMINAR");
+	private final JButton btn_generar = new JButton ("GENERAR");
 
 
-    public JPanel panel_central_central = new JPanel();
-	public JPanel panel_card = new JPanel();
-	public JPanel allMangasPanel = new JPanel();
-	public MainTableModel mtm_principal = new MainTableModel();
-	public CardLayout card = new CardLayout();
+    private final JPanel panel_central_central = new JPanel();
+	public final JPanel panel_card = new JPanel();
+	private final JPanel allMangasPanel = new JPanel();
+	private final MainTableModel mtm_principal = new MainTableModel();
+	public final CardLayout card = new CardLayout();
 
-	private JComboBox categoria = new JComboBox();
+	private final JComboBox categoria = new JComboBox();
 
 
     public GraphicInterface(){

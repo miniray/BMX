@@ -9,9 +9,9 @@ import java.util.ArrayList;
 
 public class ImportedTableModel extends AbstractTableModel implements TableModel, TableModelListener{
 	
-	Class[] column_names = {Integer.class, Integer.class,Object.class, Object.class, Object.class, Integer.class};	
-	String titulos[] = {"Licencia", "Placa", "Nombre", "Apellido", "2do Apellido", "Año"};
-	ArrayList<Players> list_p = new ArrayList<Players>();
+	private final Class[] column_names = {Integer.class, Integer.class,Object.class, Object.class, Object.class, Integer.class};
+	private final String[] titulos = {"Licencia", "Placa", "Nombre", "Apellido", "2do Apellido", "Año"};
+	private final ArrayList<Players> list_p = new ArrayList<>();
 	Players part_temp;
 	
 	public ImportedTableModel(ArrayList<Players> listado_p){
@@ -62,7 +62,7 @@ public class ImportedTableModel extends AbstractTableModel implements TableModel
 		}
 	
 	public void deleteRow(int row){
-		list_p.remove(row);
+			list_p.remove(row);
 		this.fireTableDataChanged();
 	}
 	public void addRow(Players newRow){

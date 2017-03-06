@@ -12,7 +12,7 @@ import java.awt.event.ActionListener;
  * Created by Miquel on 15/02/2017.
  */
 public class resultsController implements ActionListener, TableModelListener {
-    private AllGames allGames;
+    private final AllGames allGames;
 
     public resultsController(AllGames allGames){
         this.allGames = allGames;

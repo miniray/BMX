@@ -43,7 +43,7 @@ public class CsvReader {
 	private String fileName = null;
 
 	// this holds all the values for switches that the user is allowed to set
-	private UserSettings userSettings = new UserSettings();
+	private final UserSettings userSettings = new UserSettings();
 
 	private Charset charset = null;
 
@@ -52,17 +52,17 @@ public class CsvReader {
 	// this will be our working buffer to hold data chunks
 	// read in from the data file
 
-	private DataBuffer dataBuffer = new DataBuffer();
+	private final DataBuffer dataBuffer = new DataBuffer();
 
-	private ColumnBuffer columnBuffer = new ColumnBuffer();
+	private final ColumnBuffer columnBuffer = new ColumnBuffer();
 
-	private RawRecordBuffer rawBuffer = new RawRecordBuffer();
+	private final RawRecordBuffer rawBuffer = new RawRecordBuffer();
 
 	private boolean[] isQualified = null;
 
 	private String rawRecord = "";
 
-	private HeadersHolder headersHolder = new HeadersHolder();
+	private final HeadersHolder headersHolder = new HeadersHolder();
 
 	// these are all more or less global loop variables
 	// to keep from needing to pass them all into various
@@ -92,13 +92,13 @@ public class CsvReader {
 	 * Double up the text qualifier to represent an occurance of the text
 	 * qualifier.
 	 */
-	public static final int ESCAPE_MODE_DOUBLED = 1;
+	private static final int ESCAPE_MODE_DOUBLED = 1;
 
 	/**
 	 * Use a backslash character before the text qualifier to represent an
 	 * occurance of the text qualifier.
 	 */
-	public static final int ESCAPE_MODE_BACKSLASH = 2;
+	private static final int ESCAPE_MODE_BACKSLASH = 2;
 
 	/**
 	 * Creates a {@link com.csvreader.CsvReader CsvReader} object using a file
@@ -112,7 +112,7 @@ public class CsvReader {
 	 *            The {@link java.nio.charset.Charset Charset} to use while
 	 *            parsing the data.
 	 */
-	public CsvReader(String fileName, char delimiter, Charset charset)
+    private CsvReader(String fileName, char delimiter, Charset charset)
 			throws FileNotFoundException {
 		if (fileName == null) {
 			throw new IllegalArgumentException(
@@ -171,7 +171,7 @@ public class CsvReader {
 	 * @param delimiter
 	 *            The character to use as the column delimiter.
 	 */
-	public CsvReader(Reader inputStream, char delimiter) {
+    private CsvReader(Reader inputStream, char delimiter) {
 		if (inputStream == null) {
 			throw new IllegalArgumentException(
 					"Parameter inputStream can not be null.");
@@ -192,7 +192,7 @@ public class CsvReader {
 	 * @param inputStream
 	 *            The stream to use as the data source.
 	 */
-	public CsvReader(Reader inputStream) {
+    private CsvReader(Reader inputStream) {
 		this(inputStream, Letters.COMMA);
 	}
 
@@ -1370,9 +1370,7 @@ public class CsvReader {
 
 		isQualified[columnsCount] = startedWithQualifier;
 
-		currentValue = "";
-
-		columnsCount++;
+        columnsCount++;
 	}
 
 	private void appendLetter(char letter) {
@@ -1423,7 +1421,7 @@ public class CsvReader {
 	 *                Thrown if an error occurs while reading data from the
 	 *                source stream.
 	 */
-	private void endRecord() throws IOException {
+	private void endRecord() {
 		// this flag is used as a loop exit condition
 		// during parsing
 
@@ -1442,7 +1440,7 @@ public class CsvReader {
 	 * @exception IOException
 	 *                Thrown if this object has already been closed.
 	 */
-	public int getIndex(String headerName) throws IOException {
+    private int getIndex(String headerName) throws IOException {
 		checkClosed();
 
 		Object indexValue = headersHolder.IndexByName.get(headerName);
@@ -1489,7 +1487,7 @@ public class CsvReader {
 	 *                Thrown if an error occurs while reading data from the
 	 *                source stream.
 	 */
-	public boolean skipLine() throws IOException {
+    private boolean skipLine() throws IOException {
 		checkClosed();
 
 		// clear public column values for current line
@@ -1542,7 +1540,7 @@ public class CsvReader {
 	/**
 	 * Closes and releases all related resources.
 	 */
-	public void close() {
+    private void close() {
 		if (!closed) {
 			close(true);
 
@@ -1705,7 +1703,7 @@ public class CsvReader {
 	private class UserSettings {
 		// having these as publicly accessible members will prevent
 		// the overhead of the method call that exists on properties
-		public boolean CaseSensitive;
+		public final boolean CaseSensitive;
 
 		public char TextQualifier;
 

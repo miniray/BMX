@@ -7,18 +7,16 @@
   </component>
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/src/Modelo/CategoriesManagement.java" line="78" />
-    <bookmark url="file://$PROJECT_DIR$/src/Modelo/Constants.java" line="8" mnemonic="2" />
+    <bookmark url="file://$PROJECT_DIR$/src/Modelo/Constants.java" line="6" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d81d3b57-2c71-46a0-b9ed-ebaf6b409ca9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controlador/resultsController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Modelo/mangaPoints.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BMX/Controlador/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Controlador/Main.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/Categories.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Modelo/Categories.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Controlador/Controller.class" afterPath="$PROJECT_DIR$/out/production/BMX/Controlador/Controller.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/AllGames.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/AllGames.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/CSVReader.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/CSVReader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/CategoriesManagement.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/CategoriesManagement.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/Constants.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/Constants.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/DataBase.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/DataBase.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/ImportedTableModel.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/ImportedTableModel.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/MainTableModel.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/MainTableModel.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/Manga.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/Manga.class" />
@@ -26,23 +24,47 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/MotosTableModel.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/MotosTableModel.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/Players.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/Players.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/SingleGame.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/SingleGame.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/Utils.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/Utils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Vista/CategoryCellEditor.class" afterPath="$PROJECT_DIR$/out/production/BMX/Vista/CategoryCellEditor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Vista/CategoryCruiserCellEditor.class" afterPath="$PROJECT_DIR$/out/production/BMX/Vista/CategoryCruiserCellEditor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Vista/GenderCellEditor.class" afterPath="$PROJECT_DIR$/out/production/BMX/Vista/GenderCellEditor.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Vista/GraphicInterface.class" afterPath="$PROJECT_DIR$/out/production/BMX/Vista/GraphicInterface.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Vista/PlayersImportationFrame.class" afterPath="$PROJECT_DIR$/out/production/BMX/Vista/PlayersImportationFrame.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Vista/principal.class" afterPath="$PROJECT_DIR$/out/production/BMX/Vista/principal.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/com/csvreader/CsvReader$ColumnBuffer.class" afterPath="$PROJECT_DIR$/out/production/BMX/com/csvreader/CsvReader$ColumnBuffer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/com/csvreader/CsvReader$ComplexEscape.class" afterPath="$PROJECT_DIR$/out/production/BMX/com/csvreader/CsvReader$ComplexEscape.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/com/csvreader/CsvReader$DataBuffer.class" afterPath="$PROJECT_DIR$/out/production/BMX/com/csvreader/CsvReader$DataBuffer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/com/csvreader/CsvReader$HeadersHolder.class" afterPath="$PROJECT_DIR$/out/production/BMX/com/csvreader/CsvReader$HeadersHolder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/com/csvreader/CsvReader$Letters.class" afterPath="$PROJECT_DIR$/out/production/BMX/com/csvreader/CsvReader$Letters.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/com/csvreader/CsvReader$RawRecordBuffer.class" afterPath="$PROJECT_DIR$/out/production/BMX/com/csvreader/CsvReader$RawRecordBuffer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/com/csvreader/CsvReader$StaticSettings.class" afterPath="$PROJECT_DIR$/out/production/BMX/com/csvreader/CsvReader$StaticSettings.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/com/csvreader/CsvReader$UserSettings.class" afterPath="$PROJECT_DIR$/out/production/BMX/com/csvreader/CsvReader$UserSettings.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/com/csvreader/CsvReader.class" afterPath="$PROJECT_DIR$/out/production/BMX/com/csvreader/CsvReader.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controlador/Controller.java" afterPath="$PROJECT_DIR$/src/Controlador/Controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controlador/resultsController.java" afterPath="$PROJECT_DIR$/src/Controlador/resultsController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/AllGames.java" afterPath="$PROJECT_DIR$/src/Modelo/AllGames.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/CSVReader.java" afterPath="$PROJECT_DIR$/src/Modelo/CSVReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/CategoriesManagement.java" afterPath="$PROJECT_DIR$/src/Modelo/CategoriesManagement.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/Constants.java" afterPath="$PROJECT_DIR$/src/Modelo/Constants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/DataBase.java" afterPath="$PROJECT_DIR$/src/Modelo/DataBase.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/FinalTableModel.java" afterPath="$PROJECT_DIR$/src/Modelo/FinalTableModel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/FinalsManga.java" afterPath="$PROJECT_DIR$/src/Modelo/FinalsManga.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/FinalsTableModel.java" afterPath="$PROJECT_DIR$/src/Modelo/FinalsTableModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/ImportedTableModel.java" afterPath="$PROJECT_DIR$/src/Modelo/ImportedTableModel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/MainTableModel.java" afterPath="$PROJECT_DIR$/src/Modelo/MainTableModel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/Manga.java" afterPath="$PROJECT_DIR$/src/Modelo/Manga.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/Moto.java" afterPath="$PROJECT_DIR$/src/Modelo/Moto.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/MotosTableModel.java" afterPath="$PROJECT_DIR$/src/Modelo/MotosTableModel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/Players.java" afterPath="$PROJECT_DIR$/src/Modelo/Players.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/SingleGame.java" afterPath="$PROJECT_DIR$/src/Modelo/SingleGame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/Utils.java" afterPath="$PROJECT_DIR$/src/Modelo/Utils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/mangaPoints.java" afterPath="$PROJECT_DIR$/src/Modelo/mangaPoints.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vista/CategoryCellEditor.java" afterPath="$PROJECT_DIR$/src/Vista/CategoryCellEditor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vista/CategoryCruiserCellEditor.java" afterPath="$PROJECT_DIR$/src/Vista/CategoryCruiserCellEditor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vista/GenderCellEditor.java" afterPath="$PROJECT_DIR$/src/Vista/GenderCellEditor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vista/GraphicInterface.java" afterPath="$PROJECT_DIR$/src/Vista/GraphicInterface.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vista/PlayersImportationFrame.java" afterPath="$PROJECT_DIR$/src/Vista/PlayersImportationFrame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vista/principal.java" afterPath="$PROJECT_DIR$/src/Vista/principal.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/csvreader/CsvReader.java" afterPath="$PROJECT_DIR$/src/com/csvreader/CsvReader.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,10 +88,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Manga.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Manga.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Modelo/Manga.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
+            <state relative-caret-position="182">
               <caret line="79" column="74" lean-forward="false" selection-start-line="79" selection-start-column="74" selection-end-line="79" selection-end-column="74" />
               <folding>
                 <element signature="method#setNumberOfMangaLabel#0;class#Manga#0" expanded="false" />
@@ -78,59 +100,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CategoriesManagement.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Modelo/CategoriesManagement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="77" column="55" lean-forward="false" selection-start-line="77" selection-start-column="55" selection-end-line="77" selection-end-column="55" />
-              <folding>
-                <element signature="docComment;class#CategoriesManagement#0" expanded="false" />
-                <element signature="method#setListenerButton#0;class#CategoriesManagement#0" expanded="false" />
-                <element signature="method#getSpecificCategoryArray#0;class#CategoriesManagement#0" expanded="false" />
-                <element signature="method#getCategoriesByGender#0;class#CategoriesManagement#0" expanded="false" />
-                <element signature="method#getAllExistingCategoriesWithPlayers#0;class#CategoriesManagement#0" expanded="false" />
-                <element signature="method#getAllExistingCategoriesIdArray#0;class#CategoriesManagement#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SingleGame.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Modelo/SingleGame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="76" column="77" lean-forward="false" selection-start-line="76" selection-start-column="77" selection-end-line="76" selection-end-column="77" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#generateGamePanel#0;class#SingleGame#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AllGames.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Modelo/AllGames.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-272">
-              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+            <state relative-caret-position="663">
+              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MotosTableModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Modelo/MotosTableModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1462">
-              <caret line="151" column="31" lean-forward="false" selection-start-line="151" selection-start-column="31" selection-end-line="151" selection-end-column="31" />
-              <folding>
-                <element signature="method#tableChanged#0;class#MotosTableModel#0" expanded="false" />
-                <element signature="method#getValueAt#0;class#MotosTableModel#0" expanded="false" />
-                <element signature="method#removeTableModelListener#0;class#MotosTableModel#0" expanded="false" />
-                <element signature="method#resetAllPlayersPoints#0;class#MotosTableModel#0" expanded="false" />
-                <element signature="e#4117#4118#0" expanded="true" />
-                <element signature="e#4173#4174#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -138,8 +113,18 @@
       <file leaf-file-name="Moto.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Modelo/Moto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="123" column="40" lean-forward="false" selection-start-line="123" selection-start-column="40" selection-end-line="123" selection-end-column="40" />
+            <state relative-caret-position="1751">
+              <caret line="112" column="13" lean-forward="false" selection-start-line="112" selection-start-column="13" selection-end-line="112" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImportedTableModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Modelo/ImportedTableModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="867">
+              <caret line="68" column="27" lean-forward="false" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -148,7 +133,7 @@
       <file leaf-file-name="resultsController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controlador/resultsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
+            <state relative-caret-position="374">
               <caret line="28" column="28" lean-forward="false" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
               <folding />
             </state>
@@ -166,11 +151,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>add</find>
-      <find>points</find>
-      <find>playersOfThisMoto</find>
-      <find>quantity_of_mangas</find>
-      <find>POINTS</find>
       <find>updatePlayerPoints</find>
       <find>reseteando</find>
       <find>68</find>
@@ -182,7 +162,6 @@
       <find>black</find>
       <find>SETBORDER</find>
       <find>button</find>
-      <find>final</find>
       <find>FinalsManga</find>
       <find>return</find>
       <find>color.</find>
@@ -196,6 +175,12 @@
       <find>+ &quot; cat &quot; +</find>
       <find>System.out.println</find>
       <find>.GETPLACA</find>
+      <find>number_of_manga</find>
+      <find>splitAllPlayersToMangas</find>
+      <find>PLACA</find>
+      <find>final</find>
+      <find>tru</find>
+      <find>sixteenthMangaPanels</find>
     </findStrings>
     <replaceStrings>
       <replace>ny</replace>
@@ -224,15 +209,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Vista/Frame_generar.java" />
-        <option value="$PROJECT_DIR$/src/Controlador/prueba.java" />
         <option value="$PROJECT_DIR$/src/Controlador/Main.java" />
         <option value="$PROJECT_DIR$/src/Modelo/Constantes.java" />
         <option value="$PROJECT_DIR$/src/Vista/Frame_imp_part.java" />
         <option value="$PROJECT_DIR$/src/Modelo/BaseDatosParticipantes.java" />
         <option value="$PROJECT_DIR$/src/Modelo/GestorCSV.java" />
         <option value="$PROJECT_DIR$/src/Controlador/Controlador.java" />
-        <option value="$PROJECT_DIR$/src/Modelo/ImportedTableModel.java" />
         <option value="$PROJECT_DIR$/src/Modelo/Utils.java" />
         <option value="$PROJECT_DIR$/src/Modelo/Categories.java" />
         <option value="$PROJECT_DIR$/src/Vista/FactoryMotosPanels.java" />
@@ -244,7 +226,6 @@
         <option value="$PROJECT_DIR$/src/Vista/CategoriaCellEditor.java" />
         <option value="$PROJECT_DIR$/src/Modelo/CategoriesMananagement.java" />
         <option value="$PROJECT_DIR$/src/Vista/GenderCellEditor.java" />
-        <option value="$PROJECT_DIR$/src/Vista/CategoryCruiserCellEditor.java" />
         <option value="$PROJECT_DIR$/src/Modelo/Carrera.java" />
         <option value="$PROJECT_DIR$/src/Vista/MotoPanel.java" />
         <option value="$PROJECT_DIR$/src/Vista/MangaPanel.java" />
@@ -264,17 +245,21 @@
         <option value="$PROJECT_DIR$/src/Modelo/Players.java" />
         <option value="$PROJECT_DIR$/src/Modelo/resultsController.java" />
         <option value="$PROJECT_DIR$/src/Vista/PlayersImportationFrame.java" />
-        <option value="$PROJECT_DIR$/src/Modelo/FinalsManga.java" />
         <option value="$PROJECT_DIR$/src/Modelo/MainTableModel.java" />
         <option value="$PROJECT_DIR$/src/Vista/GraphicInterface.java" />
         <option value="$PROJECT_DIR$/src/Controlador/resultsController.java" />
-        <option value="$PROJECT_DIR$/src/Modelo/AllGames.java" />
-        <option value="$PROJECT_DIR$/src/Controlador/Controller.java" />
         <option value="$PROJECT_DIR$/src/Modelo/CategoriesManagement.java" />
-        <option value="$PROJECT_DIR$/src/Modelo/Moto.java" />
         <option value="$PROJECT_DIR$/src/Modelo/Manga.java" />
+        <option value="$PROJECT_DIR$/src/Vista/CategoryCruiserCellEditor.java" />
+        <option value="$PROJECT_DIR$/src/Controlador/Controller.java" />
         <option value="$PROJECT_DIR$/src/Modelo/MotosTableModel.java" />
+        <option value="$PROJECT_DIR$/src/com/csvreader/CsvReader.java" />
+        <option value="$PROJECT_DIR$/src/com/csvreader/CsvWriter.java" />
+        <option value="$PROJECT_DIR$/src/Modelo/AllGames.java" />
+        <option value="$PROJECT_DIR$/src/Modelo/Moto.java" />
+        <option value="$PROJECT_DIR$/src/Modelo/ImportedTableModel.java" />
         <option value="$PROJECT_DIR$/src/Modelo/SingleGame.java" />
+        <option value="$PROJECT_DIR$/src/Modelo/FinalsManga.java" />
       </list>
     </option>
   </component>
@@ -286,7 +271,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
-    <option name="width" value="1378" />
+    <option name="width" value="1370" />
     <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -307,22 +292,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BMX" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BMX" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -401,6 +372,20 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Controlador" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BMX" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BMX" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -926,7 +911,9 @@
       <workItem from="1488200343024" duration="7404000" />
       <workItem from="1488315225056" duration="5367000" />
       <workItem from="1488375095976" duration="4472000" />
-      <workItem from="1488393854311" duration="11808000" />
+      <workItem from="1488393854311" duration="20045000" />
+      <workItem from="1488755000488" duration="5775000" />
+      <workItem from="1488832423596" duration="32000" />
     </task>
     <task id="LOCAL-00001" summary="new">
       <created>1487103591689</created>
@@ -935,11 +922,18 @@
       <option name="project" value="LOCAL" />
       <updated>1487103591689</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="new">
+      <created>1488493816976</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1488493816976</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="425973000" />
+    <option name="totallyTimeSpent" value="440017000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -951,41 +945,41 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
-    <editor active="false" />
+    <frame x="-7" y="0" width="1370" height="735" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31794873" sideWeight="0.14599092" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2621528" sideWeight="0.8540091" order="2" side_tool="false" content_ui="combo" x="13" y="55" width="1356" height="699" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31907895" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23129772" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2492647" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3246528" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2621528" sideWeight="0.8540091" order="2" side_tool="false" content_ui="combo" x="13" y="55" width="1356" height="699" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2245827" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30381945" sideWeight="0.49411765" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46354166" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31770834" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3246528" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30381945" sideWeight="0.49411765" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1037,7 +1031,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="221" />
+      <option name="time" value="233" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1046,13 +1040,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/AbstractButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="2341" column="0" lean-forward="false" selection-start-line="2341" selection-start-column="0" selection-end-line="2341" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/swing/DefaultButtonModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
@@ -1120,13 +1107,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="3324" column="0" lean-forward="false" selection-start-line="3324" selection-start-column="0" selection-end-line="3324" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vista/CategoryCruiserCellEditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" column="90" lean-forward="false" selection-start-line="23" selection-start-column="90" selection-end-line="23" selection-end-column="90" />
         </state>
       </provider>
     </entry>
@@ -1204,13 +1184,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/csvreader/CsvReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="1089" column="59" lean-forward="false" selection-start-line="1089" selection-start-column="59" selection-end-line="1089" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Modelo/DataBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
@@ -1229,15 +1202,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="30" column="8" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modelo/ImportedTableModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1245,7 +1209,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
           <caret line="69" column="35" lean-forward="false" selection-start-line="69" selection-start-column="35" selection-end-line="69" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1253,7 +1216,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1261,10 +1223,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-          <folding>
-            <element signature="e#348#349#0" expanded="false" />
-            <element signature="e#397#398#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1272,7 +1230,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1280,14 +1237,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="66" lean-forward="false" selection-start-line="14" selection-start-column="66" selection-end-line="14" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modelo/FinalsManga.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="32" column="30" lean-forward="false" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -1312,15 +1261,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2227">
           <caret line="140" column="53" lean-forward="false" selection-start-line="140" selection-start-column="53" selection-end-line="140" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#7764#7765#0" expanded="false" />
-            <element signature="e#7783#7784#0" expanded="false" />
-            <element signature="e#8565#8566#0" expanded="false" />
-            <element signature="e#8588#8589#0" expanded="false" />
-            <element signature="e#8694#8695#0" expanded="false" />
-            <element signature="e#8725#8726#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1329,7 +1269,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-102">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1337,21 +1276,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Modelo/Categories.java" />
+    <entry file="file://$PROJECT_DIR$/src/Controlador/resultsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="28" column="28" lean-forward="false" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modelo/Categories.java">
+    <entry file="file://$PROJECT_DIR$/src/Vista/CategoryCruiserCellEditor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="36">
+          <caret line="30" column="40" lean-forward="false" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controlador/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
+        <state relative-caret-position="121">
           <caret line="169" column="45" lean-forward="false" selection-start-line="169" selection-start-column="45" selection-end-line="169" selection-end-column="45" />
           <folding>
             <element signature="method#mouseClicked#0;class#Controller#0" expanded="false" />
@@ -1361,10 +1307,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Modelo/MotosTableModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="101" column="20" lean-forward="false" selection-start-line="101" selection-start-column="20" selection-end-line="101" selection-end-column="20" />
+          <folding>
+            <element signature="e#605#624#0" expanded="false" />
+            <element signature="method#tableChanged#0;class#MotosTableModel#0" expanded="false" />
+            <element signature="method#getValueAt#0;class#MotosTableModel#0" expanded="false" />
+            <element signature="method#removeTableModelListener#0;class#MotosTableModel#0" expanded="false" />
+            <element signature="method#resetAllPlayersPoints#0;class#MotosTableModel#0" expanded="false" />
+            <element signature="e#4000#4001#0" expanded="false" />
+            <element signature="e#4056#4057#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/csvreader/CsvReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="1697" column="12" lean-forward="false" selection-start-line="1697" selection-start-column="12" selection-end-line="1697" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/csvreader/CsvWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="581" column="31" lean-forward="false" selection-start-line="581" selection-start-column="31" selection-end-line="581" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Modelo/Moto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1751">
+          <caret line="112" column="13" lean-forward="false" selection-start-line="112" selection-start-column="13" selection-end-line="112" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Modelo/ImportedTableModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="68" column="27" lean-forward="false" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Modelo/AllGames.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Modelo/CategoriesManagement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="77" column="55" lean-forward="false" selection-start-line="77" selection-start-column="55" selection-end-line="77" selection-end-column="55" />
+        <state relative-caret-position="17">
+          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#CategoriesManagement#0" expanded="false" />
             <element signature="method#setListenerButton#0;class#CategoriesManagement#0" expanded="false" />
@@ -1376,62 +1376,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controlador/resultsController.java">
+    <entry file="file://$PROJECT_DIR$/src/Modelo/SingleGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="28" column="28" lean-forward="false" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
-          <folding />
+        <state relative-caret-position="1853">
+          <caret line="113" column="79" lean-forward="false" selection-start-line="113" selection-start-column="56" selection-end-line="113" selection-end-column="79" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getAllMangasPanel#0;class#SingleGame#0" expanded="false" />
+            <element signature="method#createMangasStructure#0;class#SingleGame#0" expanded="false" />
+            <element signature="method#splitAllPlayersToMangas#0;class#SingleGame#0" expanded="false" />
+            <element signature="method#transformStringToHtml#0;class#SingleGame#0" expanded="false" />
+            <element signature="method#setNumber_of_manga_int#0;class#SingleGame#0" expanded="false" />
+            <element signature="method#orderPlayersInThisRaceByCampeonatoEspañaRanking#0;class#SingleGame#0" expanded="false" />
+            <element signature="method#orderPlayersInThisRaceByCruiserEspañaRanking#0;class#SingleGame#0" expanded="false" />
+            <element signature="method#connectCrontroller#0;class#SingleGame#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Modelo/FinalsManga.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="297" column="28" lean-forward="false" selection-start-line="297" selection-start-column="8" selection-end-line="297" selection-end-column="28" />
+          <folding>
+            <element signature="method#createFinalCase#0;class#FinalsManga#0" expanded="false" />
+            <element signature="method#createSemifinalsCase#0;class#FinalsManga#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Modelo/Manga.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
+        <state relative-caret-position="182">
           <caret line="79" column="74" lean-forward="false" selection-start-line="79" selection-start-column="74" selection-end-line="79" selection-end-column="74" />
           <folding>
             <element signature="method#setNumberOfMangaLabel#0;class#Manga#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modelo/Moto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="123" column="40" lean-forward="false" selection-start-line="123" selection-start-column="40" selection-end-line="123" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modelo/MotosTableModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1462">
-          <caret line="151" column="31" lean-forward="false" selection-start-line="151" selection-start-column="31" selection-end-line="151" selection-end-column="31" />
-          <folding>
-            <element signature="method#tableChanged#0;class#MotosTableModel#0" expanded="false" />
-            <element signature="method#getValueAt#0;class#MotosTableModel#0" expanded="false" />
-            <element signature="method#removeTableModelListener#0;class#MotosTableModel#0" expanded="false" />
-            <element signature="method#resetAllPlayersPoints#0;class#MotosTableModel#0" expanded="false" />
-            <element signature="e#4117#4118#0" expanded="true" />
-            <element signature="e#4173#4174#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modelo/AllGames.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-272">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modelo/SingleGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="76" column="77" lean-forward="false" selection-start-line="76" selection-start-column="77" selection-end-line="76" selection-end-column="77" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#generateGamePanel#0;class#SingleGame#0" expanded="false" />
           </folding>
         </state>
       </provider>

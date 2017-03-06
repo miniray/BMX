@@ -3,7 +3,7 @@ package Vista;
 import Controlador.Controller;
 import Modelo.DataBase;
 
-public class principal {
+class principal {
 	
 public static void main (String[] args){
 		

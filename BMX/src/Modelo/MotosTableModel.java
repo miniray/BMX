@@ -13,20 +13,19 @@ import java.util.ArrayList;
  */
 public class MotosTableModel extends AbstractTableModel implements Constants, TableModel , TableModelListener{
 
-    Class[] column_names = {Integer.class, String.class};
-    String titulos[] = {"Puntos", "Placa"};
-    ArrayList<ArrayList> list_p = new ArrayList();
-    ArrayList<Players> playersInMoto = new ArrayList<>();
-    private int numero_moto;
+    private final Class[] column_names = {Integer.class, String.class};
+    private final String[] titulos = {"Puntos", "Placa"};
+    private ArrayList<ArrayList<Object>> list_p = new ArrayList<ArrayList<Object>>();
+    private ArrayList<Players> playersInMoto = new ArrayList<>();
     private ArrayList<JLabel> labelsPlateArray;
 
     public MotosTableModel(ArrayList<Players> playersInMoto, int numero_moto){
         this.playersInMoto = playersInMoto;
-        this.numero_moto= numero_moto;
+        int numero_moto1 = numero_moto;
         createPointsArray(this.playersInMoto.size());
         }
 
-    public void insertarDatos(ArrayList array){
+    public void insertarDatos(ArrayList<ArrayList<Object>> array){
         list_p = array;
 
     }
@@ -41,7 +40,7 @@ public class MotosTableModel extends AbstractTableModel implements Constants, Ta
 
     }
 
-    public ArrayList getRow(int row){
+    public ArrayList<Object> getRow(int row){
         return list_p.get(row);
     }
 
@@ -61,7 +60,7 @@ public class MotosTableModel extends AbstractTableModel implements Constants, Ta
         return titulos[col_index];
     }
 
-    public ArrayList<ArrayList> getArray(){
+    public ArrayList<ArrayList<Object>> getArray(){
         return list_p;
     }
 
@@ -90,7 +89,7 @@ public class MotosTableModel extends AbstractTableModel implements Constants, Ta
 
     }
 
-    public void addAlArray(ArrayList array){
+    public void addAlArray(ArrayList<Object> array){
         list_p.add(array);
     }
 
@@ -123,7 +122,7 @@ public class MotosTableModel extends AbstractTableModel implements Constants, Ta
 
     public void resetAllPlayersPoints(){
             for (Players aPlayer: playersInMoto){
-               aPlayer.setPoints(0);
+               aPlayer.setPoints();
        }
     }
 
@@ -140,14 +139,9 @@ public class MotosTableModel extends AbstractTableModel implements Constants, Ta
         }
     }
 
-    public void getPointsDescription(){
-        for(Players aPlayer: this.playersInMoto){
-            //System.out.println("Placa: " + aPlayer.getPlaca() + " //POINTS: " + aPlayer.getPoints());
-        }
-    }
 
     public void checkPlatesPointsLabel(){
-        for (ArrayList aPlate: list_p){
+        for (ArrayList<Object> aPlate: list_p){
             for (JLabel aLabel: labelsPlateArray){
                 if(aPlate.get(1).equals(aLabel.getText())){
                     aLabel.setBackground(Color.GREEN);

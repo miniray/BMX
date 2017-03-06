@@ -3,6 +3,7 @@ import Controlador.Controller;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Objects;
 
 import javax.swing.*;
 
@@ -13,11 +14,11 @@ public class DataBase implements Constants {
     public ImportedTableModel tableModelImportedPlayers;
     public ImportedTableModel tableModelSelectedPlayers;
 
-    private ArrayList<String[]> allSpainCategories = new ArrayList<>();
-    private ArrayList<ArrayList> allCategoriesNamesArray = new ArrayList<>();
+    private final ArrayList<String[]> allSpainCategories = new ArrayList<>();
+    private final ArrayList<ArrayList> allCategoriesNamesArray = new ArrayList<>();
 
     public boolean buttonAllControl;
-    private CSVReader csvReader;
+    private final CSVReader csvReader;
     private Controller c;
 
 
@@ -67,16 +68,12 @@ public class DataBase implements Constants {
 
     }
 
-    public ArrayList getAllCategoriesArray(){
-        return allCategoriesNamesArray;
-    }
-
     public int getIDfromCategoryList(int gender, String categoryName){
 
         int index = -1;
         for ( String categorySelected : allSpainCategories.get(gender)){
             index++;
-            if (categorySelected == categoryName){
+            if (Objects.equals(categorySelected, categoryName)){
                 return index;
             }
 

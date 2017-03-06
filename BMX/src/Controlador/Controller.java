@@ -16,9 +16,9 @@ import Vista.GraphicInterface;
 
 public class Controller implements ActionListener, MouseListener, TableModelListener, Constants {
 
-	private GraphicInterface graphicInterface;
-	private DataBase dataBase;
-	private PlayersImportationFrame playersImportationFrame;
+	private final GraphicInterface graphicInterface;
+	private final DataBase dataBase;
+	private final PlayersImportationFrame playersImportationFrame;
 	private boolean is_generated = false;
     private AllGames carrera;
     private resultsController rsController;
@@ -167,8 +167,7 @@ public class Controller implements ActionListener, MouseListener, TableModelList
 			if (arg0.getSource() instanceof MainTableModel) {
 				generateButtonsForPanels();
 				((MainTableModel)(graphicInterface.getMainTable().getModel())).getChangesToMainArray(graphicInterface.getMainTableModel().getArray());
-                if(graphicInterface == null){
-				}else {
+                if(graphicInterface != null){
 					graphicInterface.getMainTable().updateUI();
 				}
 			}
@@ -182,7 +181,7 @@ public class Controller implements ActionListener, MouseListener, TableModelList
 				graphicInterface.panel_categoria_cruiser,graphicInterface.getCategory().getSelectedIndex());
 	}
 
-	public void connectResultsController(){
+	private void connectResultsController(){
 		for (int i = 0; i < 3; i++){
 			for (Map.Entry<Integer, SingleGame> entry : carrera.getAllGamesmap().get(i).entrySet())
 			{

@@ -11,12 +11,12 @@ import java.util.TreeMap;
  * Objeto para crear una Manga (JPanel) con un numero determinado de
  * Motos (Moto) dentro.
  */
-public class Manga {
+class Manga {
 
-    private JPanel panelManga;
-    private Map<Integer, Moto> motosMap;
-    private ArrayList<Players> mangaPlayersArray;
-    private JLabel numberOfMangaLabel;
+    private final JPanel panelManga;
+    private final Map<Integer, Moto> motosMap;
+    private final ArrayList<Players> mangaPlayersArray;
+    private final JLabel numberOfMangaLabel;
 
 
     public Manga(ArrayList<Players> allPlayersOfThisManga){

@@ -1,7 +1,5 @@
 package Modelo;
 
-import java.util.ArrayList;
-
 public interface Constants {
 	//  							0		1		2			3			4			5			6			7
 	String[] cat_espanya_masc = {"5 a 6", "7 a 8", "9 a 10", "11 a 12", "13 a 14", "15 a 16", " Junior 17 a 29","17 a 29",

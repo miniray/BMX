@@ -11,23 +11,23 @@ import java.util.*;
  */
 public class SingleGame {
 
-    private int numberOfPlayers;
-    private JPanel gamePanel;
-    private JPanel panelForScroll;
+    private final int numberOfPlayers;
+    private final JPanel gamePanel;
+    private final JPanel panelForScroll;
     private JScrollPane scrollerForPanels;
-    private Map<Integer, Manga> mangasMap;
-    private ArrayList<Players> allPlayersOfThisRace;
+    private final Map<Integer, Manga> mangasMap;
+    private final ArrayList<Players> allPlayersOfThisRace;
     private int number_of_manga_int;
     private FinalsManga finalsMangas;
     private boolean is_cruiser_race;
-    private ArrayList<ArrayList<Players>> allPlayersByMangaArray;
-    int quantity_of_mangas;
+    private final ArrayList<ArrayList<Players>> allPlayersByMangaArray;
+    private int quantity_of_mangas;
     private int category_id;
     private int gender;
 
     public SingleGame(int gender, int category_id, ArrayList<Players> listOfPlayers) {
         this.category_id = category_id;
-        this.gender = gender;
+        this. gender = gender;
         numberOfPlayers = listOfPlayers.size();
         allPlayersOfThisRace = listOfPlayers;
         mangasMap = new TreeMap<>();
@@ -69,12 +69,29 @@ public class SingleGame {
             finalsMangas = new FinalsManga(numberOfPlayers);
         }
 
-        if (numberOfPlayers > 32) {
-            quantity_of_mangas = 5;
+        if (numberOfPlayers > 32 && numberOfPlayers < 40) {
+            quantity_of_mangas = 6;
             finalsMangas = new FinalsManga(numberOfPlayers);
         }
 
-        /*OJO HAY QUE HACER LA ESTRUCTURA DE CUARTOS, OCTAVOS DECISEIISAVOS*/
+
+        if (numberOfPlayers >= 40 && numberOfPlayers < 65) {
+            quantity_of_mangas = 8;
+            finalsMangas = new FinalsManga(numberOfPlayers);
+        }
+
+
+        if (numberOfPlayers >= 65 && numberOfPlayers < 80) {
+            quantity_of_mangas = 12;
+            finalsMangas = new FinalsManga(numberOfPlayers);
+        }
+
+
+        if (numberOfPlayers >= 80 && numberOfPlayers < 129) {
+            quantity_of_mangas = 16;
+            finalsMangas = new FinalsManga(numberOfPlayers);
+        }
+
 
     }
 
@@ -85,13 +102,33 @@ public class SingleGame {
             gamePanel.add(mangasMap.get(i).getMangaPanel());
         }
         if (finalsMangas != null) {
+            if (finalsMangas.isThereSixteenth()){
+                gamePanelGridLayout.setRows((gamePanelGridLayout.getRows()+1));
+                for (JPanel aSixteenthManga : finalsMangas.getSixteenthMangaPanels()){
+                    gamePanel.add(aSixteenthManga);
+                }
+            }
+
+            if (finalsMangas.isThereEighth()){
+                gamePanelGridLayout.setRows((gamePanelGridLayout.getRows()+1));
+                for (JPanel aEighthManga : finalsMangas.getSixteenthMangaPanels()){
+                    gamePanel.add(aEighthManga);
+                }
+
+            }
+
+            if (finalsMangas.isThereQuarters()){
+                gamePanelGridLayout.setRows((gamePanelGridLayout.getRows()+1));
+                gamePanel.add(finalsMangas.getQuartersMangaPanel());
+            }
+
             gamePanelGridLayout.setRows(gamePanelGridLayout.getRows() + 1);
             gamePanel.add(finalsMangas.getFinalMangaPanel());
         }
 
 
         panelForScroll.setLayout(new GridLayout(0, 1));
-        panelForScroll.setPreferredSize(new Dimension(800, mangasMap.size() * 250));
+        panelForScroll.setPreferredSize(new Dimension(800, mangasMap.size() * 300));
         panelForScroll.add(gamePanel);
         scrollerForPanels = new JScrollPane(panelForScroll);
         scrollerForPanels.setVisible(true);
@@ -121,12 +158,13 @@ public class SingleGame {
         for (int n = 0; n < allPlayersOfThisRace.size(); n++) {
 
             if (quantity_of_mangas == 1) {
+
                 allPlayersByMangaArray.get(contador_manga - 1).add(allPlayersOfThisRace.get(n));
             } else {
 
                 allPlayersByMangaArray.get(contador_manga - 1).add(allPlayersOfThisRace.get(n));
 
-                if (contador_manga % quantity_of_mangas == 0 || contador_manga == 1 && reverse == true) {
+                if (contador_manga % quantity_of_mangas == 0 || contador_manga == 1 && reverse) {
                     reverse = !reverse;
                     n++;
                     if (n < allPlayersOfThisRace.size()) {
@@ -174,16 +212,16 @@ public class SingleGame {
 
     private void orderPlayersInThisRaceByCampeonatoEspañaRanking() {
 
-        Collections.sort(allPlayersOfThisRace, Players.PlayerCampeonatoEspanyaComparator);
+        allPlayersOfThisRace.sort(Players.PlayerCampeonatoEspanyaComparator);
     }
 
     private void orderPlayersInThisRaceByCruiserEspañaRanking() {
 
-        Collections.sort(allPlayersOfThisRace, Players.PlayerCruiserEspanyaComparator);
+        allPlayersOfThisRace.sort(Players.PlayerCruiserEspanyaComparator);
     }
 
-    public void setIsCruiserRace(boolean is) {
-        is_cruiser_race = is;
+    public void setIsCruiserRace() {
+        is_cruiser_race = true;
     }
 
     public Map<Integer, Manga> getMangasMap() {
