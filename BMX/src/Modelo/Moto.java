@@ -1,8 +1,5 @@
 package Modelo;
 
-import Modelo.MotosTableModel;
-import Modelo.Players;
-
 import javax.swing.*;
 import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
@@ -16,10 +13,11 @@ public class Moto implements TableModelListener {
 
         private final JPanel container;
         private final MotosTableModel tableModelMoto;
-        private final ArrayList<Players> playersOfThisMoto;
-        private ArrayList<JLabel> labelsForPlayers;
+        private ArrayList<Players> playersOfThisMoto;
         private final JLabel motoTitle;
-    private boolean is_quarter = false;
+        private JPanel playersLabelsPanel;
+        private ArrayList <JLabel> labelArrayList;
+        private boolean is_quarter = false;
         private boolean is_semifinal = false;
         private boolean is_final = false;
 
@@ -49,9 +47,9 @@ public class Moto implements TableModelListener {
         JScrollPane motoTableScroller = new JScrollPane(motoTable);
         motoTableScroller.setVisible(true);
         JPanel tablePanel = new JPanel();
-        JPanel playersLabelsPanel = new JPanel();
-        playersLabelsPanel.setLayout(new GridLayout(4,2));
-        creationAndAditionOfLabelsForPlayers(playersLabelsPanel);
+        playersLabelsPanel = new JPanel();
+        labelArrayList = new ArrayList<>();
+        setLabelPlayers();
 
         GridBagLayout gridBagTableAndLabelsLayout = new GridBagLayout();
         gridBagTableAndLabelsLayout.columnWeights = new double[]{1.0, 1.0, 1.0, 1.0};
@@ -95,8 +93,8 @@ public class Moto implements TableModelListener {
 
         layoutPosition.gridx = 1;
         layoutPosition.gridy = 1;
-        layoutPosition.gridwidth = 4;
-        layoutPosition.gridheight = 4;
+        layoutPosition.gridwidth = 3;
+        layoutPosition.gridheight = 2;
 
         container.add(tablePanel, layoutPosition);
         container.setBackground(new Color(64,64,64));
@@ -116,34 +114,30 @@ public class Moto implements TableModelListener {
         System.out.println("SOURCE: " + e.getSource());
     }
 
-    private void creationAndAditionOfLabelsForPlayers(JPanel playersLabelPanel){
-        labelsForPlayers = new ArrayList();
-        for (int i = 0; i < 8; i++){
+    private void setLabelPlayers(){
+        playersLabelsPanel.removeAll();
+        playersLabelsPanel.setLayout(new GridLayout((playersOfThisMoto.size()/2 +1), 2));
+        for (int i = 0; i < playersOfThisMoto.size(); i++){
             JLabel temp = new JLabel();
             temp.setHorizontalAlignment(SwingConstants.CENTER);
             temp.setVerticalAlignment(SwingConstants.CENTER);
             temp.setBackground(Color.red);
             temp.setOpaque(true);
-            labelsForPlayers.add(temp);
-            playersLabelPanel.add(temp);
-
+            temp.setText(playersOfThisMoto.get(i).getPlaca());
+            labelArrayList.add(temp);
+            playersLabelsPanel.add(temp);
         }
-        insertPlayerNumberToLabels();
-        this.getModelMotoTable().setLabelsPlateArray(labelsForPlayers);
     }
 
-    private void insertPlayerNumberToLabels(){
-        int contador = 0;
-        if (playersOfThisMoto.size() > 8){
-            System.out.println("NO PUEDE HABER MAS DE 8 PILOTOS POR MOTO"+ " \nActualmente hay: " + playersOfThisMoto.size());
-        }
-        playersOfThisMoto.sort(Players.PlayerCampeonatoEspanyaComparator);
-        for (Players aPlayer: playersOfThisMoto){
-            System.out.println("PLACA: " + playersOfThisMoto.get(contador).getPlaca());
-            labelsForPlayers.get(contador).setText(aPlayer.getPlaca());
-            contador++;
-        }
-
+    public void setPlayersOfThisMoto(ArrayList <Players> playersOfThisMoto){
+        this.playersOfThisMoto = playersOfThisMoto;
+        this.getModelMotoTable().setPlayersInMoto(playersOfThisMoto);
+        setLabelPlayers();
     }
+
+    public ArrayList <JLabel> getLabelArrayList(){
+        return labelArrayList;
+    }
+
 
 }

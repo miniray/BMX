@@ -19,8 +19,12 @@ class FinalsManga {
     private JPanel sixteenthMangaPanel3;
     private JPanel sixteenthMangaPanel4;
 
-    private ArrayList<JPanel> eigthMangaPanels;
+    private ArrayList<JPanel> eighthMangaPanels;
     private ArrayList<JPanel> sixteenthMangaPanels;
+
+    private ArrayList<Moto> quarterMotos;
+    private ArrayList<Moto> eighthMotos;
+    private ArrayList<Moto> sixteenthMotos;
 
     private final JPanel finalMangaPanel;
 
@@ -30,7 +34,7 @@ class FinalsManga {
 
     private boolean isThereQuarters = false;
     private boolean isThereSemifinals = false;
-    private boolean isThereFinal = false;
+    private boolean isThereDirectFinal = false;
     private boolean isThereEighth = false;
     private boolean isThereSixteenth = false;
 
@@ -44,29 +48,23 @@ class FinalsManga {
         finalMangaPanel.setBackground(new Color(64, 64, 64));
         if (numberOfPlayers > 8 && numberOfPlayers <= 16) {
             createFinalCase();
-            isThereFinal = true;
+            isThereDirectFinal = true;
         }
 
         if (numberOfPlayers > 16 && numberOfPlayers <= 32) {
             createSemifinalsCase();
             isThereSemifinals = true;
-            isThereFinal = true;
         }
         if (numberOfPlayers > 32 && numberOfPlayers <= 64) {
             createQuartersCase();
             createSemifinalsCase();
             isThereQuarters = true;
-            isThereSemifinals = true;
-            isThereFinal = true;
         }
         if (numberOfPlayers > 64 && numberOfPlayers <= 128) {
             createEighthCase();
             createQuartersCase();
             createSemifinalsCase();
             isThereEighth = true;
-            isThereQuarters = true;
-            isThereSemifinals = true;
-            isThereFinal = true;
         }
         if (numberOfPlayers > 128 && numberOfPlayers <= 256) {
             createSixteenthCase();
@@ -74,10 +72,6 @@ class FinalsManga {
             createQuartersCase();
             createSemifinalsCase();
             isThereSixteenth = true;
-            isThereEighth = true;
-            isThereQuarters = true;
-            isThereSemifinals = true;
-            isThereFinal = true;
         }
     }
 
@@ -86,6 +80,10 @@ class FinalsManga {
     }
 
     public JPanel getQuartersMangaPanel(){ return quartersMangaPanel;}
+
+    public ArrayList<JPanel> getEighthMangaPanels(){ return eighthMangaPanels; }
+
+    public ArrayList<JPanel> getSixteenthMangaPanels(){ return sixteenthMangaPanels;}
 
     public Moto getFinalMoto(){
         return finalMoto;
@@ -120,9 +118,9 @@ class FinalsManga {
         semifinalsMotosMap.put(2,semiMoto2);
 
     }
-
     private void createQuartersCase (){
         quarterMotosMap = new TreeMap<>();
+        quarterMotos = new ArrayList<>();
 
         ArrayList<Players> quarterPlayers1 = new ArrayList<>();
         ArrayList<Players> quarterPlayers2 = new ArrayList<>();
@@ -134,27 +132,29 @@ class FinalsManga {
         Moto quarter3 = new Moto(0, quarterPlayers3);
         Moto quarter4 = new Moto(0, quarterPlayers4);
 
+        quarterMotos.add(quarter1);
+        quarterMotos.add(quarter2);
+        quarterMotos.add(quarter3);
+        quarterMotos.add(quarter4);
+
         quarter1.setMotoTitle("CUARTOS 1");
         quarter2.setMotoTitle("CUARTOS 2");
         quarter3.setMotoTitle("CUARTOS 3");
         quarter4.setMotoTitle("CUARTOS 4");
 
         quartersMangaPanel = new JPanel();
-        quartersMangaPanel.setLayout(new GridLayout(0,4));
-        quartersMangaPanel.add(quarter1.getMotoPanel());
-        quartersMangaPanel.add(quarter2.getMotoPanel());
-        quartersMangaPanel.add(quarter3.getMotoPanel());
-        quartersMangaPanel.add(quarter4.getMotoPanel());
+
+        Utils.layoutForTheMangaPanel(quartersMangaPanel, "CUARTOS", quarterMotos);
+
         quarterMotosMap.put(1,quarter1);
         quarterMotosMap.put(2,quarter2);
         quarterMotosMap.put(3,quarter3);
         quarterMotosMap.put(4,quarter4);
     }
-
     private void createEighthCase (){
         eighthMotosMap = new TreeMap<>();
-
-        eigthMangaPanels = new ArrayList<>();
+        eighthMangaPanels = new ArrayList<>();
+        eighthMotos = new ArrayList<>();
 
         ArrayList<Players> eighthPlayers1 = new ArrayList<>();
         ArrayList<Players> eighthPlayers2 = new ArrayList<>();
@@ -174,6 +174,15 @@ class FinalsManga {
         Moto eighth7 = new Moto(0, eighthPlayers7);
         Moto eighth8 = new Moto(0, eighthPlayers8);
 
+        eighthMotos.add(eighth1);
+        eighthMotos.add(eighth2);
+        eighthMotos.add(eighth3);
+        eighthMotos.add(eighth4);
+        eighthMotos.add(eighth5);
+        eighthMotos.add(eighth6);
+        eighthMotos.add(eighth7);
+        eighthMotos.add(eighth8);
+
         eighth1.setMotoTitle("OCTAVOS 1");
         eighth2.setMotoTitle("OCTAVOS 2");
         eighth3.setMotoTitle("OCTAVOS 3");
@@ -185,20 +194,21 @@ class FinalsManga {
 
 
         eighthMangaPanel1 = new JPanel();
-        eighthMangaPanel1.setLayout(new GridLayout(0,4));
         eighthMangaPanel2 = new JPanel();
-        eighthMangaPanel2.setLayout(new GridLayout(0,4));
-        eighthMangaPanel1.add(eighth1.getMotoPanel());
-        eighthMangaPanel1.add(eighth2.getMotoPanel());
-        eighthMangaPanel1.add(eighth3.getMotoPanel());
-        eighthMangaPanel1.add(eighth4.getMotoPanel());
-        eighthMangaPanel2.add(eighth5.getMotoPanel());
-        eighthMangaPanel2.add(eighth6.getMotoPanel());
-        eighthMangaPanel2.add(eighth7.getMotoPanel());
-        eighthMangaPanel2.add(eighth8.getMotoPanel());
 
-        eigthMangaPanels.add(eighthMangaPanel1);
-        eigthMangaPanels.add(eighthMangaPanel2);
+        eighthMangaPanels.add(eighthMangaPanel1);
+        eighthMangaPanels.add(eighthMangaPanel2);
+
+        int temp_int = 0;
+
+        for (int i = 0; i < 2 ; i++){
+            ArrayList<Moto> tempMotos = new ArrayList<>();
+            tempMotos.add(eighthMotos.get(temp_int++));
+            tempMotos.add(eighthMotos.get(temp_int++));
+            tempMotos.add(eighthMotos.get(temp_int++));
+            tempMotos.add(eighthMotos.get(temp_int++));
+            Utils.layoutForTheMangaPanel(eighthMangaPanels.get(i), "OCTAVOS " + (i+1), tempMotos);
+        }
 
         eighthMotosMap.put(1,eighth1);
         eighthMotosMap.put(2,eighth2);
@@ -210,10 +220,10 @@ class FinalsManga {
         eighthMotosMap.put(8,eighth8);
 
     }
-
     private void createSixteenthCase (){
         sixteenthMotosMap = new TreeMap<>();
         sixteenthMangaPanels = new ArrayList<>();
+        sixteenthMotos = new ArrayList<>();
 
         ArrayList<Players> sixteenthPlayers1 = new ArrayList<>();
         ArrayList<Players> sixteenthPlayers2 = new ArrayList<>();
@@ -249,6 +259,25 @@ class FinalsManga {
         Moto sixteenth15 = new Moto(0, sixteenthPlayers15);
         Moto sixteenth16 = new Moto(0, sixteenthPlayers16);
 
+        sixteenthMotos.add(sixteenth1);
+        sixteenthMotos.add(sixteenth2);
+        sixteenthMotos.add(sixteenth3);
+        sixteenthMotos.add(sixteenth4);
+        sixteenthMotos.add(sixteenth5);
+        sixteenthMotos.add(sixteenth6);
+        sixteenthMotos.add(sixteenth7);
+        sixteenthMotos.add(sixteenth8);
+        sixteenthMotos.add(sixteenth9);
+        sixteenthMotos.add(sixteenth10);
+        sixteenthMotos.add(sixteenth11);
+        sixteenthMotos.add(sixteenth12);
+        sixteenthMotos.add(sixteenth13);
+        sixteenthMotos.add(sixteenth14);
+        sixteenthMotos.add(sixteenth15);
+        sixteenthMotos.add(sixteenth16);
+
+
+
         sixteenth1.setMotoTitle("DECISEISAVOS 1");
         sixteenth2.setMotoTitle("DECISEISAVOS 2");
         sixteenth3.setMotoTitle("DECISEISAVOS 3");
@@ -267,36 +296,25 @@ class FinalsManga {
         sixteenth16.setMotoTitle("DECISEISAVOS 16");
 
         sixteenthMangaPanel1 = new JPanel();
-        sixteenthMangaPanel1.setLayout(new GridLayout(0,4));
         sixteenthMangaPanel2 = new JPanel();
-        sixteenthMangaPanel2.setLayout(new GridLayout(0,4));
         sixteenthMangaPanel3 = new JPanel();
-        sixteenthMangaPanel3.setLayout(new GridLayout(0,4));
         sixteenthMangaPanel4 = new JPanel();
-        sixteenthMangaPanel4.setLayout(new GridLayout(0,4));
-
-        sixteenthMangaPanel1.add(sixteenth1.getMotoPanel());
-        sixteenthMangaPanel1.add(sixteenth2.getMotoPanel());
-        sixteenthMangaPanel1.add(sixteenth3.getMotoPanel());
-        sixteenthMangaPanel1.add(sixteenth4.getMotoPanel());
-        sixteenthMangaPanel2.add(sixteenth5.getMotoPanel());
-        sixteenthMangaPanel2.add(sixteenth6.getMotoPanel());
-        sixteenthMangaPanel2.add(sixteenth7.getMotoPanel());
-        sixteenthMangaPanel2.add(sixteenth8.getMotoPanel());
-        sixteenthMangaPanel3.add(sixteenth9.getMotoPanel());
-        sixteenthMangaPanel3.add(sixteenth10.getMotoPanel());
-        sixteenthMangaPanel3.add(sixteenth11.getMotoPanel());
-        sixteenthMangaPanel3.add(sixteenth12.getMotoPanel());
-        sixteenthMangaPanel4.add(sixteenth13.getMotoPanel());
-        sixteenthMangaPanel4.add(sixteenth14.getMotoPanel());
-        sixteenthMangaPanel4.add(sixteenth15.getMotoPanel());
-        sixteenthMangaPanel4.add(sixteenth16.getMotoPanel());
 
         sixteenthMangaPanels.add(sixteenthMangaPanel1);
         sixteenthMangaPanels.add(sixteenthMangaPanel2);
         sixteenthMangaPanels.add(sixteenthMangaPanel3);
         sixteenthMangaPanels.add(sixteenthMangaPanel4);
 
+        int temp_int = 0;
+
+        for (int i = 0; i < 4 ; i++){
+            ArrayList<Moto> tempMotos = new ArrayList<>();
+            tempMotos.add(sixteenthMotos.get(temp_int++));
+            tempMotos.add(sixteenthMotos.get(temp_int++));
+            tempMotos.add(sixteenthMotos.get(temp_int++));
+            tempMotos.add(sixteenthMotos.get(temp_int++));
+            Utils.layoutForTheMangaPanel(sixteenthMangaPanels.get(i), "DECISEISAVOS " + (i+1), tempMotos);
+        }
 
         sixteenthMotosMap.put(1,sixteenth1);
         sixteenthMotosMap.put(2,sixteenth2);
@@ -317,13 +335,23 @@ class FinalsManga {
 
     }
 
+    public boolean isThereDirectFinal(){return isThereDirectFinal;}
+    public boolean isThereSemifinals(){return isThereSemifinals;}
     public boolean isThereQuarters(){ return isThereQuarters;}
     public boolean isThereEighth(){ return isThereEighth;}
     public boolean isThereSixteenth(){ return isThereSixteenth;}
 
-    public ArrayList<JPanel> getEigthMangaPanels(){ return eigthMangaPanels; }
 
-    public ArrayList<JPanel> getSixteenthMangaPanels(){ return sixteenthMangaPanels;}
+    //pendiente
+    public void setQuarterPlayers(ArrayList <Players> playersForQuarters){
+        for(Map.Entry<Integer,Moto> quarterMoto: quarterMotosMap.entrySet()){
+            quarterMoto.getValue().getModelMotoTable();
+        }
+    }
+    public void setFinalMoto(ArrayList <Players> finalPlayersArray){
 
+        finalMoto.setPlayersOfThisMoto(finalPlayersArray);
+
+    }
 
 }

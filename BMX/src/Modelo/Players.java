@@ -299,9 +299,10 @@ public class Players {
     public int getPoints(){
         return this.total_points;
     }
+
     public void addPoints(int points){
         this.total_points = this.total_points + points;
-        System.out.println("TOTAL DEL PLAYER: "+ this.total_points + "    POINTS A SUMAR " + points);
+        System.out.println("PLACA: "  +  this.getPlaca() + "TOTAL PUNTOS: "+ this.total_points + "    PUNTOS A SUMAR " + points);
     }
 
     public static final Comparator<Players> PlayerCampeonatoEspanyaComparator = (p1, p2) -> {
@@ -317,6 +318,14 @@ public class Players {
         int playerCruiserRankingEspanya2 = p2.getRankingCruiserNacional();
 
         return playerCruiserRankingEspanya1 - playerCruiserRankingEspanya2;
+
+    };
+
+    public static final Comparator<Players> PlayerPointsComparator = (p1, p2) -> {
+        int playerPoints1 = p1.getRankingCampeonatoEspanya();
+        int playerPoints2 = p2.getRankingCampeonatoEspanya();
+
+        return playerPoints1 - playerPoints2;
 
     };
 }

@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Map;
+import java.util.Objects;
 import java.util.TreeMap;
 
 /**
@@ -87,11 +88,15 @@ public class AllGames {
 
     public void calculateAllPointsOfAllSingleGames(){
         for(int i= 0; i<3; i++){
-            for (Map.Entry<Integer,SingleGame> entry: allGamesmap.get(i).entrySet()){
-                entry.getValue().calculateAllMangasPoints();
+            for (Map.Entry<Integer,SingleGame> singleGameEntry: allGamesmap.get(i).entrySet()){
+                singleGameEntry.getValue().calculateAllMangasPoints();
+                if (singleGameEntry.getValue().checkMotoTableModelPlatesFull()){
+                        singleGameEntry.getValue().setUpFinalPlayers();
+                }
             }
         }
     }
+
 
 }
 

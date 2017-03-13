@@ -17,17 +17,16 @@ public class MotosTableModel extends AbstractTableModel implements Constants, Ta
     private final String[] titulos = {"Puntos", "Placa"};
     private ArrayList<ArrayList<Object>> list_p = new ArrayList<ArrayList<Object>>();
     private ArrayList<Players> playersInMoto = new ArrayList<>();
-    private ArrayList<JLabel> labelsPlateArray;
+    private int numero_moto;
 
     public MotosTableModel(ArrayList<Players> playersInMoto, int numero_moto){
         this.playersInMoto = playersInMoto;
-        int numero_moto1 = numero_moto;
+        this.numero_moto = numero_moto;
         createPointsArray(this.playersInMoto.size());
         }
 
-    public void insertarDatos(ArrayList<ArrayList<Object>> array){
+    public void setNewArray(ArrayList<ArrayList<Object>> array){
         list_p = array;
-
     }
     private void createPointsArray(int number_of_players){
 
@@ -89,10 +88,6 @@ public class MotosTableModel extends AbstractTableModel implements Constants, Ta
 
     }
 
-    public void addAlArray(ArrayList<Object> array){
-        list_p.add(array);
-    }
-
     @Override
     public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
         ArrayList<Object> temp = list_p.get(rowIndex);
@@ -139,8 +134,7 @@ public class MotosTableModel extends AbstractTableModel implements Constants, Ta
         }
     }
 
-
-    public void checkPlatesPointsLabel(){
+    public void checkPlatesPointsLabel(ArrayList <JLabel> labelsPlateArray){
         for (ArrayList<Object> aPlate: list_p){
             for (JLabel aLabel: labelsPlateArray){
                 if(aPlate.get(1).equals(aLabel.getText())){
@@ -151,15 +145,8 @@ public class MotosTableModel extends AbstractTableModel implements Constants, Ta
         }
     }
 
-    public void setLabelsPlateArray(ArrayList<JLabel> labelsPlateArray){
-        this.labelsPlateArray = labelsPlateArray;
+    public void setPlayersInMoto(ArrayList <Players> playersInMoto){
+        this.playersInMoto = playersInMoto;
     }
-
-    /*public void getAllPlayersInThisMoto(){
-        System.out.println("MOTO  " + numero_moto+ "\n");
-        for (Players aPlayer: this.playersInMoto){
-            System.out.println("PLACA DEL PILOTO: " + aPlayer.getPlaca() + " \n PUNTOS DEL PILOTO: " + aPlayer.getPoints());
-        }
-    }*/
 
 }

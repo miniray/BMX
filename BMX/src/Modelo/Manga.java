@@ -13,7 +13,7 @@ import java.util.TreeMap;
  */
 class Manga {
 
-    private final JPanel panelManga;
+    private final JPanel mangaPanel;
     private final Map<Integer, Moto> motosMap;
     private final ArrayList<Players> mangaPlayersArray;
     private final JLabel numberOfMangaLabel;
@@ -22,9 +22,9 @@ class Manga {
     public Manga(ArrayList<Players> allPlayersOfThisManga){
 
         motosMap = new TreeMap<>();
-        panelManga = new JPanel();
+        mangaPanel = new JPanel();
         GridBagLayout gbl = new GridBagLayout();
-        panelManga.setLayout(gbl);
+        mangaPanel.setLayout(gbl);
         GridBagConstraints constraints = new GridBagConstraints();
         gbl.columnWeights = new double[] {-10.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0};
         gbl.rowWeights = new double[] {1.0, 1.0, 1.0, 1.0, Double.MIN_VALUE};
@@ -36,7 +36,7 @@ class Manga {
         constraints.fill = GridBagConstraints.BOTH;
         constraints.weighty = 0.0;
         numberOfMangaLabel = new JLabel();
-        panelManga.add(numberOfMangaLabel, constraints);
+        mangaPanel.add(numberOfMangaLabel, constraints);
 
         mangaPlayersArray = allPlayersOfThisManga;
 
@@ -47,13 +47,13 @@ class Manga {
             constraints.gridy = 0;
             constraints.gridwidth = 2;
             constraints.gridheight = 3;
-            panelManga.add(moto.getMotoPanel(), constraints);
+            mangaPanel.add(moto.getMotoPanel(), constraints);
 
         }
     }
 
     public JPanel getMangaPanel(){
-        return panelManga;
+        return mangaPanel;
     }
 
     public Map<Integer, Moto> getMotosMap(){
@@ -77,17 +77,24 @@ class Manga {
 
         for (Map.Entry<Integer, Moto> entry : motosMap.entrySet()){
             entry.getValue().getModelMotoTable().updatePlayerPoints();
-            entry.getValue().getModelMotoTable().checkPlatesPointsLabel();
+            entry.getValue().getModelMotoTable().checkPlatesPointsLabel(entry.getValue().getLabelArrayList());
         }
 
     }
 
-    /*public void printMangas(){
-        int mangasq = 1;
-        for (Map.Entry<Integer, Moto> entry : motosMap.entrySet()) {
-            entry.getValue().getModelMotoTable().getAllPlayersInThisMoto();
-            mangasq++;
-       }
-    }*/
+    public ArrayList<Players> getClasifiedPlayers(){
+        mangaPlayersArray.sort(Players.PlayerPointsComparator);
+        ArrayList <Players> finalPlayers = new ArrayList<>();
 
+        if (mangaPlayersArray.size() != 4){
+            for (int i = 0; i < 3; i++){
+                finalPlayers.add(mangaPlayersArray.get(i));
+            }
+        }else{
+            for (int i = 0; i < 4; i++){
+                finalPlayers.add(mangaPlayersArray.get(i));
+            }
+        }
+        return finalPlayers;
+    }
 }

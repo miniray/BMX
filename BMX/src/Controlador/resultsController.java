@@ -11,17 +11,11 @@ import java.awt.event.ActionListener;
 /**
  * Created by Miquel on 15/02/2017.
  */
-public class resultsController implements ActionListener, TableModelListener {
+public class resultsController implements TableModelListener {
     private final AllGames allGames;
 
     public resultsController(AllGames allGames){
         this.allGames = allGames;
-
-
-    }
-    @Override
-    public void actionPerformed(ActionEvent e) {
-
     }
 
 
