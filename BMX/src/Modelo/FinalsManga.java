@@ -49,8 +49,9 @@ class FinalsManga {
         if (numberOfPlayers > 8 && numberOfPlayers <= 16) {
             createFinalCase();
             isThereDirectFinal = true;
-        }
 
+
+        }
         if (numberOfPlayers > 16 && numberOfPlayers <= 32) {
             createSemifinalsCase();
             isThereSemifinals = true;
@@ -97,6 +98,7 @@ class FinalsManga {
             finalsPlayers.add(temp);
         }
         finalMoto = new Moto(0, finalsPlayers);
+        finalMoto.setIs_final();
         finalMoto.setMotoTitle("FINAL");
         finalMangaPanel.add(finalMoto.getMotoPanel(), 0);
     }
@@ -107,6 +109,8 @@ class FinalsManga {
         finalsPlayers = new ArrayList<>();
         Moto semiMoto1 = new Moto(0, semifinalsPlayers1);
         Moto semiMoto2 = new Moto(0, semifinalsPlayers2);
+        semiMoto1.setIs_semifinal();
+        semiMoto2.setIs_semifinal();
         finalMoto = new Moto (0, finalsPlayers);
         semiMoto1.setMotoTitle("SEMIFINAL 1");
         semiMoto2.setMotoTitle("SEMIFINAL 2");
@@ -136,6 +140,10 @@ class FinalsManga {
         quarterMotos.add(quarter2);
         quarterMotos.add(quarter3);
         quarterMotos.add(quarter4);
+
+        for (Moto aMoto: quarterMotos){
+            aMoto.setIs_quarter();
+        }
 
         quarter1.setMotoTitle("CUARTOS 1");
         quarter2.setMotoTitle("CUARTOS 2");
@@ -182,6 +190,10 @@ class FinalsManga {
         eighthMotos.add(eighth6);
         eighthMotos.add(eighth7);
         eighthMotos.add(eighth8);
+
+        for(Moto aMoto: eighthMotos){
+            aMoto.setIs_eighth();
+        }
 
         eighth1.setMotoTitle("OCTAVOS 1");
         eighth2.setMotoTitle("OCTAVOS 2");
@@ -276,6 +288,10 @@ class FinalsManga {
         sixteenthMotos.add(sixteenth15);
         sixteenthMotos.add(sixteenth16);
 
+        for(Moto aMoto: sixteenthMotos){
+            aMoto.setIs_sixteenth();
+        }
+
 
 
         sixteenth1.setMotoTitle("DECISEISAVOS 1");
@@ -349,9 +365,7 @@ class FinalsManga {
         }
     }
     public void setFinalMoto(ArrayList <Players> finalPlayersArray){
-
         finalMoto.setPlayersOfThisMoto(finalPlayersArray);
-
     }
 
 }

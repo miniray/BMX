@@ -17,9 +17,11 @@ public class Moto implements TableModelListener {
         private final JLabel motoTitle;
         private JPanel playersLabelsPanel;
         private ArrayList <JLabel> labelArrayList;
-        private boolean is_quarter = false;
-        private boolean is_semifinal = false;
-        private boolean is_final = false;
+        public boolean is_sixteenth = false;
+        public boolean is_eighth = false;
+        public boolean is_quarter = false;
+        public boolean is_semifinal = false;
+        public boolean is_final = false;
 
 
 
@@ -100,6 +102,7 @@ public class Moto implements TableModelListener {
         container.setBackground(new Color(64,64,64));
         }
 
+
     public JPanel getMotoPanel(){ return this.container;}
 
     public MotosTableModel getModelMotoTable(){ return tableModelMoto; }
@@ -133,11 +136,23 @@ public class Moto implements TableModelListener {
         this.playersOfThisMoto = playersOfThisMoto;
         this.getModelMotoTable().setPlayersInMoto(playersOfThisMoto);
         setLabelPlayers();
+        getMotoPanel().updateUI();
     }
 
     public ArrayList <JLabel> getLabelArrayList(){
         return labelArrayList;
     }
 
+    public void setIs_sixteenth(){ is_sixteenth = true;}
+    public void setIs_eighth(){ is_eighth = true;}
+    public void setIs_quarter(){ is_quarter = true;}
+    public void setIs_semifinal(){ is_semifinal = true;}
+    public void setIs_final(){ is_final = true;}
+
+    public boolean getIs_sixteenth(){return is_sixteenth;}
+    public boolean getIs_eighth(){return is_eighth;}
+    public boolean getIs_quarter(){return is_quarter;}
+    public boolean getIs_semifinal(){return is_semifinal;}
+    public boolean getIs_final(){return is_final;}
 
 }

@@ -127,6 +127,7 @@ public class MotosTableModel extends AbstractTableModel implements Constants, Ta
             if (aRow.get(1) != "") {
                 for (Players aPlayer : playersInMoto) {
                     if (aPlayer.getPlaca().equals(aRow.get(1))) {
+                        System.out.println("MOTO: " + numero_moto + "\n");
                         aPlayer.addPoints((int) aRow.get(0));
                     }
                 }
@@ -135,11 +136,19 @@ public class MotosTableModel extends AbstractTableModel implements Constants, Ta
     }
 
     public void checkPlatesPointsLabel(ArrayList <JLabel> labelsPlateArray){
+        ArrayList<JLabel> labelsToColor = new ArrayList<>();
         for (ArrayList<Object> aPlate: list_p){
             for (JLabel aLabel: labelsPlateArray){
                 if(aPlate.get(1).equals(aLabel.getText())){
-                    aLabel.setBackground(Color.GREEN);
+                    labelsToColor.add(aLabel);
                 }
+            }
+        }
+        for (JLabel aLabel: labelsPlateArray){
+            if (labelsToColor.contains(aLabel)){
+                aLabel.setBackground(Color.GREEN);
+            }else{
+                aLabel.setBackground(Color.RED);
             }
 
         }

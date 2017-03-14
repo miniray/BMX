@@ -90,8 +90,12 @@ public class AllGames {
         for(int i= 0; i<3; i++){
             for (Map.Entry<Integer,SingleGame> singleGameEntry: allGamesmap.get(i).entrySet()){
                 singleGameEntry.getValue().calculateAllMangasPoints();
-                if (singleGameEntry.getValue().checkMotoTableModelPlatesFull()){
+                int number_of_full_motos = singleGameEntry.getValue().checkMotoTableModelPlatesFull();
+                int number_of_motos_in_the_singlegame = (singleGameEntry.getValue().getQuantity_of_mangas()*3);
+                if (number_of_full_motos == number_of_motos_in_the_singlegame) {
+                    if (singleGameEntry.getValue().getAllPlayersOfThisRace().size() <= 16) {
                         singleGameEntry.getValue().setUpFinalPlayers();
+                    }
                 }
             }
         }

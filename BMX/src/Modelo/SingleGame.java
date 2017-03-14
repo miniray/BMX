@@ -103,6 +103,10 @@ public class SingleGame {
 
     }
 
+    public int getQuantity_of_mangas(){
+        return quantity_of_mangas;
+    }
+
     private void generateGamePanel() {
         GridLayout gamePanelGridLayout = new GridLayout(mangasMap.size(), 0);
         gamePanel.setLayout(gamePanelGridLayout);
@@ -187,13 +191,6 @@ public class SingleGame {
                 }
             }
         }
-        int contador_temp = 0;
-        for (ArrayList<Players> aManga : allPlayersByMangaArray) {
-            contador_temp++;
-            System.out.println("SE HA INTRODUCIDO EN LA MANGA " + contador_temp + ": " + aManga.size());
-        }
-
-
     }
 
     public void setNumber_of_manga_int(int number_of_manga_int) {
@@ -238,7 +235,6 @@ public class SingleGame {
     public void calculateAllMangasPoints() {
         for (Map.Entry<Integer, Manga> entry : mangasMap.entrySet()) {
             entry.getValue().calculateAllMotosPointsOfThisManga();
-            //entry.getValue().printMangas();
         }
     }
 
@@ -250,18 +246,23 @@ public class SingleGame {
         }
     }
 
-    public boolean checkMotoTableModelPlatesFull() {
-        boolean isEmpty = false;
+    public int checkMotoTableModelPlatesFull() {
+        int number_of_full_plates = 0;
+        int number_of_full_mangas = 0;
         for (Map.Entry<Integer, Manga> entry : mangasMap.entrySet()) {
             for (Map.Entry<Integer, Moto> motoEntry : entry.getValue().getMotosMap().entrySet()) {
                 for (ArrayList<Object> aRow : motoEntry.getValue().getModelMotoTable().getArray()) {
-                    if (aRow.get(1).equals("")) {
-                        isEmpty = true;
+                    if (!aRow.get(1).equals("")) {
+                        number_of_full_plates++;
                     }
                 }
+                if (number_of_full_plates == motoEntry.getValue().getModelMotoTable().getArray().size()){
+                    number_of_full_mangas++;
+                }
+                number_of_full_plates = 0;
             }
         }
-        return isEmpty;
+        return number_of_full_mangas;
     }
 
     public void setUpFinalPlayers() {
@@ -286,5 +287,9 @@ public class SingleGame {
         playersToFinal.addAll(mangasMap.get(0).getClasifiedPlayers());
         playersToFinal.addAll(mangasMap.get(1).getClasifiedPlayers());
         finalsMangas.setFinalMoto(playersToFinal);
+    }
+
+    public ArrayList<Players> getAllPlayersOfThisRace(){
+        return allPlayersOfThisRace;
     }
 }

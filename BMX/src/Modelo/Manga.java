@@ -86,7 +86,7 @@ class Manga {
         mangaPlayersArray.sort(Players.PlayerPointsComparator);
         ArrayList <Players> finalPlayers = new ArrayList<>();
 
-        if (mangaPlayersArray.size() != 4){
+        if (mangaPlayersArray.size() == 4){
             for (int i = 0; i < 3; i++){
                 finalPlayers.add(mangaPlayersArray.get(i));
             }

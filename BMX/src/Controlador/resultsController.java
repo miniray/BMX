@@ -21,7 +21,5 @@ public class resultsController implements TableModelListener {
 
     public void tableChanged(TableModelEvent e) {
         allGames.calculateAllPointsOfAllSingleGames();
-        ((MotosTableModel) e.getSource()).updatePlayerPoints();
-
     }
 }
