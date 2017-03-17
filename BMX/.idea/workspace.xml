@@ -10,24 +10,12 @@
     <bookmark url="file://$PROJECT_DIR$/src/Modelo/Constants.java" line="6" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d81d3b57-2c71-46a0-b9ed-ebaf6b409ca9" name="Default" comment="14/03/17">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/Moto.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/MotosTableModel.class" afterPath="" />
+    <list default="true" id="d81d3b57-2c71-46a0-b9ed-ebaf6b409ca9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/AllGames.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/AllGames.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/Manga.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/Manga.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/Players.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/Players.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/SingleGame.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/SingleGame.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controlador/Controller.java" afterPath="$PROJECT_DIR$/src/Controlador/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controlador/resultsController.java" afterPath="$PROJECT_DIR$/src/Controlador/resultsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/AllGames.java" afterPath="$PROJECT_DIR$/src/Modelo/AllGames.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/FinalsManga.java" afterPath="$PROJECT_DIR$/src/Modelo/FinalsManga.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/FinalsTableModel.java" afterPath="$PROJECT_DIR$/src/Modelo/FinalsTableModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/Manga.java" afterPath="$PROJECT_DIR$/src/Modelo/Manga.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/Moto.java" afterPath="$PROJECT_DIR$/src/Modelo/Moto.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/MotosTableModel.java" afterPath="$PROJECT_DIR$/src/Modelo/MotosTableModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/Players.java" afterPath="$PROJECT_DIR$/src/Modelo/Players.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/SingleGame.java" afterPath="$PROJECT_DIR$/src/Modelo/SingleGame.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -969,7 +957,7 @@
       <workItem from="1489564629019" duration="916000" />
       <workItem from="1489587032773" duration="231000" />
       <workItem from="1489692904766" duration="4236000" />
-      <workItem from="1489761811329" duration="411000" />
+      <workItem from="1489761811329" duration="455000" />
     </task>
     <task id="LOCAL-00001" summary="new">
       <created>1487103591689</created>
@@ -1013,11 +1001,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489762175227</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="14/03/17">
+      <created>1489762261172</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1489762261172</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="491667000" />
+    <option name="totallyTimeSpent" value="491711000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
