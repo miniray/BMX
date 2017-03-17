@@ -96,6 +96,7 @@ class FinalsManga {
             Players temp = new Players();
             finalsPlayers.add(temp);
         }
+
         finalMoto = new Moto(0, finalsPlayers);
         finalMoto.setIs_final();
         finalMoto.setMotoTitle("FINAL");
