@@ -98,6 +98,7 @@ class FinalsManga {
         }
 
         //11111
+        //22222
 
         finalMoto = new Moto(0, finalsPlayers);
         finalMoto.setIs_final();
