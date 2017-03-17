@@ -112,6 +112,7 @@ public class Controller implements ActionListener, MouseListener, TableModelList
 				carrera = new AllGames(graphicInterface.getCardPanel(), graphicInterface.getPanelBotonTodos());
 				rsController = new resultsController(carrera);
 				connectResultsController();
+				carrera.setRsController(rsController);
                 break;
 
 		    case "RANKING":

@@ -12,6 +12,7 @@ import java.util.ArrayList;
 public class Moto implements TableModelListener {
 
         private final JPanel container;
+        private Manga myManga;
         private final MotosTableModel tableModelMoto;
         private ArrayList<Players> playersOfThisMoto;
         private final JLabel motoTitle;
@@ -25,9 +26,10 @@ public class Moto implements TableModelListener {
 
 
 
-    public Moto(int number, ArrayList<Players> playersOfThisMoto) {
+    public Moto(int number, ArrayList<Players> playersOfThisMoto, Manga myManga) {
 
         int numero_moto = number;
+        this.myManga = myManga;
 
         //INICIALIZACION
         this.playersOfThisMoto = playersOfThisMoto;
@@ -42,7 +44,7 @@ public class Moto implements TableModelListener {
         motoTitle.setForeground(Color.white);
 
         //CREACION DE LA TABLA, SU MODELO, SU SCROLLPANE Y SU PANEL
-        tableModelMoto = new MotosTableModel(this.playersOfThisMoto, numero_moto);
+        tableModelMoto = new MotosTableModel(this.playersOfThisMoto, numero_moto, myManga);
         JTable motoTable = new JTable();
         motoTable.setModel(tableModelMoto);
 
@@ -130,6 +132,7 @@ public class Moto implements TableModelListener {
             labelArrayList.add(temp);
             playersLabelsPanel.add(temp);
         }
+        giveToModelThePlateLabelArray(labelArrayList);
     }
 
     public void setPlayersOfThisMoto(ArrayList <Players> playersOfThisMoto){
@@ -155,4 +158,8 @@ public class Moto implements TableModelListener {
     public boolean getIs_semifinal(){return is_semifinal;}
     public boolean getIs_final(){return is_final;}
 
+    public void giveToModelThePlateLabelArray(ArrayList<JLabel> platesLabelArray){
+        this.getModelMotoTable().setPlateLabelsArray(platesLabelArray);
+
+    }
 }

@@ -2,11 +2,11 @@ package Controlador;
 
 import Modelo.AllGames;
 import Modelo.MotosTableModel;
+import Modelo.Manga;
+import Modelo.SingleGame;
 
 import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 /**
  * Created by Miquel on 15/02/2017.
@@ -20,6 +20,28 @@ public class resultsController implements TableModelListener {
 
 
     public void tableChanged(TableModelEvent e) {
-        allGames.calculateAllPointsOfAllSingleGames();
+
+        MotosTableModel eventMotoModel = (MotosTableModel)e.getSource();
+        Manga myManga = eventMotoModel.getMyManga();
+        SingleGame mySingleGame = myManga.getMySingleGame();
+
+        if (eventMotoModel.get_Is_final()){
+            System.out.println("TRUE");
+        }else {
+            //allGames.calculateAllPointsOfAllSingleGames();
+            eventMotoModel.getMyManga().calculateAllMotosPointsOfThisManga();
+            eventMotoModel.checkLabelPlates();
+            checkAndSetUpFinalPlayers(mySingleGame);
+        }
+
+    }
+    private void checkAndSetUpFinalPlayers(SingleGame mySingleGame){
+        int number_of_full_motos = mySingleGame.checkMotoTableModelPlatesFull();
+        int number_of_motos_in_the_singlegame = (mySingleGame.getQuantity_of_mangas()*3);
+        if (number_of_full_motos == number_of_motos_in_the_singlegame) {
+            if (mySingleGame.getAllPlayersOfThisRace().size() <= 16) {
+                mySingleGame.setUpFinalPlayers(this);
+            }
+        }
     }
 }

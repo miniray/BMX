@@ -18,11 +18,71 @@ public class MotosTableModel extends AbstractTableModel implements Constants, Ta
     private ArrayList<ArrayList<Object>> list_p = new ArrayList<ArrayList<Object>>();
     private ArrayList<Players> playersInMoto = new ArrayList<>();
     private int numero_moto;
+    private boolean is_final = false;
+    private boolean is_semifinal = false;
+    private boolean is_quarter = false;
+    private boolean is_eighth = false;
+    private boolean is_sixteenth = false;
+    private int genre;
+    private int category_id;
+    private Manga myManga;
 
-    public MotosTableModel(ArrayList<Players> playersInMoto, int numero_moto){
+    private ArrayList<JLabel> platesLabelArray;
+
+    public void setGenre(int genre) {
+        this.genre = genre;
+    }
+
+    public void setCategory_id(int category_id) {
+        this.category_id = category_id;
+    }
+
+
+    public boolean get_Is_final() {
+        return is_final;
+    }
+
+    public boolean get_Is_semifinal() {
+        return is_semifinal;
+    }
+
+    public boolean get_Is_quarter() {
+        return is_quarter;
+    }
+
+    public boolean get_Is_eighth() {
+        return is_eighth;
+    }
+
+    public boolean get_Is_sixteenth() {
+        return is_sixteenth;
+    }
+
+    public void set_Is_final(boolean is_final) {
+        this.is_final = is_final;
+    }
+
+    public void set_Is_semifinal(boolean is_semifinal) {
+        this.is_semifinal = is_semifinal;
+    }
+
+    public void set_Is_quarter(boolean is_quarter) {
+        this.is_quarter = is_quarter;
+    }
+
+    public void set_Is_eighth(boolean is_eighth) {
+        this.is_eighth = is_eighth;
+    }
+
+    public void set_Is_sixteenth(boolean is_sixteenth) {
+        this.is_sixteenth = is_sixteenth;
+    }
+
+    public MotosTableModel(ArrayList<Players> playersInMoto, int numero_moto, Manga myManga){
         this.playersInMoto = playersInMoto;
         this.numero_moto = numero_moto;
         createPointsArray(this.playersInMoto.size());
+        this.myManga = myManga;
         }
 
     public void setNewArray(ArrayList<ArrayList<Object>> array){
@@ -127,7 +187,6 @@ public class MotosTableModel extends AbstractTableModel implements Constants, Ta
             if (aRow.get(1) != "") {
                 for (Players aPlayer : playersInMoto) {
                     if (aPlayer.getPlaca().equals(aRow.get(1))) {
-                        System.out.println("MOTO: " + numero_moto + "\n");
                         aPlayer.addPoints((int) aRow.get(0));
                     }
                 }
@@ -158,4 +217,14 @@ public class MotosTableModel extends AbstractTableModel implements Constants, Ta
         this.playersInMoto = playersInMoto;
     }
 
+    public void setPlateLabelsArray(ArrayList <JLabel> labelsArray){
+        platesLabelArray = labelsArray;
+    }
+
+    public void checkLabelPlates(){
+        checkPlatesPointsLabel(platesLabelArray);
+    }
+
+
+    public Manga getMyManga(){ return myManga;}
 }

@@ -1,5 +1,7 @@
 package Modelo;
 
+import Controlador.resultsController;
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
@@ -49,8 +51,6 @@ class FinalsManga {
         if (numberOfPlayers > 8 && numberOfPlayers <= 16) {
             createFinalCase();
             isThereDirectFinal = true;
-
-
         }
         if (numberOfPlayers > 16 && numberOfPlayers <= 32) {
             createSemifinalsCase();
@@ -90,7 +90,6 @@ class FinalsManga {
         return finalMoto;
     }
 
-
     private void createFinalCase(){
         finalsPlayers = new ArrayList<>();
         for (int i = 0; i< 8; i++){
@@ -101,6 +100,7 @@ class FinalsManga {
         finalMoto.setIs_final();
         finalMoto.setMotoTitle("FINAL");
         finalMangaPanel.add(finalMoto.getMotoPanel(), 0);
+        finalMoto.getModelMotoTable().set_Is_final(true);
     }
     private void createSemifinalsCase (){
         Map<Integer, Moto> semifinalsMotosMap = new TreeMap<>();
@@ -364,8 +364,13 @@ class FinalsManga {
             quarterMoto.getValue().getModelMotoTable();
         }
     }
+
     public void setFinalMoto(ArrayList <Players> finalPlayersArray){
         finalMoto.setPlayersOfThisMoto(finalPlayersArray);
+
     }
 
+    public void setDirectFinalController(resultsController rc){
+        finalMoto.getModelMotoTable().addTableModelListener(rc);
+    }
 }

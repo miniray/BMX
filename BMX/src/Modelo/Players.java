@@ -301,7 +301,6 @@ public class Players {
 
     public void addPoints(int points){
         this.total_points = this.total_points + points;
-        System.out.println("PLACA: "  +  this.getPlaca() + "    TOTAL PUNTOS: "+ this.total_points + "    PUNTOS A SUMAR " + points);
     }
 
     public static final Comparator<Players> PlayerCampeonatoEspanyaComparator = (p1, p2) -> {

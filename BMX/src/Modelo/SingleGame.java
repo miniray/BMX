@@ -46,7 +46,7 @@ public class SingleGame {
 
     private void generateAllMangas() {
         for (int i = 0; i < quantity_of_mangas; i++) {
-            Manga manga = new Manga(allPlayersByMangaArray.get(i));
+            Manga manga = new Manga(allPlayersByMangaArray.get(i), this);
             mangasMap.put(i, manga);
         }
     }
@@ -159,7 +159,6 @@ public class SingleGame {
         }
     }
 
-
     private void splitAllPlayersToMangas() {
         createMangasStructure();
         orderPlayersArray();
@@ -265,7 +264,7 @@ public class SingleGame {
         return number_of_full_mangas;
     }
 
-    public void setUpFinalPlayers() {
+    public void setUpFinalPlayers(resultsController rsController) {
         if (finalsMangas.isThereSixteenth()) {
 
         }
@@ -279,6 +278,7 @@ public class SingleGame {
         }
         if (finalsMangas.isThereDirectFinal()){
             calculateDirectFinal();
+            finalsMangas.getFinalMoto().getModelMotoTable().addTableModelListener(rsController);
         }
     }
 
@@ -292,4 +292,7 @@ public class SingleGame {
     public ArrayList<Players> getAllPlayersOfThisRace(){
         return allPlayersOfThisRace;
     }
+
+
+
 }

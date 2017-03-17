@@ -10,14 +10,19 @@
     <bookmark url="file://$PROJECT_DIR$/src/Modelo/Constants.java" line="6" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d81d3b57-2c71-46a0-b9ed-ebaf6b409ca9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/Moto.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/Moto.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/MotosTableModel.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/MotosTableModel.class" />
+    <list default="true" id="d81d3b57-2c71-46a0-b9ed-ebaf6b409ca9" name="Default" comment="14/03/17">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/Moto.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/MotosTableModel.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/AllGames.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/AllGames.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/Manga.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/Manga.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/Players.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/Players.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/SingleGame.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/SingleGame.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controlador/Controller.java" afterPath="$PROJECT_DIR$/src/Controlador/Controller.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controlador/resultsController.java" afterPath="$PROJECT_DIR$/src/Controlador/resultsController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/AllGames.java" afterPath="$PROJECT_DIR$/src/Modelo/AllGames.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/FinalsManga.java" afterPath="$PROJECT_DIR$/src/Modelo/FinalsManga.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/FinalsTableModel.java" afterPath="$PROJECT_DIR$/src/Modelo/FinalsTableModel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/Manga.java" afterPath="$PROJECT_DIR$/src/Modelo/Manga.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/Moto.java" afterPath="$PROJECT_DIR$/src/Modelo/Moto.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/MotosTableModel.java" afterPath="$PROJECT_DIR$/src/Modelo/MotosTableModel.java" />
@@ -40,47 +45,20 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="DockManager">
-    <window id="2">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="Moto.java" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/src/Modelo/Moto.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="708">
-                    <caret line="155" column="30" lean-forward="false" selection-start-line="155" selection-start-column="30" selection-end-line="155" selection-end-column="30" />
-                    <folding>
-                      <element signature="method#Moto#0;class#Moto#0" expanded="false" />
-                      <element signature="method#tableChanged#0;class#Moto#0" expanded="false" />
-                      <element signature="method#setLabelPlayers#0;class#Moto#0" expanded="false" />
-                      <element signature="method#setPlayersOfThisMoto#0;class#Moto#0" expanded="false" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="BMX" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SingleGame.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SingleGame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Modelo/SingleGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-155">
-              <caret line="162" column="43" lean-forward="false" selection-start-line="162" selection-start-column="43" selection-end-line="162" selection-end-column="43" />
+            <state relative-caret-position="208">
+              <caret line="235" column="55" lean-forward="false" selection-start-line="235" selection-start-column="55" selection-end-line="235" selection-end-column="55" />
               <folding>
                 <element signature="docComment;class#SingleGame#0" expanded="false" />
                 <element signature="method#SingleGame#0;class#SingleGame#0" expanded="false" />
-                <element signature="method#generateAllMangas#0;class#SingleGame#0" expanded="false" />
-                <element signature="method#setQuantityOfMangas#0;class#SingleGame#0" expanded="false" />
                 <element signature="method#generateGamePanel#0;class#SingleGame#0" expanded="false" />
                 <element signature="method#getAllMangasPanel#0;class#SingleGame#0" expanded="false" />
                 <element signature="method#createMangasStructure#0;class#SingleGame#0" expanded="false" />
@@ -89,9 +67,7 @@
                 <element signature="method#orderPlayersInThisRaceByCampeonatoEspañaRanking#0;class#SingleGame#0" expanded="false" />
                 <element signature="method#orderPlayersInThisRaceByCruiserEspañaRanking#0;class#SingleGame#0" expanded="false" />
                 <element signature="method#connectCrontroller#0;class#SingleGame#0" expanded="false" />
-                <element signature="method#calculateAllMangasPoints#0;class#SingleGame#0" expanded="false" />
                 <element signature="method#orderPlayersArray#0;class#SingleGame#0" expanded="false" />
-                <element signature="method#checkMotoTableModelPlatesFull#0;class#SingleGame#0" expanded="false" />
                 <element signature="method#setUpFinalPlayers#0;class#SingleGame#0" expanded="false" />
                 <element signature="method#calculateDirectFinal#0;class#SingleGame#0" expanded="false" />
               </folding>
@@ -99,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FinalsManga.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FinalsManga.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Modelo/FinalsManga.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1187">
-              <caret line="234" column="39" lean-forward="false" selection-start-line="234" selection-start-column="39" selection-end-line="234" selection-end-column="39" />
+            <state relative-caret-position="112">
+              <caret line="98" column="45" lean-forward="false" selection-start-line="98" selection-start-column="45" selection-end-line="98" selection-end-column="45" />
               <folding>
                 <element signature="method#createSemifinalsCase#0;class#FinalsManga#0" expanded="false" />
                 <element signature="method#createQuartersCase#0;class#FinalsManga#0" expanded="false" />
@@ -117,10 +93,33 @@
       <file leaf-file-name="Manga.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Modelo/Manga.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="119">
+              <caret line="80" column="13" lean-forward="false" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="70" />
               <folding>
                 <element signature="method#setNumberOfMangaLabel#0;class#Manga#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FinalsTableModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Modelo/FinalsTableModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Moto.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Modelo/Moto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="46" column="89" lean-forward="false" selection-start-line="46" selection-start-column="89" selection-end-line="46" selection-end-column="89" />
+              <folding>
+                <element signature="method#tableChanged#0;class#Moto#0" expanded="false" />
+                <element signature="method#setPlayersOfThisMoto#0;class#Moto#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -129,8 +128,8 @@
       <file leaf-file-name="AllGames.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Modelo/AllGames.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="96" column="71" lean-forward="true" selection-start-line="96" selection-start-column="71" selection-end-line="96" selection-end-column="71" />
+            <state relative-caret-position="174">
+              <caret line="98" column="48" lean-forward="false" selection-start-line="98" selection-start-column="48" selection-end-line="98" selection-end-column="48" />
               <folding>
                 <element signature="method#AllGames#0;class#AllGames#0" expanded="false" />
                 <element signature="method#createAllGamesStructure#0;class#AllGames#0" expanded="false" />
@@ -144,17 +143,17 @@
       <file leaf-file-name="MotosTableModel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Modelo/MotosTableModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="137" column="22" lean-forward="true" selection-start-line="137" selection-start-column="22" selection-end-line="137" selection-end-column="22" />
+            <state relative-caret-position="2499">
+              <caret line="223" column="32" lean-forward="false" selection-start-line="223" selection-start-column="32" selection-end-line="223" selection-end-column="32" />
               <folding>
                 <element signature="method#createPointsArray#0;class#MotosTableModel#0" expanded="false" />
                 <element signature="method#tableChanged#0;class#MotosTableModel#0" expanded="false" />
                 <element signature="method#getValueAt#0;class#MotosTableModel#0" expanded="false" />
                 <element signature="method#removeTableModelListener#0;class#MotosTableModel#0" expanded="false" />
-                <element signature="method#resetAllPlayersPoints#0;class#MotosTableModel#0" expanded="false" />
-                <element signature="method#updatePlayerPoints#0;class#MotosTableModel#0" expanded="false" />
-                <element signature="e#4288#4289#0" expanded="true" />
-                <element signature="e#4338#4339#0" expanded="true" />
+                <element signature="e#5736#5737#0" expanded="true" />
+                <element signature="e#5782#5783#0" expanded="true" />
+                <element signature="e#5819#5820#0" expanded="true" />
+                <element signature="e#5875#5876#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -163,11 +162,10 @@
       <file leaf-file-name="resultsController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controlador/resultsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="22" column="54" lean-forward="false" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+            <state relative-caret-position="153">
+              <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="28" />
               <folding>
-                <element signature="e#523#524#0" expanded="true" />
-                <element signature="e#584#585#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -176,8 +174,8 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controlador/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1008">
-              <caret line="113" column="16" lean-forward="false" selection-start-line="113" selection-start-column="16" selection-end-line="113" selection-end-column="16" />
+            <state relative-caret-position="1411">
+              <caret line="114" column="52" lean-forward="false" selection-start-line="114" selection-start-column="52" selection-end-line="114" selection-end-column="52" />
               <folding>
                 <element signature="method#mouseClicked#0;class#Controller#0" expanded="false" />
                 <element signature="method#mouseEntered#0;class#Controller#0" expanded="false" />
@@ -198,14 +196,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>tru</find>
-      <find>sixteenthMangaPanels</find>
-      <find>getEighthMangaPanels</find>
-      <find>MANGA</find>
-      <find>setNumberOfAllTheMangas</find>
-      <find>layout</find>
-      <find>numberOfMangaLabel</find>
-      <find>transformStringToHtml</find>
       <find>textoLabel</find>
       <find>allPlayersByMangaArray</find>
       <find>createMangasStructure</find>
@@ -216,7 +206,6 @@
       <find>container</find>
       <find>setLabelsPlateArray</find>
       <find>results</find>
-      <find>label</find>
       <find>playersLabelPanel</find>
       <find>labelsPlateArray</find>
       <find>playersLabelsPanel</find>
@@ -225,9 +214,18 @@
       <find>full</find>
       <find>quantity</find>
       <find>TOTAL DEL PLAYER</find>
-      <find>numero_moto</find>
       <find>LABEL</find>
       <find>MOTO</find>
+      <find>numero_moto</find>
+      <find>rc</find>
+      <find>finalsmangas</find>
+      <find>rsController</find>
+      <find>listener</find>
+      <find>points</find>
+      <find>calculateAll</find>
+      <find>plate</find>
+      <find>moto</find>
+      <find>label</find>
     </findStrings>
     <replaceStrings>
       <replace>ny</replace>
@@ -287,25 +285,25 @@
         <option value="$PROJECT_DIR$/src/Modelo/Constants.java" />
         <option value="$PROJECT_DIR$/src/Modelo/mangaPoints.java" />
         <option value="$PROJECT_DIR$/src/Modelo/CSVReader.java" />
-        <option value="$PROJECT_DIR$/src/Modelo/FinalsTableModel.java" />
         <option value="$PROJECT_DIR$/src/Modelo/resultsController.java" />
         <option value="$PROJECT_DIR$/src/Vista/PlayersImportationFrame.java" />
         <option value="$PROJECT_DIR$/src/Modelo/MainTableModel.java" />
         <option value="$PROJECT_DIR$/src/Vista/GraphicInterface.java" />
         <option value="$PROJECT_DIR$/src/Modelo/CategoriesManagement.java" />
         <option value="$PROJECT_DIR$/src/Vista/CategoryCruiserCellEditor.java" />
-        <option value="$PROJECT_DIR$/src/Controlador/Controller.java" />
         <option value="$PROJECT_DIR$/src/com/csvreader/CsvReader.java" />
         <option value="$PROJECT_DIR$/src/com/csvreader/CsvWriter.java" />
         <option value="$PROJECT_DIR$/src/Modelo/ImportedTableModel.java" />
         <option value="$PROJECT_DIR$/src/Modelo/Utils.java" />
-        <option value="$PROJECT_DIR$/src/Modelo/MotosTableModel.java" />
-        <option value="$PROJECT_DIR$/src/Modelo/Manga.java" />
-        <option value="$PROJECT_DIR$/src/Modelo/Players.java" />
-        <option value="$PROJECT_DIR$/src/Modelo/SingleGame.java" />
         <option value="$PROJECT_DIR$/src/Modelo/AllGames.java" />
-        <option value="$PROJECT_DIR$/src/Controlador/resultsController.java" />
+        <option value="$PROJECT_DIR$/src/Controlador/Controller.java" />
+        <option value="$PROJECT_DIR$/src/Modelo/Players.java" />
         <option value="$PROJECT_DIR$/src/Modelo/Moto.java" />
+        <option value="$PROJECT_DIR$/src/Modelo/Manga.java" />
+        <option value="$PROJECT_DIR$/src/Modelo/SingleGame.java" />
+        <option value="$PROJECT_DIR$/src/Controlador/resultsController.java" />
+        <option value="$PROJECT_DIR$/src/Modelo/MotosTableModel.java" />
+        <option value="$PROJECT_DIR$/src/Modelo/FinalsTableModel.java" />
         <option value="$PROJECT_DIR$/src/Modelo/FinalsManga.java" />
       </list>
     </option>
@@ -317,10 +315,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="-7" />
+    <option name="width" value="1378" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -340,7 +337,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -423,7 +420,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -967,7 +964,12 @@
       <workItem from="1489138692367" duration="594000" />
       <workItem from="1489163867842" duration="5862000" />
       <workItem from="1489344080130" duration="5861000" />
-      <workItem from="1489411261235" duration="11067000" />
+      <workItem from="1489411261235" duration="12086000" />
+      <workItem from="1489520949123" duration="1320000" />
+      <workItem from="1489564629019" duration="916000" />
+      <workItem from="1489587032773" duration="231000" />
+      <workItem from="1489692904766" duration="4236000" />
+      <workItem from="1489761811329" duration="411000" />
     </task>
     <task id="LOCAL-00001" summary="new">
       <created>1487103591689</created>
@@ -997,11 +999,25 @@
       <option name="project" value="LOCAL" />
       <updated>1489413386103</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="14/03/17">
+      <created>1489502219806</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1489502219806</updated>
+    </task>
+    <task id="LOCAL-00006" summary="14/03/17">
+      <created>1489762175227</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1489762175227</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="483534000" />
+    <option name="totallyTimeSpent" value="491667000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1013,27 +1029,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32649574" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3246528" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32291666" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31794873" sideWeight="0.14599092" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21367522" sideWeight="0.8540091" order="2" side_tool="false" content_ui="combo" x="13" y="55" width="1356" height="699" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33675215" sideWeight="0.8540091" order="2" side_tool="false" content_ui="combo" x="13" y="55" width="1356" height="699" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19818456" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21320182" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3025641" sideWeight="0.49411765" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2492647" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1048,6 +1063,7 @@
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31770834" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30729166" sideWeight="0.49411765" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1086,6 +1102,24 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -1290,13 +1324,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vista/GraphicInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2227">
-          <caret line="140" column="53" lean-forward="false" selection-start-line="140" selection-start-column="53" selection-end-line="140" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controlador/Main.java" />
     <entry file="file://$PROJECT_DIR$/src/Modelo/Categories.java" />
     <entry file="file://$PROJECT_DIR$/src/Vista/CategoryCruiserCellEditor.java">
@@ -1369,9 +1396,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="36" column="5" lean-forward="false" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1390,34 +1414,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modelo/FinalsTableModel.java">
+    <entry file="file://$PROJECT_DIR$/src/Modelo/Players.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="27" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="27" />
-          <folding />
+        <state relative-caret-position="143">
+          <caret line="302" column="55" lean-forward="false" selection-start-line="302" selection-start-column="55" selection-end-line="302" selection-end-column="55" />
+          <folding>
+            <element signature="e#8839#8840#0" expanded="true" />
+            <element signature="e#8901#8902#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modelo/Players.java">
+    <entry file="file://$PROJECT_DIR$/src/Vista/GraphicInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="324" column="42" lean-forward="false" selection-start-line="324" selection-start-column="42" selection-end-line="324" selection-end-column="42" />
-          <folding>
-            <element signature="e#3223#3224#0" expanded="true" />
-            <element signature="e#3251#3252#0" expanded="true" />
-            <element signature="method#getDescripcion#0;class#Players#0" expanded="false" />
-            <element signature="method#setRankingCruiserRegional#0;class#Players#0" expanded="false" />
-            <element signature="method#setRankingCruiserNacional#0;class#Players#0" expanded="false" />
-            <element signature="e#8759#8760#0" expanded="true" />
-            <element signature="e#8799#8800#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="79">
+          <caret line="242" column="0" lean-forward="true" selection-start-line="242" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controlador/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1008">
-          <caret line="113" column="16" lean-forward="false" selection-start-line="113" selection-start-column="16" selection-end-line="113" selection-end-column="16" />
+        <state relative-caret-position="1411">
+          <caret line="114" column="52" lean-forward="false" selection-start-line="114" selection-start-column="52" selection-end-line="114" selection-end-column="52" />
           <folding>
             <element signature="method#mouseClicked#0;class#Controller#0" expanded="false" />
             <element signature="method#mouseEntered#0;class#Controller#0" expanded="false" />
@@ -1426,10 +1445,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Modelo/MotosTableModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2499">
+          <caret line="223" column="32" lean-forward="false" selection-start-line="223" selection-start-column="32" selection-end-line="223" selection-end-column="32" />
+          <folding>
+            <element signature="method#createPointsArray#0;class#MotosTableModel#0" expanded="false" />
+            <element signature="method#tableChanged#0;class#MotosTableModel#0" expanded="false" />
+            <element signature="method#getValueAt#0;class#MotosTableModel#0" expanded="false" />
+            <element signature="method#removeTableModelListener#0;class#MotosTableModel#0" expanded="false" />
+            <element signature="e#5736#5737#0" expanded="true" />
+            <element signature="e#5782#5783#0" expanded="true" />
+            <element signature="e#5819#5820#0" expanded="true" />
+            <element signature="e#5875#5876#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controlador/resultsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Modelo/AllGames.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="96" column="71" lean-forward="true" selection-start-line="96" selection-start-column="71" selection-end-line="96" selection-end-column="71" />
+        <state relative-caret-position="174">
+          <caret line="98" column="48" lean-forward="false" selection-start-line="98" selection-start-column="48" selection-end-line="98" selection-end-column="48" />
           <folding>
             <element signature="method#AllGames#0;class#AllGames#0" expanded="false" />
             <element signature="method#createAllGamesStructure#0;class#AllGames#0" expanded="false" />
@@ -1439,79 +1485,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controlador/resultsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="22" column="54" lean-forward="false" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
-          <folding>
-            <element signature="e#523#524#0" expanded="true" />
-            <element signature="e#584#585#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modelo/MotosTableModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="137" column="22" lean-forward="true" selection-start-line="137" selection-start-column="22" selection-end-line="137" selection-end-column="22" />
-          <folding>
-            <element signature="method#createPointsArray#0;class#MotosTableModel#0" expanded="false" />
-            <element signature="method#tableChanged#0;class#MotosTableModel#0" expanded="false" />
-            <element signature="method#getValueAt#0;class#MotosTableModel#0" expanded="false" />
-            <element signature="method#removeTableModelListener#0;class#MotosTableModel#0" expanded="false" />
-            <element signature="method#resetAllPlayersPoints#0;class#MotosTableModel#0" expanded="false" />
-            <element signature="method#updatePlayerPoints#0;class#MotosTableModel#0" expanded="false" />
-            <element signature="e#4288#4289#0" expanded="true" />
-            <element signature="e#4338#4339#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Modelo/Moto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="708">
-          <caret line="155" column="30" lean-forward="false" selection-start-line="155" selection-start-column="30" selection-end-line="155" selection-end-column="30" />
+        <state relative-caret-position="170">
+          <caret line="46" column="89" lean-forward="false" selection-start-line="46" selection-start-column="89" selection-end-line="46" selection-end-column="89" />
           <folding>
-            <element signature="method#Moto#0;class#Moto#0" expanded="false" />
             <element signature="method#tableChanged#0;class#Moto#0" expanded="false" />
-            <element signature="method#setLabelPlayers#0;class#Moto#0" expanded="false" />
             <element signature="method#setPlayersOfThisMoto#0;class#Moto#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modelo/Manga.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="method#setNumberOfMangaLabel#0;class#Manga#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modelo/FinalsManga.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1187">
-          <caret line="234" column="39" lean-forward="false" selection-start-line="234" selection-start-column="39" selection-end-line="234" selection-end-column="39" />
-          <folding>
-            <element signature="method#createSemifinalsCase#0;class#FinalsManga#0" expanded="false" />
-            <element signature="method#createQuartersCase#0;class#FinalsManga#0" expanded="false" />
-            <element signature="method#createEighthCase#0;class#FinalsManga#0" expanded="false" />
-            <element signature="method#createSixteenthCase#0;class#FinalsManga#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Modelo/SingleGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-155">
-          <caret line="162" column="43" lean-forward="false" selection-start-line="162" selection-start-column="43" selection-end-line="162" selection-end-column="43" />
+        <state relative-caret-position="208">
+          <caret line="235" column="55" lean-forward="false" selection-start-line="235" selection-start-column="55" selection-end-line="235" selection-end-column="55" />
           <folding>
             <element signature="docComment;class#SingleGame#0" expanded="false" />
             <element signature="method#SingleGame#0;class#SingleGame#0" expanded="false" />
-            <element signature="method#generateAllMangas#0;class#SingleGame#0" expanded="false" />
-            <element signature="method#setQuantityOfMangas#0;class#SingleGame#0" expanded="false" />
             <element signature="method#generateGamePanel#0;class#SingleGame#0" expanded="false" />
             <element signature="method#getAllMangasPanel#0;class#SingleGame#0" expanded="false" />
             <element signature="method#createMangasStructure#0;class#SingleGame#0" expanded="false" />
@@ -1520,11 +1511,40 @@
             <element signature="method#orderPlayersInThisRaceByCampeonatoEspañaRanking#0;class#SingleGame#0" expanded="false" />
             <element signature="method#orderPlayersInThisRaceByCruiserEspañaRanking#0;class#SingleGame#0" expanded="false" />
             <element signature="method#connectCrontroller#0;class#SingleGame#0" expanded="false" />
-            <element signature="method#calculateAllMangasPoints#0;class#SingleGame#0" expanded="false" />
             <element signature="method#orderPlayersArray#0;class#SingleGame#0" expanded="false" />
-            <element signature="method#checkMotoTableModelPlatesFull#0;class#SingleGame#0" expanded="false" />
             <element signature="method#setUpFinalPlayers#0;class#SingleGame#0" expanded="false" />
             <element signature="method#calculateDirectFinal#0;class#SingleGame#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Modelo/Manga.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="80" column="13" lean-forward="false" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="70" />
+          <folding>
+            <element signature="method#setNumberOfMangaLabel#0;class#Manga#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Modelo/FinalsTableModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Modelo/FinalsManga.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="98" column="45" lean-forward="false" selection-start-line="98" selection-start-column="45" selection-end-line="98" selection-end-column="45" />
+          <folding>
+            <element signature="method#createSemifinalsCase#0;class#FinalsManga#0" expanded="false" />
+            <element signature="method#createQuartersCase#0;class#FinalsManga#0" expanded="false" />
+            <element signature="method#createEighthCase#0;class#FinalsManga#0" expanded="false" />
+            <element signature="method#createSixteenthCase#0;class#FinalsManga#0" expanded="false" />
           </folding>
         </state>
       </provider>

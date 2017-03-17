@@ -7,6 +7,6 @@ import java.util.ArrayList;
  */
 class FinalsTableModel extends MotosTableModel{
     public FinalsTableModel(ArrayList<Players> playersInMoto, int numero_moto) {
-        super(playersInMoto, numero_moto);
+
     }
 }

@@ -1,5 +1,7 @@
 package Modelo;
 
+import Controlador.resultsController;
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
@@ -18,6 +20,7 @@ public class AllGames {
     private int number_of_manga;
     private final int[][] mangas_order= {{1,0},{0,0}, {1,1}, {0,1},{1,2}, {1,3}, {0,2}, {1,4}, {0,3}, {1,5}, {1,6} , {1,7}, {1,8}
             ,{2,1}, {2,2}, {2,3}, {2,4},{2,5}, {0,4}, {1,9}, {1,10}};
+    private resultsController rsController;
 
 
     public AllGames(JPanel mainPanel, JPanel buttonTodosPanel){
@@ -35,6 +38,10 @@ public class AllGames {
         createAllGamesStructure(mainPanel, buttonTodosPanel);
         setNumberOfAllTheMangas();
 
+    }
+
+    public void setRsController(resultsController rsController){
+        this.rsController = rsController;
     }
 
     private void createAllGamesStructure(JPanel mainPanel, JPanel buttonTodosPanel){
@@ -94,7 +101,7 @@ public class AllGames {
                 int number_of_motos_in_the_singlegame = (singleGameEntry.getValue().getQuantity_of_mangas()*3);
                 if (number_of_full_motos == number_of_motos_in_the_singlegame) {
                     if (singleGameEntry.getValue().getAllPlayersOfThisRace().size() <= 16) {
-                        singleGameEntry.getValue().setUpFinalPlayers();
+                        singleGameEntry.getValue().setUpFinalPlayers(rsController);
                     }
                 }
             }

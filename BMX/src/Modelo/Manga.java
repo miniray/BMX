@@ -11,16 +11,18 @@ import java.util.TreeMap;
  * Objeto para crear una Manga (JPanel) con un numero determinado de
  * Motos (Moto) dentro.
  */
-class Manga {
+public class Manga {
 
     private final JPanel mangaPanel;
     private final Map<Integer, Moto> motosMap;
     private final ArrayList<Players> mangaPlayersArray;
     private final JLabel numberOfMangaLabel;
+    private SingleGame mySingleGame;
 
 
-    public Manga(ArrayList<Players> allPlayersOfThisManga){
+    public Manga(ArrayList<Players> allPlayersOfThisManga, SingleGame mySingleGame){
 
+        this.mySingleGame = mySingleGame;
         motosMap = new TreeMap<>();
         mangaPanel = new JPanel();
         GridBagLayout gbl = new GridBagLayout();
@@ -41,7 +43,7 @@ class Manga {
         mangaPlayersArray = allPlayersOfThisManga;
 
         for (int i = 1; i<= 3; i++){
-            Moto moto = new Moto(i, mangaPlayersArray);
+            Moto moto = new Moto(i, mangaPlayersArray, this);
             motosMap.put(i, moto);
             constraints.gridx += constraints.gridwidth;
             constraints.gridy = 0;
@@ -97,4 +99,6 @@ class Manga {
         }
         return finalPlayers;
     }
+
+    public SingleGame getMySingleGame(){ return mySingleGame;}
 }
