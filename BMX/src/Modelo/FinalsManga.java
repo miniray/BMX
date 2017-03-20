@@ -30,6 +30,7 @@ class FinalsManga {
 
     private final JPanel finalMangaPanel;
 
+    Map<Integer, Moto> semifinalsMotosMap;
     Map<Integer, Moto> quarterMotosMap;
     Map<Integer, Moto> eighthMotosMap;
     Map<Integer, Moto> sixteenthMotosMap;
@@ -97,25 +98,24 @@ class FinalsManga {
             finalsPlayers.add(temp);
         }
 
-        //11111
-        //22222
 
-        finalMoto = new Moto(0, finalsPlayers);
+        //IMPLEMENTAR CONSTRUCTOR CON FINALMANGA
+        finalMoto = new Moto(0, finalsPlayers, this);
         finalMoto.setIs_final();
         finalMoto.setMotoTitle("FINAL");
         finalMangaPanel.add(finalMoto.getMotoPanel(), 0);
         finalMoto.getModelMotoTable().set_Is_final(true);
     }
     private void createSemifinalsCase (){
-        Map<Integer, Moto> semifinalsMotosMap = new TreeMap<>();
+        semifinalsMotosMap = new TreeMap<>();
         ArrayList<Players> semifinalsPlayers1 = new ArrayList<>();
         ArrayList<Players> semifinalsPlayers2 = new ArrayList<>();
         finalsPlayers = new ArrayList<>();
-        Moto semiMoto1 = new Moto(0, semifinalsPlayers1);
-        Moto semiMoto2 = new Moto(0, semifinalsPlayers2);
+        Moto semiMoto1 = new Moto(0, semifinalsPlayers1, this);
+        Moto semiMoto2 = new Moto(0, semifinalsPlayers2, this);
         semiMoto1.setIs_semifinal();
         semiMoto2.setIs_semifinal();
-        finalMoto = new Moto (0, finalsPlayers);
+        finalMoto = new Moto (0, finalsPlayers, this);
         semiMoto1.setMotoTitle("SEMIFINAL 1");
         semiMoto2.setMotoTitle("SEMIFINAL 2");
         finalMoto.setMotoTitle("FINAL");
@@ -135,10 +135,10 @@ class FinalsManga {
         ArrayList<Players> quarterPlayers3 = new ArrayList<>();
         ArrayList<Players> quarterPlayers4 = new ArrayList<>();
 
-        Moto quarter1 = new Moto(0, quarterPlayers1);
-        Moto quarter2 = new Moto(0, quarterPlayers2);
-        Moto quarter3 = new Moto(0, quarterPlayers3);
-        Moto quarter4 = new Moto(0, quarterPlayers4);
+        Moto quarter1 = new Moto(0, quarterPlayers1, this);
+        Moto quarter2 = new Moto(0, quarterPlayers2, this);
+        Moto quarter3 = new Moto(0, quarterPlayers3, this);
+        Moto quarter4 = new Moto(0, quarterPlayers4,this);
 
         quarterMotos.add(quarter1);
         quarterMotos.add(quarter2);
@@ -177,14 +177,14 @@ class FinalsManga {
         ArrayList<Players> eighthPlayers7 = new ArrayList<>();
         ArrayList<Players> eighthPlayers8 = new ArrayList<>();
 
-        Moto eighth1 = new Moto(0, eighthPlayers1);
-        Moto eighth2 = new Moto(0, eighthPlayers2);
-        Moto eighth3 = new Moto(0, eighthPlayers3);
-        Moto eighth4 = new Moto(0, eighthPlayers4);
-        Moto eighth5 = new Moto(0, eighthPlayers5);
-        Moto eighth6 = new Moto(0, eighthPlayers6);
-        Moto eighth7 = new Moto(0, eighthPlayers7);
-        Moto eighth8 = new Moto(0, eighthPlayers8);
+        Moto eighth1 = new Moto(0, eighthPlayers1, this);
+        Moto eighth2 = new Moto(0, eighthPlayers2, this);
+        Moto eighth3 = new Moto(0, eighthPlayers3, this);
+        Moto eighth4 = new Moto(0, eighthPlayers4, this);
+        Moto eighth5 = new Moto(0, eighthPlayers5,this);
+        Moto eighth6 = new Moto(0, eighthPlayers6,this);
+        Moto eighth7 = new Moto(0, eighthPlayers7,this);
+        Moto eighth8 = new Moto(0, eighthPlayers8,this);
 
         eighthMotos.add(eighth1);
         eighthMotos.add(eighth2);
@@ -258,22 +258,22 @@ class FinalsManga {
         ArrayList<Players> sixteenthPlayers15 = new ArrayList<>();
         ArrayList<Players> sixteenthPlayers16 = new ArrayList<>();
 
-        Moto sixteenth1 = new Moto(0, sixteenthPlayers1);
-        Moto sixteenth2 = new Moto(0, sixteenthPlayers2);
-        Moto sixteenth3 = new Moto(0, sixteenthPlayers3);
-        Moto sixteenth4 = new Moto(0, sixteenthPlayers4);
-        Moto sixteenth5 = new Moto(0, sixteenthPlayers5);
-        Moto sixteenth6 = new Moto(0, sixteenthPlayers6);
-        Moto sixteenth7 = new Moto(0, sixteenthPlayers7);
-        Moto sixteenth8 = new Moto(0, sixteenthPlayers8);
-        Moto sixteenth9 = new Moto(0, sixteenthPlayers9);
-        Moto sixteenth10 = new Moto(0, sixteenthPlayers10);
-        Moto sixteenth11 = new Moto(0, sixteenthPlayers11);
-        Moto sixteenth12 = new Moto(0, sixteenthPlayers12);
-        Moto sixteenth13 = new Moto(0, sixteenthPlayers13);
-        Moto sixteenth14 = new Moto(0, sixteenthPlayers14);
-        Moto sixteenth15 = new Moto(0, sixteenthPlayers15);
-        Moto sixteenth16 = new Moto(0, sixteenthPlayers16);
+        Moto sixteenth1 = new Moto(0, sixteenthPlayers1, this);
+        Moto sixteenth2 = new Moto(0, sixteenthPlayers2,this);
+        Moto sixteenth3 = new Moto(0, sixteenthPlayers3, this);
+        Moto sixteenth4 = new Moto(0, sixteenthPlayers4, this);
+        Moto sixteenth5 = new Moto(0, sixteenthPlayers5,this);
+        Moto sixteenth6 = new Moto(0, sixteenthPlayers6, this);
+        Moto sixteenth7 = new Moto(0, sixteenthPlayers7, this);
+        Moto sixteenth8 = new Moto(0, sixteenthPlayers8, this);
+        Moto sixteenth9 = new Moto(0, sixteenthPlayers9, this);
+        Moto sixteenth10 = new Moto(0, sixteenthPlayers10, this);
+        Moto sixteenth11 = new Moto(0, sixteenthPlayers11, this);
+        Moto sixteenth12 = new Moto(0, sixteenthPlayers12, this);
+        Moto sixteenth13 = new Moto(0, sixteenthPlayers13, this);
+        Moto sixteenth14 = new Moto(0, sixteenthPlayers14, this);
+        Moto sixteenth15 = new Moto(0, sixteenthPlayers15, this);
+        Moto sixteenth16 = new Moto(0, sixteenthPlayers16, this);
 
         sixteenthMotos.add(sixteenth1);
         sixteenthMotos.add(sixteenth2);
@@ -362,11 +362,18 @@ class FinalsManga {
     public boolean isThereSixteenth(){ return isThereSixteenth;}
 
 
-    //pendiente
-    public void setQuarterPlayers(ArrayList <Players> playersForQuarters){
-        for(Map.Entry<Integer,Moto> quarterMoto: quarterMotosMap.entrySet()){
-            quarterMoto.getValue().getModelMotoTable();
-        }
+
+    public void setSemifinalsPlayers(ArrayList<Players> playersForSemifinals1, ArrayList<Players> playersForSemifinals2){
+        semifinalsMotosMap.get(1).getModelMotoTable().setPlayersInMoto(playersForSemifinals1);
+        semifinalsMotosMap.get(2).getModelMotoTable().setPlayersInMoto(playersForSemifinals2);
+    }
+    //PENDIENTE
+    public void setQuarterPlayers(ArrayList <Players> playersForQuarters1, ArrayList <Players> playersForQuarters2,
+                                  ArrayList <Players> playersForQuarters3, ArrayList <Players> playersForQuarters4){
+        quarterMotosMap.get(1).getModelMotoTable().setPlayersInMoto(playersForQuarters1);
+        quarterMotosMap.get(2).getModelMotoTable().setPlayersInMoto(playersForQuarters2);
+        quarterMotosMap.get(3).getModelMotoTable().setPlayersInMoto(playersForQuarters3);
+        quarterMotosMap.get(4).getModelMotoTable().setPlayersInMoto(playersForQuarters4);
     }
 
     public void setFinalMoto(ArrayList <Players> finalPlayersArray){

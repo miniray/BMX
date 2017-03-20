@@ -13,6 +13,7 @@ public class Moto implements TableModelListener {
 
         private final JPanel container;
         private Manga myManga;
+        private FinalsManga myFinalManga;
         private final MotosTableModel tableModelMoto;
         private ArrayList<Players> playersOfThisMoto;
         private final JLabel motoTitle;
@@ -104,6 +105,83 @@ public class Moto implements TableModelListener {
         container.setBackground(new Color(64,64,64));
         }
 
+    public Moto (int number, ArrayList<Players> playersOfThisMoto, FinalsManga myFinalManga){
+
+        int numero_moto = number;
+        this.myFinalManga = myFinalManga;
+
+        //INICIALIZACION
+        this.playersOfThisMoto = playersOfThisMoto;
+
+        //CONFIGURACION DEL LABEL
+        if (numero_moto != 0){
+            motoTitle = new JLabel("MOTO " + numero_moto);
+        }else{
+            motoTitle = new JLabel("FINAL");
+        }
+        motoTitle.setHorizontalAlignment(JLabel.CENTER);
+        motoTitle.setForeground(Color.white);
+
+        //CREACION DE LA TABLA, SU MODELO, SU SCROLLPANE Y SU PANEL
+        tableModelMoto = new MotosTableModel(this.playersOfThisMoto, numero_moto, myManga);
+        JTable motoTable = new JTable();
+        motoTable.setModel(tableModelMoto);
+
+        JScrollPane motoTableScroller = new JScrollPane(motoTable);
+        motoTableScroller.setVisible(true);
+        JPanel tablePanel = new JPanel();
+        playersLabelsPanel = new JPanel();
+        labelArrayList = new ArrayList<>();
+        setLabelPlayers();
+
+        GridBagLayout gridBagTableAndLabelsLayout = new GridBagLayout();
+        gridBagTableAndLabelsLayout.columnWeights = new double[]{1.0, 1.0, 1.0, 1.0};
+        gridBagTableAndLabelsLayout.rowWeights = new double[]{1,1,1,1};
+        tablePanel.setLayout(gridBagTableAndLabelsLayout);
+        GridBagConstraints tableAndLabelsPosition = new GridBagConstraints();
+
+        tableAndLabelsPosition.fill = GridBagConstraints.BOTH;
+        tableAndLabelsPosition.gridx = 0;
+        tableAndLabelsPosition.gridy = 0;
+        tableAndLabelsPosition.gridwidth = 3;
+        tableAndLabelsPosition.gridheight = 5;
+
+        tablePanel.add(motoTableScroller,tableAndLabelsPosition);
+
+        tableAndLabelsPosition.gridx = 3;
+        tableAndLabelsPosition.gridy = 0;
+        tableAndLabelsPosition.gridwidth = 1;
+        tableAndLabelsPosition.gridheight = 5;
+
+        tablePanel.add(playersLabelsPanel,tableAndLabelsPosition);
+
+        //CREACION DEL PANELCONTENEDOR, SU LAYOUT Y LA PROPORCION DE TAMAÑO DE SU PARRILLA.
+        GridBagLayout gridBagContainerLayout = new GridBagLayout();
+        gridBagContainerLayout.columnWeights = new double[]{1.0, 1.0, 1.0, 1.0};
+        gridBagContainerLayout.rowWeights = new double[]{1.0, 40.0, 1.0, 1.0};
+        container = new JPanel();
+        container.setLayout(gridBagContainerLayout);
+
+        //CREACION DEL COLOCADOR DEL LAYOUT Y CONFIGURACION DE TAMAÑOS
+        GridBagConstraints layoutPosition = new GridBagConstraints();
+
+        //INTRODUCCION DE TABLA Y LABEL AL PANEL
+
+        layoutPosition.fill = GridBagConstraints.BOTH;
+        layoutPosition.gridx = 1;
+        layoutPosition.gridy = 0;
+        layoutPosition.gridwidth = 4;
+        layoutPosition.gridheight = 1;
+        container.add(motoTitle, layoutPosition);
+
+        layoutPosition.gridx = 1;
+        layoutPosition.gridy = 1;
+        layoutPosition.gridwidth = 3;
+        layoutPosition.gridheight = 2;
+
+        container.add(tablePanel, layoutPosition);
+        container.setBackground(new Color(64,64,64));
+    }
 
     public JPanel getMotoPanel(){ return this.container;}
 

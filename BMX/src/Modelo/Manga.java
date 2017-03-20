@@ -18,6 +18,7 @@ public class Manga {
     private final ArrayList<Players> mangaPlayersArray;
     private final JLabel numberOfMangaLabel;
     private SingleGame mySingleGame;
+    private int numero_de_manga;
 
 
     public Manga(ArrayList<Players> allPlayersOfThisManga, SingleGame mySingleGame){
@@ -39,6 +40,7 @@ public class Manga {
         constraints.weighty = 0.0;
         numberOfMangaLabel = new JLabel();
         mangaPanel.add(numberOfMangaLabel, constraints);
+        numero_de_manga = 0;
 
         mangaPlayersArray = allPlayersOfThisManga;
 
@@ -84,7 +86,7 @@ public class Manga {
 
     }
 
-    public ArrayList<Players> getClasifiedPlayers(){
+    public ArrayList<Players> getQualifiedFinalPlayers(){
         mangaPlayersArray.sort(Players.PlayerPointsComparator);
         ArrayList <Players> finalPlayers = new ArrayList<>();
 
@@ -100,5 +102,44 @@ public class Manga {
         return finalPlayers;
     }
 
+    public ArrayList<Players> getQualifiedPlayers1and3(){
+        mangaPlayersArray.sort(Players.PlayerPointsComparator);
+        ArrayList <Players> qualifiedPlayers = new ArrayList<>();
+        qualifiedPlayers.add(mangaPlayersArray.get(0));
+        qualifiedPlayers.add(mangaPlayersArray.get(2));
+
+        return qualifiedPlayers;
+    }
+    public ArrayList<Players> getQualifiedPlayers1and4(){
+        mangaPlayersArray.sort(Players.PlayerPointsComparator);
+        ArrayList <Players> qualifiedPlayers = new ArrayList<>();
+        qualifiedPlayers.add(mangaPlayersArray.get(0));
+        qualifiedPlayers.add(mangaPlayersArray.get(3));
+
+        return qualifiedPlayers;
+    }
+    public ArrayList<Players> getQualifiedPlayers2and4(){
+        mangaPlayersArray.sort(Players.PlayerPointsComparator);
+        ArrayList <Players> qualifiedPlayers = new ArrayList<>();
+        qualifiedPlayers.add(mangaPlayersArray.get(1));
+        qualifiedPlayers.add(mangaPlayersArray.get(3));
+
+        return qualifiedPlayers;
+    }
+    public ArrayList<Players> getQualifiedPlayers2and3(){
+        mangaPlayersArray.sort(Players.PlayerPointsComparator);
+        ArrayList <Players> qualifiedPlayers = new ArrayList<>();
+        qualifiedPlayers.add(mangaPlayersArray.get(1));
+        qualifiedPlayers.add(mangaPlayersArray.get(2));
+
+        return qualifiedPlayers;
+    }
+
+
     public SingleGame getMySingleGame(){ return mySingleGame;}
+
+    public void setNumero_de_manga(int numero_de_manga){
+        this.numero_de_manga = numero_de_manga;
+    }
+
 }

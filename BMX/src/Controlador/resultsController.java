@@ -22,15 +22,20 @@ public class resultsController implements TableModelListener {
     public void tableChanged(TableModelEvent e) {
 
         MotosTableModel eventMotoModel = (MotosTableModel)e.getSource();
-        Manga myManga = eventMotoModel.getMyManga();
-        SingleGame mySingleGame = myManga.getMySingleGame();
+
 
         if (eventMotoModel.get_Is_final()){
-            System.out.println("TRUE");
-        }else {
-            //allGames.calculateAllPointsOfAllSingleGames();
-            eventMotoModel.getMyManga().calculateAllMotosPointsOfThisManga();
             eventMotoModel.checkLabelPlates();
+            System.out.println("TRUE");
+        }
+        if (eventMotoModel.get_Is_semifinal()){
+            eventMotoModel.checkLabelPlates();
+
+        }
+        else {
+            Manga myManga = eventMotoModel.getMyManga();
+            SingleGame mySingleGame = myManga.getMySingleGame();
+            eventMotoModel.getMyManga().calculateAllMotosPointsOfThisManga();
             checkAndSetUpFinalPlayers(mySingleGame);
         }
 

@@ -47,7 +47,9 @@ public class SingleGame {
     private void generateAllMangas() {
         for (int i = 0; i < quantity_of_mangas; i++) {
             Manga manga = new Manga(allPlayersByMangaArray.get(i), this);
+            manga.setNumero_de_manga(i+1);
             mangasMap.put(i, manga);
+
         }
     }
 
@@ -152,7 +154,7 @@ public class SingleGame {
         return scrollerForPanels;
     }
 
-    private void createMangasStructure() {
+    private void createMangasArraysOfPlayers() {
         for (int i = 0; i < quantity_of_mangas; i++) {
             ArrayList<Players> playersByManga = new ArrayList<>();
             allPlayersByMangaArray.add(playersByManga);
@@ -160,7 +162,7 @@ public class SingleGame {
     }
 
     private void splitAllPlayersToMangas() {
-        createMangasStructure();
+        createMangasArraysOfPlayers();
         orderPlayersArray();
 
         boolean reverse = false;
@@ -173,7 +175,6 @@ public class SingleGame {
                 allPlayersByMangaArray.get(contador_manga - 1).add(allPlayersOfThisRace.get(n));
             } else {
 
-                ArrayList<Players> test = allPlayersByMangaArray.get(contador_manga - 1);
                 allPlayersByMangaArray.get(contador_manga - 1).add(allPlayersOfThisRace.get(n));
 
                 if (contador_manga % quantity_of_mangas == 0 || contador_manga == 1 && reverse) {
@@ -275,6 +276,7 @@ public class SingleGame {
 
         }
         if (finalsMangas.isThereSemifinals()) {
+
         }
         if (finalsMangas.isThereDirectFinal()){
             calculateDirectFinal();
@@ -284,15 +286,43 @@ public class SingleGame {
 
     public void calculateDirectFinal(){
         playersToFinal = new ArrayList<>();
-        playersToFinal.addAll(mangasMap.get(0).getClasifiedPlayers());
-        playersToFinal.addAll(mangasMap.get(1).getClasifiedPlayers());
+        playersToFinal.addAll(mangasMap.get(0).getQualifiedFinalPlayers());
+        playersToFinal.addAll(mangasMap.get(1).getQualifiedFinalPlayers());
         finalsMangas.setFinalMoto(playersToFinal);
+    }
+
+    public void calculateSemiFinals(){
+        if (numberOfPlayers >= 17 && numberOfPlayers <= 19){
+            ArrayList <Players> playersToSemiFinal1 = new ArrayList<>();
+            ArrayList <Players> playersToSemiFinal2 = new ArrayList<>();
+            playersToSemiFinal1.addAll(mangasMap.get(0).getQualifiedPlayers1and3());
+            playersToSemiFinal1.addAll(mangasMap.get(1).getQualifiedPlayers2and4());
+            playersToSemiFinal1.addAll(mangasMap.get(2).getQualifiedPlayers2and3());
+
+            playersToSemiFinal2.addAll(mangasMap.get(0).getQualifiedPlayers2and4());
+            playersToSemiFinal2.addAll(mangasMap.get(1).getQualifiedPlayers1and3());
+            playersToSemiFinal2.addAll(mangasMap.get(2).getQualifiedPlayers1and4());
+            finalsMangas.setSemifinalsPlayers(playersToSemiFinal1,playersToSemiFinal2);
+
+        }else{
+            ArrayList <Players> playersToSemiFinal1 = new ArrayList<>();
+            ArrayList <Players> playersToSemiFinal2 = new ArrayList<>();
+            playersToSemiFinal1.addAll(mangasMap.get(0).getQualifiedPlayers1and3());
+            playersToSemiFinal1.addAll(mangasMap.get(1).getQualifiedPlayers2and4());
+            playersToSemiFinal1.addAll(mangasMap.get(2).getQualifiedPlayers2and4());
+            playersToSemiFinal1.addAll(mangasMap.get(2).getQualifiedPlayers1and3());
+
+            playersToSemiFinal2.addAll(mangasMap.get(0).getQualifiedPlayers2and4());
+            playersToSemiFinal2.addAll(mangasMap.get(1).getQualifiedPlayers1and3());
+            playersToSemiFinal2.addAll(mangasMap.get(2).getQualifiedPlayers1and3());
+            playersToSemiFinal2.addAll(mangasMap.get(2).getQualifiedPlayers2and4());
+
+            finalsMangas.setSemifinalsPlayers(playersToSemiFinal1,playersToSemiFinal2);
+
+        }
     }
 
     public ArrayList<Players> getAllPlayersOfThisRace(){
         return allPlayersOfThisRace;
     }
-
-
-
 }
