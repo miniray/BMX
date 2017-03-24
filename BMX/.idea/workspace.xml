@@ -12,10 +12,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d81d3b57-2c71-46a0-b9ed-ebaf6b409ca9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controlador/resultsController.java" afterPath="$PROJECT_DIR$/src/Controlador/resultsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/FinalsManga.java" afterPath="$PROJECT_DIR$/src/Modelo/FinalsManga.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/MotosTableModel.java" afterPath="$PROJECT_DIR$/src/Modelo/MotosTableModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/SingleGame.java" afterPath="$PROJECT_DIR$/src/Modelo/SingleGame.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="../Age of Empires III.lnk" />
@@ -89,8 +85,8 @@
       <file leaf-file-name="MotosTableModel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Modelo/MotosTableModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="227" column="42" lean-forward="false" selection-start-line="227" selection-start-column="42" selection-end-line="227" selection-end-column="42" />
+            <state relative-caret-position="369">
+              <caret line="240" column="0" lean-forward="true" selection-start-line="240" selection-start-column="0" selection-end-line="240" selection-end-column="0" />
               <folding>
                 <element signature="method#checkIfPlatesAreFull#0;class#MotosTableModel#0" expanded="false" />
               </folding>
@@ -947,7 +943,7 @@
       <workItem from="1490027852708" duration="1767000" />
       <workItem from="1490050462126" duration="3202000" />
       <workItem from="1490133696158" duration="381000" />
-      <workItem from="1490336666986" duration="1270000" />
+      <workItem from="1490336666986" duration="1285000" />
     </task>
     <task id="LOCAL-00001" summary="new">
       <created>1487103591689</created>
@@ -1033,11 +1029,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490052464516</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="21/03/17- CREANDO METODO PARA COMPROBAR QUE SEMIFINAL ESTA LLENO">
+      <created>1490337947102</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1490337947102</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="501359000" />
+    <option name="totallyTimeSpent" value="501374000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1561,8 +1564,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Modelo/MotosTableModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="227" column="42" lean-forward="false" selection-start-line="227" selection-start-column="42" selection-end-line="227" selection-end-column="42" />
+        <state relative-caret-position="369">
+          <caret line="240" column="0" lean-forward="true" selection-start-line="240" selection-start-column="0" selection-end-line="240" selection-end-column="0" />
           <folding>
             <element signature="method#checkIfPlatesAreFull#0;class#MotosTableModel#0" expanded="false" />
           </folding>
