@@ -362,10 +362,14 @@ class FinalsManga {
     public boolean isThereSixteenth(){ return isThereSixteenth;}
 
 
-
+//  probar update ui
     public void setSemifinalsPlayers(ArrayList<Players> playersForSemifinals1, ArrayList<Players> playersForSemifinals2){
-        semifinalsMotosMap.get(1).getModelMotoTable().setPlayersInMoto(playersForSemifinals1);
-        semifinalsMotosMap.get(2).getModelMotoTable().setPlayersInMoto(playersForSemifinals2);
+            semifinalsMotosMap.get(1).getModelMotoTable().setPlayersInMoto(playersForSemifinals1);
+            semifinalsMotosMap.get(2).getModelMotoTable().setPlayersInMoto(playersForSemifinals2);
+    }
+
+    public Map<Integer,Moto> getSemifinalsMotosMap(){return semifinalsMotosMap;
+
     }
     //PENDIENTE
     public void setQuarterPlayers(ArrayList <Players> playersForQuarters1, ArrayList <Players> playersForQuarters2,
@@ -383,5 +387,12 @@ class FinalsManga {
 
     public void setDirectFinalController(resultsController rc){
         finalMoto.getModelMotoTable().addTableModelListener(rc);
+    }
+
+    public void checkFullSemifinals(){
+        int counter = 0;
+        for (Map.Entry<Integer,Moto> aSemifinal: semifinalsMotosMap.entrySet()){
+
+        }
     }
 }

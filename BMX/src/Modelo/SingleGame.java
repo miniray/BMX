@@ -276,6 +276,10 @@ public class SingleGame {
 
         }
         if (finalsMangas.isThereSemifinals()) {
+            calculateSemiFinals();
+            for(Map.Entry<Integer, Moto> aSemifinal: finalsMangas.getSemifinalsMotosMap().entrySet()){
+                aSemifinal.getValue().getModelMotoTable().addTableModelListener(rsController);
+            }
 
         }
         if (finalsMangas.isThereDirectFinal()){
@@ -292,9 +296,10 @@ public class SingleGame {
     }
 
     public void calculateSemiFinals(){
+
+        ArrayList <Players> playersToSemiFinal1 = new ArrayList<>();
+        ArrayList <Players> playersToSemiFinal2 = new ArrayList<>();
         if (numberOfPlayers >= 17 && numberOfPlayers <= 19){
-            ArrayList <Players> playersToSemiFinal1 = new ArrayList<>();
-            ArrayList <Players> playersToSemiFinal2 = new ArrayList<>();
             playersToSemiFinal1.addAll(mangasMap.get(0).getQualifiedPlayers1and3());
             playersToSemiFinal1.addAll(mangasMap.get(1).getQualifiedPlayers2and4());
             playersToSemiFinal1.addAll(mangasMap.get(2).getQualifiedPlayers2and3());
@@ -302,11 +307,8 @@ public class SingleGame {
             playersToSemiFinal2.addAll(mangasMap.get(0).getQualifiedPlayers2and4());
             playersToSemiFinal2.addAll(mangasMap.get(1).getQualifiedPlayers1and3());
             playersToSemiFinal2.addAll(mangasMap.get(2).getQualifiedPlayers1and4());
-            finalsMangas.setSemifinalsPlayers(playersToSemiFinal1,playersToSemiFinal2);
 
         }else{
-            ArrayList <Players> playersToSemiFinal1 = new ArrayList<>();
-            ArrayList <Players> playersToSemiFinal2 = new ArrayList<>();
             playersToSemiFinal1.addAll(mangasMap.get(0).getQualifiedPlayers1and3());
             playersToSemiFinal1.addAll(mangasMap.get(1).getQualifiedPlayers2and4());
             playersToSemiFinal1.addAll(mangasMap.get(2).getQualifiedPlayers2and4());
@@ -316,10 +318,8 @@ public class SingleGame {
             playersToSemiFinal2.addAll(mangasMap.get(1).getQualifiedPlayers1and3());
             playersToSemiFinal2.addAll(mangasMap.get(2).getQualifiedPlayers1and3());
             playersToSemiFinal2.addAll(mangasMap.get(2).getQualifiedPlayers2and4());
-
-            finalsMangas.setSemifinalsPlayers(playersToSemiFinal1,playersToSemiFinal2);
-
         }
+        finalsMangas.setSemifinalsPlayers(playersToSemiFinal1,playersToSemiFinal2);
     }
 
     public ArrayList<Players> getAllPlayersOfThisRace(){

@@ -44,7 +44,11 @@ public class resultsController implements TableModelListener {
         int number_of_full_motos = mySingleGame.checkMotoTableModelPlatesFull();
         int number_of_motos_in_the_singlegame = (mySingleGame.getQuantity_of_mangas()*3);
         if (number_of_full_motos == number_of_motos_in_the_singlegame) {
-            if (mySingleGame.getAllPlayersOfThisRace().size() <= 16) {
+            int quantity_of_players = mySingleGame.getAllPlayersOfThisRace().size();
+            if (quantity_of_players > 8 && quantity_of_players <= 16) {
+                mySingleGame.setUpFinalPlayers(this);
+            }
+            if (quantity_of_players > 17 &&  quantity_of_players <= 32){
                 mySingleGame.setUpFinalPlayers(this);
             }
         }
