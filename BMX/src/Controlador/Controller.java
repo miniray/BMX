@@ -4,9 +4,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.io.BufferedWriter;
+import java.io.IOException;
 import java.util.Map;
 
-import javax.swing.*;
+import javax.swing.JButton;
 import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
 
@@ -157,6 +159,22 @@ public class Controller implements ActionListener, MouseListener, TableModelList
                     graphicInterface.getCardPanel().updateUI();
                 }
                 break;
+
+			case "PRINT PREMANGAS":
+				//METODO DE PRINT PREMANGAS
+
+				AllGames allGamesForPrint = new AllGames();
+				allGamesForPrint.getAllGamesmap();
+
+				BufferedWriter bw = Utils.createFileAndGetWriterBuffer();
+				try {
+					Utils.printPreMangas(allGamesForPrint.getOrderedArrayListByNumberOfManga());
+					System.out.println("INTENTO ABRIR");
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+				break;
+
 
 			default:
 				break;

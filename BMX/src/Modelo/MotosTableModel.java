@@ -15,7 +15,7 @@ public class MotosTableModel extends AbstractTableModel implements Constants, Ta
 
     private final Class[] column_names = {Integer.class, String.class};
     private final String[] titulos = {"Puntos", "Placa"};
-    private ArrayList<ArrayList<Object>> list_p = new ArrayList<ArrayList<Object>>();
+    private ArrayList<ArrayList<Object>> list_p = new ArrayList<>();
     private ArrayList<Players> playersInMoto = new ArrayList<>();
     private int numero_moto;
     private boolean is_final = false;
@@ -26,6 +26,13 @@ public class MotosTableModel extends AbstractTableModel implements Constants, Ta
     private int genre;
     private int category_id;
     private Manga myManga;
+
+    public MotosTableModel(ArrayList<Players> playersInMoto, int numero_moto, Manga myManga){
+        this.playersInMoto = playersInMoto;
+        this.numero_moto = numero_moto;
+        createPointsArray(this.playersInMoto.size());
+        this.myManga = myManga;
+    }
 
     private ArrayList<JLabel> platesLabelArray;
 
@@ -78,16 +85,10 @@ public class MotosTableModel extends AbstractTableModel implements Constants, Ta
         this.is_sixteenth = is_sixteenth;
     }
 
-    public MotosTableModel(ArrayList<Players> playersInMoto, int numero_moto, Manga myManga){
-        this.playersInMoto = playersInMoto;
-        this.numero_moto = numero_moto;
-        createPointsArray(this.playersInMoto.size());
-        this.myManga = myManga;
-        }
-
     public void setNewArray(ArrayList<ArrayList<Object>> array){
         list_p = array;
     }
+
     private void createPointsArray(int number_of_players){
 
         for (int i = 1; i <= number_of_players; i++ ){
@@ -215,6 +216,7 @@ public class MotosTableModel extends AbstractTableModel implements Constants, Ta
 
     public void setPlayersInMoto(ArrayList <Players> playersInMoto){
         this.playersInMoto = playersInMoto;
+        createPointsArray(playersInMoto.size());
     }
 
     public void setPlateLabelsArray(ArrayList <JLabel> labelsArray){
@@ -240,4 +242,17 @@ public class MotosTableModel extends AbstractTableModel implements Constants, Ta
     }
 
     public Manga getMyManga(){ return myManga;}
+
+    public ArrayList<Players> get4FirstPlayers(){
+        ArrayList<Players> playersSelected = new ArrayList<>();
+        for (int i = 0; i < 4;i++){
+            for (Players aPlayer: playersInMoto){
+                if (list_p.get(i).get(1).equals(aPlayer.getPlaca())){
+                    playersSelected.add(aPlayer);
+                    break;
+                }
+            }
+        }
+        return playersSelected;
+    }
 }

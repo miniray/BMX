@@ -4,23 +4,21 @@ import Controlador.resultsController;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.Objects;
-import java.util.TreeMap;
+import java.util.*;
 
 /**
  * Created by Miquel on 17/01/2017.
  */
-public class AllGames {
+public class AllGames implements Constants{
 
     private Map<Integer, Map<Integer, ArrayList<Players>>> allPlayersByCategoryArray;
     private ArrayList<ArrayList<Integer>> allExistingCategoriesIdArray;
     private Map <Integer, Map<Integer,SingleGame>> allGamesmap;
     private int number_of_manga;
-    private final int[][] mangas_order= {{1,0},{0,0}, {1,1}, {0,1},{1,2}, {1,3}, {0,2}, {1,4}, {0,3}, {1,5}, {1,6} , {1,7}, {1,8}
-            ,{2,1}, {2,2}, {2,3}, {2,4},{2,5}, {0,4}, {1,9}, {1,10}};
     private resultsController rsController;
+    private JButton printMangas;
+    private JButton printFinals;
+    private ArrayList<String[]> categoriesNames;
 
 
     public AllGames(JPanel mainPanel, JPanel buttonTodosPanel){
@@ -38,10 +36,32 @@ public class AllGames {
         createAllGamesStructure(mainPanel, buttonTodosPanel);
         setNumberOfAllTheMangas();
 
+
+    }
+
+    public AllGames(){
+
+        number_of_manga = 1;
+        allPlayersByCategoryArray = CategoriesManagement.getAllExistingCategoriesWithPlayers();
+        allExistingCategoriesIdArray = CategoriesManagement.getAllExistingCategoriesIdArray();
+        allGamesmap = new TreeMap<>();
+        Map<Integer, SingleGame> menPlayersByCategory = new TreeMap<>();
+        Map<Integer, SingleGame> womenPlayersByCategory = new TreeMap<>();
+        Map<Integer, SingleGame> cruiserPlayersByCategory = new TreeMap<>();
+        allGamesmap.put(0, womenPlayersByCategory);
+        allGamesmap.put(1, menPlayersByCategory);
+        allGamesmap.put(2, cruiserPlayersByCategory);
+        createAllGamesStructureForPrint();
+        setNumberOfAllTheMangas();
+
     }
 
     public void setRsController(resultsController rsController){
+
         this.rsController = rsController;
+        printMangas.addActionListener(rsController);
+        printFinals.addActionListener(rsController);
+
     }
 
     private void createAllGamesStructure(JPanel mainPanel, JPanel buttonTodosPanel){
@@ -69,16 +89,14 @@ public class AllGames {
 
     private void createPrintButtons(JPanel buttonsPanel){
 
-        buttonsPanel.setLayout(new GridLayout(0,4));
-        JButton printMangas = new JButton("PRINT MANGAS");
-        JButton printQuarterfinals = new JButton(" PRINT CUARTOS DE FINAL");
-        JButton printSemifinals = new JButton("PRINT SEMIFINALS");
-        JButton printFinals = new JButton("PRINT FINALS");
+        buttonsPanel.setLayout(new GridLayout(0,2));
+        printMangas = new JButton("PRINT MANGAS");
+        printFinals = new JButton("PRINT FINALS");
         buttonsPanel.removeAll();
         buttonsPanel.add(printMangas);
-        buttonsPanel.add(printQuarterfinals);
-        buttonsPanel.add(printSemifinals);
         buttonsPanel.add(printFinals);
+        printMangas.setActionCommand("PRINT ALL");
+        printFinals.setActionCommand("PRINT ALL FINALS");
         buttonsPanel.updateUI();
     }
 
@@ -86,28 +104,42 @@ public class AllGames {
 
         for (int[] aMangas_order : mangas_order) {
             if (allGamesmap.get(aMangas_order[0]).get(aMangas_order[1]) != null) {
-                SingleGame tempManga = allGamesmap.get(aMangas_order[0]).get(aMangas_order[1]);
-                tempManga.setNumber_of_manga_int(number_of_manga);
-                number_of_manga = tempManga.getNumber_of_manga_int();
+                SingleGame tempSingleGame = allGamesmap.get(aMangas_order[0]).get(aMangas_order[1]);
+                tempSingleGame.setNumber_of_manga_int(number_of_manga);
+                number_of_manga = tempSingleGame.getNumber_of_manga_int();
             }
         }
     }
 
-    public void calculateAllPointsOfAllSingleGames(){
-        for(int i= 0; i<3; i++){
-            for (Map.Entry<Integer,SingleGame> singleGameEntry: allGamesmap.get(i).entrySet()){
-                singleGameEntry.getValue().calculateAllMangasPoints();
-                int number_of_full_motos = singleGameEntry.getValue().checkMotoTableModelPlatesFull();
-                int number_of_motos_in_the_singlegame = (singleGameEntry.getValue().getQuantity_of_mangas()*3);
-                if (number_of_full_motos == number_of_motos_in_the_singlegame) {
-                    if (singleGameEntry.getValue().getAllPlayersOfThisRace().size() <= 16) {
-                        singleGameEntry.getValue().setUpFinalPlayers(rsController);
+    private void createAllGamesStructureForPrint(){
+        for (int gender = 0; gender < allExistingCategoriesIdArray.size(); gender++){
+            for (int position_of_category = 0; position_of_category < allExistingCategoriesIdArray.get(gender).size(); position_of_category++){
+                int category = allExistingCategoriesIdArray.get(gender).get(position_of_category);
+                if (!( gender == 2 & position_of_category == 0)){
+
+                    SingleGame singleGame = new SingleGame( gender,category, allPlayersByCategoryArray.get(gender).get(category));
+                    allGamesmap.get(gender).put(category, singleGame);
+                    if (gender == 2 & position_of_category != 0 ){
+                        singleGame.setIsCruiserRace();
                     }
                 }
             }
         }
     }
 
+
+    public ArrayList<Manga> getOrderedArrayListByNumberOfManga(){
+         ArrayList<Manga> allMangasSortInArray = new ArrayList<>();
+        for (int[] aMangas_order : mangas_order) {
+            if (allGamesmap.get(aMangas_order[0]).get(aMangas_order[1]) != null) {
+                SingleGame tempManga = allGamesmap.get(aMangas_order[0]).get(aMangas_order[1]);
+                for(Map.Entry<Integer, Manga> aManga: tempManga.getMangasMap().entrySet()){
+                    allMangasSortInArray.add(aManga.getValue());
+                }
+            }
+        }
+        return allMangasSortInArray;
+    }
 
 }
 

@@ -34,7 +34,7 @@ class CSVReader {
 										Integer.parseInt(importedFile.get(15)), Integer.parseInt(importedFile.get(16)),
 										Integer.parseInt(importedFile.get(17)), Integer.parseInt(importedFile.get(18)),
 										Integer.parseInt(importedFile.get(19)), Integer.parseInt(importedFile.get(20)),
-										Integer.parseInt(importedFile.get(21)));
+										Integer.parseInt(importedFile.get(21)),importedFile.get(22));
 					arrayOfPlayersImported.add(tempPlayer);
 				}
 			} catch (IOException e) {

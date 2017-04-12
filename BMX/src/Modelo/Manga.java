@@ -142,4 +142,6 @@ public class Manga {
         this.numero_de_manga = numero_de_manga;
     }
 
+    public int getNumero_de_manga(){ return numero_de_manga;}
+
 }

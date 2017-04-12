@@ -19,4 +19,7 @@ public interface Constants {
 	//
 	String[] cat_catalunya_fem = {"Feminas A", "Feminas B", "Olimpica Women"};
 
+	int[][] mangas_order= {{1,0},{0,0}, {1,1}, {0,1},{1,2}, {1,3}, {0,2}, {1,4}, {0,3}, {1,5}, {1,6} , {1,7}, {1,8}
+			,{2,1}, {2,2}, {2,3}, {2,4},{2,5}, {0,4}, {1,9}, {1,10}};
+
 }

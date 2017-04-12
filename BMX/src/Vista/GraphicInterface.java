@@ -18,17 +18,18 @@ public class GraphicInterface implements Constants {
 	public final JPanel panel_categoria_fem = new JPanel();
 	public final JPanel panel_categoria_cruiser = new JPanel();
 	private final JPanel panel_boton_todos = new JPanel();
-	private final JButton btn_todos = new JButton ("TODOS");
+
 
 	public final GridLayout grid_panel_cat_masc = new GridLayout(0,1);
 	public final GridLayout grid_panel_cat_fem = new GridLayout(0,1);
 	public final GridLayout grid_panel_cat_cruiser = new GridLayout(0,1);
 
+	private final JButton btn_todos = new JButton ("TODOS");
 	private final JButton btn_importar = new JButton("IMPORTAR");
 	private final JButton btn_anyadir = new JButton("INSERTAR PARTICIPANTE");
 	private final JButton btn_eliminar = new JButton("ELIMINAR");
 	private final JButton btn_generar = new JButton ("GENERAR");
-
+	private final JButton btn_print_premangas= new JButton ("IMPRIMIR MANGAS");
 
     private final JPanel panel_central_central = new JPanel();
 	public final JPanel panel_card = new JPanel();
@@ -116,7 +117,7 @@ public class GraphicInterface implements Constants {
 		//PANEL BOTONES
 		Color colorBotones = new Color(64,64,64);
 		panel_botones.setBackground(colorBotones);
-		panel_botones.setLayout(new GridLayout(6,0,0,50));
+		panel_botones.setLayout(new GridLayout(7,0,0,50));
 		panel_botones.setBorder(new EmptyBorder(20,30,30,20));
 		panel_botones.add(btn_importar);
 		panel_botones.add(btn_anyadir);
@@ -131,6 +132,7 @@ public class GraphicInterface implements Constants {
 		ranking.addItem("LIGA");
 		ranking.addItem("COPA");
 
+		panel_botones.add(btn_print_premangas);
 		panel_botones.add(categoria);
 		panel_botones.add(ranking);
 
@@ -171,6 +173,8 @@ public class GraphicInterface implements Constants {
 		btn_todos.setActionCommand("TODOS");
 		categoria.addActionListener(c);
 		categoria.setActionCommand("RANKING");
+		btn_print_premangas.addActionListener(c);
+		btn_print_premangas.setActionCommand("PRINT PREMANGAS");
 
 
 		//solo permite seleccionar 1 fila.

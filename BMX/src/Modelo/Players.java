@@ -1,5 +1,6 @@
 package Modelo;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 
 public class Players {
@@ -10,6 +11,7 @@ public class Players {
     private String nombre = "";
     private String apellido_1 = "";
     private String apellido_2 = "";
+    private String club = "";
     private int anyo_nacimiento = 0;
     private int sexo = 0;
     private String provincia = "";
@@ -30,6 +32,9 @@ public class Players {
     private int ranking_cruiser_nacional = 0;
     private int ranking_a_comparar = 0;
 
+    //PREGUNTAR A ALBERT QUE SE USARÁ MAS EN LAS COMEPTICIONES
+    private int rankingAConcursar;
+
 
     public Players() {
     }
@@ -42,7 +47,8 @@ public class Players {
                    int ranking_otro_regional,
                    int ranking_liga_espanyola, int ranking_copa_espanyola, int ranking_campeonato_espanya,
                    int ranking_otro_nacional,
-                   int ranking_cruiser_regional, int ranking_cruiser_nacional) {
+                   int ranking_cruiser_regional, int ranking_cruiser_nacional, String club) {
+
         this.id = id;
         this.licencia = licencia;
         this.placa = placa;
@@ -68,6 +74,7 @@ public class Players {
         this.ranking_cruiser_regional = ranking_cruiser_regional;
         this.ranking_cruiser_nacional = ranking_cruiser_nacional;
         this.total_points = 0;
+        this.club = club;
     }
 
     //ID
@@ -326,5 +333,22 @@ public class Players {
         return playerPoints1 - playerPoints2;
 
     };
+
+    public ArrayList<String> getArrayListForPrintMangas(){
+
+        ArrayList<String> arrayToPrint = new ArrayList<>();
+
+        arrayToPrint.add(placa);
+        arrayToPrint.add(nombre+" " + apellido_1+ " " + apellido_2);
+        arrayToPrint.add(club);
+        arrayToPrint.add(String.valueOf(ranking_campeonato_espanya));
+        arrayToPrint.add("");
+        arrayToPrint.add("");
+        arrayToPrint.add("");
+
+        return arrayToPrint;
+
+
+    }
 }
 	

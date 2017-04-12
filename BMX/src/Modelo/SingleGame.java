@@ -60,49 +60,47 @@ public class SingleGame {
         }
         if (numberOfPlayers > 8 && numberOfPlayers <= 16) {
             quantity_of_mangas = 2;
-            finalsMangas = new FinalsManga(numberOfPlayers);
+            finalsMangas = new FinalsManga(numberOfPlayers, this);
             finalsMangas.getFinalMoto().getModelMotoTable().setPositionsAsTitle();
         }
         if (numberOfPlayers > 16 && numberOfPlayers <= 19) {
             quantity_of_mangas = 3;
-            finalsMangas = new FinalsManga(numberOfPlayers);
+            finalsMangas = new FinalsManga(numberOfPlayers, this);
         }
         if (numberOfPlayers > 19 && numberOfPlayers <= 32) {
             quantity_of_mangas = 4;
-            finalsMangas = new FinalsManga(numberOfPlayers);
+            finalsMangas = new FinalsManga(numberOfPlayers,this);
         }
 
         if (numberOfPlayers > 32 && numberOfPlayers < 40) {
             quantity_of_mangas = 6;
-            finalsMangas = new FinalsManga(numberOfPlayers);
+            finalsMangas = new FinalsManga(numberOfPlayers,this);
         }
 
 
         if (numberOfPlayers >= 40 && numberOfPlayers < 65) {
             quantity_of_mangas = 8;
-            finalsMangas = new FinalsManga(numberOfPlayers);
+            finalsMangas = new FinalsManga(numberOfPlayers,this);
         }
 
 
         if (numberOfPlayers >= 65 && numberOfPlayers < 80) {
             quantity_of_mangas = 12;
-            finalsMangas = new FinalsManga(numberOfPlayers);
+            finalsMangas = new FinalsManga(numberOfPlayers,this);
         }
 
 
         if (numberOfPlayers >= 80 && numberOfPlayers <= 128) {
             quantity_of_mangas = 16;
-            finalsMangas = new FinalsManga(numberOfPlayers);
+            finalsMangas = new FinalsManga(numberOfPlayers,this);
         }
 
         if (numberOfPlayers > 128 & numberOfPlayers <= 256) {
             quantity_of_mangas = 32;
-            finalsMangas = new FinalsManga(numberOfPlayers);
+            finalsMangas = new FinalsManga(numberOfPlayers,this);
 
 
         }
-
-
     }
 
     public int getQuantity_of_mangas(){
@@ -197,6 +195,7 @@ public class SingleGame {
         this.number_of_manga_int = number_of_manga_int;
         for (int i = 0; i < mangasMap.size(); i++) {
             mangasMap.get(i).setNumberOfMangaLabel(Utils.transformStringToHtml("MANGA: " + this.number_of_manga_int));
+            mangasMap.get(i).setNumero_de_manga(this.number_of_manga_int);
             this.number_of_manga_int++;
         }
     }
@@ -265,7 +264,7 @@ public class SingleGame {
         return number_of_full_mangas;
     }
 
-    public void setUpFinalPlayers(resultsController rsController) {
+    public void setUpFinalPlayers(resultsController rsController, boolean go_to_final) {
         if (finalsMangas.isThereSixteenth()) {
 
         }
@@ -293,6 +292,9 @@ public class SingleGame {
         playersToFinal.addAll(mangasMap.get(0).getQualifiedFinalPlayers());
         playersToFinal.addAll(mangasMap.get(1).getQualifiedFinalPlayers());
         finalsMangas.setFinalMoto(playersToFinal);
+    }
+    public void calculateSemiFinalsFinal(){
+        finalsMangas.setFinalMoto(finalsMangas.getSemiFinalQualifiedPlayersArray());
     }
 
     public void calculateSemiFinals(){
@@ -322,7 +324,13 @@ public class SingleGame {
         finalsMangas.setSemifinalsPlayers(playersToSemiFinal1,playersToSemiFinal2);
     }
 
+
+
     public ArrayList<Players> getAllPlayersOfThisRace(){
         return allPlayersOfThisRace;
+    }
+
+    public FinalsManga getFinalManga(){
+        return finalsMangas;
     }
 }
