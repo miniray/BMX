@@ -57,6 +57,7 @@ public class SingleGame {
 
         if (numberOfPlayers <= 8) {
             quantity_of_mangas = 1;
+            finalsMangas = null;
         }
         if (numberOfPlayers > 8 && numberOfPlayers <= 16) {
             quantity_of_mangas = 2;

@@ -166,7 +166,7 @@ public class Controller implements ActionListener, MouseListener, TableModelList
 				AllGames allGamesForPrint = new AllGames();
 				allGamesForPrint.getAllGamesmap();
 
-				BufferedWriter bw = Utils.createFileAndGetWriterBuffer();
+				BufferedWriter bw = Utils.createFileAndGetWriterBuffer("MANGAS");
 				try {
 					Utils.printPreMangas(allGamesForPrint.getOrderedArrayListByNumberOfManga());
 					System.out.println("INTENTO ABRIR");

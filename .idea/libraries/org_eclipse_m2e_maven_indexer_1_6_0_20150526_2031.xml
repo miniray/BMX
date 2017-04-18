@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="org.eclipse.m2e.maven.indexer_1.6.0.20150526-2031">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/estudios/eclipse/plugins/org.eclipse.m2e.maven.indexer_1.6.0.20150526-2031/indexer-core-3.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/estudios/eclipse/plugins/org.eclipse.m2e.maven.indexer_1.6.0.20150526-2031/lucene-core-2.4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/estudios/eclipse/plugins/org.eclipse.m2e.maven.indexer_1.6.0.20150526-2031/indexer-artifact-3.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/estudios/eclipse/plugins/org.eclipse.m2e.maven.indexer_1.6.0.20150526-2031/lucene-highlighter-2.4.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

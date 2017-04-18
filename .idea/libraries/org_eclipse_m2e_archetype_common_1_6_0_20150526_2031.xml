@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="org.eclipse.m2e.archetype.common_1.6.0.20150526-2031">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/estudios/eclipse/plugins/org.eclipse.m2e.archetype.common_1.6.0.20150526-2031/jchardet-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/estudios/eclipse/plugins/org.eclipse.m2e.archetype.common_1.6.0.20150526-2031/archetype-registry-2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/estudios/eclipse/plugins/org.eclipse.m2e.archetype.common_1.6.0.20150526-2031/maven-invoker-2.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/estudios/eclipse/plugins/org.eclipse.m2e.archetype.common_1.6.0.20150526-2031/archetype-catalog-2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/estudios/eclipse/plugins/org.eclipse.m2e.archetype.common_1.6.0.20150526-2031/dom4j-1.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/estudios/eclipse/plugins/org.eclipse.m2e.archetype.common_1.6.0.20150526-2031/jdom-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/estudios/eclipse/plugins/org.eclipse.m2e.archetype.common_1.6.0.20150526-2031/oro-2.0.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/estudios/eclipse/plugins/org.eclipse.m2e.archetype.common_1.6.0.20150526-2031/commons-io-2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/estudios/eclipse/plugins/org.eclipse.m2e.archetype.common_1.6.0.20150526-2031/commons-lang-2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/estudios/eclipse/plugins/org.eclipse.m2e.archetype.common_1.6.0.20150526-2031/archetype-common-2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/estudios/eclipse/plugins/org.eclipse.m2e.archetype.common_1.6.0.20150526-2031/commons-collections-3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/estudios/eclipse/plugins/org.eclipse.m2e.archetype.common_1.6.0.20150526-2031/plexus-velocity-1.1.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/estudios/eclipse/plugins/org.eclipse.m2e.archetype.common_1.6.0.20150526-2031/archetype-descriptor-2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/estudios/eclipse/plugins/org.eclipse.m2e.archetype.common_1.6.0.20150526-2031/velocity-1.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -127,19 +127,37 @@ public class AllGames implements Constants{
         }
     }
 
-
     public ArrayList<Manga> getOrderedArrayListByNumberOfManga(){
-         ArrayList<Manga> allMangasSortInArray = new ArrayList<>();
+        ArrayList<Manga> allMangasSortInArray = new ArrayList<>();
         for (int[] aMangas_order : mangas_order) {
             if (allGamesmap.get(aMangas_order[0]).get(aMangas_order[1]) != null) {
-                SingleGame tempManga = allGamesmap.get(aMangas_order[0]).get(aMangas_order[1]);
-                for(Map.Entry<Integer, Manga> aManga: tempManga.getMangasMap().entrySet()){
+                SingleGame tempSingleGame = allGamesmap.get(aMangas_order[0]).get(aMangas_order[1]);
+                for(Map.Entry<Integer, Manga> aManga: tempSingleGame.getMangasMap().entrySet()){
                     allMangasSortInArray.add(aManga.getValue());
                 }
             }
         }
         return allMangasSortInArray;
     }
+
+    public ArrayList<FinalsManga> getOrderedSemifinalArrayListByNumberOfManga(){
+        ArrayList<FinalsManga> allSemifinalsSortInArray = new ArrayList<>();
+        for (int[] aMangas_order : mangas_order) {
+            if (allGamesmap.get(aMangas_order[0]).get(aMangas_order[1]) != null) {
+                SingleGame tempSingleGame = allGamesmap.get(aMangas_order[0]).get(aMangas_order[1]);
+                if (tempSingleGame.getFinalManga()!= null){
+                    if (tempSingleGame.getFinalManga().isThereSemifinals()){
+
+                        allSemifinalsSortInArray.add(tempSingleGame.getFinalManga());
+
+                    }
+                }
+            }
+        }
+        return allSemifinalsSortInArray;
+    }
+
+
 
 }
 

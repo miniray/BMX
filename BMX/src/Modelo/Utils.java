@@ -5,6 +5,7 @@ import java.awt.*;
 import java.io.*;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Map;
 
 /**
  * Created by Miquel on 27/12/2016.
@@ -59,8 +60,8 @@ public class Utils implements Constants {
         layoutForMotosInMangaPanel(mangaPanel,motosArrayList,constraints);
     }
 
-    public static BufferedWriter createFileAndGetWriterBuffer(){
-        String desktopPath = WindowsUtils.getCurrentUserDesktopPath() + "\\LISTADO MANGAS.html" ;
+    public static BufferedWriter createFileAndGetWriterBuffer(String nameOfReport){
+        String desktopPath = WindowsUtils.getCurrentUserDesktopPath() + "\\LISTADO " + nameOfReport + ".html" ;
         FileWriter fw;
 
         try{
@@ -81,7 +82,7 @@ public class Utils implements Constants {
         return fileToPrintHtml;
     }
 
-    public static void writeIntoTheFile(BufferedWriter bw, ArrayList<Manga> arrayListOfOrderedMangas, String nameOfGame) throws IOException {
+    public static void writeIntoTheFileOfMangas(BufferedWriter bw, ArrayList<Manga> arrayListOfOrderedMangas) throws IOException {
 
         String html = "<style type=\"text/css\">\n" +
                 ".tg  {border-collapse:collapse;border-spacing:0;}\n" +
@@ -90,7 +91,22 @@ public class Utils implements Constants {
                 ".tg .tg-fbrz{font-weight:bold;font-size:20px;text-align:center;vertical-align:top}\n" +
                 ".tg .tg-if35{text-decoration:underline;text-align:center;vertical-align:top}\n" +
                 ".tg .tg-yw4l{vertical-align:top}\n" +
-                "</style>\n" + createAllGamesManga(nameOfGame, arrayListOfOrderedMangas);
+                "</style>\n" + createAllGamesManga(arrayListOfOrderedMangas);
+
+        bw.write(html);
+        bw.close();
+    }
+
+    public static void writeIntoTheFileOfSemifinals(BufferedWriter bw, ArrayList<FinalsManga> arrayListOfOrderedMangas) throws IOException {
+
+        String html = "<style type=\"text/css\">\n" +
+                ".tg  {border-collapse:collapse;border-spacing:0;}\n" +
+                ".tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}\n" +
+                ".tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}\n" +
+                ".tg .tg-fbrz{font-weight:bold;font-size:20px;text-align:center;vertical-align:top}\n" +
+                ".tg .tg-if35{text-decoration:underline;text-align:center;vertical-align:top}\n" +
+                ".tg .tg-yw4l{vertical-align:top}\n" +
+                "</style>\n" + createAllGamesSemifinal(arrayListOfOrderedMangas);
 
         bw.write(html);
         bw.close();
@@ -113,10 +129,15 @@ public class Utils implements Constants {
     }
 
     public static void printPreMangas(ArrayList<Manga> arrayListOrderedMangas) throws IOException {
-        writeIntoTheFile(createFileAndGetWriterBuffer(), arrayListOrderedMangas, "Mangas");
+        writeIntoTheFileOfMangas(createFileAndGetWriterBuffer("MANGAS"), arrayListOrderedMangas);
         openFile();
-
     }
+
+    public static void printSemifinals(ArrayList<FinalsManga> arrayListOrderedMangas) throws IOException {
+        writeIntoTheFileOfSemifinals(createFileAndGetWriterBuffer("SEMIFINALS"), arrayListOrderedMangas);
+        openFile();
+    }
+
 
     public static ArrayList<ArrayList<String>> parseArrayListOfMangaData(Manga aManga){
         ArrayList<ArrayList<String>> arrayListWithAllPlayersData =new ArrayList<>();
@@ -128,7 +149,7 @@ public class Utils implements Constants {
     }
 
 
-    public static String createAllGamesManga(String nameOfGame, ArrayList<Manga> arrayOfAllMangas){
+    public static String createAllGamesManga( ArrayList<Manga> arrayOfAllMangas){
         String html = "";
 
         for (Manga aManga: arrayOfAllMangas) {
@@ -144,7 +165,7 @@ public class Utils implements Constants {
                             "<col style=\"width: 101px\">\n" +
                             "</colgroup>\n" +
                             "  <tr>\n" +
-                            "    <th class=\"tg-fbrz\" colspan=\"7\">" + nameOfGame+ ":" + aManga.getNumero_de_manga() + "</th>\n" +
+                            "    <th class=\"tg-fbrz\" colspan=\"7\">" + "MANGA"+ " " + aManga.getNumero_de_manga() + "</th>\n" +
                             "  </tr>\n" +
                             "  <tr>\n" +
                             "    <th class=\"tg-fbrz\" colspan=\"7\">CATEGORIA:  " + aManga.getMySingleGame().getCategoryName() + "</th>\n" +
@@ -160,6 +181,47 @@ public class Utils implements Constants {
                             "  </tr>\n" + createARowForPlayer(aManga.getMangaPlayersArray()) +
                             "  </tr>\n" + "</table>";
 
+        }
+        return html;
+    }
+    public static String createAllGamesSemifinal( ArrayList<FinalsManga> allGamesFinalMangas ) {
+        String html = "";
+        int contador = 200;
+
+        for (FinalsManga aFinalManga : allGamesFinalMangas) {
+            for (Map.Entry aSemifinal : aFinalManga.getSemifinalsMotosMap().entrySet()) {
+                Moto tempSemifinalMoto = (Moto) aSemifinal.getValue();
+                
+                contador++;
+                html +=
+                        "<table class=\"tg\" style=\"undefined;table-layout: fixed; width: 1027px\">\n" +
+                                "<colgroup>\n" +
+                                "<col style=\"width: 101px\">\n" +
+                                "<col style=\"width: 301px\">\n" +
+                                "<col style=\"width: 221px\">\n" +
+                                "<col style=\"width: 101px\">\n" +
+                                "<col style=\"width: 101px\">\n" +
+                                "<col style=\"width: 101px\">\n" +
+                                "<col style=\"width: 101px\">\n" +
+                                "</colgroup>\n" +
+                                "  <tr>\n" +
+                                "    <th class=\"tg-fbrz\" colspan=\"7\">" + "SEMIFINAL" + " " + contador + "</th>\n" +
+                                "  </tr>\n" +
+                                "  <tr>\n" +
+                                "    <th class=\"tg-fbrz\" colspan=\"7\">CATEGORIA:  " + aFinalManga.getMySingleGame().getCategoryName() + "</th>\n" +
+                                "  </tr>\n" +
+                                "  <tr>\n" +
+                                "    <td class=\"tg-if35\">PLACA</td>\n" +
+                                "    <td class=\"tg-if35\">NOMBRE</td>\n" +
+                                "    <td class=\"tg-if35\">CLUB</td>\n" +
+                                "    <td class=\"tg-if35\">RANKING</td>\n" +
+                                "    <td class=\"tg-if35\">MOTO 1</td>\n" +
+                                "    <td class=\"tg-if35\">MOTO2</td>\n" +
+                                "    <td class=\"tg-if35\">MOTO3</td>\n" +
+                                "  </tr>\n" + createARowForPlayer(tempSemifinalMoto.getModelMotoTable().getPlayersInMoto()) +
+                                "  </tr>\n" + "</table>";
+
+            }
         }
         return html;
     }

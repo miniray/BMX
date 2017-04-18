@@ -347,8 +347,7 @@ public class Players {
         arrayToPrint.add("");
 
         return arrayToPrint;
-
-
     }
+
 }
 	

@@ -255,4 +255,8 @@ public class MotosTableModel extends AbstractTableModel implements Constants, Ta
         }
         return playersSelected;
     }
+
+    public ArrayList<Players> getPlayersInMoto(){
+        return playersInMoto;
+    }
 }

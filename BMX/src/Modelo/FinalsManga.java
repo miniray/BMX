@@ -408,4 +408,16 @@ public class FinalsManga {
         }
         return semifinalQualifiedPlayersArray;
     }
+
+    public ArrayList<ArrayList<Players>> getSemifinalPlayersArray() {
+        ArrayList<ArrayList<Players>> semifinalPlayersArray = new ArrayList<>();
+        for (Map.Entry<Integer, Moto> aSemifinalMoto : semifinalsMotosMap.entrySet()) {
+            semifinalPlayersArray.add(aSemifinalMoto.getValue().getModelMotoTable().getPlayersInMoto());
+        }
+        return semifinalPlayersArray;
+    }
+
+    public SingleGame getMySingleGame(){
+        return mySingleGame;
+    }
 }

@@ -62,10 +62,11 @@ public class resultsController implements TableModelListener, ActionListener {
 
         String actionCommand = e.getActionCommand();
 
+
         switch(actionCommand){
 
             case "PRINT ALL":
-                BufferedWriter bw = Utils.createFileAndGetWriterBuffer();
+                Utils.createFileAndGetWriterBuffer("MANGAS");
                 try {
                     Utils.printPreMangas(allGames.getOrderedArrayListByNumberOfManga());
                     System.out.println("INTENTO ABRIR");
@@ -75,6 +76,13 @@ public class resultsController implements TableModelListener, ActionListener {
                 break;
 
             case "PRINT ALL FINALS":
+                Utils.createFileAndGetWriterBuffer("SEMIFINALS");
+                try {
+                    Utils.printSemifinals(allGames.getOrderedSemifinalArrayListByNumberOfManga());
+                    System.out.println("INTENTO ABRIR");
+                } catch (IOException eio) {
+                    eio.printStackTrace();
+                }
                 break;
             default:
                 break;

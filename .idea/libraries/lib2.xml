@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="lib2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/estudios/eclipse/plugins/org.eclipse.wb.runtime.lib_1.8.0.r45x201506110820/lib/cglib-nodep-2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/estudios/eclipse/plugins/org.eclipse.wb.runtime.lib_1.8.0.r45x201506110820/lib/cglib-nodep-2.2.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="BMX">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/BMXrefactorized/out/artifacts/BMX_jar/BMX.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
