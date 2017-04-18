@@ -14,8 +14,8 @@ public class DataBase implements Constants {
     public ImportedTableModel tableModelImportedPlayers;
     public ImportedTableModel tableModelSelectedPlayers;
 
-    private final ArrayList<String[]> allSpainCategories = new ArrayList<>();
-    private final ArrayList<ArrayList> allCategoriesNamesArray = new ArrayList<>();
+    private static final ArrayList<String[]> allSpainCategories = new ArrayList<>();
+    public static final ArrayList<ArrayList<String[]>> allCategoriesNamesArray = new ArrayList<>();
 
     public boolean buttonAllControl;
     private final CSVReader csvReader;
@@ -83,5 +83,9 @@ public class DataBase implements Constants {
 
     public Controller getController(){
         return c;
+    }
+
+    public static ArrayList<String[]> getAllCategoriesNamesArray(){
+        return allSpainCategories;
     }
 }

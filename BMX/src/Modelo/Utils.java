@@ -81,7 +81,7 @@ public class Utils implements Constants {
         return fileToPrintHtml;
     }
 
-    public static void writeIntoTheFile(BufferedWriter bw, ArrayList<Manga> arrayListOfOrderedMangas) throws IOException {
+    public static void writeIntoTheFile(BufferedWriter bw, ArrayList<Manga> arrayListOfOrderedMangas, String nameOfGame) throws IOException {
 
         String html = "<style type=\"text/css\">\n" +
                 ".tg  {border-collapse:collapse;border-spacing:0;}\n" +
@@ -90,7 +90,7 @@ public class Utils implements Constants {
                 ".tg .tg-fbrz{font-weight:bold;font-size:20px;text-align:center;vertical-align:top}\n" +
                 ".tg .tg-if35{text-decoration:underline;text-align:center;vertical-align:top}\n" +
                 ".tg .tg-yw4l{vertical-align:top}\n" +
-                "</style>\n" + createAllGamesManga(arrayListOfOrderedMangas);
+                "</style>\n" + createAllGamesManga(nameOfGame, arrayListOfOrderedMangas);
 
         bw.write(html);
         bw.close();
@@ -113,7 +113,7 @@ public class Utils implements Constants {
     }
 
     public static void printPreMangas(ArrayList<Manga> arrayListOrderedMangas) throws IOException {
-        writeIntoTheFile(createFileAndGetWriterBuffer(), arrayListOrderedMangas);
+        writeIntoTheFile(createFileAndGetWriterBuffer(), arrayListOrderedMangas, "Mangas");
         openFile();
 
     }
@@ -128,7 +128,7 @@ public class Utils implements Constants {
     }
 
 
-    public static String createAllGamesManga(ArrayList<Manga> arrayOfAllMangas){
+    public static String createAllGamesManga(String nameOfGame, ArrayList<Manga> arrayOfAllMangas){
         String html = "";
 
         for (Manga aManga: arrayOfAllMangas) {
@@ -144,7 +144,10 @@ public class Utils implements Constants {
                             "<col style=\"width: 101px\">\n" +
                             "</colgroup>\n" +
                             "  <tr>\n" +
-                            "    <th class=\"tg-fbrz\" colspan=\"7\">MANGA " + aManga.getNumero_de_manga() + "</th>\n" +
+                            "    <th class=\"tg-fbrz\" colspan=\"7\">" + nameOfGame+ ":" + aManga.getNumero_de_manga() + "</th>\n" +
+                            "  </tr>\n" +
+                            "  <tr>\n" +
+                            "    <th class=\"tg-fbrz\" colspan=\"7\">CATEGORIA:  " + aManga.getMySingleGame().getCategoryName() + "</th>\n" +
                             "  </tr>\n" +
                             "  <tr>\n" +
                             "    <td class=\"tg-if35\">PLACA</td>\n" +

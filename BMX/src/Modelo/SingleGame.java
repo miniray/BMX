@@ -333,4 +333,9 @@ public class SingleGame {
     public FinalsManga getFinalManga(){
         return finalsMangas;
     }
+
+    public String getCategoryName(){
+        String categoryName = DataBase.getAllCategoriesNamesArray().get(gender)[category_id];
+        return categoryName;
+    }
 }
