@@ -226,16 +226,6 @@ public class Utils implements Constants {
         return html;
     }
 
-    public void createCategoriesNamesArray(){
-
-        categoriesNames.add(cat_espanya_fem);
-        categoriesNames.add(cat_espanya_masc);
-        categoriesNames.add(cat_espanya_cruiser_masc);
-    }
-
-    public ArrayList<String[]>  getCategoriesNames(){
-        return categoriesNames;
-    }
 
 }
 

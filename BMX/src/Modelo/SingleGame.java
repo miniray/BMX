@@ -283,17 +283,21 @@ public class SingleGame {
 
         }
         if (finalsMangas.isThereDirectFinal()){
-            calculateDirectFinal();
+            //calculateDirectFinalLessThan9();
             finalsMangas.getFinalMoto().getModelMotoTable().addTableModelListener(rsController);
         }
     }
 
-    public void calculateDirectFinal(){
+    public void calculateDirectFinalMax8Players(){
+
+    }
+    public void calculateDirectFinalMax16Players(){
         playersToFinal = new ArrayList<>();
         playersToFinal.addAll(mangasMap.get(0).getQualifiedFinalPlayers());
         playersToFinal.addAll(mangasMap.get(1).getQualifiedFinalPlayers());
         finalsMangas.setFinalMoto(playersToFinal);
     }
+
     public void calculateSemiFinalsFinal(){
         finalsMangas.setFinalMoto(finalsMangas.getSemiFinalQualifiedPlayersArray());
     }
@@ -303,24 +307,43 @@ public class SingleGame {
         ArrayList <Players> playersToSemiFinal1 = new ArrayList<>();
         ArrayList <Players> playersToSemiFinal2 = new ArrayList<>();
         if (numberOfPlayers >= 17 && numberOfPlayers <= 19){
-            playersToSemiFinal1.addAll(mangasMap.get(0).getQualifiedPlayers1and3());
-            playersToSemiFinal1.addAll(mangasMap.get(1).getQualifiedPlayers2and4());
-            playersToSemiFinal1.addAll(mangasMap.get(2).getQualifiedPlayers2and3());
 
-            playersToSemiFinal2.addAll(mangasMap.get(0).getQualifiedPlayers2and4());
-            playersToSemiFinal2.addAll(mangasMap.get(1).getQualifiedPlayers1and3());
-            playersToSemiFinal2.addAll(mangasMap.get(2).getQualifiedPlayers1and4());
+            playersToSemiFinal1.add(mangasMap.get(0).getQualifiedPlayer(0));
+            playersToSemiFinal1.add(mangasMap.get(1).getQualifiedPlayer(1));
+            playersToSemiFinal1.add(mangasMap.get(2).getQualifiedPlayer(1));
+            playersToSemiFinal1.add(mangasMap.get(0).getQualifiedPlayer(2));
+            playersToSemiFinal1.add(mangasMap.get(1).getQualifiedPlayer(3));
+            playersToSemiFinal1.add(mangasMap.get(2).getQualifiedPlayer(2));
+
+            playersToSemiFinal2.add(mangasMap.get(1).getQualifiedPlayer(0));
+            playersToSemiFinal2.add(mangasMap.get(2).getQualifiedPlayer(0));
+            playersToSemiFinal2.add(mangasMap.get(0).getQualifiedPlayer(1));
+            playersToSemiFinal2.add(mangasMap.get(1).getQualifiedPlayer(2));
+            playersToSemiFinal2.add(mangasMap.get(0).getQualifiedPlayer(3));
+            playersToSemiFinal2.add(mangasMap.get(2).getQualifiedPlayer(3));
+
 
         }else{
-            playersToSemiFinal1.addAll(mangasMap.get(0).getQualifiedPlayers1and3());
-            playersToSemiFinal1.addAll(mangasMap.get(1).getQualifiedPlayers2and4());
-            playersToSemiFinal1.addAll(mangasMap.get(2).getQualifiedPlayers2and4());
-            playersToSemiFinal1.addAll(mangasMap.get(2).getQualifiedPlayers1and3());
 
-            playersToSemiFinal2.addAll(mangasMap.get(0).getQualifiedPlayers2and4());
-            playersToSemiFinal2.addAll(mangasMap.get(1).getQualifiedPlayers1and3());
-            playersToSemiFinal2.addAll(mangasMap.get(2).getQualifiedPlayers1and3());
-            playersToSemiFinal2.addAll(mangasMap.get(2).getQualifiedPlayers2and4());
+            playersToSemiFinal1.add(mangasMap.get(0).getQualifiedPlayer(0));
+            playersToSemiFinal1.add(mangasMap.get(3).getQualifiedPlayer(0));
+            playersToSemiFinal1.add(mangasMap.get(1).getQualifiedPlayer(1));
+            playersToSemiFinal1.add(mangasMap.get(2).getQualifiedPlayer(1));
+            playersToSemiFinal1.add(mangasMap.get(0).getQualifiedPlayer(2));
+            playersToSemiFinal1.add(mangasMap.get(3).getQualifiedPlayer(2));
+            playersToSemiFinal1.add(mangasMap.get(1).getQualifiedPlayer(3));
+            playersToSemiFinal1.add(mangasMap.get(2).getQualifiedPlayer(3));
+
+
+            playersToSemiFinal2.add(mangasMap.get(1).getQualifiedPlayer(0));
+            playersToSemiFinal2.add(mangasMap.get(2).getQualifiedPlayer(0));
+            playersToSemiFinal2.add(mangasMap.get(0).getQualifiedPlayer(1));
+            playersToSemiFinal2.add(mangasMap.get(3).getQualifiedPlayer(1));
+            playersToSemiFinal2.add(mangasMap.get(1).getQualifiedPlayer(2));
+            playersToSemiFinal2.add(mangasMap.get(2).getQualifiedPlayer(2));
+            playersToSemiFinal2.add(mangasMap.get(0).getQualifiedPlayer(3));
+            playersToSemiFinal2.add(mangasMap.get(3).getQualifiedPlayer(3));
+
         }
         finalsMangas.setSemifinalsPlayers(playersToSemiFinal1,playersToSemiFinal2);
     }

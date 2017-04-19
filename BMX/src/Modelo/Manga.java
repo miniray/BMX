@@ -79,6 +79,7 @@ public class Manga {
             entry.getValue().getModelMotoTable().resetAllPlayersPoints();
         }
 
+
         for (Map.Entry<Integer, Moto> entry : motosMap.entrySet()){
             entry.getValue().getModelMotoTable().updatePlayerPoints();
             entry.getValue().getModelMotoTable().checkPlatesPointsLabel(entry.getValue().getLabelArrayList());
@@ -102,37 +103,9 @@ public class Manga {
         return finalPlayers;
     }
 
-    public ArrayList<Players> getQualifiedPlayers1and3(){
+    public Players getQualifiedPlayer(int position){
         mangaPlayersArray.sort(Players.PlayerPointsComparator);
-        ArrayList <Players> qualifiedPlayers = new ArrayList<>();
-        qualifiedPlayers.add(mangaPlayersArray.get(0));
-        qualifiedPlayers.add(mangaPlayersArray.get(2));
-
-        return qualifiedPlayers;
-    }
-    public ArrayList<Players> getQualifiedPlayers1and4(){
-        mangaPlayersArray.sort(Players.PlayerPointsComparator);
-        ArrayList <Players> qualifiedPlayers = new ArrayList<>();
-        qualifiedPlayers.add(mangaPlayersArray.get(0));
-        qualifiedPlayers.add(mangaPlayersArray.get(3));
-
-        return qualifiedPlayers;
-    }
-    public ArrayList<Players> getQualifiedPlayers2and4(){
-        mangaPlayersArray.sort(Players.PlayerPointsComparator);
-        ArrayList <Players> qualifiedPlayers = new ArrayList<>();
-        qualifiedPlayers.add(mangaPlayersArray.get(1));
-        qualifiedPlayers.add(mangaPlayersArray.get(3));
-
-        return qualifiedPlayers;
-    }
-    public ArrayList<Players> getQualifiedPlayers2and3(){
-        mangaPlayersArray.sort(Players.PlayerPointsComparator);
-        ArrayList <Players> qualifiedPlayers = new ArrayList<>();
-        qualifiedPlayers.add(mangaPlayersArray.get(1));
-        qualifiedPlayers.add(mangaPlayersArray.get(2));
-
-        return qualifiedPlayers;
+        return mangaPlayersArray.get(position);
     }
 
 

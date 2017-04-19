@@ -48,6 +48,7 @@ public class Moto implements TableModelListener {
         //CREACION DE LA TABLA, SU MODELO, SU SCROLLPANE Y SU PANEL
         tableModelMoto = new MotosTableModel(this.playersOfThisMoto, numero_moto, myManga);
         JTable motoTable = new JTable();
+        motoTable.setOpaque(true);
         motoTable.setModel(tableModelMoto);
 
         JScrollPane motoTableScroller = new JScrollPane(motoTable);

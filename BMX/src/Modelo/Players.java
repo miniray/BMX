@@ -19,6 +19,10 @@ public class Players {
     private int categoria_regional;
     private int categoria_cruiser;
     private int total_points;
+    private int points_moto1;
+    private int points_moto2;
+    private int points_moto3;
+
 
     private int ranking_liga_regional = 0;
     private int ranking_copa_regional = 0;
@@ -306,6 +310,32 @@ public class Players {
         return this.total_points;
     }
 
+    public void setPoints_moto1(int points_moto1) {
+        this.points_moto1 = points_moto1;
+    }
+
+    public void setPoints_moto2(int points_moto2) {
+        this.points_moto2 = points_moto2;
+    }
+
+    public void setPoints_moto3(int points_moto3) {
+        this.points_moto3 = points_moto3;
+    }
+
+    public int getPoints_moto1() {
+        return points_moto1;
+    }
+
+    public int getPoints_moto2() {
+        return points_moto2;
+    }
+
+    public int getPoints_moto3() {
+        return points_moto3;
+    }
+
+
+
     public void addPoints(int points){
         this.total_points = this.total_points + points;
     }
@@ -330,6 +360,16 @@ public class Players {
         int playerPoints1 = p1.getPoints();
         int playerPoints2 = p2.getPoints();
 
+        if ((playerPoints1 - playerPoints2) == 0){
+            if (p1.getPoints_moto3()<p2.getPoints_moto3()){
+                playerPoints1 -= 1;
+                System.out.println("PLACA: " + p1.getPlaca() + " TIENE QUEDÓ MEJOR EN LA MOTO 3");
+            }else{
+                playerPoints2 -= 1;
+                System.out.println("PLACA: " + p1.getPlaca() + " TIENE QUEDÓ MEJOR EN LA MOTO 3");
+            }
+        }
+
         return playerPoints1 - playerPoints2;
 
     };
@@ -348,6 +388,7 @@ public class Players {
 
         return arrayToPrint;
     }
+
 
 }
 	

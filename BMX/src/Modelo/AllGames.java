@@ -51,7 +51,7 @@ public class AllGames implements Constants{
         allGamesmap.put(0, womenPlayersByCategory);
         allGamesmap.put(1, menPlayersByCategory);
         allGamesmap.put(2, cruiserPlayersByCategory);
-        createAllGamesStructureForPrint();
+        createAllGamesStructure();
         setNumberOfAllTheMangas();
 
     }
@@ -111,7 +111,7 @@ public class AllGames implements Constants{
         }
     }
 
-    private void createAllGamesStructureForPrint(){
+    private void createAllGamesStructure(){
         for (int gender = 0; gender < allExistingCategoriesIdArray.size(); gender++){
             for (int position_of_category = 0; position_of_category < allExistingCategoriesIdArray.get(gender).size(); position_of_category++){
                 int category = allExistingCategoriesIdArray.get(gender).get(position_of_category);

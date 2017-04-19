@@ -179,6 +179,9 @@ public class MotosTableModel extends AbstractTableModel implements Constants, Ta
     public void resetAllPlayersPoints(){
             for (Players aPlayer: playersInMoto){
                aPlayer.setPoints();
+               aPlayer.setPoints_moto1(0);
+               aPlayer.setPoints_moto2(0);
+               aPlayer.setPoints_moto3(0);
        }
     }
 
@@ -188,7 +191,22 @@ public class MotosTableModel extends AbstractTableModel implements Constants, Ta
             if (aRow.get(1) != "") {
                 for (Players aPlayer : playersInMoto) {
                     if (aPlayer.getPlaca().equals(aRow.get(1))) {
-                        aPlayer.addPoints((int) aRow.get(0));
+                        int points = (int)aRow.get(0);
+                        aPlayer.addPoints(points);
+                        switch(this.numero_moto){
+
+                            case 1:
+                                aPlayer.setPoints_moto1(points);
+                                break;
+                            case 2:
+                                aPlayer.setPoints_moto2(points);
+                                break;
+                            case 3:
+                                aPlayer.setPoints_moto3(points);
+                                break;
+                            default:
+                                break;
+                        }
                     }
                 }
             }
