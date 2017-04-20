@@ -57,51 +57,34 @@ public class SingleGame {
 
         if (numberOfPlayers <= 8) {
             quantity_of_mangas = 1;
-            finalsMangas = null;
         }
         if (numberOfPlayers > 8 && numberOfPlayers <= 16) {
             quantity_of_mangas = 2;
-            finalsMangas = new FinalsManga(numberOfPlayers, this);
-            finalsMangas.getFinalMoto().getModelMotoTable().setPositionsAsTitle();
         }
         if (numberOfPlayers > 16 && numberOfPlayers <= 19) {
             quantity_of_mangas = 3;
-            finalsMangas = new FinalsManga(numberOfPlayers, this);
         }
         if (numberOfPlayers > 19 && numberOfPlayers <= 32) {
             quantity_of_mangas = 4;
-            finalsMangas = new FinalsManga(numberOfPlayers,this);
         }
-
         if (numberOfPlayers > 32 && numberOfPlayers < 40) {
             quantity_of_mangas = 6;
-            finalsMangas = new FinalsManga(numberOfPlayers,this);
         }
-
-
         if (numberOfPlayers >= 40 && numberOfPlayers < 65) {
             quantity_of_mangas = 8;
-            finalsMangas = new FinalsManga(numberOfPlayers,this);
         }
-
-
         if (numberOfPlayers >= 65 && numberOfPlayers < 80) {
             quantity_of_mangas = 12;
-            finalsMangas = new FinalsManga(numberOfPlayers,this);
         }
-
 
         if (numberOfPlayers >= 80 && numberOfPlayers <= 128) {
             quantity_of_mangas = 16;
-            finalsMangas = new FinalsManga(numberOfPlayers,this);
         }
-
         if (numberOfPlayers > 128 & numberOfPlayers <= 256) {
             quantity_of_mangas = 32;
-            finalsMangas = new FinalsManga(numberOfPlayers,this);
-
-
         }
+        finalsMangas = new FinalsManga(numberOfPlayers,this);
+        finalsMangas.getFinalMoto().getModelMotoTable().setPositionsAsTitle();
     }
 
     public int getQuantity_of_mangas(){
@@ -141,7 +124,7 @@ public class SingleGame {
 
 
         panelForScroll.setLayout(new GridLayout(0, 1));
-        panelForScroll.setPreferredSize(new Dimension(800, mangasMap.size() * 300));
+        panelForScroll.setPreferredSize(new Dimension(800, mangasMap.size() * 200));
         panelForScroll.add(gamePanel);
         scrollerForPanels = new JScrollPane(panelForScroll);
         scrollerForPanels.setVisible(true);
@@ -283,12 +266,19 @@ public class SingleGame {
 
         }
         if (finalsMangas.isThereDirectFinal()){
-            //calculateDirectFinalLessThan9();
+            //calculateDirectFinalMoreThan8();
+            finalsMangas.getFinalMoto().getModelMotoTable().addTableModelListener(rsController);
+        }
+
+        if (finalsMangas.isThereDirectFinalFor8()){
+            calculateDirectFinalFor8();
             finalsMangas.getFinalMoto().getModelMotoTable().addTableModelListener(rsController);
         }
     }
 
-    public void calculateDirectFinalMax8Players(){
+    public void calculateDirectFinalFor8(){
+        ArrayList <Players> playersToFinalFor8 = new ArrayList();
+        playersToFinalFor8.addAll(mangasMap.get(0).getAllPlayersSortedByPoints());
 
     }
     public void calculateDirectFinalMax16Players(){

@@ -65,7 +65,7 @@ public class resultsController implements TableModelListener, ActionListener {
 
         switch(actionCommand){
 
-            case "PRINT ALL":
+            case "PRINT MANGAS":
                 Utils.createFileAndGetWriterBuffer("MANGAS");
                 try {
                     Utils.printPreMangas(allGames.getOrderedArrayListByNumberOfManga());
@@ -75,7 +75,10 @@ public class resultsController implements TableModelListener, ActionListener {
                 }
                 break;
 
-            case "PRINT ALL FINALS":
+            case "PRINT CUARTOS":
+                break;
+
+            case "PRINT SEMIFINALES":
                 Utils.createFileAndGetWriterBuffer("SEMIFINALS");
                 try {
                     Utils.printSemifinals(allGames.getOrderedSemifinalArrayListByNumberOfManga());
@@ -84,6 +87,11 @@ public class resultsController implements TableModelListener, ActionListener {
                     eio.printStackTrace();
                 }
                 break;
+
+
+            case "PRINT FINALES":
+                break;
+
             default:
                 break;
         }

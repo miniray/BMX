@@ -19,6 +19,7 @@ public class MotosTableModel extends AbstractTableModel implements Constants, Ta
     private ArrayList<Players> playersInMoto = new ArrayList<>();
     private int numero_moto;
     private boolean is_final = false;
+    private boolean is_final_for_8 = false;
     private boolean is_semifinal = false;
     private boolean is_quarter = false;
     private boolean is_eighth = false;
@@ -49,6 +50,10 @@ public class MotosTableModel extends AbstractTableModel implements Constants, Ta
         return is_final;
     }
 
+    public boolean get_Is_final_for_8() {
+        return is_final_for_8;
+    }
+
     public boolean get_Is_semifinal() {
         return is_semifinal;
     }
@@ -67,6 +72,10 @@ public class MotosTableModel extends AbstractTableModel implements Constants, Ta
 
     public void set_Is_final(boolean is_final) {
         this.is_final = is_final;
+    }
+
+    public void set_Is_final_for_8(boolean is_final_for_8) {
+        this.is_final_for_8 = is_final_for_8;
     }
 
     public void set_Is_semifinal(boolean is_semifinal) {

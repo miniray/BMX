@@ -17,7 +17,9 @@ public class AllGames implements Constants{
     private int number_of_manga;
     private resultsController rsController;
     private JButton printMangas;
-    private JButton printFinals;
+    private JButton printCuartos;
+    private JButton printSemifinals;
+    private JButton printFinales;
     private ArrayList<String[]> categoriesNames;
 
 
@@ -60,8 +62,9 @@ public class AllGames implements Constants{
 
         this.rsController = rsController;
         printMangas.addActionListener(rsController);
-        printFinals.addActionListener(rsController);
-
+        printSemifinals.addActionListener(rsController);
+        printCuartos.addActionListener(rsController);
+        printFinales.addActionListener(rsController);
     }
 
     private void createAllGamesStructure(JPanel mainPanel, JPanel buttonTodosPanel){
@@ -89,14 +92,21 @@ public class AllGames implements Constants{
 
     private void createPrintButtons(JPanel buttonsPanel){
 
-        buttonsPanel.setLayout(new GridLayout(0,2));
+        buttonsPanel.setLayout(new GridLayout(0,4));
         printMangas = new JButton("PRINT MANGAS");
-        printFinals = new JButton("PRINT FINALS");
+        printCuartos = new JButton("PRINT CUARTOS");
+        printSemifinals = new JButton("PRINT SEMIFINALES");
+        printFinales = new JButton("PRINT FINALES");
         buttonsPanel.removeAll();
         buttonsPanel.add(printMangas);
-        buttonsPanel.add(printFinals);
-        printMangas.setActionCommand("PRINT ALL");
-        printFinals.setActionCommand("PRINT ALL FINALS");
+        buttonsPanel.add(printCuartos);
+        buttonsPanel.add(printSemifinals);
+        buttonsPanel.add(printFinales);
+
+        printMangas.setActionCommand("PRINT MANGAS");
+        printCuartos.setActionCommand("PRINT CUARTOS");
+        printSemifinals.setActionCommand("PRINT SEMIFINALES");
+        printFinales.setActionCommand("PRINT FINALES");
         buttonsPanel.updateUI();
     }
 

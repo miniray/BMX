@@ -363,10 +363,10 @@ public class Players {
         if ((playerPoints1 - playerPoints2) == 0){
             if (p1.getPoints_moto3()<p2.getPoints_moto3()){
                 playerPoints1 -= 1;
-                System.out.println("PLACA: " + p1.getPlaca() + " TIENE QUEDÓ MEJOR EN LA MOTO 3");
+                System.out.println("PLACA: " + p1.getPlaca() + " QUEDÓ MEJOR EN LA MOTO 3 QUE LA PLACA" + p2.getPlaca());
             }else{
                 playerPoints2 -= 1;
-                System.out.println("PLACA: " + p1.getPlaca() + " TIENE QUEDÓ MEJOR EN LA MOTO 3");
+                System.out.println("PLACA: " + p2.getPlaca() + " QUEDÓ MEJOR EN LA MOTO 3 QUE LA PLACA" + p1.getPlaca());
             }
         }
 

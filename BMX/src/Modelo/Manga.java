@@ -87,6 +87,7 @@ public class Manga {
 
     }
 
+    //PARA CUANDO HAY 2 MANGAS Y EN UNA HAY 4 PILOTOS PASAN 3
     public ArrayList<Players> getQualifiedFinalPlayers(){
         mangaPlayersArray.sort(Players.PlayerPointsComparator);
         ArrayList <Players> finalPlayers = new ArrayList<>();
@@ -103,6 +104,11 @@ public class Manga {
         return finalPlayers;
     }
 
+    public ArrayList<Players> getAllPlayersSortedByPoints(){
+        mangaPlayersArray.sort(Players.PlayerPointsComparator);
+        return mangaPlayersArray;
+
+    }
     public Players getQualifiedPlayer(int position){
         mangaPlayersArray.sort(Players.PlayerPointsComparator);
         return mangaPlayersArray.get(position);

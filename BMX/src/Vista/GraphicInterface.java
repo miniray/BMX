@@ -108,11 +108,6 @@ public class GraphicInterface implements Constants {
 		constraints.gridheight =6;
 		frame.getContentPane().add(panel_card,constraints);
 
-		//TABLA FINAL
-
-		JButton btn_imprimirMotos = new JButton("IMPRIMIR MOTOS");
-		JButton btn_imprimirSemiFinales = new JButton("IMPRIMIR SEMIFINALES");
-		JButton btn_imprimirFinales = new JButton("IMPRIMIR FINALES");
 
 		//PANEL BOTONES
 		Color colorBotones = new Color(64,64,64);

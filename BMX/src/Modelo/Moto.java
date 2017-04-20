@@ -25,6 +25,7 @@ public class Moto implements TableModelListener {
         public boolean is_quarter = false;
         public boolean is_semifinal = false;
         public boolean is_final = false;
+        public boolean is_final_for_8 = false;
 
 
 
@@ -231,12 +232,14 @@ public class Moto implements TableModelListener {
     public void setIs_quarter(){ is_quarter = true;}
     public void setIs_semifinal(){ is_semifinal = true;}
     public void setIs_final(){ is_final = true;}
+    public void setIs_final_for_8(){ is_final_for_8 = true;}
 
     public boolean getIs_sixteenth(){return is_sixteenth;}
     public boolean getIs_eighth(){return is_eighth;}
     public boolean getIs_quarter(){return is_quarter;}
     public boolean getIs_semifinal(){return is_semifinal;}
     public boolean getIs_final(){return is_final;}
+    public boolean getIs_final_for_8(){ return is_final_for_8;}
 
     public void giveToModelThePlateLabelArray(ArrayList<JLabel> platesLabelArray){
         this.getModelMotoTable().setPlateLabelsArray(platesLabelArray);

@@ -37,6 +37,7 @@ public class FinalsManga {
 
     private boolean isThereQuarters = false;
     private boolean isThereSemifinals = false;
+    private boolean isThereDirectFinalFor8 = false;
     private boolean isThereDirectFinal = false;
     private boolean isThereEighth = false;
     private boolean isThereSixteenth = false;
@@ -51,6 +52,11 @@ public class FinalsManga {
         finalMangaPanel = new JPanel();
         finalMangaPanel.setLayout(new GridLayout(0, 3));
         finalMangaPanel.setBackground(new Color(64, 64, 64));
+
+        if (numberOfPlayers <= 8){
+            createFinalCaseFor8();
+            isThereDirectFinalFor8 = true;
+        }
         if (numberOfPlayers > 8 && numberOfPlayers <= 16) {
             createFinalCase();
             isThereDirectFinal = true;
@@ -93,6 +99,19 @@ public class FinalsManga {
         return finalMoto;
     }
 
+    private void createFinalCaseFor8(){
+        finalsPlayers = new ArrayList<>();
+        for (int i = 0; i< 8; i++){
+            Players temp = new Players();
+            finalsPlayers.add(temp);
+        }
+
+        finalMoto = new Moto(0, finalsPlayers, mySingleGame);
+        finalMoto.setIs_final_for_8();
+        finalMoto.setMotoTitle("FINAL");
+        finalMangaPanel.add(finalMoto.getMotoPanel(), 0);
+        finalMoto.getModelMotoTable().set_Is_final_for_8(true);
+    }
     private void createFinalCase(){
         finalsPlayers = new ArrayList<>();
         for (int i = 0; i< 8; i++){
@@ -100,8 +119,6 @@ public class FinalsManga {
             finalsPlayers.add(temp);
         }
 
-
-        //IMPLEMENTAR CONSTRUCTOR CON FINALMANGA
         finalMoto = new Moto(0, finalsPlayers, mySingleGame);
         finalMoto.setIs_final();
         finalMoto.setMotoTitle("FINAL");
@@ -359,14 +376,15 @@ public class FinalsManga {
 
     }
 
+
     public boolean isThereDirectFinal(){return isThereDirectFinal;}
     public boolean isThereSemifinals(){return isThereSemifinals;}
     public boolean isThereQuarters(){ return isThereQuarters;}
     public boolean isThereEighth(){ return isThereEighth;}
     public boolean isThereSixteenth(){ return isThereSixteenth;}
+    public boolean isThereDirectFinalFor8(){return isThereDirectFinalFor8;}
 
 
-//  probar update ui
     public void setSemifinalsPlayers(ArrayList<Players> playersForSemifinals1, ArrayList<Players> playersForSemifinals2){
             semifinalsMotosMap.get(1).setPlayersOfThisMoto(playersForSemifinals1);
             semifinalsMotosMap.get(2).setPlayersOfThisMoto(playersForSemifinals2);
