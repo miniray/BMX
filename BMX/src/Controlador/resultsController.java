@@ -23,6 +23,7 @@ public class resultsController implements TableModelListener, ActionListener {
     public void tableChanged(TableModelEvent e) {
 
         MotosTableModel eventMotoModel = (MotosTableModel)e.getSource();
+        //en el cas de que la mototablemodel sigui d'una semifinal no te manga, s'ha de filtrar per a que siguie una finalManga
         Manga myManga = eventMotoModel.getMyManga();
         SingleGame mySingleGame = myManga.getMySingleGame();
         System.out.println("TABLECHANGED");

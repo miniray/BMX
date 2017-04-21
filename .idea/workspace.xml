@@ -6,18 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f62a754-bfd4-41d1-9b33-597476384a5b" name="Default" comment="">
+    <list default="true" id="7f62a754-bfd4-41d1-9b33-597476384a5b" name="Default" comment="IMPLEMENTADO LA GESTION DE LAS FINALES PARA MENOS DE 8PLAYERS">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BMX/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/BMX/META-INF/MANIFEST.MF" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BMX/src/Controlador/resultsController.java" afterPath="$PROJECT_DIR$/BMX/src/Controlador/resultsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BMX/src/Modelo/AllGames.java" afterPath="$PROJECT_DIR$/BMX/src/Modelo/AllGames.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BMX/src/Modelo/FinalsManga.java" afterPath="$PROJECT_DIR$/BMX/src/Modelo/FinalsManga.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BMX/src/Modelo/Manga.java" afterPath="$PROJECT_DIR$/BMX/src/Modelo/Manga.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BMX/src/Modelo/Moto.java" afterPath="$PROJECT_DIR$/BMX/src/Modelo/Moto.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BMX/src/Modelo/MotosTableModel.java" afterPath="$PROJECT_DIR$/BMX/src/Modelo/MotosTableModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BMX/src/Modelo/Players.java" afterPath="$PROJECT_DIR$/BMX/src/Modelo/Players.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BMX/src/Modelo/SingleGame.java" afterPath="$PROJECT_DIR$/BMX/src/Modelo/SingleGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BMX/src/Vista/GraphicInterface.java" afterPath="$PROJECT_DIR$/BMX/src/Vista/GraphicInterface.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,12 +26,12 @@
     <window id="1">
       <content type="file-editors">
         <state>
-          <leaf>
-            <file leaf-file-name="SingleGame.java" pinned="false" current-in-tab="true">
+          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+            <file leaf-file-name="SingleGame.java" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/BMX/src/Modelo/SingleGame.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="499">
-                    <caret line="271" column="0" lean-forward="false" selection-start-line="271" selection-start-column="0" selection-end-line="271" selection-end-column="0" />
+                  <state relative-caret-position="543">
+                    <caret line="265" column="0" lean-forward="true" selection-start-line="265" selection-start-column="0" selection-end-line="265" selection-end-column="0" />
                     <folding>
                       <element signature="docComment;class#SingleGame#0" expanded="false" />
                       <element signature="method#generateAllMangas#0;class#SingleGame#0" expanded="false" />
@@ -61,11 +52,11 @@
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="resultsController.java" pinned="false" current-in-tab="false">
+            <file leaf-file-name="resultsController.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/BMX/src/Controlador/resultsController.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="677">
-                    <caret line="72" column="40" lean-forward="true" selection-start-line="72" selection-start-column="40" selection-end-line="72" selection-end-column="40" />
+                  <state relative-caret-position="271">
+                    <caret line="25" column="127" lean-forward="false" selection-start-line="25" selection-start-column="127" selection-end-line="25" selection-end-column="127" />
                     <folding />
                   </state>
                 </provider>
@@ -102,7 +93,7 @@
       <file leaf-file-name="Players.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BMX/src/Modelo/Players.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
+            <state relative-caret-position="4777">
               <caret line="368" column="108" lean-forward="false" selection-start-line="368" selection-start-column="108" selection-end-line="368" selection-end-column="108" />
               <folding />
             </state>
@@ -112,7 +103,7 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BMX/src/Controlador/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
+            <state relative-caret-position="1683">
               <caret line="113" column="68" lean-forward="false" selection-start-line="113" selection-start-column="56" selection-end-line="113" selection-end-column="68" />
               <folding />
             </state>
@@ -122,7 +113,7 @@
       <file leaf-file-name="Manga.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BMX/src/Modelo/Manga.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
+            <state relative-caret-position="506">
               <caret line="110" column="4" lean-forward="false" selection-start-line="110" selection-start-column="4" selection-end-line="110" selection-end-column="4" />
               <folding />
             </state>
@@ -132,7 +123,7 @@
       <file leaf-file-name="FinalsManga.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BMX/src/Modelo/FinalsManga.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
+            <state relative-caret-position="1207">
               <caret line="387" column="36" lean-forward="false" selection-start-line="387" selection-start-column="16" selection-end-line="387" selection-end-column="36" />
               <folding>
                 <element signature="method#FinalsManga#0;class#FinalsManga#0" expanded="false" />
@@ -152,7 +143,7 @@
       <file leaf-file-name="MotosTableModel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BMX/src/Modelo/MotosTableModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
+            <state relative-caret-position="884">
               <caret line="76" column="33" lean-forward="false" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
               <folding>
                 <element signature="method#checkPlatesPointsLabel#0;class#MotosTableModel#0" expanded="false" />
@@ -167,7 +158,7 @@
       <file leaf-file-name="Moto.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BMX/src/Modelo/Moto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
+            <state relative-caret-position="1003">
               <caret line="242" column="0" lean-forward="false" selection-start-line="242" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
               <folding>
                 <element signature="method#Moto#0;class#Moto#0" expanded="false" />
@@ -183,7 +174,7 @@
       <file leaf-file-name="GraphicInterface.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BMX/src/Vista/GraphicInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
+            <state relative-caret-position="1700">
               <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
               <folding>
                 <element signature="method#setAllPlayersModel#0;class#GraphicInterface#0" expanded="false" />
@@ -219,13 +210,13 @@
         <option value="$PROJECT_DIR$/BMX/src/Modelo/Utils.java" />
         <option value="$PROJECT_DIR$/BMX/src/Modelo/Players.java" />
         <option value="$PROJECT_DIR$/BMX/src/Vista/GraphicInterface.java" />
-        <option value="$PROJECT_DIR$/BMX/src/Controlador/resultsController.java" />
         <option value="$PROJECT_DIR$/BMX/src/Modelo/AllGames.java" />
         <option value="$PROJECT_DIR$/BMX/src/Modelo/Moto.java" />
         <option value="$PROJECT_DIR$/BMX/src/Modelo/MotosTableModel.java" />
         <option value="$PROJECT_DIR$/BMX/src/Modelo/FinalsManga.java" />
         <option value="$PROJECT_DIR$/BMX/src/Modelo/SingleGame.java" />
         <option value="$PROJECT_DIR$/BMX/src/Modelo/Manga.java" />
+        <option value="$PROJECT_DIR$/BMX/src/Controlador/resultsController.java" />
       </list>
     </option>
   </component>
@@ -257,6 +248,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -339,7 +331,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
@@ -793,7 +784,8 @@
       <updated>1492519250632</updated>
       <workItem from="1492519251792" duration="5324000" />
       <workItem from="1492529554340" duration="1301000" />
-      <workItem from="1492603619792" duration="12684000" />
+      <workItem from="1492603619792" duration="12750000" />
+      <workItem from="1492781447557" duration="1317000" />
     </task>
     <task id="LOCAL-00001" summary="IMPLEMENTADO LA IMPRESION DE SEMIFINALES 18/04/17">
       <created>1492524735795</created>
@@ -809,11 +801,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492621687040</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="IMPLEMENTADO LA GESTION DE LAS FINALES PARA MENOS DE 8PLAYERS">
+      <created>1492696828667</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1492696828667</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19309000" />
+    <option name="totallyTimeSpent" value="20692000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -826,12 +825,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -843,15 +841,15 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2553305" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25799572" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39910814" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -863,16 +861,57 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="IMPLEMENTADO LA IMPRESION DE SEMIFINALES 18/04/17" />
-    <option name="LAST_COMMIT_MESSAGE" value="IMPLEMENTADO LA IMPRESION DE SEMIFINALES 18/04/17" />
+    <MESSAGE value="IMPLEMENTADO LA GESTION DE LAS FINALES PARA MENOS DE 8PLAYERS" />
+    <option name="LAST_COMMIT_MESSAGE" value="IMPLEMENTADO LA GESTION DE LAS FINALES PARA MENOS DE 8PLAYERS" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BMX/src/Controlador/resultsController.java</url>
+          <line>36</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BMX/src/Controlador/resultsController.java</url>
+          <line>26</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -881,6 +920,135 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/BMX/src/Modelo/AllGames.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="92" column="56" lean-forward="false" selection-start-line="92" selection-start-column="56" selection-end-line="92" selection-end-column="56" />
+          <folding>
+            <element signature="method#AllGames#0;class#AllGames#0" expanded="false" />
+            <element signature="method#AllGames#1;class#AllGames#0" expanded="false" />
+            <element signature="method#setRsController#0;class#AllGames#0" expanded="false" />
+            <element signature="method#createAllGamesStructure#0;class#AllGames#0" expanded="false" />
+            <element signature="method#createPrintButtons#0;class#AllGames#0" expanded="false" />
+            <element signature="method#setNumberOfAllTheMangas#0;class#AllGames#0" expanded="false" />
+            <element signature="method#createAllGamesStructure#1;class#AllGames#0" expanded="false" />
+            <element signature="method#getOrderedArrayListByNumberOfManga#0;class#AllGames#0" expanded="false" />
+            <element signature="method#getOrderedSemifinalArrayListByNumberOfManga#0;class#AllGames#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BMX/src/Modelo/Players.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4777">
+          <caret line="368" column="108" lean-forward="false" selection-start-line="368" selection-start-column="108" selection-end-line="368" selection-end-column="108" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BMX/src/Controlador/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1683">
+          <caret line="113" column="68" lean-forward="false" selection-start-line="113" selection-start-column="56" selection-end-line="113" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BMX/src/Modelo/FinalsManga.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="387" column="36" lean-forward="false" selection-start-line="387" selection-start-column="16" selection-end-line="387" selection-end-column="36" />
+          <folding>
+            <element signature="method#FinalsManga#0;class#FinalsManga#0" expanded="false" />
+            <element signature="method#createFinalCaseFor8#0;class#FinalsManga#0" expanded="false" />
+            <element signature="method#createFinalCase#0;class#FinalsManga#0" expanded="false" />
+            <element signature="method#createSemifinalsCase#0;class#FinalsManga#0" expanded="false" />
+            <element signature="method#createQuartersCase#0;class#FinalsManga#0" expanded="false" />
+            <element signature="method#createEighthCase#0;class#FinalsManga#0" expanded="false" />
+            <element signature="method#createSixteenthCase#0;class#FinalsManga#0" expanded="false" />
+            <element signature="e#17723#17724#0" expanded="true" />
+            <element signature="e#17758#17759#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BMX/src/Modelo/MotosTableModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="76" column="33" lean-forward="false" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
+          <folding>
+            <element signature="method#checkPlatesPointsLabel#0;class#MotosTableModel#0" expanded="false" />
+            <element signature="method#setPlayersInMoto#0;class#MotosTableModel#0" expanded="false" />
+            <element signature="e#7745#7746#0" expanded="true" />
+            <element signature="e#7781#7782#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BMX/src/Modelo/Moto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="242" column="0" lean-forward="false" selection-start-line="242" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
+          <folding>
+            <element signature="method#Moto#0;class#Moto#0" expanded="false" />
+            <element signature="method#Moto#1;class#Moto#0" expanded="false" />
+            <element signature="method#tableChanged#0;class#Moto#0" expanded="false" />
+            <element signature="method#setLabelPlayers#0;class#Moto#0" expanded="false" />
+            <element signature="method#setPlayersOfThisMoto#0;class#Moto#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BMX/src/Vista/GraphicInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1700">
+          <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+          <folding>
+            <element signature="method#setAllPlayersModel#0;class#GraphicInterface#0" expanded="false" />
+            <element signature="method#changeTableModel#0;class#GraphicInterface#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BMX/src/Modelo/Manga.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1700">
+          <caret line="110" column="4" lean-forward="false" selection-start-line="110" selection-start-column="4" selection-end-line="110" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BMX/src/Modelo/SingleGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#SingleGame#0" expanded="false" />
+            <element signature="method#generateAllMangas#0;class#SingleGame#0" expanded="false" />
+            <element signature="method#setQuantityOfMangas#0;class#SingleGame#0" expanded="false" />
+            <element signature="method#createMangasArraysOfPlayers#0;class#SingleGame#0" expanded="false" />
+            <element signature="method#splitAllPlayersToMangas#0;class#SingleGame#0" expanded="false" />
+            <element signature="method#setNumber_of_manga_int#0;class#SingleGame#0" expanded="false" />
+            <element signature="method#orderPlayersInThisRaceByCampeonatoEspañaRanking#0;class#SingleGame#0" expanded="false" />
+            <element signature="method#orderPlayersInThisRaceByCruiserEspañaRanking#0;class#SingleGame#0" expanded="false" />
+            <element signature="method#connectCrontroller#0;class#SingleGame#0" expanded="false" />
+            <element signature="method#calculateAllMangasPoints#0;class#SingleGame#0" expanded="false" />
+            <element signature="method#orderPlayersArray#0;class#SingleGame#0" expanded="false" />
+            <element signature="method#checkMotoTableModelPlatesFull#0;class#SingleGame#0" expanded="false" />
+            <element signature="method#calculateDirectFinalMax16Players#0;class#SingleGame#0" expanded="false" />
+            <element signature="method#calculateSemiFinalsFinal#0;class#SingleGame#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BMX/src/Controlador/resultsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="72" column="40" lean-forward="true" selection-start-line="72" selection-start-column="40" selection-end-line="72" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BMX/src/Modelo/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
@@ -910,11 +1078,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1207">
           <caret line="80" column="41" lean-forward="false" selection-start-line="80" selection-start-column="26" selection-end-line="80" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#468#469#0" expanded="false" />
-            <element signature="e#508#509#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -922,83 +1086,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4675">
           <caret line="350" column="0" lean-forward="false" selection-start-line="350" selection-start-column="0" selection-end-line="350" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#3149#3150#0" expanded="false" />
-            <element signature="e#3177#3178#0" expanded="false" />
-            <element signature="e#3203#3204#0" expanded="false" />
-            <element signature="e#3228#3229#0" expanded="false" />
-            <element signature="e#3288#3289#0" expanded="false" />
-            <element signature="e#3328#3329#0" expanded="false" />
-            <element signature="e#3360#3361#0" expanded="false" />
-            <element signature="e#3391#3392#0" expanded="false" />
-            <element signature="e#3445#3446#0" expanded="false" />
-            <element signature="e#3479#3480#0" expanded="false" />
-            <element signature="e#3511#3512#0" expanded="false" />
-            <element signature="e#3539#3540#0" expanded="false" />
-            <element signature="e#3596#3597#0" expanded="false" />
-            <element signature="e#3632#3633#0" expanded="false" />
-            <element signature="e#3665#3666#0" expanded="false" />
-            <element signature="e#3694#3695#0" expanded="false" />
-            <element signature="e#3761#3762#0" expanded="false" />
-            <element signature="e#3805#3806#0" expanded="false" />
-            <element signature="e#3841#3842#0" expanded="false" />
-            <element signature="e#3874#3875#0" expanded="false" />
-            <element signature="e#3941#3942#0" expanded="false" />
-            <element signature="e#3985#3986#0" expanded="false" />
-            <element signature="e#4021#4022#0" expanded="false" />
-            <element signature="e#4054#4055#0" expanded="false" />
-            <element signature="e#4123#4124#0" expanded="false" />
-            <element signature="e#4177#4178#0" expanded="false" />
-            <element signature="e#4215#4216#0" expanded="false" />
-            <element signature="e#4253#4254#0" expanded="false" />
-            <element signature="e#4438#4439#0" expanded="false" />
-            <element signature="e#4478#4479#0" expanded="false" />
-            <element signature="e#4546#4547#0" expanded="false" />
-            <element signature="e#4589#4590#0" expanded="false" />
-            <element signature="e#4630#4631#0" expanded="false" />
-            <element signature="e#4671#4672#0" expanded="false" />
-            <element signature="e#4757#4758#0" expanded="false" />
-            <element signature="e#4815#4816#0" expanded="false" />
-            <element signature="e#4855#4856#0" expanded="false" />
-            <element signature="e#4895#4896#0" expanded="false" />
-            <element signature="e#5220#5221#0" expanded="false" />
-            <element signature="e#5247#5248#0" expanded="false" />
-            <element signature="e#5313#5314#0" expanded="false" />
-            <element signature="e#5355#5356#0" expanded="false" />
-            <element signature="e#5391#5392#0" expanded="false" />
-            <element signature="e#5423#5424#0" expanded="false" />
-            <element signature="e#5627#5628#0" expanded="false" />
-            <element signature="e#5671#5672#0" expanded="false" />
-            <element signature="e#5849#5850#0" expanded="false" />
-            <element signature="e#5893#5894#0" expanded="false" />
-            <element signature="e#6101#6102#0" expanded="false" />
-            <element signature="e#6151#6152#0" expanded="false" />
-            <element signature="e#6357#6358#0" expanded="false" />
-            <element signature="e#6402#6403#0" expanded="false" />
-            <element signature="e#6585#6586#0" expanded="false" />
-            <element signature="e#6630#6631#0" expanded="false" />
-            <element signature="e#6833#6834#0" expanded="false" />
-            <element signature="e#6882#6883#0" expanded="false" />
-            <element signature="e#7081#7082#0" expanded="false" />
-            <element signature="e#7125#7126#0" expanded="false" />
-            <element signature="e#7303#7304#0" expanded="false" />
-            <element signature="e#7347#7348#0" expanded="false" />
-            <element signature="e#8460#8461#0" expanded="false" />
-            <element signature="e#8507#8508#0" expanded="false" />
-            <element signature="e#8700#8701#0" expanded="false" />
-            <element signature="e#8747#8748#0" expanded="false" />
-            <element signature="e#8810#8811#0" expanded="false" />
-            <element signature="e#8870#8871#0" expanded="false" />
-            <element signature="e#8910#8911#0" expanded="false" />
-            <element signature="e#8951#8952#0" expanded="false" />
-            <element signature="e#8981#8982#0" expanded="false" />
-            <element signature="e#9018#9019#0" expanded="false" />
-            <element signature="e#9047#9048#0" expanded="false" />
-            <element signature="e#9087#9088#0" expanded="false" />
-            <element signature="e#9645#9646#0" expanded="false" />
-            <element signature="e#9707#9708#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1133,11 +1221,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1207">
           <caret line="80" column="41" lean-forward="false" selection-start-line="80" selection-start-column="26" selection-end-line="80" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#468#469#0" expanded="false" />
-            <element signature="e#508#509#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1145,83 +1229,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4675">
           <caret line="350" column="0" lean-forward="false" selection-start-line="350" selection-start-column="0" selection-end-line="350" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#3149#3150#0" expanded="false" />
-            <element signature="e#3177#3178#0" expanded="false" />
-            <element signature="e#3203#3204#0" expanded="false" />
-            <element signature="e#3228#3229#0" expanded="false" />
-            <element signature="e#3288#3289#0" expanded="false" />
-            <element signature="e#3328#3329#0" expanded="false" />
-            <element signature="e#3360#3361#0" expanded="false" />
-            <element signature="e#3391#3392#0" expanded="false" />
-            <element signature="e#3445#3446#0" expanded="false" />
-            <element signature="e#3479#3480#0" expanded="false" />
-            <element signature="e#3511#3512#0" expanded="false" />
-            <element signature="e#3539#3540#0" expanded="false" />
-            <element signature="e#3596#3597#0" expanded="false" />
-            <element signature="e#3632#3633#0" expanded="false" />
-            <element signature="e#3665#3666#0" expanded="false" />
-            <element signature="e#3694#3695#0" expanded="false" />
-            <element signature="e#3761#3762#0" expanded="false" />
-            <element signature="e#3805#3806#0" expanded="false" />
-            <element signature="e#3841#3842#0" expanded="false" />
-            <element signature="e#3874#3875#0" expanded="false" />
-            <element signature="e#3941#3942#0" expanded="false" />
-            <element signature="e#3985#3986#0" expanded="false" />
-            <element signature="e#4021#4022#0" expanded="false" />
-            <element signature="e#4054#4055#0" expanded="false" />
-            <element signature="e#4123#4124#0" expanded="false" />
-            <element signature="e#4177#4178#0" expanded="false" />
-            <element signature="e#4215#4216#0" expanded="false" />
-            <element signature="e#4253#4254#0" expanded="false" />
-            <element signature="e#4438#4439#0" expanded="false" />
-            <element signature="e#4478#4479#0" expanded="false" />
-            <element signature="e#4546#4547#0" expanded="false" />
-            <element signature="e#4589#4590#0" expanded="false" />
-            <element signature="e#4630#4631#0" expanded="false" />
-            <element signature="e#4671#4672#0" expanded="false" />
-            <element signature="e#4757#4758#0" expanded="false" />
-            <element signature="e#4815#4816#0" expanded="false" />
-            <element signature="e#4855#4856#0" expanded="false" />
-            <element signature="e#4895#4896#0" expanded="false" />
-            <element signature="e#5220#5221#0" expanded="false" />
-            <element signature="e#5247#5248#0" expanded="false" />
-            <element signature="e#5313#5314#0" expanded="false" />
-            <element signature="e#5355#5356#0" expanded="false" />
-            <element signature="e#5391#5392#0" expanded="false" />
-            <element signature="e#5423#5424#0" expanded="false" />
-            <element signature="e#5627#5628#0" expanded="false" />
-            <element signature="e#5671#5672#0" expanded="false" />
-            <element signature="e#5849#5850#0" expanded="false" />
-            <element signature="e#5893#5894#0" expanded="false" />
-            <element signature="e#6101#6102#0" expanded="false" />
-            <element signature="e#6151#6152#0" expanded="false" />
-            <element signature="e#6357#6358#0" expanded="false" />
-            <element signature="e#6402#6403#0" expanded="false" />
-            <element signature="e#6585#6586#0" expanded="false" />
-            <element signature="e#6630#6631#0" expanded="false" />
-            <element signature="e#6833#6834#0" expanded="false" />
-            <element signature="e#6882#6883#0" expanded="false" />
-            <element signature="e#7081#7082#0" expanded="false" />
-            <element signature="e#7125#7126#0" expanded="false" />
-            <element signature="e#7303#7304#0" expanded="false" />
-            <element signature="e#7347#7348#0" expanded="false" />
-            <element signature="e#8460#8461#0" expanded="false" />
-            <element signature="e#8507#8508#0" expanded="false" />
-            <element signature="e#8700#8701#0" expanded="false" />
-            <element signature="e#8747#8748#0" expanded="false" />
-            <element signature="e#8810#8811#0" expanded="false" />
-            <element signature="e#8870#8871#0" expanded="false" />
-            <element signature="e#8910#8911#0" expanded="false" />
-            <element signature="e#8951#8952#0" expanded="false" />
-            <element signature="e#8981#8982#0" expanded="false" />
-            <element signature="e#9018#9019#0" expanded="false" />
-            <element signature="e#9047#9048#0" expanded="false" />
-            <element signature="e#9087#9088#0" expanded="false" />
-            <element signature="e#9645#9646#0" expanded="false" />
-            <element signature="e#9707#9708#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1361,17 +1369,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BMX/src/Modelo/mangaPoints.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/BMX/src/Modelo/mangaPoints.java" />
     <entry file="file://$PROJECT_DIR$/BMX/src/Modelo/Players.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
+        <state relative-caret-position="4777">
           <caret line="368" column="108" lean-forward="false" selection-start-line="368" selection-start-column="108" selection-end-line="368" selection-end-column="108" />
           <folding />
         </state>
@@ -1379,7 +1380,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BMX/src/Vista/GraphicInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
+        <state relative-caret-position="1700">
           <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
           <folding>
             <element signature="method#setAllPlayersModel#0;class#GraphicInterface#0" expanded="false" />
@@ -1390,16 +1391,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BMX/src/Controlador/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
+        <state relative-caret-position="1683">
           <caret line="113" column="68" lean-forward="false" selection-start-line="113" selection-start-column="56" selection-end-line="113" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BMX/src/Controlador/resultsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="677">
-          <caret line="72" column="40" lean-forward="true" selection-start-line="72" selection-start-column="40" selection-end-line="72" selection-end-column="40" />
           <folding />
         </state>
       </provider>
@@ -1424,7 +1417,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BMX/src/Modelo/Moto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
+        <state relative-caret-position="1003">
           <caret line="242" column="0" lean-forward="false" selection-start-line="242" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
           <folding>
             <element signature="method#Moto#0;class#Moto#0" expanded="false" />
@@ -1438,7 +1431,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BMX/src/Modelo/MotosTableModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="884">
           <caret line="76" column="33" lean-forward="false" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
           <folding>
             <element signature="method#checkPlatesPointsLabel#0;class#MotosTableModel#0" expanded="false" />
@@ -1451,7 +1444,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BMX/src/Modelo/FinalsManga.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
+        <state relative-caret-position="1207">
           <caret line="387" column="36" lean-forward="false" selection-start-line="387" selection-start-column="16" selection-end-line="387" selection-end-column="36" />
           <folding>
             <element signature="method#FinalsManga#0;class#FinalsManga#0" expanded="false" />
@@ -1469,8 +1462,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BMX/src/Modelo/SingleGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="271" column="0" lean-forward="false" selection-start-line="271" selection-start-column="0" selection-end-line="271" selection-end-column="0" />
+        <state relative-caret-position="543">
+          <caret line="265" column="0" lean-forward="true" selection-start-line="265" selection-start-column="0" selection-end-line="265" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#SingleGame#0" expanded="false" />
             <element signature="method#generateAllMangas#0;class#SingleGame#0" expanded="false" />
@@ -1490,9 +1483,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BMX/src/Controlador/resultsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="25" column="127" lean-forward="false" selection-start-line="25" selection-start-column="127" selection-end-line="25" selection-end-column="127" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BMX/src/Modelo/Manga.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
+        <state relative-caret-position="506">
           <caret line="110" column="4" lean-forward="false" selection-start-line="110" selection-start-column="4" selection-end-line="110" selection-end-column="4" />
           <folding />
         </state>
