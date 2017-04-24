@@ -106,7 +106,7 @@ public class FinalsManga {
             finalsPlayers.add(temp);
         }
 
-        finalMoto = new Moto(0, finalsPlayers, mySingleGame);
+        finalMoto = new Moto(0, finalsPlayers, this);
         finalMoto.setIs_final_for_8();
         finalMoto.setMotoTitle("FINAL");
         finalMangaPanel.add(finalMoto.getMotoPanel(), 0);
@@ -119,7 +119,7 @@ public class FinalsManga {
             finalsPlayers.add(temp);
         }
 
-        finalMoto = new Moto(0, finalsPlayers, mySingleGame);
+        finalMoto = new Moto(0, finalsPlayers, this);
         finalMoto.setIs_final();
         finalMoto.setMotoTitle("FINAL");
         finalMangaPanel.add(finalMoto.getMotoPanel(), 0);
@@ -130,13 +130,13 @@ public class FinalsManga {
         ArrayList<Players> semifinalsPlayers1 = new ArrayList<>();
         ArrayList<Players> semifinalsPlayers2 = new ArrayList<>();
         finalsPlayers = new ArrayList<>();
-        Moto semiMoto1 = new Moto(0, semifinalsPlayers1, mySingleGame);
-        Moto semiMoto2 = new Moto(0, semifinalsPlayers2, mySingleGame);
+        Moto semiMoto1 = new Moto(0, semifinalsPlayers1, this);
+        Moto semiMoto2 = new Moto(0, semifinalsPlayers2, this);
         semiMoto1.getModelMotoTable().set_Is_semifinal(true);
         semiMoto2.getModelMotoTable().set_Is_semifinal(true);
         semiMoto1.setIs_semifinal();
         semiMoto2.setIs_semifinal();
-        finalMoto = new Moto (0, finalsPlayers, mySingleGame);
+        finalMoto = new Moto (0, finalsPlayers, this);
         semiMoto1.setMotoTitle("SEMIFINAL 1");
         semiMoto2.setMotoTitle("SEMIFINAL 2");
         finalMoto.setMotoTitle("FINAL");
@@ -156,10 +156,10 @@ public class FinalsManga {
         ArrayList<Players> quarterPlayers3 = new ArrayList<>();
         ArrayList<Players> quarterPlayers4 = new ArrayList<>();
 
-        Moto quarter1 = new Moto(0, quarterPlayers1, mySingleGame);
-        Moto quarter2 = new Moto(0, quarterPlayers2, mySingleGame);
-        Moto quarter3 = new Moto(0, quarterPlayers3, mySingleGame);
-        Moto quarter4 = new Moto(0, quarterPlayers4,mySingleGame);
+        Moto quarter1 = new Moto(0, quarterPlayers1, this);
+        Moto quarter2 = new Moto(0, quarterPlayers2, this);
+        Moto quarter3 = new Moto(0, quarterPlayers3, this);
+        Moto quarter4 = new Moto(0, quarterPlayers4,this);
 
         quarterMotos.add(quarter1);
         quarterMotos.add(quarter2);
@@ -198,14 +198,14 @@ public class FinalsManga {
         ArrayList<Players> eighthPlayers7 = new ArrayList<>();
         ArrayList<Players> eighthPlayers8 = new ArrayList<>();
 
-        Moto eighth1 = new Moto(0, eighthPlayers1, mySingleGame);
-        Moto eighth2 = new Moto(0, eighthPlayers2, mySingleGame);
-        Moto eighth3 = new Moto(0, eighthPlayers3, mySingleGame);
-        Moto eighth4 = new Moto(0, eighthPlayers4, mySingleGame);
-        Moto eighth5 = new Moto(0, eighthPlayers5,mySingleGame);
-        Moto eighth6 = new Moto(0, eighthPlayers6,mySingleGame);
-        Moto eighth7 = new Moto(0, eighthPlayers7,mySingleGame);
-        Moto eighth8 = new Moto(0, eighthPlayers8,mySingleGame);
+        Moto eighth1 = new Moto(0, eighthPlayers1, this);
+        Moto eighth2 = new Moto(0, eighthPlayers2, this);
+        Moto eighth3 = new Moto(0, eighthPlayers3, this);
+        Moto eighth4 = new Moto(0, eighthPlayers4, this);
+        Moto eighth5 = new Moto(0, eighthPlayers5,this);
+        Moto eighth6 = new Moto(0, eighthPlayers6,this);
+        Moto eighth7 = new Moto(0, eighthPlayers7,this);
+        Moto eighth8 = new Moto(0, eighthPlayers8,this);
 
         eighthMotos.add(eighth1);
         eighthMotos.add(eighth2);
@@ -279,22 +279,22 @@ public class FinalsManga {
         ArrayList<Players> sixteenthPlayers15 = new ArrayList<>();
         ArrayList<Players> sixteenthPlayers16 = new ArrayList<>();
 
-        Moto sixteenth1 = new Moto(0, sixteenthPlayers1, mySingleGame);
-        Moto sixteenth2 = new Moto(0, sixteenthPlayers2,mySingleGame);
-        Moto sixteenth3 = new Moto(0, sixteenthPlayers3, mySingleGame);
-        Moto sixteenth4 = new Moto(0, sixteenthPlayers4, mySingleGame);
-        Moto sixteenth5 = new Moto(0, sixteenthPlayers5,mySingleGame);
-        Moto sixteenth6 = new Moto(0, sixteenthPlayers6, mySingleGame);
-        Moto sixteenth7 = new Moto(0, sixteenthPlayers7, mySingleGame);
-        Moto sixteenth8 = new Moto(0, sixteenthPlayers8, mySingleGame);
-        Moto sixteenth9 = new Moto(0, sixteenthPlayers9, mySingleGame);
-        Moto sixteenth10 = new Moto(0, sixteenthPlayers10, mySingleGame);
-        Moto sixteenth11 = new Moto(0, sixteenthPlayers11, mySingleGame);
-        Moto sixteenth12 = new Moto(0, sixteenthPlayers12, mySingleGame);
-        Moto sixteenth13 = new Moto(0, sixteenthPlayers13, mySingleGame);
-        Moto sixteenth14 = new Moto(0, sixteenthPlayers14, mySingleGame);
-        Moto sixteenth15 = new Moto(0, sixteenthPlayers15, mySingleGame);
-        Moto sixteenth16 = new Moto(0, sixteenthPlayers16, mySingleGame);
+        Moto sixteenth1 = new Moto(0, sixteenthPlayers1, this);
+        Moto sixteenth2 = new Moto(0, sixteenthPlayers2,this);
+        Moto sixteenth3 = new Moto(0, sixteenthPlayers3, this);
+        Moto sixteenth4 = new Moto(0, sixteenthPlayers4, this);
+        Moto sixteenth5 = new Moto(0, sixteenthPlayers5,this);
+        Moto sixteenth6 = new Moto(0, sixteenthPlayers6, this);
+        Moto sixteenth7 = new Moto(0, sixteenthPlayers7, this);
+        Moto sixteenth8 = new Moto(0, sixteenthPlayers8, this);
+        Moto sixteenth9 = new Moto(0, sixteenthPlayers9, this);
+        Moto sixteenth10 = new Moto(0, sixteenthPlayers10, this);
+        Moto sixteenth11 = new Moto(0, sixteenthPlayers11, this);
+        Moto sixteenth12 = new Moto(0, sixteenthPlayers12, this);
+        Moto sixteenth13 = new Moto(0, sixteenthPlayers13, this);
+        Moto sixteenth14 = new Moto(0, sixteenthPlayers14, this);
+        Moto sixteenth15 = new Moto(0, sixteenthPlayers15, this);
+        Moto sixteenth16 = new Moto(0, sixteenthPlayers16, this);
 
         sixteenthMotos.add(sixteenth1);
         sixteenthMotos.add(sixteenth2);
@@ -412,7 +412,7 @@ public class FinalsManga {
     }
 
     public boolean checkFullSemifinals(){
-        boolean are_full = false;
+        boolean are_full = true;
         for (Map.Entry<Integer,Moto> aSemifinal: semifinalsMotosMap.entrySet()){
             are_full = are_full & aSemifinal.getValue().getModelMotoTable().checkIfPlatesAreFull();
         }

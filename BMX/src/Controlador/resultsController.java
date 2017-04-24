@@ -27,18 +27,17 @@ public class resultsController implements TableModelListener, ActionListener {
         if (eventMotoModel.get_Is_final()){
             eventMotoModel.checkLabelPlates();
         }
-        else {
+        if (eventMotoModel.get_Is_semifinal()) {
+            eventMotoModel.checkLabelPlates();
+            checkAndSetUpFinalPlayersForSemifinalGame(eventMotoModel.getMyFinalsManga().getMySingleGame());
+
+        }
+
+        if (eventMotoModel.get_Is_manga()){
             Manga myManga = eventMotoModel.getMyManga();
             SingleGame mySingleGame = myManga.getMySingleGame();
-            if (eventMotoModel.get_Is_semifinal()) {
-                eventMotoModel.checkLabelPlates();
-                checkAndSetUpFirstFinalPlayers(mySingleGame);
-                checkAndSetUpFinalPlayersForSemifinalGame(mySingleGame);
-
-            } else {
-                eventMotoModel.getMyManga().calculateAllMotosPointsOfThisManga();
-                checkAndSetUpFirstFinalPlayers(mySingleGame);
-            }
+            eventMotoModel.getMyManga().calculateAllMotosPointsOfThisManga();
+            checkAndSetUpFirstFinalPlayers(mySingleGame);
         }
 
     }
@@ -52,7 +51,7 @@ public class resultsController implements TableModelListener, ActionListener {
 
     private void checkAndSetUpFinalPlayersForSemifinalGame(SingleGame mySingleGame){
         if((mySingleGame.getFinalManga()).checkFullSemifinals()){
-            mySingleGame.setUpFinalPlayers(this,true);
+            mySingleGame.calculateSemiFinalsFinal();
         }
     }
 

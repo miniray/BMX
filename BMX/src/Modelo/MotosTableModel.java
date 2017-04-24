@@ -24,15 +24,24 @@ public class MotosTableModel extends AbstractTableModel implements Constants, Ta
     private boolean is_quarter = false;
     private boolean is_eighth = false;
     private boolean is_sixteenth = false;
+    private boolean is_manga = false;
     private int genre;
     private int category_id;
     private Manga myManga;
+    private FinalsManga myFinalsManga;
 
     public MotosTableModel(ArrayList<Players> playersInMoto, int numero_moto, Manga myManga){
         this.playersInMoto = playersInMoto;
         this.numero_moto = numero_moto;
         createPointsArray(this.playersInMoto.size());
         this.myManga = myManga;
+        set_Is_manga(true);
+    }
+    public MotosTableModel(ArrayList<Players> playersInMoto, int numero_moto, FinalsManga myFinalsManga){
+        this.playersInMoto = playersInMoto;
+        this.numero_moto = numero_moto;
+        createPointsArray(this.playersInMoto.size());
+        this.myFinalsManga = myFinalsManga;
     }
 
     private ArrayList<JLabel> platesLabelArray;
@@ -45,6 +54,9 @@ public class MotosTableModel extends AbstractTableModel implements Constants, Ta
         this.category_id = category_id;
     }
 
+    public boolean get_Is_manga() {
+        return is_manga;
+    }
 
     public boolean get_Is_final() {
         return is_final;
@@ -69,6 +81,8 @@ public class MotosTableModel extends AbstractTableModel implements Constants, Ta
     public boolean get_Is_sixteenth() {
         return is_sixteenth;
     }
+
+    public void set_Is_manga(boolean is_manga) { this.is_manga = is_manga; }
 
     public void set_Is_final(boolean is_final) {
         this.is_final = is_final;
@@ -285,5 +299,9 @@ public class MotosTableModel extends AbstractTableModel implements Constants, Ta
 
     public ArrayList<Players> getPlayersInMoto(){
         return playersInMoto;
+    }
+
+    public FinalsManga getMyFinalsManga(){
+        return myFinalsManga;
     }
 }

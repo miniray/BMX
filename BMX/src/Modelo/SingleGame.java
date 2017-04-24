@@ -215,11 +215,6 @@ public class SingleGame {
         }
     }
 
-    public void calculateAllMangasPoints() {
-        for (Map.Entry<Integer, Manga> entry : mangasMap.entrySet()) {
-            entry.getValue().calculateAllMotosPointsOfThisManga();
-        }
-    }
 
     private void orderPlayersArray() {
         if (is_cruiser_race) {

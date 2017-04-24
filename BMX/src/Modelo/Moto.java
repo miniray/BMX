@@ -13,6 +13,7 @@ public class Moto implements TableModelListener {
 
         private final JPanel container;
         private Manga myManga;
+        private FinalsManga myFinalsManga;
         private SingleGame mySingleGame;
         private FinalsManga myFinalManga;
         private final MotosTableModel tableModelMoto;
@@ -108,10 +109,10 @@ public class Moto implements TableModelListener {
         container.setBackground(new Color(64,64,64));
         }
 
-    public Moto (int number, ArrayList<Players> playersOfThisMoto, SingleGame mySingleGame){
+    public Moto (int number, ArrayList<Players> playersOfThisMoto, FinalsManga myFinalsManga){
 
         int numero_moto = number;
-        this.mySingleGame = mySingleGame;
+        this.myFinalsManga = myFinalsManga;
 
         //INICIALIZACION
         this.playersOfThisMoto = playersOfThisMoto;
@@ -126,7 +127,7 @@ public class Moto implements TableModelListener {
         motoTitle.setForeground(Color.white);
 
         //CREACION DE LA TABLA, SU MODELO, SU SCROLLPANE Y SU PANEL
-        tableModelMoto = new MotosTableModel(this.playersOfThisMoto, numero_moto, myManga);
+        tableModelMoto = new MotosTableModel(this.playersOfThisMoto, numero_moto, myFinalsManga );
         JTable motoTable = new JTable();
         motoTable.setModel(tableModelMoto);
 
