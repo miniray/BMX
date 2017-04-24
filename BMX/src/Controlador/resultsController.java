@@ -23,24 +23,22 @@ public class resultsController implements TableModelListener, ActionListener {
     public void tableChanged(TableModelEvent e) {
 
         MotosTableModel eventMotoModel = (MotosTableModel)e.getSource();
-        //en el cas de que la mototablemodel sigui d'una semifinal no te manga, s'ha de filtrar per a que siguie una finalManga
-        Manga myManga = eventMotoModel.getMyManga();
-        SingleGame mySingleGame = myManga.getMySingleGame();
-        System.out.println("TABLECHANGED");
 
         if (eventMotoModel.get_Is_final()){
             eventMotoModel.checkLabelPlates();
         }
-        if (eventMotoModel.get_Is_semifinal()){
-            System.out.println("TABLECHANGED IF IS SEMIFINAL");
-            eventMotoModel.checkLabelPlates();
-            checkAndSetUpFirstFinalPlayers(mySingleGame);
-            checkAndSetUpFinalPlayersForSemifinalGame(mySingleGame);
-
-        }
         else {
-            eventMotoModel.getMyManga().calculateAllMotosPointsOfThisManga();
-            checkAndSetUpFirstFinalPlayers(mySingleGame);
+            Manga myManga = eventMotoModel.getMyManga();
+            SingleGame mySingleGame = myManga.getMySingleGame();
+            if (eventMotoModel.get_Is_semifinal()) {
+                eventMotoModel.checkLabelPlates();
+                checkAndSetUpFirstFinalPlayers(mySingleGame);
+                checkAndSetUpFinalPlayersForSemifinalGame(mySingleGame);
+
+            } else {
+                eventMotoModel.getMyManga().calculateAllMotosPointsOfThisManga();
+                checkAndSetUpFirstFinalPlayers(mySingleGame);
+            }
         }
 
     }
