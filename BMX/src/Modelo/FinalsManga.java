@@ -137,6 +137,7 @@ public class FinalsManga {
         semiMoto1.setIs_semifinal();
         semiMoto2.setIs_semifinal();
         finalMoto = new Moto (0, finalsPlayers, this);
+        finalMoto.setIs_final();
         semiMoto1.setMotoTitle("SEMIFINAL 1");
         semiMoto2.setMotoTitle("SEMIFINAL 2");
         finalMoto.setMotoTitle("FINAL");
@@ -405,16 +406,19 @@ public class FinalsManga {
     public void setFinalMoto(ArrayList <Players> finalPlayersArray){
         finalMoto.setPlayersOfThisMoto(finalPlayersArray);
 
+
     }
 
     public void setDirectFinalController(resultsController rc){
         finalMoto.getModelMotoTable().addTableModelListener(rc);
     }
 
-    public boolean checkFullSemifinals(){
-        boolean are_full = true;
+    public int checkFullSemifinals(){
+        int are_full = 0;
         for (Map.Entry<Integer,Moto> aSemifinal: semifinalsMotosMap.entrySet()){
-            are_full = are_full & aSemifinal.getValue().getModelMotoTable().checkIfPlatesAreFull();
+            if (aSemifinal.getValue().getModelMotoTable().checkIfPlatesAreFull() == aSemifinal.getValue().getModelMotoTable().getPlayersInMoto().size()){
+                are_full ++;
+            }
         }
         return are_full;
     }

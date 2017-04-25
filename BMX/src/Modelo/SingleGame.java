@@ -276,6 +276,7 @@ public class SingleGame {
         playersToFinalFor8.addAll(mangasMap.get(0).getAllPlayersSortedByPoints());
 
     }
+
     public void calculateDirectFinalMax16Players(){
         playersToFinal = new ArrayList<>();
         playersToFinal.addAll(mangasMap.get(0).getQualifiedFinalPlayers());

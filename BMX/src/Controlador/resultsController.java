@@ -50,7 +50,7 @@ public class resultsController implements TableModelListener, ActionListener {
     }
 
     private void checkAndSetUpFinalPlayersForSemifinalGame(SingleGame mySingleGame){
-        if((mySingleGame.getFinalManga()).checkFullSemifinals()){
+        if((mySingleGame.getFinalManga()).checkFullSemifinals() != 0){
             mySingleGame.calculateSemiFinalsFinal();
         }
     }

@@ -268,18 +268,14 @@ public class MotosTableModel extends AbstractTableModel implements Constants, Ta
         checkPlatesPointsLabel(platesLabelArray);
     }
 
-    public boolean checkIfPlatesAreFull() {
+    public int checkIfPlatesAreFull() {
         int counter = 0;
         for (ArrayList<Object> aRow : list_p) {
             if (!aRow.equals("")) {
                 counter++;
             }
         }
-        if (counter == list_p.size()) {
-            return true;
-        } else {
-            return false;
-        }
+        return counter;
     }
 
     public Manga getMyManga(){ return myManga;}
