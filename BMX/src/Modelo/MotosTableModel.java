@@ -114,6 +114,7 @@ public class MotosTableModel extends AbstractTableModel implements Constants, Ta
 
     private void createPointsArray(int number_of_players){
 
+        list_p.clear();
         for (int i = 1; i <= number_of_players; i++ ){
             ArrayList<Object> array = new ArrayList<>();
             array.add(i);
@@ -268,14 +269,13 @@ public class MotosTableModel extends AbstractTableModel implements Constants, Ta
         checkPlatesPointsLabel(platesLabelArray);
     }
 
-    public int checkIfPlatesAreFull() {
-        int counter = 0;
+    public boolean checkIfPlatesAreFull() {
         for (ArrayList<Object> aRow : list_p) {
-            if (!aRow.equals("")) {
-                counter++;
+            if (aRow.get(1).equals("")) {
+                return false;
             }
         }
-        return counter;
+        return true;
     }
 
     public Manga getMyManga(){ return myManga;}

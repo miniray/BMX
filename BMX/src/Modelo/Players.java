@@ -344,7 +344,7 @@ public class Players {
         int playerRankingCampeonatoEspanya1 = p1.getRankingCampeonatoEspanya();
         int playerRankingCampeonatoEspanya2 = p2.getRankingCampeonatoEspanya();
 
-        return playerRankingCampeonatoEspanya1 - playerRankingCampeonatoEspanya2;
+        return playerRankingCampeonatoEspanya2 - playerRankingCampeonatoEspanya1;
 
     };
 
@@ -352,7 +352,7 @@ public class Players {
         int playerCruiserRankingEspanya1 = p1.getRankingCruiserNacional();
         int playerCruiserRankingEspanya2 = p2.getRankingCruiserNacional();
 
-        return playerCruiserRankingEspanya1 - playerCruiserRankingEspanya2;
+        return playerCruiserRankingEspanya2 - playerCruiserRankingEspanya1;
 
     };
 

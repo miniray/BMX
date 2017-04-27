@@ -203,6 +203,7 @@ public class Moto implements TableModelListener {
 
     private void setLabelPlayers(){
         playersLabelsPanel.removeAll();
+        labelArrayList.clear();
         playersLabelsPanel.setLayout(new GridLayout((playersOfThisMoto.size()/2 +1), 2));
         for (int i = 0; i < playersOfThisMoto.size(); i++){
             JLabel temp = new JLabel();

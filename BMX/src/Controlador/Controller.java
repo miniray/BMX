@@ -115,6 +115,7 @@ public class Controller implements ActionListener, MouseListener, TableModelList
 				rsController = new resultsController(carrera);
 				connectResultsController();
 				carrera.setRsController(rsController);
+				graphicInterface.card.next(graphicInterface.getCardPanel());
                 break;
 
 		    case "RANKING":

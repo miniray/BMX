@@ -101,11 +101,13 @@ public class Utils implements Constants {
 
         String html = "<style type=\"text/css\">\n" +
                 ".tg  {border-collapse:collapse;border-spacing:0;}\n" +
+                ".tg-pagebreak  {border-collapse:collapse;border-spacing:0;}\n" +
                 ".tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}\n" +
                 ".tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}\n" +
                 ".tg .tg-fbrz{font-weight:bold;font-size:20px;text-align:center;vertical-align:top}\n" +
                 ".tg .tg-if35{text-decoration:underline;text-align:center;vertical-align:top}\n" +
                 ".tg .tg-yw4l{vertical-align:top}\n" +
+                "@media print { .tg-pagebreak {page-break-after: always;}" +
                 "</style>\n" + createAllGamesSemifinal(arrayListOfOrderedMangas);
 
         bw.write(html);
@@ -113,6 +115,7 @@ public class Utils implements Constants {
     }
     private static String createARowForPlayer(ArrayList <Players> arrayListOfPlayersData) {
         String playerInfo = new String();
+        arrayListOfPlayersData.sort(Players.PlayerCampeonatoEspanyaComparator);
 
         for (Players playerData : arrayListOfPlayersData) {
             playerInfo += "  <tr>\n";
@@ -151,10 +154,17 @@ public class Utils implements Constants {
 
     public static String createAllGamesManga( ArrayList<Manga> arrayOfAllMangas){
         String html = "";
+        int contador_pares = 0;
 
         for (Manga aManga: arrayOfAllMangas) {
-            html +=
-                    "<table class=\"tg\" style=\"undefined;table-layout: fixed; width: 1027px\">\n" +
+            contador_pares++;
+
+            html +="<table class=\"tg";
+
+            if (contador_pares%2 == 0){
+                html+= "-pagebreak";
+            }
+            html += "\" style=\"undefined;table-layout: fixed; width: 1027px\">\n" +
                             "<colgroup>\n" +
                             "<col style=\"width: 101px\">\n" +
                             "<col style=\"width: 301px\">\n" +

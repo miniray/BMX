@@ -387,6 +387,7 @@ public class FinalsManga {
 
 
     public void setSemifinalsPlayers(ArrayList<Players> playersForSemifinals1, ArrayList<Players> playersForSemifinals2){
+
             semifinalsMotosMap.get(1).setPlayersOfThisMoto(playersForSemifinals1);
             semifinalsMotosMap.get(2).setPlayersOfThisMoto(playersForSemifinals2);
     }
@@ -406,7 +407,6 @@ public class FinalsManga {
     public void setFinalMoto(ArrayList <Players> finalPlayersArray){
         finalMoto.setPlayersOfThisMoto(finalPlayersArray);
 
-
     }
 
     public void setDirectFinalController(resultsController rc){
@@ -416,28 +416,31 @@ public class FinalsManga {
     public int checkFullSemifinals(){
         int are_full = 0;
         for (Map.Entry<Integer,Moto> aSemifinal: semifinalsMotosMap.entrySet()){
-            if (aSemifinal.getValue().getModelMotoTable().checkIfPlatesAreFull() == aSemifinal.getValue().getModelMotoTable().getPlayersInMoto().size()){
-                are_full ++;
+            if (aSemifinal.getValue().getModelMotoTable().checkIfPlatesAreFull()){
+                are_full++;
             }
         }
         return are_full;
     }
 
-    public ArrayList<Players> getSemiFinalQualifiedPlayersArray(){
+    public ArrayList<Players> getSemiFinalQualifiedPlayersForFinalArray(){
         ArrayList <Players> semifinalQualifiedPlayersArray = new ArrayList<>();
+        ArrayList <Players> semifinalQualifiedPlayersOrderedArray = new ArrayList<>();
         for(Map.Entry<Integer,Moto> aSemifinalMoto: semifinalsMotosMap.entrySet()){
             semifinalQualifiedPlayersArray.addAll(aSemifinalMoto.getValue().getModelMotoTable().get4FirstPlayers());
         }
-        return semifinalQualifiedPlayersArray;
+
+        semifinalQualifiedPlayersOrderedArray.add(semifinalQualifiedPlayersArray.get(0));
+        semifinalQualifiedPlayersOrderedArray.add(semifinalQualifiedPlayersArray.get(4));
+        semifinalQualifiedPlayersOrderedArray.add(semifinalQualifiedPlayersArray.get(1));
+        semifinalQualifiedPlayersOrderedArray.add(semifinalQualifiedPlayersArray.get(5));
+        semifinalQualifiedPlayersOrderedArray.add(semifinalQualifiedPlayersArray.get(2));
+        semifinalQualifiedPlayersOrderedArray.add(semifinalQualifiedPlayersArray.get(6));
+        semifinalQualifiedPlayersOrderedArray.add(semifinalQualifiedPlayersArray.get(3));
+        semifinalQualifiedPlayersOrderedArray.add(semifinalQualifiedPlayersArray.get(7));
+        return semifinalQualifiedPlayersOrderedArray;
     }
 
-    public ArrayList<ArrayList<Players>> getSemifinalPlayersArray() {
-        ArrayList<ArrayList<Players>> semifinalPlayersArray = new ArrayList<>();
-        for (Map.Entry<Integer, Moto> aSemifinalMoto : semifinalsMotosMap.entrySet()) {
-            semifinalPlayersArray.add(aSemifinalMoto.getValue().getModelMotoTable().getPlayersInMoto());
-        }
-        return semifinalPlayersArray;
-    }
 
     public SingleGame getMySingleGame(){
         return mySingleGame;

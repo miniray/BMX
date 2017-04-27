@@ -24,7 +24,6 @@ public class SingleGame {
     private int quantity_of_mangas;
     private int category_id;
     private int gender;
-    private ArrayList<Players> playersToFinal;
 
     public SingleGame(int gender, int category_id, ArrayList<Players> listOfPlayers) {
         this.category_id = category_id;
@@ -261,7 +260,7 @@ public class SingleGame {
 
         }
         if (finalsMangas.isThereDirectFinal()){
-            //calculateDirectFinalMoreThan8();
+            calculateDirectFinalMax16Players();
             finalsMangas.getFinalMoto().getModelMotoTable().addTableModelListener(rsController);
         }
 
@@ -272,20 +271,39 @@ public class SingleGame {
     }
 
     public void calculateDirectFinalFor8(){
-        ArrayList <Players> playersToFinalFor8 = new ArrayList();
-        playersToFinalFor8.addAll(mangasMap.get(0).getAllPlayersSortedByPoints());
+        finalsMangas.setFinalMoto(mangasMap.get(0).getAllPlayersSortedByPoints());
 
     }
 
     public void calculateDirectFinalMax16Players(){
-        playersToFinal = new ArrayList<>();
+        ArrayList <Players> playersToFinal = new ArrayList<>();
+        ArrayList <Players> playersToFinalSorted = new ArrayList<>();
         playersToFinal.addAll(mangasMap.get(0).getQualifiedFinalPlayers());
         playersToFinal.addAll(mangasMap.get(1).getQualifiedFinalPlayers());
-        finalsMangas.setFinalMoto(playersToFinal);
+        if (playersToFinal.size() == 7){
+            playersToFinalSorted.add(playersToFinal.get(0));
+            playersToFinalSorted.add(playersToFinal.get(3));
+            playersToFinalSorted.add(playersToFinal.get(1));
+            playersToFinalSorted.add(playersToFinal.get(4));
+            playersToFinalSorted.add(playersToFinal.get(2));
+            playersToFinalSorted.add(playersToFinal.get(5));
+            playersToFinalSorted.add(playersToFinal.get(6));
+        }else{
+            playersToFinalSorted.add(playersToFinal.get(0));
+            playersToFinalSorted.add(playersToFinal.get(4));
+            playersToFinalSorted.add(playersToFinal.get(1));
+            playersToFinalSorted.add(playersToFinal.get(5));
+            playersToFinalSorted.add(playersToFinal.get(2));
+            playersToFinalSorted.add(playersToFinal.get(6));
+            playersToFinalSorted.add(playersToFinal.get(3));
+            playersToFinalSorted.add(playersToFinal.get(7));
+
+        }
+        finalsMangas.setFinalMoto(playersToFinalSorted);
     }
 
     public void calculateSemiFinalsFinal(){
-        finalsMangas.setFinalMoto(finalsMangas.getSemiFinalQualifiedPlayersArray());
+        finalsMangas.setFinalMoto(finalsMangas.getSemiFinalQualifiedPlayersForFinalArray());
     }
 
     public void calculateSemiFinals(){

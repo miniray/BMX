@@ -90,18 +90,18 @@ public class Manga {
     //PARA CUANDO HAY 2 MANGAS Y EN UNA HAY 4 PILOTOS PASAN 3
     public ArrayList<Players> getQualifiedFinalPlayers(){
         mangaPlayersArray.sort(Players.PlayerPointsComparator);
-        ArrayList <Players> finalPlayers = new ArrayList<>();
+        ArrayList <Players> qualifiedPlayers = new ArrayList<>();
 
         if (mangaPlayersArray.size() == 4){
             for (int i = 0; i < 3; i++){
-                finalPlayers.add(mangaPlayersArray.get(i));
+                qualifiedPlayers.add(mangaPlayersArray.get(i));
             }
         }else{
             for (int i = 0; i < 4; i++){
-                finalPlayers.add(mangaPlayersArray.get(i));
+                qualifiedPlayers.add(mangaPlayersArray.get(i));
             }
         }
-        return finalPlayers;
+        return qualifiedPlayers;
     }
 
     public ArrayList<Players> getAllPlayersSortedByPoints(){

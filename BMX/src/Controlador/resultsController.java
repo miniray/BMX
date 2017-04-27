@@ -24,9 +24,14 @@ public class resultsController implements TableModelListener, ActionListener {
 
         MotosTableModel eventMotoModel = (MotosTableModel)e.getSource();
 
+        /*
+        if (eventMotoModel.get_Is_final_for_8()){
+            eventMotoModel.checkLabelPlates();
+        }
         if (eventMotoModel.get_Is_final()){
             eventMotoModel.checkLabelPlates();
         }
+        */
         if (eventMotoModel.get_Is_semifinal()) {
             eventMotoModel.checkLabelPlates();
             checkAndSetUpFinalPlayersForSemifinalGame(eventMotoModel.getMyFinalsManga().getMySingleGame());
@@ -40,6 +45,7 @@ public class resultsController implements TableModelListener, ActionListener {
             checkAndSetUpFirstFinalPlayers(mySingleGame);
         }
 
+        eventMotoModel.checkLabelPlates();
     }
     private void checkAndSetUpFirstFinalPlayers(SingleGame mySingleGame){
         int number_of_full_motos = mySingleGame.checkMotoTableModelPlatesFull();
@@ -50,8 +56,9 @@ public class resultsController implements TableModelListener, ActionListener {
     }
 
     private void checkAndSetUpFinalPlayersForSemifinalGame(SingleGame mySingleGame){
-        if((mySingleGame.getFinalManga()).checkFullSemifinals() != 0){
+        if((mySingleGame.getFinalManga()).checkFullSemifinals() == 2){
             mySingleGame.calculateSemiFinalsFinal();
+            mySingleGame.getFinalManga().setDirectFinalController(this);
         }
     }
 
@@ -67,7 +74,6 @@ public class resultsController implements TableModelListener, ActionListener {
                 Utils.createFileAndGetWriterBuffer("MANGAS");
                 try {
                     Utils.printPreMangas(allGames.getOrderedArrayListByNumberOfManga());
-                    System.out.println("INTENTO ABRIR");
                 } catch (IOException eio) {
                     eio.printStackTrace();
                 }
