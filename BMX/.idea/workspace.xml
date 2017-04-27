@@ -11,24 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d81d3b57-2c71-46a0-b9ed-ebaf6b409ca9" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BMX/Pilotos_test1.csv" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Controlador/Controller.class" afterPath="$PROJECT_DIR$/out/production/BMX/Controlador/Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/AllGames.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/AllGames.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/Manga.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/Manga.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/Players.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/Players.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/SingleGame.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/SingleGame.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/Utils.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/Utils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Vista/GraphicInterface.class" afterPath="$PROJECT_DIR$/out/production/BMX/Vista/GraphicInterface.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/Constants.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/Constants.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controlador/Controller.java" afterPath="$PROJECT_DIR$/src/Controlador/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controlador/resultsController.java" afterPath="$PROJECT_DIR$/src/Controlador/resultsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/Constants.java" afterPath="$PROJECT_DIR$/src/Modelo/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/FinalsManga.java" afterPath="$PROJECT_DIR$/src/Modelo/FinalsManga.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/Manga.java" afterPath="$PROJECT_DIR$/src/Modelo/Manga.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/Moto.java" afterPath="$PROJECT_DIR$/src/Modelo/Moto.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/MotosTableModel.java" afterPath="$PROJECT_DIR$/src/Modelo/MotosTableModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/Players.java" afterPath="$PROJECT_DIR$/src/Modelo/Players.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/SingleGame.java" afterPath="$PROJECT_DIR$/src/Modelo/SingleGame.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/Utils.java" afterPath="$PROJECT_DIR$/src/Modelo/Utils.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -58,8 +42,8 @@
       <file leaf-file-name="Utils.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Modelo/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="107" column="28" lean-forward="true" selection-start-line="107" selection-start-column="28" selection-end-line="107" selection-end-column="28" />
+            <state relative-caret-position="105">
+              <caret line="230" column="72" lean-forward="false" selection-start-line="230" selection-start-column="72" selection-end-line="230" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#transformStringToHtml#0;class#Utils#0" expanded="false" />
@@ -1007,7 +991,7 @@
       <workItem from="1493066056525" duration="9000" />
       <workItem from="1493066979597" duration="2311000" />
       <workItem from="1493148239798" duration="7517000" />
-      <workItem from="1493325550789" duration="7183000" />
+      <workItem from="1493325550789" duration="8536000" />
     </task>
     <task id="LOCAL-00001" summary="new">
       <created>1487103591689</created>
@@ -1128,11 +1112,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493069289792</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="seteo finales + page break">
+      <created>1493333191029</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1493333191029</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="555904000" />
+    <option name="totallyTimeSpent" value="557257000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1249,7 +1240,8 @@
     <MESSAGE value="21/03/17- ACABADO DE CREAR REPARTICION PLAYERS SEMIFINAL" />
     <MESSAGE value="21/03/17- CREANDO METODO PARA COMPROBAR QUE SEMIFINAL ESTA LLENO" />
     <MESSAGE value="rellenado de la final de la semifinal" />
-    <option name="LAST_COMMIT_MESSAGE" value="rellenado de la final de la semifinal" />
+    <MESSAGE value="seteo finales + page break" />
+    <option name="LAST_COMMIT_MESSAGE" value="seteo finales + page break" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1666,8 +1658,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Modelo/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="107" column="28" lean-forward="true" selection-start-line="107" selection-start-column="28" selection-end-line="107" selection-end-column="28" />
+        <state relative-caret-position="105">
+          <caret line="230" column="72" lean-forward="false" selection-start-line="230" selection-start-column="72" selection-end-line="230" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#transformStringToHtml#0;class#Utils#0" expanded="false" />
