@@ -3,7 +3,7 @@ package Modelo;
 import java.util.ArrayList;
 import java.util.Comparator;
 
-public class Players {
+public class Players implements Constants{
 
     private int id = 0;
     private int licencia = 0;
@@ -374,7 +374,7 @@ public class Players {
 
     };
 
-    public ArrayList<String> getArrayListForPrintMangas(){
+    public ArrayList<String> getArrayListForPrintMangas(int position){
 
         ArrayList<String> arrayToPrint = new ArrayList<>();
 
@@ -382,9 +382,9 @@ public class Players {
         arrayToPrint.add(nombre+" " + apellido_1+ " " + apellido_2);
         arrayToPrint.add(club);
         arrayToPrint.add(String.valueOf(ranking_campeonato_espanya));
-        arrayToPrint.add("");
-        arrayToPrint.add("");
-        arrayToPrint.add("");
+        arrayToPrint.add(String.valueOf(positionsList[position][0]));
+        arrayToPrint.add(String.valueOf(positionsList[position][1]));
+        arrayToPrint.add(String.valueOf(positionsList[position][2]));
 
         return arrayToPrint;
     }

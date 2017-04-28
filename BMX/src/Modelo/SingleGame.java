@@ -366,4 +366,7 @@ public class SingleGame {
         String categoryName = DataBase.getAllCategoriesNamesArray().get(gender)[category_id];
         return categoryName;
     }
+    public int getGender(){
+        return gender;
+    }
 }

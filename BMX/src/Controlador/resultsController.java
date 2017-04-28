@@ -6,7 +6,6 @@ import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.BufferedWriter;
 import java.io.IOException;
 
 /**
@@ -85,8 +84,7 @@ public class resultsController implements TableModelListener, ActionListener {
             case "PRINT SEMIFINALES":
                 Utils.createFileAndGetWriterBuffer("SEMIFINALS");
                 try {
-                    Utils.printSemifinals(allGames.getOrderedSemifinalArrayListByNumberOfManga());
-                    System.out.println("INTENTO ABRIR");
+                    Utils.printSemifinals(allGames.getOrderedSemifinalOrFinalArrayListByNumberOfManga(2));
                 } catch (IOException eio) {
                     eio.printStackTrace();
                 }
@@ -94,6 +92,12 @@ public class resultsController implements TableModelListener, ActionListener {
 
 
             case "PRINT FINALES":
+                Utils.createFileAndGetWriterBuffer("FINALS");
+                try {
+                    Utils.printFinals(allGames.getOrderedSemifinalOrFinalArrayListByNumberOfManga(1));
+                } catch (IOException eio) {
+                    eio.printStackTrace();
+                }
                 break;
 
             default:

@@ -150,21 +150,29 @@ public class AllGames implements Constants{
         return allMangasSortInArray;
     }
 
-    public ArrayList<FinalsManga> getOrderedSemifinalArrayListByNumberOfManga(){
-        ArrayList<FinalsManga> allSemifinalsSortInArray = new ArrayList<>();
+    public ArrayList<FinalsManga> getOrderedSemifinalOrFinalArrayListByNumberOfManga(int semifinalsOrFinal){
+        ArrayList<FinalsManga> finalMangasSortedArray = new ArrayList<>();
         for (int[] aMangas_order : mangas_order) {
             if (allGamesmap.get(aMangas_order[0]).get(aMangas_order[1]) != null) {
                 SingleGame tempSingleGame = allGamesmap.get(aMangas_order[0]).get(aMangas_order[1]);
                 if (tempSingleGame.getFinalManga()!= null){
-                    if (tempSingleGame.getFinalManga().isThereSemifinals()){
-
-                        allSemifinalsSortInArray.add(tempSingleGame.getFinalManga());
-
+                    switch(semifinalsOrFinal){
+                        case 1:
+                            finalMangasSortedArray.add(tempSingleGame.getFinalManga());
+                            break;
+                        case 2:
+                            if (tempSingleGame.getFinalManga().isThereSemifinals()) {
+                                finalMangasSortedArray.add(tempSingleGame.getFinalManga());
+                            }
+                            break;
+                        default:
+                            System.out.println("NO SE QUE ESTOY RECOGIENDO SI FINALES O SEMIS!");
+                            break;
                     }
                 }
             }
         }
-        return allSemifinalsSortInArray;
+        return finalMangasSortedArray;
     }
 
 
