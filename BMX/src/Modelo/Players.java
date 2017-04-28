@@ -3,7 +3,7 @@ package Modelo;
 import java.util.ArrayList;
 import java.util.Comparator;
 
-public class Players {
+public class Players implements Constants{
 
     private int id = 0;
     private int licencia = 0;
@@ -306,7 +306,7 @@ public class Players {
         this.total_points = 0;
     }
 
-    public int getPoints(){
+    public int getTotalPoints(){
         return this.total_points;
     }
 
@@ -337,7 +337,7 @@ public class Players {
 
 
     public void addPoints(int points){
-        this.total_points = this.total_points + points;
+        this.total_points += points;
     }
 
     public static final Comparator<Players> PlayerCampeonatoEspanyaComparator = (p1, p2) -> {
@@ -357,8 +357,8 @@ public class Players {
     };
 
     public static final Comparator<Players> PlayerPointsComparator = (p1, p2) -> {
-        int playerPoints1 = p1.getPoints();
-        int playerPoints2 = p2.getPoints();
+        int playerPoints1 = p1.getTotalPoints();
+        int playerPoints2 = p2.getTotalPoints();
 
         if ((playerPoints1 - playerPoints2) == 0){
             if (p1.getPoints_moto3()<p2.getPoints_moto3()){
@@ -374,7 +374,7 @@ public class Players {
 
     };
 
-    public ArrayList<String> getArrayListForPrintMangas(){
+    public ArrayList<String> getArrayListForPrintMangas(int position){
 
         ArrayList<String> arrayToPrint = new ArrayList<>();
 
@@ -382,9 +382,9 @@ public class Players {
         arrayToPrint.add(nombre+" " + apellido_1+ " " + apellido_2);
         arrayToPrint.add(club);
         arrayToPrint.add(String.valueOf(ranking_campeonato_espanya));
-        arrayToPrint.add("");
-        arrayToPrint.add("");
-        arrayToPrint.add("");
+        arrayToPrint.add(String.valueOf(positionsList[position][0]));
+        arrayToPrint.add(String.valueOf(positionsList[position][1]));
+        arrayToPrint.add(String.valueOf(positionsList[position][2]));
 
         return arrayToPrint;
     }

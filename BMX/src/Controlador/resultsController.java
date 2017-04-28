@@ -6,7 +6,6 @@ import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.BufferedWriter;
 import java.io.IOException;
 
 /**
@@ -24,14 +23,14 @@ public class resultsController implements TableModelListener, ActionListener {
 
         MotosTableModel eventMotoModel = (MotosTableModel)e.getSource();
 
-        /*
+
         if (eventMotoModel.get_Is_final_for_8()){
             eventMotoModel.checkLabelPlates();
         }
         if (eventMotoModel.get_Is_final()){
             eventMotoModel.checkLabelPlates();
         }
-        */
+
         if (eventMotoModel.get_Is_semifinal()) {
             eventMotoModel.checkLabelPlates();
             checkAndSetUpFinalPlayersForSemifinalGame(eventMotoModel.getMyFinalsManga().getMySingleGame());
@@ -41,7 +40,7 @@ public class resultsController implements TableModelListener, ActionListener {
         if (eventMotoModel.get_Is_manga()){
             Manga myManga = eventMotoModel.getMyManga();
             SingleGame mySingleGame = myManga.getMySingleGame();
-            eventMotoModel.getMyManga().calculateAllMotosPointsOfThisManga();
+            myManga.calculateAllMotosPointsOfThisManga();
             checkAndSetUpFirstFinalPlayers(mySingleGame);
         }
 
@@ -85,8 +84,7 @@ public class resultsController implements TableModelListener, ActionListener {
             case "PRINT SEMIFINALES":
                 Utils.createFileAndGetWriterBuffer("SEMIFINALS");
                 try {
-                    Utils.printSemifinals(allGames.getOrderedSemifinalArrayListByNumberOfManga());
-                    System.out.println("INTENTO ABRIR");
+                    Utils.printSemifinals(allGames.getOrderedSemifinalOrFinalArrayListByNumberOfManga(2));
                 } catch (IOException eio) {
                     eio.printStackTrace();
                 }
@@ -94,6 +92,12 @@ public class resultsController implements TableModelListener, ActionListener {
 
 
             case "PRINT FINALES":
+                Utils.createFileAndGetWriterBuffer("FINALS");
+                try {
+                    Utils.printFinals(allGames.getOrderedSemifinalOrFinalArrayListByNumberOfManga(1));
+                } catch (IOException eio) {
+                    eio.printStackTrace();
+                }
                 break;
 
             default:

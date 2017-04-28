@@ -195,7 +195,7 @@ public class MainTableModel extends AbstractTableModel implements Constants, Tab
 		
 		public void deleteRow(int row){
 			list_p.remove(row);
-			System.out.println(list_p.size() + "TAMAÑOOOOOO");
+			System.out.println(list_p.size() + "TAMAÑO");
 			getRowCount();
 			this.fireTableStructureChanged();
 			this.fireTableDataChanged();
