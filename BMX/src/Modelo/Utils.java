@@ -86,7 +86,7 @@ public class Utils implements Constants {
 
         String html = "<style type=\"text/css\">\n" +
                 ".tg  {border-collapse:collapse;border-spacing:0;}\n" +
-                ".tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}\n" +
+                ".tg td{font-family:Arial, sans-serif;font-size:14px;padding:2px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}\n" +
                 ".tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}\n" +
                 ".tg .tg-fbrz{font-weight:bold;font-size:20px;text-align:center;vertical-align:top}\n" +
                 ".tg .tg-if35{text-decoration:underline;text-align:center;vertical-align:top}\n" +
@@ -188,7 +188,7 @@ public class Utils implements Constants {
                             "    <td class=\"tg-if35\">MOTO2</td>\n" +
                             "    <td class=\"tg-if35\">MOTO3</td>\n" +
                             "  </tr>\n" + createARowForPlayer(aManga.getMangaPlayersArray()) +
-                            "  </tr>\n" + "</table>";
+                            "  </tr>\n" + "</table>"+"<br><br><br>";
 
         }
         return html;
