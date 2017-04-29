@@ -11,14 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d81d3b57-2c71-46a0-b9ed-ebaf6b409ca9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/Constants.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/Constants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/Players.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/Players.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/MainTableModel.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/MainTableModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BMX/Modelo/Utils.class" afterPath="$PROJECT_DIR$/out/production/BMX/Modelo/Utils.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controlador/resultsController.java" afterPath="$PROJECT_DIR$/src/Controlador/resultsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/MainTableModel.java" afterPath="$PROJECT_DIR$/src/Modelo/MainTableModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/MotosTableModel.java" afterPath="$PROJECT_DIR$/src/Modelo/MotosTableModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/Players.java" afterPath="$PROJECT_DIR$/src/Modelo/Players.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Modelo/Utils.java" afterPath="$PROJECT_DIR$/src/Modelo/Utils.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="../Age of Empires III.lnk" />
@@ -56,9 +51,6 @@
                 <element signature="method#layoutForTheMangaPanel#0;class#Utils#0" expanded="false" />
                 <element signature="method#createFileAndGetWriterBuffer#0;class#Utils#0" expanded="false" />
                 <element signature="method#writeIntoTheFileOfSemifinalsAndFinals#0;class#Utils#0" expanded="false" />
-                <element signature="method#openFile#0;class#Utils#0" expanded="false" />
-                <element signature="method#printSemifinals#0;class#Utils#0" expanded="false" />
-                <element signature="method#printFinals#0;class#Utils#0" expanded="false" />
                 <element signature="method#getCategoryGender#0;class#Utils#0" expanded="false" />
               </folding>
             </state>
@@ -1021,7 +1013,7 @@
       <workItem from="1493364176694" duration="665000" />
       <workItem from="1493403705568" duration="4686000" />
       <workItem from="1493409674985" duration="979000" />
-      <workItem from="1493415025584" duration="8532000" />
+      <workItem from="1493415025584" duration="8603000" />
     </task>
     <task id="LOCAL-00001" summary="new">
       <created>1487103591689</created>
@@ -1156,11 +1148,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493334804485</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="ARREGLADO SORTING POR MOTO O ALGUN TIPO DE FINAL">
+      <created>1493498514385</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1493498514385</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="572162000" />
+    <option name="totallyTimeSpent" value="572233000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1173,7 +1172,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="1" width="1377" height="734" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3263889" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1185,7 +1184,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31770834" sideWeight="0.14599092" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936507" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13715278" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3547826" sideWeight="0.8540091" order="2" side_tool="false" content_ui="combo" x="13" y="55" width="1356" height="699" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3547826" sideWeight="0.8540091" order="2" side_tool="false" content_ui="combo" x="13" y="55" width="1356" height="699" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1356,9 +1355,6 @@
             <element signature="method#layoutForTheMangaPanel#0;class#Utils#0" expanded="false" />
             <element signature="method#createFileAndGetWriterBuffer#0;class#Utils#0" expanded="false" />
             <element signature="method#writeIntoTheFileOfSemifinalsAndFinals#0;class#Utils#0" expanded="false" />
-            <element signature="method#openFile#0;class#Utils#0" expanded="false" />
-            <element signature="method#printSemifinals#0;class#Utils#0" expanded="false" />
-            <element signature="method#printFinals#0;class#Utils#0" expanded="false" />
             <element signature="method#getCategoryGender#0;class#Utils#0" expanded="false" />
           </folding>
         </state>
@@ -1471,9 +1467,6 @@
             <element signature="method#layoutForTheMangaPanel#0;class#Utils#0" expanded="false" />
             <element signature="method#createFileAndGetWriterBuffer#0;class#Utils#0" expanded="false" />
             <element signature="method#writeIntoTheFileOfSemifinalsAndFinals#0;class#Utils#0" expanded="false" />
-            <element signature="method#openFile#0;class#Utils#0" expanded="false" />
-            <element signature="method#printSemifinals#0;class#Utils#0" expanded="false" />
-            <element signature="method#printFinals#0;class#Utils#0" expanded="false" />
             <element signature="method#getCategoryGender#0;class#Utils#0" expanded="false" />
           </folding>
         </state>
@@ -1594,9 +1587,6 @@
             <element signature="method#layoutForTheMangaPanel#0;class#Utils#0" expanded="false" />
             <element signature="method#createFileAndGetWriterBuffer#0;class#Utils#0" expanded="false" />
             <element signature="method#writeIntoTheFileOfSemifinalsAndFinals#0;class#Utils#0" expanded="false" />
-            <element signature="method#openFile#0;class#Utils#0" expanded="false" />
-            <element signature="method#printSemifinals#0;class#Utils#0" expanded="false" />
-            <element signature="method#printFinals#0;class#Utils#0" expanded="false" />
             <element signature="method#getCategoryGender#0;class#Utils#0" expanded="false" />
           </folding>
         </state>
@@ -1696,9 +1686,6 @@
             <element signature="method#layoutForTheMangaPanel#0;class#Utils#0" expanded="false" />
             <element signature="method#createFileAndGetWriterBuffer#0;class#Utils#0" expanded="false" />
             <element signature="method#writeIntoTheFileOfSemifinalsAndFinals#0;class#Utils#0" expanded="false" />
-            <element signature="method#openFile#0;class#Utils#0" expanded="false" />
-            <element signature="method#printSemifinals#0;class#Utils#0" expanded="false" />
-            <element signature="method#printFinals#0;class#Utils#0" expanded="false" />
             <element signature="method#getCategoryGender#0;class#Utils#0" expanded="false" />
           </folding>
         </state>
@@ -1944,9 +1931,6 @@
             <element signature="method#layoutForTheMangaPanel#0;class#Utils#0" expanded="false" />
             <element signature="method#createFileAndGetWriterBuffer#0;class#Utils#0" expanded="false" />
             <element signature="method#writeIntoTheFileOfSemifinalsAndFinals#0;class#Utils#0" expanded="false" />
-            <element signature="method#openFile#0;class#Utils#0" expanded="false" />
-            <element signature="method#printSemifinals#0;class#Utils#0" expanded="false" />
-            <element signature="method#printFinals#0;class#Utils#0" expanded="false" />
             <element signature="method#getCategoryGender#0;class#Utils#0" expanded="false" />
           </folding>
         </state>
