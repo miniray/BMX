@@ -271,6 +271,8 @@ public class SingleGame {
     }
 
     public void calculateDirectFinalFor8(){
+
+
         finalsMangas.setFinalMoto(mangasMap.get(0).getAllPlayersSortedByPoints());
 
     }

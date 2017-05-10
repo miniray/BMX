@@ -374,17 +374,24 @@ public class Players implements Constants{
 
     };
 
-    public ArrayList<String> getArrayListForPrintMangas(int position){
+    public ArrayList<String> getArrayListForPrintMangas(int position, boolean with_moto_points){
 
         ArrayList<String> arrayToPrint = new ArrayList<>();
+
 
         arrayToPrint.add(placa);
         arrayToPrint.add(nombre+" " + apellido_1+ " " + apellido_2);
         arrayToPrint.add(club);
         arrayToPrint.add(String.valueOf(ranking_campeonato_espanya));
-        arrayToPrint.add(String.valueOf(positionsList[position][0]));
-        arrayToPrint.add(String.valueOf(positionsList[position][1]));
-        arrayToPrint.add(String.valueOf(positionsList[position][2]));
+        if (!with_moto_points) {
+                arrayToPrint.add(String.valueOf(positionsList[position][0]));
+                arrayToPrint.add(String.valueOf(positionsList[position][1]));
+                arrayToPrint.add(String.valueOf(positionsList[position][2]));
+        }else{
+            arrayToPrint.add(String.valueOf(points_moto1));
+            arrayToPrint.add(String.valueOf(points_moto2));
+            arrayToPrint.add(String.valueOf(points_moto3));
+        }
 
         return arrayToPrint;
     }

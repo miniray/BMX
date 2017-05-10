@@ -76,7 +76,8 @@ public class Utils implements Constants {
 
     public static void writeIntoTheFileOfMangas(BufferedWriter bw, ArrayList<Manga> arrayListOfOrderedMangas) throws IOException {
 
-        String html = "<style type=\"text/css\">\n" +
+        String html = "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">" +
+                "<style type=\"text/css\">\n" +
                 ".tg  {border-collapse:collapse;border-spacing:0;}\n" +
                 ".tg td{font-family:Arial, sans-serif;font-size:14px;padding:2px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}\n" +
                 ".tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}\n" +
@@ -90,7 +91,8 @@ public class Utils implements Constants {
     }
     public static void writeIntoTheFileOfSemifinalsAndFinals(BufferedWriter bw, ArrayList<FinalsManga> arrayListOfOrderedMangas, int semifinalOrFinal) throws IOException {
 
-        String html = "<style type=\"text/css\">\n" +
+        String html = "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">" +
+                "<style type=\"text/css\">\n" +
                 ".tg  {border-collapse:collapse;border-spacing:0;}\n" +
                 ".tg-pagebreak  {border-collapse:collapse;border-spacing:0;}\n" +
                 ".tg td{font-family:Arial, sans-serif;font-size:14px;padding:2px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}\n" +
@@ -118,7 +120,7 @@ public class Utils implements Constants {
         bw.close();
     }
 
-    private static String createARowForPlayer(ArrayList <Players> arrayListOfPlayersData, boolean is_moto) {
+    private static String createARowForPlayer(ArrayList <Players> arrayListOfPlayersData, boolean is_moto, boolean with_moto_points) {
         String playerInfo = new String();
         if (is_moto){
             arrayListOfPlayersData.sort(Players.PlayerCampeonatoEspanyaComparator);
@@ -128,7 +130,7 @@ public class Utils implements Constants {
 
         for (Players playerData : arrayListOfPlayersData) {
             playerInfo += "  <tr>\n";
-            for (String aColumn : playerData.getArrayListForPrintMangas(contador_position_list)) {
+            for (String aColumn : playerData.getArrayListForPrintMangas(contador_position_list,with_moto_points)) {
                 playerInfo += "    <td class=\"tg-yw4l\">" + aColumn + "</td>\n";
             }
             playerInfo += "</tr>\n";
@@ -194,7 +196,7 @@ public class Utils implements Constants {
                             "    <td class=\"tg-if35\">MOTO 1</td>\n" +
                             "    <td class=\"tg-if35\">MOTO2</td>\n" +
                             "    <td class=\"tg-if35\">MOTO3</td>\n" +
-                            "  </tr>\n" + createARowForPlayer(aManga.getMangaPlayersArray(),true) +
+                            "  </tr>\n" + createARowForPlayer(aManga.getMangaPlayersArray(),true, false) +
                             "  </tr>\n" + "</table>"+"<br><br><br>";
 
         }
@@ -235,7 +237,7 @@ public class Utils implements Constants {
                                 "    <td class=\"tg-if35\">MOTO 1</td>\n" +
                                 "    <td class=\"tg-if35\">MOTO2</td>\n" +
                                 "    <td class=\"tg-if35\">MOTO3</td>\n" +
-                                "  </tr>\n" + createARowForPlayer(tempSemifinalMoto.getModelMotoTable().getPlayersInMoto(),false) +
+                                "  </tr>\n" + createARowForPlayer(tempSemifinalMoto.getModelMotoTable().getPlayersInMoto(),false,true) +
                                 "  </tr>\n" + "</table>" + "<br><br><br>";
 
             }
@@ -267,7 +269,8 @@ public class Utils implements Constants {
                                 "    <th class=\"tg-fbrz\" colspan=\"7\">CATEGORIA  ";
 
                 html = getCategoryGender(html,aFinalManga.getMySingleGame().getGender());
-
+                ArrayList <Players> temp = FinalMoto.getModelMotoTable().getPlayersInMoto();
+                temp.sort(Players.PlayerPointsComparator);
                 html += aFinalManga.getMySingleGame().getCategoryName() + "</th>\n" +
                                 "  </tr>\n" +
                                 "  <tr>\n" +
@@ -278,7 +281,8 @@ public class Utils implements Constants {
                                 "    <td class=\"tg-if35\">MOTO 1</td>\n" +
                                 "    <td class=\"tg-if35\">MOTO2</td>\n" +
                                 "    <td class=\"tg-if35\">MOTO3</td>\n" +
-                                "  </tr>\n" + createARowForPlayer(FinalMoto.getModelMotoTable().getPlayersInMoto(), false) +
+
+                                "  </tr>\n" + createARowForPlayer(temp, false, true) +
                                 "  </tr>\n" + "</table>" + "<br><br><br>";
 
         }
