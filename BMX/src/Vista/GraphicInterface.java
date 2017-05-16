@@ -26,6 +26,7 @@ public class GraphicInterface implements Constants {
 
 	private final JButton btn_todos = new JButton ("TODOS");
 	private final JButton btn_importar = new JButton("IMPORTAR");
+	private final JButton btn_cargar = new JButton("CARGAR");
 	private final JButton btn_anyadir = new JButton("INSERTAR PARTICIPANTE");
 	private final JButton btn_eliminar = new JButton("ELIMINAR");
 	private final JButton btn_generar = new JButton ("GENERAR");
@@ -112,9 +113,10 @@ public class GraphicInterface implements Constants {
 		//PANEL BOTONES
 		Color colorBotones = new Color(64,64,64);
 		panel_botones.setBackground(colorBotones);
-		panel_botones.setLayout(new GridLayout(7,0,0,50));
+		panel_botones.setLayout(new GridLayout(8,0,0,30));
 		panel_botones.setBorder(new EmptyBorder(20,30,30,20));
 		panel_botones.add(btn_importar);
+		panel_botones.add(btn_cargar);
 		panel_botones.add(btn_anyadir);
 		panel_botones.add(btn_eliminar);
 
@@ -159,7 +161,9 @@ public class GraphicInterface implements Constants {
 		btn_importar.addActionListener(c);
 		btn_importar.setActionCommand("IMPORTAR");		
 		btn_anyadir.addActionListener(c);
-		btn_anyadir.setActionCommand("ANYADIR");
+        btn_anyadir.setActionCommand("ANYADIR");
+        btn_cargar.addActionListener(c);
+        btn_cargar.setActionCommand("CARGAR");
 		btn_eliminar.addActionListener(c);
 		btn_eliminar.setActionCommand("ELIMINAR");
 		btn_generar.addActionListener(c);

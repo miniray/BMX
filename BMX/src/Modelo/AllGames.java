@@ -1,9 +1,14 @@
 package Modelo;
 
 import Controlador.resultsController;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.File;
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
@@ -20,8 +25,7 @@ public class AllGames implements Constants{
     private JButton printCuartos;
     private JButton printSemifinals;
     private JButton printFinales;
-    private ArrayList<String[]> categoriesNames;
-
+    private Map<Integer,Map<Integer,Map<Integer,Map<Integer,ArrayList<ArrayList<Object>>>>>>  allGamesMemory;
 
     public AllGames(JPanel mainPanel, JPanel buttonTodosPanel){
 
@@ -37,7 +41,7 @@ public class AllGames implements Constants{
         allGamesmap.put(2, cruiserPlayersByCategory);
         createAllGamesStructure(mainPanel, buttonTodosPanel);
         setNumberOfAllTheMangas();
-
+        createPointsMemoryMap();
 
     }
 
@@ -175,6 +179,30 @@ public class AllGames implements Constants{
         return finalMangasSortedArray;
     }
 
+    private void createPointsMemoryMap(){
+        //Map<Integer,Map<Integer,Map<Integer,Map<Integer,ArrayList<ArrayList<Object>>>>>>
+
+        allGamesMemory = new TreeMap<>();
+        int gender_contador = 0;
+
+        for (Map.Entry<Integer, Map<Integer, SingleGame>> aGender: allGamesmap.entrySet()){
+            allGamesMemory.put(gender_contador, new TreeMap());
+            for (Map.Entry<Integer, SingleGame> aSingleGame: aGender.getValue().entrySet()){
+                allGamesMemory.get(gender_contador).put(aSingleGame.getKey(), new TreeMap());
+                for (Map.Entry<Integer,Manga> aManga: aSingleGame.getValue().getMangasMap().entrySet()){
+                    allGamesMemory.get(gender_contador).get(aSingleGame.getKey()).put(aManga.getValue().getNumero_de_manga(), new TreeMap());
+                    for (Map.Entry<Integer,Moto> aMoto: aManga.getValue().getMotosMap().entrySet()){
+                        allGamesMemory.get(gender_contador).get(aSingleGame.getKey()).get(aManga.getValue().getNumero_de_manga()).put(aMoto.getKey(), aMoto.getValue().getModelMotoTable().getArray());
+                    }
+                }
+            }
+            gender_contador++;
+        }
+    }
+
+    public Map<Integer,Map<Integer,Map<Integer,Map<Integer,ArrayList<ArrayList<Object>>>>>>  getPointsMemoryMap(){
+        return allGamesMemory;
+    }
 
 
 }

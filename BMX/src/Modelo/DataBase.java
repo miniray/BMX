@@ -1,7 +1,10 @@
 package Modelo;
 import Controlador.Controller;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.awt.*;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -32,19 +35,46 @@ public class DataBase implements Constants {
         allCategoriesNamesArray.add(allSpainCategories);
     }
 
-    public boolean ImportFile() {
+    public boolean ImportFile() throws IOException {
 
-        //Crea array con todos los participantes del archivo importado.
-        ArrayList<Players> allPlayersArray = csvReader.PlayersArrayFromCSVFile();
 
-        if (allPlayersArray != null) {
-            tableModelImportedPlayers = new ImportedTableModel(allPlayersArray);
-            tableModelSelectedPlayers = new ImportedTableModel();
-            buttonAllControl = true;
-            return true;
-        } else {
-            return false;
+        JFileChooser file = new JFileChooser();
+        int dialog_action = file.showOpenDialog(null);
+
+        switch (dialog_action) {
+
+            case JFileChooser.APPROVE_OPTION:
+                String path = file.getSelectedFile().getPath();
+
+                if (Utils.getFileType(path).equals("csv")) {
+                    ArrayList<Players> allPlayersArray = csvReader.PlayersArrayFromCSVFile(path);
+
+                    if (allPlayersArray != null) {
+                        tableModelImportedPlayers = new ImportedTableModel(allPlayersArray);
+                        tableModelSelectedPlayers = new ImportedTableModel();
+                        buttonAllControl = true;
+                        return true;
+                    }
+                }
+                if (Utils.getFileType(path).equals("json")) {
+                    ObjectMapper mapper = new ObjectMapper();
+                    ArrayList importedPlayersArray = mapper.readValue(new File(path), ArrayList.class);
+                    ArrayList<Players> tempArray= Utils.convertLinkedHashMapToArrayListOfPlayers(importedPlayersArray);
+                    c.getImportedJsonArrayAndAddItToTheMainTable(tempArray);
+                    return false;
+                }
+                return false;
+
+            case JFileChooser.CANCEL_OPTION:
+                break;
+            //Caso si hay un error.
+            case JFileChooser.ERROR_OPTION:
+                System.out.println("Hay un error en la seleccion");
+                break;
+
+
         }
+        return false;
     }
 
 

@@ -304,14 +304,12 @@ public class MainTableModel extends AbstractTableModel implements Constants, Tab
 				for (Players selectedPlayer : categoryPlayersArray) {
                     for (Players selectedViewPlayer : list_p) {
                         if (selectedPlayer.getId() == selectedViewPlayer.getId()) {
-                            if (!is_main_table) {
-                                selectedPlayer = selectedViewPlayer;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+							selectedPlayer = selectedViewPlayer;
+						}
+					}
+				}
+			}
+		}
 
 
 }

@@ -282,6 +282,7 @@ public class SingleGame {
         ArrayList <Players> playersToFinalSorted = new ArrayList<>();
         playersToFinal.addAll(mangasMap.get(0).getQualifiedFinalPlayers());
         playersToFinal.addAll(mangasMap.get(1).getQualifiedFinalPlayers());
+
         if (playersToFinal.size() == 7){
             playersToFinalSorted.add(playersToFinal.get(0));
             playersToFinalSorted.add(playersToFinal.get(3));
@@ -354,12 +355,6 @@ public class SingleGame {
         finalsMangas.setSemifinalsPlayers(playersToSemiFinal1,playersToSemiFinal2);
     }
 
-
-
-    public ArrayList<Players> getAllPlayersOfThisRace(){
-        return allPlayersOfThisRace;
-    }
-
     public FinalsManga getFinalManga(){
         return finalsMangas;
     }
@@ -370,5 +365,9 @@ public class SingleGame {
     }
     public int getGender(){
         return gender;
+    }
+
+    public int getCategory_id(){
+        return category_id;
     }
 }

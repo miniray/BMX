@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.*;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
@@ -306,6 +307,46 @@ public class Utils implements Constants {
                 return html;
         }
     }
+
+    public static String getFileType(String path){
+        String fileType = "";
+        int i = path.lastIndexOf('.');
+        if (i >= 0) {
+            fileType = path.substring(i + 1);
+        }else{
+            fileType = "UNKNOWN";
+        }
+        return fileType;
+    }
+
+    public static ArrayList<Players> convertLinkedHashMapToArrayListOfPlayers(ArrayList<LinkedHashMap> jsonFileArray){
+        ArrayList<Players> arrayListOfPlayersImported = new ArrayList<>();
+
+        for (LinkedHashMap<String,Object> aPlayer: jsonFileArray){
+            Players tempPlayer = new Players((int) aPlayer.get("id"), (int)aPlayer.get("licencia"), (String) aPlayer.get("placa"), (String)aPlayer.get("nombre") ,(int) aPlayer.get("sexo") ,(String) aPlayer.get("provincia") ,
+                    (int)aPlayer.get("points_moto1") ,(int) aPlayer.get("points_moto2") ,(int) aPlayer.get("points_moto3") , /* DESCRIPCION*/(int) aPlayer.get("totalPoints") ,(int) aPlayer.get("rankingLigaRegional") ,
+                    (int)aPlayer.get("rankingCampeonatoRegional") ,(int) aPlayer.get("rankingCruiserRegional") ,(int) aPlayer.get("rankingCopaEspanyola"),(int) aPlayer.get("rankingLigaEspanyola") ,
+                    (int)aPlayer.get("otroRankingNacional") ,(int)aPlayer.get("rankingCopaRegional") , (int)aPlayer.get("otroRankingRegional") ,(int) aPlayer.get("rankingCruiserNacional") ,
+                    (int)aPlayer.get("rankingCampeonatoEspanya") ,(int)aPlayer.get("rankingAComparar") ,(String) aPlayer.get("apellido1"), (String)aPlayer.get("apellido2") , (int)aPlayer.get("categoriaRegional") ,
+                    (int)aPlayer.get("categoriaCruiser") , (int)aPlayer.get("categoriaEspanya") , (int)aPlayer.get("anyoNacimiento") );
+
+            arrayListOfPlayersImported.add(tempPlayer);
+        }
+
+        return arrayListOfPlayersImported;
+
+        //}
+
+    }/*
+    public Players(int id, int licencia, String placa,
+                   String nombre, String apellido_1, String apellido_2,
+                   int anyo_nacimiento, int categoria_espanya, int categoria_regional,
+                   int categoria_cruiser, int sexo, String provincia,
+                   int ranking_liga_regional, int ranking_copa_regional, int ranking_campeonato_regional,
+                   int ranking_otro_regional,
+                   int ranking_liga_espanyola, int ranking_copa_espanyola, int ranking_campeonato_espanya,
+                   int ranking_otro_nacional,
+                   int ranking_cruiser_regional, int ranking_cruiser_nacional, String club)*/
 
 }
 

@@ -79,7 +79,6 @@ public class Manga {
             entry.getValue().getModelMotoTable().resetAllPlayersPoints();
         }
 
-
         for (Map.Entry<Integer, Moto> entry : motosMap.entrySet()){
             entry.getValue().getModelMotoTable().updatePlayerPoints();
             entry.getValue().getModelMotoTable().checkPlatesPointsLabel(entry.getValue().getLabelArrayList());

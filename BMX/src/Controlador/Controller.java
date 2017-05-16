@@ -1,14 +1,24 @@
 package Controlador;
+import com.fasterxml.jackson.core.*;
+import com.fasterxml.jackson.databind.*;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.file.AccessDeniedException;
+import java.nio.file.Files;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.Map;
 
-import javax.swing.JButton;
+import javax.swing.*;
 import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
 
@@ -81,15 +91,23 @@ public class Controller implements ActionListener, MouseListener, TableModelList
 		switch (actionCommand) {
 		
 			case "IMPORTAR":
-			
-				if (dataBase.ImportFile()){
-					playersImportationFrame.importedPlayersTable.setModel(dataBase.tableModelImportedPlayers);
-					playersImportationFrame.tab_part_sel.setModel(dataBase.tableModelSelectedPlayers);
-					playersImportationFrame.frame_import.setVisible(true);
-					break;
-				}else{
-					break;
+
+
+				try {
+					if (dataBase.ImportFile()){
+                        playersImportationFrame.importedPlayersTable.setModel(dataBase.tableModelImportedPlayers);
+                        playersImportationFrame.tab_part_sel.setModel(dataBase.tableModelSelectedPlayers);
+                        playersImportationFrame.frame_import.setVisible(true);
+                        break;
+                    }else {
+                        break;
+                    }
+				} catch (IOException e) {
+					e.printStackTrace();
 				}
+			case "CARGAR":
+				break;
+
 			case "PASAR TODOS":
 				dataBase.tableModelSelectedPlayers = dataBase.tableModelImportedPlayers;
 
@@ -102,15 +120,22 @@ public class Controller implements ActionListener, MouseListener, TableModelList
 				break;
 
             case "ANYADIR":
-                break;
+
+				break;
 
             case "ELIMINAR":
-                graphicInterface.getMainTableModel().deleteRow(graphicInterface.getMainTable().getSelectedRow());
+            	if (dataBase.buttonAllControl) {
+					graphicInterface.getMainTableModel().deleteRow(graphicInterface.getMainTable().getSelectedRow());
+					graphicInterface.setCellEditor();
+				}else{
+
+				}
                 break;
 
             case "GENERAR":
                 is_generated = true;
                 graphicInterface.setCellEditor();
+				savePlayersMainListInJsonFile();
 				carrera = new AllGames(graphicInterface.getCardPanel(), graphicInterface.getPanelBotonTodos());
 				rsController = new resultsController(carrera);
 				connectResultsController();
@@ -187,11 +212,29 @@ public class Controller implements ActionListener, MouseListener, TableModelList
 			if (arg0.getSource() instanceof MainTableModel) {
 				generateButtonsForPanels();
 				((MainTableModel)(graphicInterface.getMainTable().getModel())).getChangesToMainArray(graphicInterface.getMainTableModel().getArray());
-                if(graphicInterface != null){
+
+				savePlayersMainListInJsonFile();
+
+				if(graphicInterface != null){
 					graphicInterface.getMainTable().updateUI();
 				}
 			}
-		//}
+	}
+
+	private void savePlayersMainListInJsonFile(){
+		ObjectMapper mapper = new ObjectMapper();
+		File dir = new File(WindowsUtils.getCurrentUserDesktopPath()  + "/RACEDAY");
+		dir.mkdir();
+		DateFormat dateFormat = new SimpleDateFormat("dd_MM_YYYY");
+		Date date = new Date();
+		String desktopPath = dir + "/PILOTOS" + dateFormat.format(date) + ".json";
+
+		try {
+			mapper.writeValue(new File(desktopPath), graphicInterface.getMainTableModel().getArray());
+		}
+		catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	private void generateButtonsForPanels(){
@@ -209,6 +252,13 @@ public class Controller implements ActionListener, MouseListener, TableModelList
 			}
 
 		}
+	}
+	public void getImportedJsonArrayAndAddItToTheMainTable(ArrayList<Players> importedArray){
+		graphicInterface.getMainTableModel().getArray().clear();;
+		graphicInterface.getMainTableModel().setArray(importedArray);
+		graphicInterface.setCellEditor();
+		graphicInterface.getMainTable().updateUI();
+
 	}
 }
 

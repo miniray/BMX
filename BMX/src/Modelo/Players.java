@@ -81,6 +81,43 @@ public class Players implements Constants{
         this.club = club;
     }
 
+    public Players(int id, int licencia, String placa, String nombre, int sexo, String provincia, int points_moto1, int points_moto2, int points_moto3, /* DESCRIPCION*/ int total_points,
+                   int ranking_liga_regional, int ranking_campeonato_regional, int ranking_cruiser_regional, int ranking_copa_espanyola, int ranking_liga_espanyola, int ranking_otro_nacional,
+                   int ranking_copa_regional, int ranking_otro_regional, int ranking_cruiser_nacional, int ranking_campeonato_espanya, int ranking_a_comparar, String apellido_1, String apellido_2,
+                   int categoria_regional, int categoria_cruiser, int categoria_espanya, int anyo_nacimiento){
+
+        this.id = id;
+        this.licencia = licencia;
+        this.placa = placa;
+        this.nombre = nombre;
+        this.sexo = sexo;
+        this.provincia = provincia;
+        this.points_moto1 = points_moto1;
+        this.points_moto2 = points_moto2;
+        this.points_moto3 = points_moto3;
+        this.total_points = total_points;
+        this.ranking_liga_regional = ranking_liga_regional;
+        this.ranking_campeonato_regional = ranking_campeonato_regional;
+        this.ranking_cruiser_regional = ranking_cruiser_regional;
+        this.ranking_copa_espanyola = ranking_copa_espanyola;
+        this.ranking_liga_espanyola = ranking_liga_espanyola;
+        this.ranking_otro_nacional = ranking_otro_nacional;
+        this.ranking_copa_regional = ranking_copa_regional;
+        this.ranking_otro_regional = ranking_otro_regional;
+        this.ranking_cruiser_nacional = ranking_cruiser_nacional;
+        this.ranking_campeonato_espanya = ranking_campeonato_espanya;
+        this.ranking_a_comparar = ranking_a_comparar;
+        this.apellido_1 = apellido_1;
+        this.apellido_2 = apellido_2;
+        this.categoria_regional = categoria_regional;
+        this.categoria_cruiser = categoria_cruiser;
+        this.categoria_espanya = categoria_espanya;
+        this.anyo_nacimiento = anyo_nacimiento;
+
+    }
+
+
+
     //ID
     public void setId(int id) {
         this.id = id;
