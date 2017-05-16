@@ -55,6 +55,7 @@ public class MainTableModel extends AbstractTableModel implements Constants, Tab
 
 		public void setArray(ArrayList<Players> new_array){
 			list_p.addAll(new_array);
+			fireTableDataChanged();
 		}
 
 		public Object getValueAt(int row, int col) {

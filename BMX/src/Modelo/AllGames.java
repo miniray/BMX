@@ -204,6 +204,26 @@ public class AllGames implements Constants{
         return allGamesMemory;
     }
 
+    public void chargePointsMemoryMap(Map<String,Map<String,Map<String,Map<String,ArrayList<ArrayList<Object>>>>>> allGamesMemory){
+
+
+        for (Map.Entry <String,Map<String,Map<String,Map<String,ArrayList<ArrayList<Object>>>>>> aGender: allGamesMemory.entrySet()) {
+            for (Map.Entry<String, Map<String, Map<String, ArrayList<ArrayList<Object>>>>> aSingleGame : aGender.getValue().entrySet()) {
+                    for (Map.Entry<String, Map<String, ArrayList<ArrayList<Object>>>> aManga : aSingleGame.getValue().entrySet()) {
+                        for (Map.Entry<String, ArrayList<ArrayList<Object>>> aMoto : aManga.getValue().entrySet()) {
+                            System.out.println("INTRODUZCO EN EL GENERO: " + aGender.getKey() + "\nCATEGORIA: " + aSingleGame.getKey() + "\nEN LA MANGA: " + aManga.getKey() + "\nEN LA MOTO: " + aMoto.getKey());
+                            Moto tempMoto = allGamesmap.get(Integer.parseInt(aGender.getKey())).get(Integer.parseInt(aSingleGame.getKey())).getMangasMap().get(Integer.parseInt(aManga.getKey())-1).getMotosMap().get(Integer.parseInt(aMoto.getKey()));
+                            tempMoto.getModelMotoTable().setNewArray(aMoto.getValue());
+                            tempMoto.getModelMotoTable().fireTableDataChanged();
+                            tempMoto.getModelMotoTable().checkLabelPlates();
+                        }
+
+                    }
+                }
+
+            }
+    }
+
 
 }
 

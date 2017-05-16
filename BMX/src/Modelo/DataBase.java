@@ -57,10 +57,7 @@ public class DataBase implements Constants {
                     }
                 }
                 if (Utils.getFileType(path).equals("json")) {
-                    ObjectMapper mapper = new ObjectMapper();
-                    ArrayList importedPlayersArray = mapper.readValue(new File(path), ArrayList.class);
-                    ArrayList<Players> tempArray= Utils.convertLinkedHashMapToArrayListOfPlayers(importedPlayersArray);
-                    c.getImportedJsonArrayAndAddItToTheMainTable(tempArray);
+                    c.getImportedJsonArrayAndAddItToTheMainTable(getArrayListPlayersFromJsonFIle(path));
                     return false;
                 }
                 return false;
@@ -117,5 +114,13 @@ public class DataBase implements Constants {
 
     public static ArrayList<String[]> getAllCategoriesNamesArray(){
         return allSpainCategories;
+    }
+
+    public ArrayList<Players> getArrayListPlayersFromJsonFIle(String path) throws IOException {
+        ObjectMapper mapper = new ObjectMapper();
+        ArrayList importedPlayersArray = mapper.readValue(new File(path), ArrayList.class);
+        ArrayList<Players> tempArray= Utils.convertLinkedHashMapToArrayListOfPlayers(importedPlayersArray);
+
+        return tempArray;
     }
 }

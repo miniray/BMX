@@ -1,17 +1,12 @@
 package Controlador;
-import com.fasterxml.jackson.core.*;
 import com.fasterxml.jackson.databind.*;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.file.AccessDeniedException;
-import java.nio.file.Files;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -106,6 +101,12 @@ public class Controller implements ActionListener, MouseListener, TableModelList
 					e.printStackTrace();
 				}
 			case "CARGAR":
+
+				try {
+					cargarCarrera();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
 				break;
 
 			case "PASAR TODOS":
@@ -133,14 +134,7 @@ public class Controller implements ActionListener, MouseListener, TableModelList
                 break;
 
             case "GENERAR":
-                is_generated = true;
-                graphicInterface.setCellEditor();
-				savePlayersMainListInJsonFile();
-				carrera = new AllGames(graphicInterface.getCardPanel(), graphicInterface.getPanelBotonTodos());
-				rsController = new resultsController(carrera);
-				connectResultsController();
-				carrera.setRsController(rsController);
-				graphicInterface.card.next(graphicInterface.getCardPanel());
+				generarCursa();
                 break;
 
 		    case "RANKING":
@@ -258,6 +252,52 @@ public class Controller implements ActionListener, MouseListener, TableModelList
 		graphicInterface.getMainTableModel().setArray(importedArray);
 		graphicInterface.setCellEditor();
 		graphicInterface.getMainTable().updateUI();
+
+	}
+
+	private void cargarCarrera() throws IOException {
+		JFileChooser file = new JFileChooser();
+		int dialog_action = file.showOpenDialog(null);
+
+		switch (dialog_action) {
+
+			case JFileChooser.APPROVE_OPTION:
+				String path = file.getSelectedFile().getPath();
+				if (path.contains(WindowsUtils.getCurrentUserDesktopPath() + "\\RACEDAY\\CARRERA")){
+					String playersFile = path.replace("CARRERA","PILOTOS");
+					graphicInterface.getMainTableModel().setArray(dataBase.getArrayListPlayersFromJsonFIle(playersFile));
+					generarCursa();
+					carrera.chargePointsMemoryMap(getMemoryMapFromJsonFile(path));
+
+				}
+
+					break;
+			case JFileChooser.CANCEL_OPTION:
+				break;
+			//Caso si hay un error.
+			case JFileChooser.ERROR_OPTION:
+				System.out.println("Hay un error en la seleccion");
+				break;
+
+		}
+	}
+
+	private void generarCursa(){
+		is_generated = true;
+		graphicInterface.setCellEditor();
+		savePlayersMainListInJsonFile();
+		carrera = new AllGames(graphicInterface.getCardPanel(), graphicInterface.getPanelBotonTodos());
+		rsController = new resultsController(carrera);
+		connectResultsController();
+		carrera.setRsController(rsController);
+		graphicInterface.card.next(graphicInterface.getCardPanel());
+	}
+
+	private Map<String,Map<String,Map<String,Map<String,ArrayList<ArrayList<Object>>>>>> getMemoryMapFromJsonFile(String path) throws IOException {
+		ObjectMapper mapper = new ObjectMapper();
+		Map memoryMapPoints = mapper.readValue(new File(path), Map.class);
+		return memoryMapPoints;
+
 
 	}
 }
