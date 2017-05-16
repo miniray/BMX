@@ -8,10 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7f62a754-bfd4-41d1-9b33-597476384a5b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BMX/src/Controlador/Controller.java" afterPath="$PROJECT_DIR$/BMX/src/Controlador/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BMX/src/Modelo/AllGames.java" afterPath="$PROJECT_DIR$/BMX/src/Modelo/AllGames.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BMX/src/Modelo/DataBase.java" afterPath="$PROJECT_DIR$/BMX/src/Modelo/DataBase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BMX/src/Modelo/MainTableModel.java" afterPath="$PROJECT_DIR$/BMX/src/Modelo/MainTableModel.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -108,7 +104,7 @@
         <entry file="file://$PROJECT_DIR$/BMX/src/Modelo/DataBase.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
-              <caret line="117" column="0" lean-forward="true" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+              <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -165,8 +161,8 @@
       <file leaf-file-name="AllGames.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BMX/src/Modelo/AllGames.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="214" column="248" lean-forward="false" selection-start-line="214" selection-start-column="248" selection-end-line="214" selection-end-column="248" />
+            <state relative-caret-position="365">
+              <caret line="220" column="21" lean-forward="true" selection-start-line="220" selection-start-column="21" selection-end-line="220" selection-end-column="21" />
               <folding>
                 <element signature="method#AllGames#0;class#AllGames#0" expanded="false" />
                 <element signature="method#AllGames#1;class#AllGames#0" expanded="false" />
@@ -290,24 +286,6 @@
               <option name="myItemId" value="External Libraries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jackson-databind-2.4.2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jackson-databind-2.4.2.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BMX" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -350,10 +328,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Modelo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -366,6 +340,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Jackson" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -394,7 +372,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/BMX/.idea/libraries" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -856,7 +834,7 @@
       <workItem from="1494873631740" duration="3757000" />
       <workItem from="1494877636321" duration="4902000" />
       <workItem from="1494933523629" duration="128000" />
-      <workItem from="1494966579221" duration="7655000" />
+      <workItem from="1494966579221" duration="8309000" />
     </task>
     <task id="LOCAL-00001" summary="IMPLEMENTADO LA IMPRESION DE SEMIFINALES 18/04/17">
       <created>1492524735795</created>
@@ -914,11 +892,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494933620149</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="BOTON CARGAR IMPLEMENTADO- FALTA IMPLEMENTAR SAVE DE FINALES">
+      <created>1494974321249</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1494974321249</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67848000" />
+    <option name="totallyTimeSpent" value="68502000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1002,7 +987,8 @@
     <MESSAGE value="IMPLEMENTADO LA GESTION DE LAS FINALES PARA MENOS DE 8PLAYERS" />
     <MESSAGE value="RESULTSCONTR4OLLER EDITED" />
     <MESSAGE value="arreglando final de semifinal" />
-    <option name="LAST_COMMIT_MESSAGE" value="arreglando final de semifinal" />
+    <MESSAGE value="BOTON CARGAR IMPLEMENTADO- FALTA IMPLEMENTAR SAVE DE FINALES" />
+    <option name="LAST_COMMIT_MESSAGE" value="BOTON CARGAR IMPLEMENTADO- FALTA IMPLEMENTAR SAVE DE FINALES" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1560,7 +1546,7 @@
     <entry file="file://$PROJECT_DIR$/BMX/src/Modelo/DataBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
-          <caret line="117" column="0" lean-forward="true" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+          <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1676,8 +1662,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BMX/src/Modelo/AllGames.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="214" column="248" lean-forward="false" selection-start-line="214" selection-start-column="248" selection-end-line="214" selection-end-column="248" />
+        <state relative-caret-position="365">
+          <caret line="220" column="21" lean-forward="true" selection-start-line="220" selection-start-column="21" selection-end-line="220" selection-end-column="21" />
           <folding>
             <element signature="method#AllGames#0;class#AllGames#0" expanded="false" />
             <element signature="method#AllGames#1;class#AllGames#0" expanded="false" />
