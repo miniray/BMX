@@ -10,11 +10,13 @@
       <sourceFolder url="file://$MODULE_DIR$/.settings" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/bin" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/META-INF" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/.idea/libraries" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Jackson" level="project" />
-    <orderEntry type="library" name="jackson-databind-2.4.2" level="project" />
-    <orderEntry type="library" name="jackson-annotations-2.8.8" level="project" />
+    <orderEntry type="library" exported="" name="Jackson" level="project" />
+    <orderEntry type="library" exported="" name="jackson-databind-2.4.2" level="project" />
+    <orderEntry type="library" exported="" name="jackson-annotations-2.8.8" level="project" />
+    <orderEntry type="library" exported="" name="javacsv" level="project" />
   </component>
 </module>
