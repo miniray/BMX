@@ -1,5 +1,7 @@
 package Controlador;
 import com.fasterxml.jackson.databind.*;
+
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
@@ -29,6 +31,7 @@ public class Controller implements ActionListener, MouseListener, TableModelList
 	private boolean is_generated = false;
     private AllGames carrera;
     private resultsController rsController;
+    private Color lila = new Color(165,62,246);
 	public Controller(GraphicInterface graphicInterface, DataBase dataBase, PlayersImportationFrame playersImportationFrame){
 		
 		this.playersImportationFrame = playersImportationFrame;
@@ -79,6 +82,7 @@ public class Controller implements ActionListener, MouseListener, TableModelList
 
 		String actionCommand = arg0.getActionCommand();
 		String buttonText = ((JButton)arg0.getSource()).getText();
+		JButton buttonSelected= (JButton) arg0.getSource();
 		int female = 0;
 		int male = 1;
 		int cruiser = 2;
@@ -146,12 +150,17 @@ public class Controller implements ActionListener, MouseListener, TableModelList
 			case "TODOS":
 				dataBase.buttonAllControl = true;
 				graphicInterface.setAllPlayersModel();
+				CategoriesManagement.resetCategoryButtonsColors();
+				buttonSelected.setBackground(lila);
 				break;
 
 			case "MBUTTON":
 			    if (!is_generated) {
                     dataBase.buttonAllControl = false;
                     graphicInterface.changeTableModel(CategoriesManagement.getSpecificCategoryArray(male, dataBase.getIDfromCategoryList(male, buttonText)), dataBase.getController());
+					CategoriesManagement.resetCategoryButtonsColors();
+					graphicInterface.getBtn_todos().setBackground(null);
+					buttonSelected.setBackground(lila);
                 }else{
 			        graphicInterface.card.show(graphicInterface.panel_card,"1"+ dataBase.getIDfromCategoryList(male, buttonText));
 					graphicInterface.getCardPanel().updateUI();
@@ -163,6 +172,9 @@ public class Controller implements ActionListener, MouseListener, TableModelList
                 if (!is_generated) {
                     dataBase.buttonAllControl = false;
                     graphicInterface.changeTableModel(CategoriesManagement.getSpecificCategoryArray(female, dataBase.getIDfromCategoryList(female, buttonText)), dataBase.getController());
+					CategoriesManagement.resetCategoryButtonsColors();
+					graphicInterface.getBtn_todos().setBackground(null);
+					buttonSelected.setBackground(lila);
                 }else{
                     graphicInterface.card.show(graphicInterface.panel_card,"0"+ dataBase.getIDfromCategoryList(female, buttonText));
                     graphicInterface.getCardPanel().updateUI();
@@ -173,6 +185,10 @@ public class Controller implements ActionListener, MouseListener, TableModelList
                 if(!is_generated) {
                     dataBase.buttonAllControl = false;
                     graphicInterface.changeTableModel(CategoriesManagement.getSpecificCategoryArray(cruiser, dataBase.getIDfromCategoryList(cruiser, buttonText)), dataBase.getController());
+					CategoriesManagement.resetCategoryButtonsColors();
+					graphicInterface.getBtn_todos().setBackground(null);
+					buttonSelected.setBackground(lila);
+
                 }else{
                     graphicInterface.card.show(graphicInterface.panel_card,"2"+ dataBase.getIDfromCategoryList(cruiser, buttonText));
 

@@ -1,8 +1,6 @@
 <component name="libraryTable">
   <library name="javacsv">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/BMXrefactorized/out/artifacts/BMX_jar/BMX/javacsv.jar!/" />
-    </CLASSES>
+    <CLASSES />
     <JAVADOC />
     <SOURCES />
   </library>

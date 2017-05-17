@@ -255,4 +255,8 @@ public class GraphicInterface implements Constants {
     public JPanel getPanelBotonTodos(){
 		return panel_boton_todos;
 	}
+
+	public JButton getBtn_todos(){
+    	return btn_todos;
+	}
 }

@@ -10,6 +10,9 @@ import java.util.*;
  * Created by Miquel on 11/01/2017.
  */
 public class CategoriesManagement {
+    private static String[] genderCategories = {"F", "M", "C"};
+
+    private static Color[] buttonsColorBackgroung= {new Color(83,117,246), new Color(226,227,239), new Color(247,55,55)};
 
     private static ArrayList<ArrayList<Integer>> allExistingCategoriesIdArray;
 
@@ -66,12 +69,7 @@ public class CategoriesManagement {
         ArrayList<JButton> categories_temp = new ArrayList<>();
         existingCategoriesButtonsArray = new ArrayList<>();
         int sex = 0;
-        String[] genderCategories = {"F", "M", "C"};
 
-        Color red = new Color(247,55,55);
-        Color blue = new Color(55,74,246);
-        Color white = new Color(226,227,239);
-        Color[] buttonsColorBackgroung= {blue, white, red};
         for (ArrayList<Integer> genderCategoryArray : allExistingCategoriesIdArray) {
             for (int category_id : genderCategoryArray) {
 
@@ -169,5 +167,17 @@ public class CategoriesManagement {
     }
     public static  ArrayList<ArrayList<Integer>> getAllExistingCategoriesIdArray() {
         return allExistingCategoriesIdArray;
+    }
+
+    public static void resetCategoryButtonsColors(){
+        int sex = 0;
+
+        for(ArrayList<JButton> arrayOfGenderButtons: existingCategoriesButtonsArray){
+            for (JButton aCategoryButton: arrayOfGenderButtons){
+                aCategoryButton.setBackground(buttonsColorBackgroung[sex]);
+
+            }
+            sex++;
+        }
     }
 }

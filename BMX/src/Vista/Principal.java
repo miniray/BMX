@@ -7,7 +7,7 @@ import Modelo.WindowsUtils;
 import javax.swing.*;
 import java.io.File;
 
-class principal {
+class Principal {
 	
 public static void main (String[] args){
 

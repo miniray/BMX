@@ -271,7 +271,6 @@ public class Utils implements Constants {
 
                 html = getCategoryGender(html,aFinalManga.getMySingleGame().getGender());
                 ArrayList <Players> temp = FinalMoto.getModelMotoTable().getPlayersInMoto();
-                temp.sort(Players.PlayerPointsComparator);
                 html += aFinalManga.getMySingleGame().getCategoryName() + "</th>\n" +
                                 "  </tr>\n" +
                                 "  <tr>\n" +
