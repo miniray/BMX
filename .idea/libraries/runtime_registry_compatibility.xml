@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="runtime_registry_compatibility">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/estudios/eclipse/plugins/org.eclipse.core.runtime.compatibility.registry_3.6.0.v20150318-1505/runtime_registry_compatibility.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

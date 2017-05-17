@@ -272,7 +272,7 @@ public class Controller implements ActionListener, MouseListener, TableModelList
 	}
 
 	private void cargarCarrera() throws IOException {
-		JFileChooser file = new JFileChooser();
+		JFileChooser file = new JFileChooser(WindowsUtils.getCurrentUserDesktopPath() + "/RACEDAY");
 		int dialog_action = file.showOpenDialog(null);
 
 		switch (dialog_action) {

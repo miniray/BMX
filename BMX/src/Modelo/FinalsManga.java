@@ -37,8 +37,8 @@ public class FinalsManga {
 
     private boolean isThereQuarters = false;
     private boolean isThereSemifinals = false;
-    private boolean isThereDirectFinalFor8 = false;
-    private boolean isThereDirectFinal = false;
+    private boolean isThereFinalFor8orLess = false;
+    private boolean isThereFinalFor8to16 = false;
     private boolean isThereEighth = false;
     private boolean isThereSixteenth = false;
 
@@ -55,11 +55,11 @@ public class FinalsManga {
 
         if (numberOfPlayers <= 8){
             createFinalCaseFor8();
-            isThereDirectFinalFor8 = true;
+            isThereFinalFor8orLess = true;
         }
         if (numberOfPlayers > 8 && numberOfPlayers <= 16) {
             createFinalCase();
-            isThereDirectFinal = true;
+            isThereFinalFor8to16 = true;
         }
         if (numberOfPlayers > 16 && numberOfPlayers <= 32) {
             createSemifinalsCase();
@@ -378,12 +378,12 @@ public class FinalsManga {
     }
 
 
-    public boolean isThereDirectFinal(){return isThereDirectFinal;}
+    public boolean isThereFinalFor8to16(){return isThereFinalFor8to16;}
     public boolean isThereSemifinals(){return isThereSemifinals;}
     public boolean isThereQuarters(){ return isThereQuarters;}
     public boolean isThereEighth(){ return isThereEighth;}
     public boolean isThereSixteenth(){ return isThereSixteenth;}
-    public boolean isThereDirectFinalFor8(){return isThereDirectFinalFor8;}
+    public boolean isThereFinalFor8orLess(){return isThereFinalFor8orLess;}
 
 
     public void setSemifinalsPlayers(ArrayList<Players> playersForSemifinals1, ArrayList<Players> playersForSemifinals2){

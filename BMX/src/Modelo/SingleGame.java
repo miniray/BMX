@@ -259,25 +259,25 @@ public class SingleGame {
             }
 
         }
-        if (finalsMangas.isThereDirectFinal()){
-            calculateDirectFinalMax16Players();
+        if (finalsMangas.isThereFinalFor8to16()){
+            calculateDirectFinalFor8To16Players();
             finalsMangas.getFinalMoto().getModelMotoTable().addTableModelListener(rsController);
         }
 
-        if (finalsMangas.isThereDirectFinalFor8()){
-            calculateDirectFinalFor8();
+        if (finalsMangas.isThereFinalFor8orLess()){
+            calculateDirectFinalFor8OrLess();
             finalsMangas.getFinalMoto().getModelMotoTable().addTableModelListener(rsController);
         }
     }
 
-    public void calculateDirectFinalFor8(){
+    public void calculateDirectFinalFor8OrLess(){
 
 
         finalsMangas.setFinalMoto(mangasMap.get(0).getAllPlayersSortedByPoints());
 
     }
 
-    public void calculateDirectFinalMax16Players(){
+    public void calculateDirectFinalFor8To16Players(){
         ArrayList <Players> playersToFinal = new ArrayList<>();
         ArrayList <Players> playersToFinalSorted = new ArrayList<>();
         playersToFinal.addAll(mangasMap.get(0).getQualifiedFinalPlayers());
@@ -285,12 +285,12 @@ public class SingleGame {
 
         if (playersToFinal.size() == 7){
             playersToFinalSorted.add(playersToFinal.get(0));
-            playersToFinalSorted.add(playersToFinal.get(3));
-            playersToFinalSorted.add(playersToFinal.get(1));
             playersToFinalSorted.add(playersToFinal.get(4));
-            playersToFinalSorted.add(playersToFinal.get(2));
+            playersToFinalSorted.add(playersToFinal.get(1));
             playersToFinalSorted.add(playersToFinal.get(5));
+            playersToFinalSorted.add(playersToFinal.get(2));
             playersToFinalSorted.add(playersToFinal.get(6));
+            playersToFinalSorted.add(playersToFinal.get(3));
         }else{
             playersToFinalSorted.add(playersToFinal.get(0));
             playersToFinalSorted.add(playersToFinal.get(4));
