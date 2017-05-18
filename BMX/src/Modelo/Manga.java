@@ -19,6 +19,7 @@ public class Manga {
     private final JLabel numberOfMangaLabel;
     private SingleGame mySingleGame;
     private int numero_de_manga;
+    private int numero_de_map_manga;
 
 
     public Manga(ArrayList<Players> allPlayersOfThisManga, SingleGame mySingleGame){
@@ -122,4 +123,11 @@ public class Manga {
 
     public int getNumero_de_manga(){ return numero_de_manga;}
 
+    public void setnumero_de_map_manga(int numero_de_map_manga){
+        this.numero_de_map_manga = numero_de_map_manga;
+    }
+
+    public int getNumero_de_map_manga(){
+        return this.numero_de_map_manga;
+    }
 }

@@ -46,6 +46,7 @@ public class SingleGame {
     private void generateAllMangas() {
         for (int i = 0; i < quantity_of_mangas; i++) {
             Manga manga = new Manga(allPlayersByMangaArray.get(i), this);
+            manga.setnumero_de_map_manga(i);
             manga.setNumero_de_manga(i+1);
             mangasMap.put(i, manga);
 
@@ -363,6 +364,7 @@ public class SingleGame {
         String categoryName = DataBase.getAllCategoriesNamesArray().get(gender)[category_id];
         return categoryName;
     }
+
     public int getGender(){
         return gender;
     }

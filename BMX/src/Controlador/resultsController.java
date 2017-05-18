@@ -50,7 +50,7 @@ public class resultsController implements TableModelListener, ActionListener {
             checkAndSetUpFirstFinalPlayers(mySingleGame);
             int temp_moto_contador = 1;
             for (Map.Entry<Integer, Moto> aMoto : myManga.getMotosMap().entrySet()) {
-               allGames.getPointsMemoryMap().get(mySingleGame.getGender()).get(mySingleGame.getCategory_id()).get(myManga.getNumero_de_manga()).replace(temp_moto_contador,aMoto.getValue().getModelMotoTable().getArray());
+               allGames.getPointsMemoryMap().get(mySingleGame.getGender()).get(mySingleGame.getCategory_id()).get(myManga.getNumero_de_map_manga()).replace(temp_moto_contador,aMoto.getValue().getModelMotoTable().getArray());
                 temp_moto_contador++;
             }
             ObjectMapper mapper = new ObjectMapper();

@@ -190,9 +190,9 @@ public class AllGames implements Constants{
             for (Map.Entry<Integer, SingleGame> aSingleGame: aGender.getValue().entrySet()){
                 allGamesMemory.get(gender_contador).put(aSingleGame.getKey(), new TreeMap());
                 for (Map.Entry<Integer,Manga> aManga: aSingleGame.getValue().getMangasMap().entrySet()){
-                    allGamesMemory.get(gender_contador).get(aSingleGame.getKey()).put(aManga.getValue().getNumero_de_manga(), new TreeMap());
+                    allGamesMemory.get(gender_contador).get(aSingleGame.getKey()).put(aManga.getKey(), new TreeMap());
                     for (Map.Entry<Integer,Moto> aMoto: aManga.getValue().getMotosMap().entrySet()){
-                        allGamesMemory.get(gender_contador).get(aSingleGame.getKey()).get(aManga.getValue().getNumero_de_manga()).put(aMoto.getKey(), aMoto.getValue().getModelMotoTable().getArray());
+                        allGamesMemory.get(gender_contador).get(aSingleGame.getKey()).get(aManga.getKey()).put(aMoto.getKey(), aMoto.getValue().getModelMotoTable().getArray());
                     }
                 }
             }
@@ -210,9 +210,11 @@ public class AllGames implements Constants{
         for (Map.Entry <String,Map<String,Map<String,Map<String,ArrayList<ArrayList<Object>>>>>> aGender: allGamesMemory.entrySet()) {
             for (Map.Entry<String, Map<String, Map<String, ArrayList<ArrayList<Object>>>>> aSingleGame : aGender.getValue().entrySet()) {
                     for (Map.Entry<String, Map<String, ArrayList<ArrayList<Object>>>> aManga : aSingleGame.getValue().entrySet()) {
+                        allGamesmap.get(Integer.parseInt(aGender.getKey())).get(Integer.parseInt(aSingleGame.getKey())).getMangasMap().get(Integer.parseInt(aManga.getKey())-1);
                         for (Map.Entry<String, ArrayList<ArrayList<Object>>> aMoto : aManga.getValue().entrySet()) {
-                            System.out.println("INTRODUZCO EN EL GENERO: " + aGender.getKey() + "\nCATEGORIA: " + aSingleGame.getKey() + "\nEN LA MANGA: " + aManga.getKey() + "\nEN LA MOTO: " + aMoto.getKey());
-                            Moto tempMoto = allGamesmap.get(Integer.parseInt(aGender.getKey())).get(Integer.parseInt(aSingleGame.getKey())).getMangasMap().get(Integer.parseInt(aManga.getKey())-1).getMotosMap().get(Integer.parseInt(aMoto.getKey()));
+                            SingleGame tempSingleGame= allGamesmap.get(Integer.parseInt(aGender.getKey())).get(Integer.parseInt(aSingleGame.getKey()));
+                            Manga tempManga = tempSingleGame.getMangasMap().get(Integer.parseInt(aManga.getKey()));
+                            Moto tempMoto = tempManga.getMotosMap().get(Integer.parseInt(aMoto.getKey()));
                             tempMoto.getModelMotoTable().setNewArray(aMoto.getValue());
                             tempMoto.getModelMotoTable().fireTableDataChanged();
                             tempMoto.getModelMotoTable().checkLabelPlates();
