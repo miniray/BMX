@@ -32,6 +32,7 @@ public class resultsController implements TableModelListener, ActionListener {
 
         if (eventMotoModel.get_Is_final_for_8()) {
             eventMotoModel.checkLabelPlates();
+
         }
         if (eventMotoModel.get_Is_final()) {
             eventMotoModel.checkLabelPlates();

@@ -30,10 +30,10 @@ public class FinalsManga {
 
     private final JPanel finalMangaPanel;
 
-    Map<Integer, Moto> semifinalsMotosMap;
-    Map<Integer, Moto> quarterMotosMap;
-    Map<Integer, Moto> eighthMotosMap;
-    Map<Integer, Moto> sixteenthMotosMap;
+    private Map<Integer, Moto> semifinalsMotosMap;
+    private Map<Integer, Moto> quarterMotosMap;
+    private Map<Integer, Moto> eighthMotosMap;
+    private Map<Integer, Moto> sixteenthMotosMap;
 
     private boolean isThereQuarters = false;
     private boolean isThereSemifinals = false;
@@ -441,8 +441,8 @@ public class FinalsManga {
         return semifinalQualifiedPlayersOrderedArray;
     }
 
-
     public SingleGame getMySingleGame(){
         return mySingleGame;
     }
+
 }

@@ -26,6 +26,8 @@ public class AllGames implements Constants{
     private JButton printSemifinals;
     private JButton printFinales;
     private Map<Integer,Map<Integer,Map<Integer,Map<Integer,ArrayList<ArrayList<Object>>>>>>  allGamesMemory;
+    private Map<Integer,Map<Integer,ArrayList<ArrayList<Object>>>> allGamesFinalsMemory;
+    private Map<Integer,Map<Integer,Map<Integer,ArrayList<ArrayList<Object>>>>> allGamesSemiFinalsMemory;
 
     public AllGames(JPanel mainPanel, JPanel buttonTodosPanel){
 
@@ -183,12 +185,21 @@ public class AllGames implements Constants{
         //Map<Integer,Map<Integer,Map<Integer,Map<Integer,ArrayList<ArrayList<Object>>>>>>
 
         allGamesMemory = new TreeMap<>();
+        allGamesFinalsMemory = new TreeMap<>();
+        allGamesSemiFinalsMemory = new TreeMap<>();
+
         int gender_contador = 0;
 
         for (Map.Entry<Integer, Map<Integer, SingleGame>> aGender: allGamesmap.entrySet()){
             allGamesMemory.put(gender_contador, new TreeMap());
             for (Map.Entry<Integer, SingleGame> aSingleGame: aGender.getValue().entrySet()){
+
+                //GUARDAR CADA SINGLEGAME PARA LAS MANGAS
                 allGamesMemory.get(gender_contador).put(aSingleGame.getKey(), new TreeMap());
+                //GUARDAR FINALES
+                createFinalsAndSemifinalsMemoryMap(aSingleGame.getValue(),aGender.getKey());
+
+
                 for (Map.Entry<Integer,Manga> aManga: aSingleGame.getValue().getMangasMap().entrySet()){
                     allGamesMemory.get(gender_contador).get(aSingleGame.getKey()).put(aManga.getKey(), new TreeMap());
                     for (Map.Entry<Integer,Moto> aMoto: aManga.getValue().getMotosMap().entrySet()){
@@ -225,6 +236,27 @@ public class AllGames implements Constants{
 
             }
     }
+
+    private void createFinalsAndSemifinalsMemoryMap(SingleGame aSingleGame, int gender){
+
+            if (aSingleGame.getFinalManga().isThereFinalFor8orLess() || aSingleGame.getFinalManga().isThereFinalFor8to16()){
+                allGamesFinalsMemory.get(gender).put(aSingleGame.getCategory_id(),aSingleGame.getFinalManga().getFinalMoto().getModelMotoTable().getArray());
+            }
+            if (aSingleGame.getFinalManga().isThereSemifinals()){
+
+                ArrayList<ArrayList<Object>> tempSemifinal1 = new ArrayList<>();
+                ArrayList<ArrayList<Object>> tempSemifinal2 = new ArrayList<>();
+                Map<Integer,ArrayList<ArrayList<Object>>> mySingleGameSemifinals = new TreeMap<>();
+                allGamesSemiFinalsMemory.get(gender).put(aSingleGame.getCategory_id(),mySingleGameSemifinals);
+                allGamesSemiFinalsMemory.get(gender).get(aSingleGame.getCategory_id()).put(1, tempSemifinal1);
+                allGamesSemiFinalsMemory.get(gender).get(aSingleGame.getCategory_id()).put(2, tempSemifinal2);
+
+            }
+
+
+    }
+
+
 
 
 }
