@@ -18,7 +18,7 @@ public static void main (String[] args){
 		Date date = new Date();
 
 
-		if (dateFormat.format(date).equals("19/05/2017") || dateFormat.format(date).equals("18/05/2017")) {
+		if (dateFormat.format(date).equals("19/05/2017") || dateFormat.format(date).equals("18/05/2017") || dateFormat.format(date).equals("20/05/2017")) {
 
 			GraphicInterface gi1 = new GraphicInterface();
 			DataBase bd = new DataBase();
