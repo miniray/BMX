@@ -14,7 +14,7 @@ public class MainTableModel extends AbstractTableModel implements Constants, Tab
 		private final Class[] column_names = {Integer.class, Integer.class,Object.class, Object.class, Object.class, Integer.class, Object.class, JComboBox.class,Integer.class, JComboBox.class, Integer.class};
 		private final String[] titulos = {"Licencia", "Placa", "Nombre", "Apellido", "2 Apellido", "Nacimiento", "Sexo", "Categoria", "Ranking", "Cruiser", "Rank Cruiser"};
 		private ArrayList<Players> list_p;
-		private int combo_box_category = 0;
+		private int combo_box_region = 0;
         private TableRowSorter sorter;
         private boolean is_main_table = false;
 
@@ -81,26 +81,26 @@ public class MainTableModel extends AbstractTableModel implements Constants, Tab
 				int x = player_temp.getCategoriaEspanya();
 				int n = player_temp.getCategoriaRegional();
 				if (player_temp.getSexo() == 0){
-					if (combo_box_category == 0){
+					if (combo_box_region == 0){
 						return cat_espanya_fem[x];
 					}
-					if (combo_box_category == 1){
+					if (combo_box_region == 1){
 						return cat_catalunya_fem[n];
 					}
 				}else{
-					if (combo_box_category == 0){
+					if (combo_box_region == 0){
 						return cat_espanya_masc[x];
 					}
-					if (combo_box_category == 1){
+					if (combo_box_region == 1){
 						return cat_catalunya_masc[n];
 					}
 					return "0";
 				}
 				
-			case 8: if (combo_box_category == 0){
+			case 8: if (combo_box_region == 0){
 					return player_temp.getRankingCampeonatoEspanya();
 					}
-					if (combo_box_category == 1){
+					if (combo_box_region == 1){
 						return player_temp.getRankingCampeonatoRegional();
 					}
 					return 0;
@@ -110,19 +110,19 @@ public class MainTableModel extends AbstractTableModel implements Constants, Tab
 				if (player_temp.getSexo() == 0){
 					return "NO";
 				}else{
-					if (combo_box_category == 0){
+					if (combo_box_region == 0){
 						return cat_espanya_cruiser_masc[y];
 					}
-					if (combo_box_category == 1){
+					if (combo_box_region == 1){
 						return cat_catalunya_cruiser_masc[y];
 					}
 				}
 				
 			case 10:
-			    if (combo_box_category == 0){
+			    if (combo_box_region == 0){
 					return player_temp.getRankingCruiserNacional();
 				}
-				if (combo_box_category == 1){
+				if (combo_box_region == 1){
 					return player_temp.getRankingCampeonatoRegional();
 				}
 						
@@ -211,19 +211,19 @@ public class MainTableModel extends AbstractTableModel implements Constants, Tab
 			return list_p.get(row);
 		}
 
-		public void setCombo_box_category(int x){
-			combo_box_category = x;
+		public void setCombo_box_region(int x){
+			combo_box_region = x;
 		}
 		
 		//METODO PARA SETTEAR LA categoria SEGUN GENERO Y RANKING ELEGIDO
         private void setPlayerCategory(Players p, Object value){
 
 			if (p.getSexo()== 0){
-				if (combo_box_category == 0) {
+				if (combo_box_region == 0) {
 					p.setCategoriaEspanya(getValueCategoryPosition(cat_espanya_fem, value));
 				}
 			}else{
-				if (combo_box_category == 0) {
+				if (combo_box_region == 0) {
 					p.setCategoriaEspanya(getValueCategoryPosition(cat_espanya_masc, value));
 				}
 			}
@@ -234,7 +234,7 @@ public class MainTableModel extends AbstractTableModel implements Constants, Tab
 			
 			if (p.getSexo()==1){
 				//SI EL RANKING ES ESPAnyA CAMBIAR LA categoria DE ESPAnyA
-				if (combo_box_category == 0){
+				if (combo_box_region == 0){
 					for (int n = 0; n<cat_espanya_cruiser_masc.length; n++){
 						if (Objects.equals(value.toString(), cat_espanya_cruiser_masc[n])){
 							p.setCategoriaCruiser(n);
@@ -242,7 +242,7 @@ public class MainTableModel extends AbstractTableModel implements Constants, Tab
 					}
 				}
 				//SI EL RANKING ES CATALUnyA
-				if (combo_box_category == 1){
+				if (combo_box_region == 1){
 					for (int n = 0; n<cat_catalunya_cruiser_masc.length; n++){
 						if (Objects.equals(value.toString(), cat_catalunya_cruiser_masc[n])){
 							p.setCategoriaCruiser(n);

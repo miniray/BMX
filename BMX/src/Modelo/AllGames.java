@@ -197,7 +197,7 @@ public class AllGames implements Constants{
                 //GUARDAR CADA SINGLEGAME PARA LAS MANGAS
                 allGamesMemory.get(gender_contador).put(aSingleGame.getKey(), new TreeMap());
                 //GUARDAR FINALES
-                createFinalsAndSemifinalsMemoryMap(aSingleGame.getValue(),aGender.getKey());
+                //createFinalsAndSemifinalsMemoryMap(aSingleGame.getValue(),aGender.getKey());
 
 
                 for (Map.Entry<Integer,Manga> aManga: aSingleGame.getValue().getMangasMap().entrySet()){

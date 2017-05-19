@@ -1,4 +1,5 @@
 package Controlador;
+import Vista.InsertPlayerFrame;
 import com.fasterxml.jackson.databind.*;
 
 import java.awt.*;
@@ -125,6 +126,8 @@ public class Controller implements ActionListener, MouseListener, TableModelList
 				break;
 
             case "ANYADIR":
+				InsertPlayerFrame insertPlayerFrame = new InsertPlayerFrame();
+
 
 				break;
 
@@ -143,7 +146,7 @@ public class Controller implements ActionListener, MouseListener, TableModelList
 
 		    case "RANKING":
 
-				graphicInterface.getMainTableModel().setCombo_box_category(graphicInterface.getCategory().getSelectedIndex());
+				graphicInterface.getMainTableModel().setCombo_box_region(graphicInterface.getCategory().getSelectedIndex());
 				graphicInterface.getMainTableModel().fireTableDataChanged();
 			    break;
 

@@ -32,12 +32,6 @@ public static void main (String[] args){
 			JOptionPane.showMessageDialog(null,"CONTACTA CON RACEDAY COMPANY");
 			System.exit(0);
 		}
-		/*if (new File(WindowsUtils.getCurrentUserDesktopPath() + "/RACEDAY/ARRAYDEPILOTOS.JSON").isFile()){
-		System.out.println("EXISTE");
-		}else{
-		System.out.println("NO EXISTE");
-		}*/
-
 
 	}
 

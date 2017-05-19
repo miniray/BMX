@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="javacsv">
     <CLASSES>
-      <root url="jar://$APPLICATION_HOME_DIR$/lib/javacsv.jar!/" />
+      <root url="jar://$PROJECT_DIR$/BMX/.idea/libraries/javacsv.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
