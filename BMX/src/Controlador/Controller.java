@@ -127,6 +127,7 @@ public class Controller implements ActionListener, MouseListener, TableModelList
 
             case "ANYADIR":
 				InsertPlayerFrame insertPlayerFrame = new InsertPlayerFrame();
+				insertPlayerFrame.frame.setVisible(true);
 
 
 				break;
