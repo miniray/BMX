@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.Map;
 
@@ -33,11 +34,15 @@ public class Controller implements ActionListener, MouseListener, TableModelList
     private AllGames carrera;
     private resultsController rsController;
     private Color lila = new Color(165,62,246);
+    private int contador_ids;
+	private InsertPlayerFrame insertPlayerFrame = null;
+
 	public Controller(GraphicInterface graphicInterface, DataBase dataBase, PlayersImportationFrame playersImportationFrame){
 		
 		this.playersImportationFrame = playersImportationFrame;
 		this.graphicInterface = graphicInterface;
 		this.dataBase = dataBase;
+		contador_ids = 9000;
 	}
 	
 
@@ -81,9 +86,17 @@ public class Controller implements ActionListener, MouseListener, TableModelList
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 
+		JButton buttonSelected = null;
+		String buttonText = null;
+
+
 		String actionCommand = arg0.getActionCommand();
-		String buttonText = ((JButton)arg0.getSource()).getText();
-		JButton buttonSelected= (JButton) arg0.getSource();
+		if (arg0.getSource() instanceof JButton){
+			buttonText = ((JButton)arg0.getSource()).getText();
+
+			buttonSelected= (JButton) arg0.getSource();
+		}
+
 		int female = 0;
 		int male = 1;
 		int cruiser = 2;
@@ -126,9 +139,24 @@ public class Controller implements ActionListener, MouseListener, TableModelList
 				break;
 
             case "ANYADIR":
-				InsertPlayerFrame insertPlayerFrame = new InsertPlayerFrame();
+				checkContador_id();
+				insertPlayerFrame = new InsertPlayerFrame(graphicInterface.getCategory(), contador_ids, this);
 				insertPlayerFrame.frame.setVisible(true);
+				break;
 
+			case "+":
+				insertPlayerFrame.getTableModel().addNewPlayer();
+				break;
+
+			case "-":
+				insertPlayerFrame.getTableModel().deleteAPlayer(insertPlayerFrame.getJTable().getSelectedRow());
+				break;
+
+			case "ACEPTAR PILOTOS INSERTADOS":
+				graphicInterface.getMainTableModel().getArray().addAll(insertPlayerFrame.getTableModel().getArrayList_p());
+				insertPlayerFrame.frame.dispose();
+				graphicInterface.getMainTableModel().fireTableDataChanged();
+				graphicInterface.setCellEditor();
 
 				break;
 
@@ -163,13 +191,14 @@ public class Controller implements ActionListener, MouseListener, TableModelList
                     dataBase.buttonAllControl = false;
                     graphicInterface.changeTableModel(CategoriesManagement.getSpecificCategoryArray(male, dataBase.getIDfromCategoryList(male, buttonText)), dataBase.getController());
 					CategoriesManagement.resetCategoryButtonsColors();
-					graphicInterface.getBtn_todos().setBackground(null);
-					buttonSelected.setBackground(lila);
+
                 }else{
 			        graphicInterface.card.show(graphicInterface.panel_card,"1"+ dataBase.getIDfromCategoryList(male, buttonText));
 					graphicInterface.getCardPanel().updateUI();
 
                 }
+				graphicInterface.getBtn_todos().setBackground(null);
+				buttonSelected.setBackground(lila);
 				break;
 
             case "FBUTTON":
@@ -177,12 +206,13 @@ public class Controller implements ActionListener, MouseListener, TableModelList
                     dataBase.buttonAllControl = false;
                     graphicInterface.changeTableModel(CategoriesManagement.getSpecificCategoryArray(female, dataBase.getIDfromCategoryList(female, buttonText)), dataBase.getController());
 					CategoriesManagement.resetCategoryButtonsColors();
-					graphicInterface.getBtn_todos().setBackground(null);
-					buttonSelected.setBackground(lila);
+
                 }else{
                     graphicInterface.card.show(graphicInterface.panel_card,"0"+ dataBase.getIDfromCategoryList(female, buttonText));
                     graphicInterface.getCardPanel().updateUI();
                 }
+				graphicInterface.getBtn_todos().setBackground(null);
+				buttonSelected.setBackground(lila);
                 break;
 
             case "CBUTTON":
@@ -190,14 +220,15 @@ public class Controller implements ActionListener, MouseListener, TableModelList
                     dataBase.buttonAllControl = false;
                     graphicInterface.changeTableModel(CategoriesManagement.getSpecificCategoryArray(cruiser, dataBase.getIDfromCategoryList(cruiser, buttonText)), dataBase.getController());
 					CategoriesManagement.resetCategoryButtonsColors();
-					graphicInterface.getBtn_todos().setBackground(null);
-					buttonSelected.setBackground(lila);
+
 
                 }else{
                     graphicInterface.card.show(graphicInterface.panel_card,"2"+ dataBase.getIDfromCategoryList(cruiser, buttonText));
 
                     graphicInterface.getCardPanel().updateUI();
                 }
+				graphicInterface.getBtn_todos().setBackground(null);
+				buttonSelected.setBackground(lila);
                 break;
 
 			case "PRINT PREMANGAS":
@@ -268,7 +299,6 @@ public class Controller implements ActionListener, MouseListener, TableModelList
 		}
 	}
 	public void getImportedJsonArrayAndAddItToTheMainTable(ArrayList<Players> importedArray){
-		graphicInterface.getMainTableModel().getArray().clear();;
 		graphicInterface.getMainTableModel().setArray(importedArray);
 		graphicInterface.setCellEditor();
 		graphicInterface.getMainTable().updateUI();
@@ -317,9 +347,30 @@ public class Controller implements ActionListener, MouseListener, TableModelList
 		ObjectMapper mapper = new ObjectMapper();
 		Map memoryMapPoints = mapper.readValue(new File(path), Map.class);
 		return memoryMapPoints;
+	}
 
+
+	public void setContador_ids(int contador_ids){
+		this.contador_ids = contador_ids;
+	}
+
+	private void checkContador_id(){
+
+		if (graphicInterface.getMainTableModel().getArray().size()!= 0) {
+			ArrayList<Integer> idsArrayList = new ArrayList<>();
+			for (Players aPlayer: graphicInterface.getMainTableModel().getArray()){
+				idsArrayList.add(aPlayer.getId());
+			}
+
+			if (Collections.max(idsArrayList) >= 9000) {
+				setContador_ids(Collections.max(idsArrayList) + 1);
+			} else {
+				setContador_ids(9000);
+			}
+		}
 
 	}
+
 }
 
 

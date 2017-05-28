@@ -1,6 +1,7 @@
 package Vista;
 
 import Modelo.Constants;
+import Modelo.InsertPlayerTableModel;
 import Modelo.MainTableModel;
 import Modelo.Players;
 
@@ -23,10 +24,20 @@ class CategoryCruiserCellEditor extends DefaultCellEditor implements Constants, 
     public Component getTableCellEditorComponent(JTable table, Object value,
                                                  boolean isSelected, int row, int column) {
 
-        MainTableModel tableModel = (MainTableModel)table.getModel();
-        Players player_temp = tableModel.getPlayerByModelRow(tableModel.getUnderlyingModelRow(row));
+        //Players player_temp = tableModel.getPlayerByModelRow(tableModel.getUnderlyingModelRow(row));
         JComboBox comboCruiser = (JComboBox)getComponent();
         comboCruiser.removeAllItems();
+        Players player_temp = new Players();
+
+        if (table.getModel() instanceof MainTableModel ){
+            MainTableModel tableModel = (MainTableModel) table.getModel();
+            player_temp = tableModel.getPlayerByModelRow(tableModel.getUnderlyingModelRow(row));
+        }
+        if (table.getModel() instanceof InsertPlayerTableModel){
+            InsertPlayerTableModel tableModel = (InsertPlayerTableModel) table.getModel();
+            player_temp = tableModel.getArrayList_p().get(row);
+        }
+
 
         if (player_temp.getSexo() != 0){
 

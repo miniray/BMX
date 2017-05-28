@@ -25,11 +25,11 @@ public class GraphicInterface implements Constants {
 	public final GridLayout grid_panel_cat_cruiser = new GridLayout(0,1);
 
 	private final JButton btn_todos = new JButton ("TODOS");
-	private final JButton btn_importar = new JButton("IMPORTAR");
-	private final JButton btn_cargar = new JButton("CARGAR");
-	private final JButton btn_anyadir = new JButton("INSERTAR PARTICIPANTE");
-	private final JButton btn_eliminar = new JButton("ELIMINAR");
-	private final JButton btn_generar = new JButton ("GENERAR");
+	private final JButton btn_importar = new JButton("IMPORTAR PILOTOS");
+	private final JButton btn_cargar = new JButton("CARGAR CARRERA");
+	private final JButton btn_anyadir = new JButton("INSERTAR PILOTO");
+	private final JButton btn_eliminar = new JButton("ELIMINAR PILOTO");
+	private final JButton btn_generar = new JButton ("GENERAR CARRERA");
 	private final JButton btn_print_premangas= new JButton ("IMPRIMIR MANGAS");
 
     private final JPanel panel_central_central = new JPanel();
@@ -37,6 +37,7 @@ public class GraphicInterface implements Constants {
 	private final JPanel allMangasPanel = new JPanel();
 	private final MainTableModel mtm_principal = new MainTableModel();
 	public final CardLayout card = new CardLayout();
+	private JComboBox ranking = new JComboBox();
 
 	private final JComboBox categoria = new JComboBox();
 
@@ -120,13 +121,13 @@ public class GraphicInterface implements Constants {
 		panel_botones.add(btn_anyadir);
 		panel_botones.add(btn_eliminar);
 
-		categoria.addItem("ESPANYA");
-		categoria.addItem("BARCELONA");
+		categoria.addItem("CATALUNYA");
+		categoria.addItem("ESÑPAÑA");
 		categoria.addItem("MADRID");
 
         JComboBox ranking = new JComboBox();
-        ranking.addItem("CAMPEONATO");
-		ranking.addItem("LIGA");
+        ranking.addItem("LIGA");
+		ranking.addItem("CAMPEONATO");
 		ranking.addItem("COPA");
 
 		panel_botones.add(btn_print_premangas);
@@ -175,7 +176,6 @@ public class GraphicInterface implements Constants {
 		btn_print_premangas.addActionListener(c);
 		btn_print_premangas.setActionCommand("PRINT PREMANGAS");
 
-
 		//solo permite seleccionar 1 fila.
 		tabla.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 	} 
@@ -193,6 +193,8 @@ public class GraphicInterface implements Constants {
         // Centrar texto
 		DefaultTableCellRenderer tcr = new DefaultTableCellRenderer();
 		tcr.setHorizontalAlignment(SwingConstants.CENTER);
+		ranking.setAlignmentY(JComboBox.CENTER_ALIGNMENT);
+		categoria.setAlignmentY(JComboBox.CENTER_ALIGNMENT);
 		tabla.getColumnModel().getColumn(0).setCellRenderer(tcr);
 		tabla.getColumnModel().getColumn(1).setCellRenderer(tcr);
 		tabla.getColumnModel().getColumn(5).setCellRenderer(tcr);

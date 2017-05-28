@@ -1,6 +1,7 @@
 package Vista;
 
 import Modelo.Constants;
+import Modelo.InsertPlayerTableModel;
 import Modelo.MainTableModel;
 import Modelo.Players;
 
@@ -20,8 +21,17 @@ class GenderCellEditor extends DefaultCellEditor implements Constants, TableCell
     public Component getTableCellEditorComponent(JTable table, Object value,
                                                  boolean isSelected, int row, int column) {
 
-        MainTableModel tableModel = (MainTableModel)table.getModel();
-        Players player_temp = tableModel.getPlayerByModelRow(tableModel.getUnderlyingModelRow(row));
+        Players player_temp = new Players();
+
+        if (table.getModel() instanceof MainTableModel ){
+            MainTableModel tableModel = (MainTableModel) table.getModel();
+            player_temp = tableModel.getPlayerByModelRow(tableModel.getUnderlyingModelRow(row));
+        }
+        if (table.getModel() instanceof InsertPlayerTableModel){
+            InsertPlayerTableModel tableModel = (InsertPlayerTableModel) table.getModel();
+            player_temp = tableModel.getArrayList_p().get(row);
+
+        }
 
         JComboBox <String> comboSexo = (JComboBox<String>)getComponent();
         comboSexo.removeAllItems();

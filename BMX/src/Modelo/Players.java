@@ -433,6 +433,13 @@ public class Players implements Constants{
         return arrayToPrint;
     }
 
+    public void setClub(String club){
+        this.club = club;
+    }
+
+    public String getClub(){
+        return club;
+    }
 
 }
 	
