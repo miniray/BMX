@@ -38,6 +38,7 @@ public class InsertPlayerFrame implements ActionListener {
         frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setSize(1000,800);
+        frame.setExtendedState(java.awt.Frame.MAXIMIZED_BOTH);
 
         generalPanel = new JPanel();
         gridBagConstraints = new GridBagConstraints();

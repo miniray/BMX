@@ -47,6 +47,7 @@ public class GraphicInterface implements Constants {
 		//frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         JFrame frame = new JFrame();
         frame.setSize(1300,600);
+		frame.setExtendedState(java.awt.Frame.MAXIMIZED_BOTH);
 
 		mtm_principal.setIsMainTable();
 
@@ -122,7 +123,7 @@ public class GraphicInterface implements Constants {
 		panel_botones.add(btn_eliminar);
 
 		categoria.addItem("CATALUNYA");
-		categoria.addItem("ESÑPAÑA");
+		categoria.addItem("ESPAÑA");
 		categoria.addItem("MADRID");
 
         JComboBox ranking = new JComboBox();
